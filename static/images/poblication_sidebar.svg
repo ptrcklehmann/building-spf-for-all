@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 705.88">
+    <defs>
+        <style>
+            .upper_bar {
+                fill: #9EF2F2;
+            }
+            .lower_bar {
+                fill: #D2FBFB;
+            }
+        </style>
+    </defs>
+    <g id="sidebar_card" data-name="sidebar_card">
+        <polygon id="lower_bar" class="lower_bar" points="0 705.88 45 705.88 45 52.94 0 78.92 0 705.88" />
+        <polygon id="upper_bar" class="upper_bar" points="0 0 0 26.96 45 52.94 45 0 0 0" />
+    </g>
+</svg>
