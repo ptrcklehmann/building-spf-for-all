@@ -1,5 +1,5 @@
 import React from 'react'
-import ILOLogo from '../images/ILO_logo.svg'
+import ILOLogo from '../images/ilo_logo.svg'
 import {IoIosPlay} from "react-icons/io";
 import {Link} from "gatsby"
 import './footer.css'
