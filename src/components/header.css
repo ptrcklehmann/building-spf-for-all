@@ -4,15 +4,10 @@
 .masthead {
     /* background-image: url("/images/slide.jpg"); */
     width: 100%;
-    height: calc(100vh - 30px);
-    background-size: cover;
-    background-position: bottom center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: flex-start;
-    align-items: stretch;
+    justify-content: end;
 }
 .masthead-small {
     width: 100%;
@@ -22,27 +17,15 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-content: flex-start;
-    align-items: stretch;
+    align-items: flex-start;
 }
 
-@media (max-width: 992px) {
-  .masthead {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: calc(100vh - 28px);
-    position: relative;
-  }
-}
+
 #header {
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.06);
-  padding: 10px 0;
-  background: #fff;
+  background: #1E2DBE;
 }
 
 .headline {
@@ -56,7 +39,7 @@
 }
 
 .headline h1 {
-  color: #230050;
+  color: #fff;
   white-space: nowrap;
   font-size: 18px;
   letter-spacing: -0.3px;
@@ -73,14 +56,14 @@
 #header p {
   font-size: 12px;
   letter-spacing: -0.3px;
-  color: #1E2DBE;
+  color: #EDF0F2;
   text-align: right;
   margin-bottom: 0;
 }
 
 #header .logo a svg {
-  margin: 8px 0;
-  fill: #1E2DBE;
+  margin: 15px 0;
+  fill: #fff;
   height: 80px;
 }
 .logo-socpro {
@@ -88,11 +71,23 @@
 }
 
 @media (max-width: 991px) {
+  #header {
+    padding: 1rem;
+  }
+  .masthead {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: end;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 28px);
+    position: relative;
+  }
   #header .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 20px;
   }
   #header .logo a svg {
     height: 60px;

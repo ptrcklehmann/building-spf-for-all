@@ -11,6 +11,8 @@ import LandingHeader from "./landingHeader"
 import Footer from "./footer"
 import "./layout.css"
 import ScrollToTop from "./scrolltop"
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 const LandingLayout=({children}) => {
   const data = useStaticQuery(graphql`
@@ -24,10 +26,12 @@ const LandingLayout=({children}) => {
   `)
   return (
     <div className="site">
+      <ParallaxProvider>
       <LandingHeader siteTitle={data.site.siteMetadata?.title||`Title`} />
         <main>{children}</main>
       <Footer />
       <ScrollToTop />
+      </ParallaxProvider>
     </div>
   )
 }

@@ -11,18 +11,21 @@ import Vision from '../../images/vision-illustration.svg'
 import ValueProposition from '../../images/value_proposition.svg'
 import "./vision-and-approach.css"
 import {IoIosPlay} from "react-icons/io";
-import {Parallax} from 'react-parallax';
+import {Parallax,ParallaxBanner} from 'react-scroll-parallax';
 import {Link} from "gatsby"
+import HeroSmall from "../../components/hero-small";
+
 
 export default function VisionPage() {
     return (
         <Layout>
-            <Seo title="Vision and value proposition" headerImg='/approach/vision-and-value.jpg' />
+            <Seo title="Vision and value proposition" />
+            <HeroSmall title="Vision and value proposition" bgImage='/images/approach/vision-and-value.jpg' />
             <section id="vision" className="vision">
                 <div className="container">
-                    <div className="row d-flex align-items-center justify-content-center space-vertical">
+                    <div className="row align-items-center justify-content-center space-vertical">
                         <ScrollAnimation animateIn="animate__fadeInUp">
-                            <h1 className="section-subtitle-bold space-vertical-bottom">Life without social protection means</h1>
+                            <h1 className="section-title-bold space-vertical-bottom">Life without social protection means</h1>
                         </ScrollAnimation>
                         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
                             <ul class="timeline timeline-centered">
@@ -80,142 +83,44 @@ export default function VisionPage() {
                         </div>
                     </div>
                 </div>
-                <Parallax bgImage="/images/divider-image.jpeg" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={-200}></Parallax>
+                <ParallaxBanner
+                    className="image-divider"
+                    layers={[
+                        {
+                            image: '/images/approach/vision-and-value-divider.jpg',
+                            amount: -0.2,
+                        },
+                    ]}
+                    style={{
+                        height: '25rem',
+                        backgroundPosition: 'top',
+                        backgroundSize: 'cover'
+                    }}
+                >
+                </ParallaxBanner>
+                {/* <Parallax bgImage="/images/divider-image.jpeg" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={-200}></Parallax> */}
                 <div className="container">
-                    <div className="row align-items-center justify-content-around pb-3  sm-column">
+                    <div className="row align-items-start justify-content-around pb-3  sm-column">
                         <ScrollAnimation animateIn="animate__fadeInUp">
-                            <h1 className="section-subtitle-bold space-vertical">Our vision</h1>
+                            <h1 className="section-title-bold space-vertical">Our vision</h1>
                         </ScrollAnimation>
-                        <p className="col-lg-6
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        col-md-12 col-sm-12 body-xl-large mt-lg-2 ">Our vision is a world where all countries have national social protection systems that: </p>
-                        <div className="col-lg-3 col-md-12 mt-lg-2 col-sm-12">
+                        <div className="col-lg-6 col-md-12 col-sm-12 body-large">
+                            <p className="col-lg-11 col-md-12 col-sm-12 body-xl-large pb-4">Our vision is a world where all countries have national social protection systems that: </p>
+                            <p className="col-lg-9 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Provide adequate social protection to all their population throughout their lives, prevent poverty, reduce inequality and combat social exclusion;</p>
+                            <p className="col-lg-8 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Are not temporary arrangements, but robust, reliable and sustainable mechanisms;</p>
+                            <p className="col-lg-11 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be built on national consensus achieved through inclusive social dialogue;</p>
+                            <p className="col-lg-9 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be embedded in law to provide rights and obligations for current and future generations;</p>
+                            <p className="col-lg-12 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be adequately and sustainably financed.</p>
+                        </div>
+                        <div className="col-lg-3 col-md-12 mt-lg-2 col-sm-12 square-image">
                             <Vision />
                         </div>
-                        <p className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-medium ident"><IoIosPlay className="tri-bullet" />Provide adequate social protection to all their population throughout their lives, prevent poverty, reduce inequality and combat social exclusion;</p>
-                        <p className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-medium ident"><IoIosPlay className="tri-bullet" />Are not temporary arrangements, but robust, reliable and sustainable mechanisms;</p>
-                        <p className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-medium ident"><IoIosPlay className="tri-bullet" />Should be built on national consensus achieved through inclusive social dialogue;</p>
-                        <p className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-medium ident"><IoIosPlay className="tri-bullet" />Should be embedded in law to provide rights and obligations for current and future generations;</p>
-                        <p className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-medium ident"><IoIosPlay className="tri-bullet" />Should be adequately and sustainably financed.</p>
                     </div>
                 </div>
                 <div className="blue-background">
                     <div className="container">
-                        <div className="row align-items-center justify-content-between pb-3 space-vertical sm-column">
-                            <div className="col-lg-6 col-md-12 mt-lg-2 col-sm-12  body-medium ident">
+                        <div className="row align-items-center justify-content-around pb-3 space-vertical sm-column">
+                            <div className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-medium">
                                 <ValueProposition className="space-vertical" />
                             </div>
                             <div className="col-lg-5 col-md-12 mt-lg-2 col-sm-12 body-medium justify-content-end">
@@ -232,7 +137,7 @@ export default function VisionPage() {
                     </div>
                 </div>
                 <div className="row align-items-center justify-content-center space-vertical sm-column">
-                    <Link to="/theory-of-change" className="standard-btn-filled">Theory of change</Link>
+                    <Link to="/approach/theory-of-change" className="standard-btn-filled">Theory of change</Link>
                 </div>
             </section>
         </Layout>

@@ -12,7 +12,7 @@
 .logo-ilo {
     height: 80px;
 }
-.logo-ilo g path {
+.logo-ilo  {
     fill: #fff;
 }
 
@@ -142,7 +142,6 @@
     letter-spacing: -0.3px;
     color: #B0B9E1;
     text-align: right;
-
 }
 
 @media (max-width: 991px) {
@@ -167,11 +166,6 @@
     .footer-newsletter .headline {
         margin-bottom: 5px;
     }
-}
-
-copyright {
-    text-align: center;
-    padding-top: 30px;
 }
 
 #footer .credits {

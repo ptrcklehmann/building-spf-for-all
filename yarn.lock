@@ -9430,7 +9430,7 @@ prop-types-extra@^1.1.0:
     react-is "^16.3.2"
     warning "^4.0.0"
 
-prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.5.9, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -9762,6 +9762,13 @@ react-responsive-carousel@^3.2.22:
     classnames "^2.2.5"
     prop-types "^15.5.8"
     react-easy-swipe "^0.0.21"
+
+react-scroll-parallax@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-2.4.1.tgz#ba05bc868ea36a10ae7991f9d0e61923a0b80c8f"
+  integrity sha512-EOlxoOIR0O4/Ky0p64+QLtByJyvcEDv50PYTjgBkPSyD4HhMgZ4/z3whA5xo9ylc6micOw6A8RcyCYyvHds1sQ==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-side-effect@^2.1.0:
   version "2.1.1"

@@ -8,15 +8,17 @@ import Disability from '../../images/disability.svg'
 import Children from '../../images/children.svg'
 import Mother from '../../images/mother.svg'
 import ValueProposition from '../../images/value_proposition.svg'
-import "./vision-and-approach.css"
+import "./theory-of-change.css"
 import {IoIosPlay} from "react-icons/io";
 import {Parallax} from 'react-parallax';
+import HeroSmall from "../../components/hero-small";
 
 export default function TheoryPage() {
     return (
         <Layout>
-            <Seo title="Vision and value proposition" headerImg='/images/approach/building-spf-for-all-01.jpg' />
-            <section id="vision" className="vision">
+            <Seo title="Vision and value proposition" />
+            <section id="theory" className="theory">
+            <HeroSmall title="Theory of change" bgImage='/images/approach/theory-of-change.jpg' />
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center space-vertical">
                         <ScrollAnimation animateIn="animate__fadeInUp">

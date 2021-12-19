@@ -11,6 +11,7 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 import ScrollToTop from "./scrolltop"
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Layout=({children}) => {
   const data=useStaticQuery(graphql`
@@ -26,10 +27,12 @@ const Layout=({children}) => {
   console.log(data)
   return (
     <div className="site">
+      <ParallaxProvider>
       <Header siteTitle={data.site.siteMetadata?.title||`Title`} />
       <main>{children}</main>
       <Footer />
       <ScrollToTop />
+      </ParallaxProvider>
     </div>
   )
 }

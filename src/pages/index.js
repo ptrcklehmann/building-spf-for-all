@@ -6,7 +6,7 @@ import Adequacy from '../images/adequacy.svg'
 import Effective from '../images/effective-coverage.svg'
 import Institutional from '../images/institutional-changes.svg'
 import Legal from '../images/legal-coverage.svg'
-import {Parallax} from 'react-parallax';
+import {Parallax, ParallaxBanner} from 'react-scroll-parallax';
 import {Link} from "gatsby"
 import "animate.css";
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -14,11 +14,12 @@ import {Swiper,SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/pagination"
 import "swiper/css/navigation"
+import "swiper/css/effect-fade"
 import SwiperCore,{
-  Pagination,Navigation
+  Pagination,Navigation,Autoplay,EffectFade
 } from 'swiper';
 
-SwiperCore.use([Pagination,Navigation]);
+SwiperCore.use([Pagination,Navigation,Autoplay]);
 
 const IndexPage=() => (
   <LandingLayout>
@@ -26,35 +27,52 @@ const IndexPage=() => (
     <section id="about" className="about">
       <div className="container">
         <div className="py-5 row d-flex align-items-center justify-content-center">
-          <ScrollAnimation animateIn="animate__fadeInUp">
+          <Parallax y={[-20,20]}>
             <h1 className="section-title-bold">ILO Global Flagship Programme</h1>
-          </ScrollAnimation>
+          </Parallax>
           <div className="row align-items-center justify-content-center pb-3 space-vertical sm-column">
-            <ScrollAnimation animateIn="animate__fadeInUp " className="col-lg-3 col-md-12 col-sm-12 align-self-center">
-              <FlagshipLogo className="body-image-big" alt="ILO Flagship Programme" />
+            <ScrollAnimation animateIn="animate__slideInUp" className="col-lg-3 col-md-12 col-sm-12 align-self-center">
+              <div className="square-image">
+                <FlagshipLogo className="body-image-big" alt="ILO Flagship Programme" />
+              </div>
             </ScrollAnimation>
             <p className="col-lg-6 col-md-12 col-sm-12 body-large">The ILO's Global Flagship Programme on Building Social Protection Floors for All, launched in early 2016, supports the implementation of social protection systems including floors, guided by ILO's social security standards. </p>
           </div>
           <div className="row flex-lg-row flex-md-row align-items-center justify-content-center flex-md-column-reverse flex-sm-column-reverse">
-            <p className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-large pb-md-2 mb-sm-2 ">Working across 50 priority countries, it aims to change the lives of millions of people by 2025 and provide evidence on ILO's contribution to the Sustainable Development Goals on social protection.</p>
-            <ScrollAnimation animateIn="animate__backInRight " className="col-lg-5 col-md-12 col-sm-12 row align-items-center justify-content-center">
-              <img className="col-6 body-image-big" src='/images/SDG_logo.png' alt="Sustainable Development Goals" />
-              <div className="col-4 flex-column">
-                <img className="body-image-small" src='/images/E_WEB_01.png' alt="SDG 01" />
-                <img className="body-image-small" src='/images/E_WEB_03.png' alt="SDG 03" />
+            <p className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-large">Working across 50 priority countries, it aims to change the lives of millions of people by 2025 and provide evidence on ILO's contribution to the Sustainable Development Goals on social protection.</p>
+            <ScrollAnimation animateIn="animate__slideInUp" className="col-lg-4 col-md-12 col-sm-12 justify-items-end justify-items-sm-center row">
+              <div className="d-flex row justify-lg-content-center align-items-center justify-content-md-start">
+                <img src='/images/SDG_logo.png' className="body-image-big col-6" alt="Sustainable Development Goals" />
+                <img className="body-image-small col-1" src='/images/E_WEB_01.png' alt="SDG 01" />
+                <img className="body-image-small col-1" src='/images/E_WEB_03.png' alt="SDG 03" />
               </div>
             </ScrollAnimation>
           </div>
         </div>
       </div>
-      <Parallax bgImage="/images/divider-image.jpeg" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={-200}></Parallax>
+      <ParallaxBanner
+        className="image-divider"
+        layers={[
+          {
+            image: '/images/divider-image.jpeg',
+            amount: -0.2,
+          },
+        ]}
+        style={{
+          height: '25rem',
+          backgroundPosition: 'top',
+          backgroundSize: 'cover'
+        }}
+      >
+      </ParallaxBanner>
+      {/* <Parallax bgImage="" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={-200}></Parallax> */}
       <div className="container">
         <ScrollAnimation animateIn="animate__fadeInUp">
           <h1 className="section-title-bold-center space-vertical">Our ambition 2025</h1>
         </ScrollAnimation>
         <div className="timeline">
           <div className="row">
-            <div className="col-sm-6 news-item">
+            <div className="col-sm-12 col-md-12 col-lg-6 news-item">
               <ScrollAnimation animateIn="animate__fadeInUp">
                 <div className="news-content">
                   <Institutional alt="Intitutional changes" className="body-image-big" />
@@ -67,7 +85,7 @@ const IndexPage=() => (
               </ScrollAnimation>
             </div>
 
-            <div className="col-sm-6 news-item right">
+            <div className="col-sm-12 col-md-12 col-lg-6 news-item right">
               <ScrollAnimation animateIn="animate__fadeInUp ">
                 <div className="news-content">
                   <article >
@@ -80,7 +98,7 @@ const IndexPage=() => (
               </ScrollAnimation>
             </div>
 
-            <div className="col-sm-6 news-item">
+            <div className="col-sm-12 col-md-12 col-lg-6 news-item">
               <ScrollAnimation animateIn="animate__fadeInUp" >
                 <div className="news-content">
                   <Legal alt="Legal coverage" className="body-image-big" />
@@ -94,7 +112,7 @@ const IndexPage=() => (
               </ScrollAnimation>
             </div>
 
-            <div className="col-sm-6 news-item right">
+            <div className="col-sm-12 col-md-12 col-lg-6 news-item right">
               <ScrollAnimation animateIn="animate__fadeInUp">
                 <div className="news-content">
                   <article >
@@ -116,8 +134,7 @@ const IndexPage=() => (
           <h1 className="section-title-bold space-vertical">Latest from  <Link className="news" to='/news'>{' '}News & Events</Link></h1>
         </div>
         <Swiper
-
-          slidesPerGroup={2}
+          slidesPerGroup={1}
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
@@ -125,11 +142,11 @@ const IndexPage=() => (
           }}
           navigation={true}
           autoplay={{
-            "delay": 2500,
+            "delay": 3500,
             "disableOnInteraction": false
           }}
           className="mySwiper"
-          style={{'--swiper-navigation-color': '#1F094D','--swiper-pagination-color': '#1F094D'}}
+          style={{'--swiper-navigation-color': '#1F054D'}}
           breakpoints={{
             "640": {
               "slidesPerView": 1,
@@ -137,13 +154,14 @@ const IndexPage=() => (
             },
             "768": {
               "slidesPerView": 2,
-              "spaceBetween": 0
+              "spaceBetween": 10
             },
             "1024": {
               "slidesPerView": 3,
-              "spaceBetween": 0
+              "spaceBetween": 5
             }
-          }}>
+          }}
+          effect={'fade'}>
           <SwiperSlide>
             <div className="card-news">
               <p className="year">2021</p>
@@ -177,21 +195,38 @@ const IndexPage=() => (
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide><div className="card-news">
-            <p className="year">2021</p>
-            <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
-              <div className="card-header ">
-                <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
-                <Link to="#" className="standard-btn">Go to link</Link>
+          <SwiperSlide>
+            <div className="card-news">
+              <p className="year">2021</p>
+              <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
+                <div className="card-header ">
+                  <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
+                  <Link to="#" className="standard-btn">Go to link</Link>
+                </div>
               </div>
             </div>
-          </div></SwiperSlide>
+          </SwiperSlide>
         </Swiper>
         <div className="row align-items-end justify-content-end space-vertical-bottom" style={{backgroundImage: 'url(/images)'}}>
           <Link to="/news-and-events" className="standard-btn">See more</Link>
         </div>
       </div>
-      <Parallax bgImage="/images/divider-image-2.jpeg" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={200}></Parallax>
+      <ParallaxBanner
+        className="image-divider"
+        layers={[
+          {
+            image: '/images/divider-image-2.jpeg',
+            amount: -0.2,
+          },
+        ]}
+        style={{
+          height: '22rem',
+          backgroundPosition: 'top',
+          backgroundSize: 'cover'
+        }}
+      >
+      </ParallaxBanner>
+      {/* <Parallax bgImage="/images/divider-image-2.jpeg" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={200}></Parallax> */}
       <div className="container">
         <div className="row d-flex align-items-center justify-content-center p-0">
           <h1 className="section-title-bold space-vertical">Latest  <Link className="pub" to='/resources'>{' '} Publications</Link></h1>
@@ -229,7 +264,7 @@ const IndexPage=() => (
             </div>
           </div>
         </div>
-        <div className="row align-items-end justify-content-end p-0">
+        <div className="row align-items-end justify-content-end mx-1">
           <Link to="/resources" className="standard-btn">See more</Link>
         </div>
         <div className="container space-vertical">

@@ -139,7 +139,7 @@
   top: 4px;
   left: 0;
   width: 15px;
-  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .timeline-marker:after {
   content: "";
