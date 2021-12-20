@@ -8,7 +8,7 @@ import './navbar.css'
 const Navbar = () => {
   const ref = useRef();
   const sticky = useStickyNavbar(140);
-  const navClasses = `col-lg-12 navbar d-flex justify-content-center align-items-center fluid ${sticky ? 'sticky' : ''}`
+  const navClasses = `navbar d-flex  align-items-center fluid ${sticky ? 'sticky' : ''}`
 
   function useStickyNavbar(offset = 0) {
     const [stick, setStick] = useState(false);

@@ -15,7 +15,7 @@ export default function Header(props) {
       <TopBar />
       <header
         id="header"
-        className="d-flex align-items-center">
+        className="d-flex align-items-center justify-content-between">
         <div className="container d-flex align-items-center justify-content-between">
           <div className="logo">
             <Link to="/">

@@ -1,12 +1,23 @@
 import React from 'react'
 import "./hero.css"
+import {IoIosPlay} from "react-icons/io";
+import TriangleIntro from '../images/triangle-intro.svg'
+
 
 export default function Hero() {
     return (
-        <section id="hero">
+        <section id="hero" className="container fluid">
+            <TriangleIntro className="triangle-intro "/>
             <div className="hero-row">
-                <h2  className="hero-heading">Changing the lives of millions of peopleto allow them to live a life in dignity.</h2>
-                <div className="right-column">
+                <div className="hero-heading">
+                    <h1>
+                    Building social protection floors for all</h1>
+                    <p>ILO Global Flagship Programme</p>
+                    <h2 className="h">
+                    Changing the lives of millions of peopleto allow them to live a life in dignity.
+                    </h2>
+                </div>
+                {/* <div className="right-column">
                     <div className="content">
                         <div className="hashtag">PUBLICATION</div>
                         <div>
@@ -14,7 +25,7 @@ export default function Hero() {
                             <a href="#" className="btn-get-started">Read our Strategy</a>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     )

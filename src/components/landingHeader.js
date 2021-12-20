@@ -14,28 +14,28 @@ export default function LandingHeader(props) {
   return (
     <>
       <TopBar />
-      <header id="header" className="d-flex align-items-center">
-        <div className="container d-flex align-items-center">
+      <header id="header" className="d-flex fluid ">
+        <div className="container d-flex align-items-between justify-content-between">
           <div className="logo me-auto">
             <Link to="/">
               <ILOSocpro className="logo-socpro" />
             </Link>
           </div>
-          <div className="headline">
-            <h1><IoIosPlay className="tri-bullet" />Building social protection floors for all</h1>
-            <p>ILO Global Flagship Programme</p>
+          <Navbar />
           </div>
-        </div>
+          {/* <div className="headline">
+            <h1>Building social protection floors for all</h1>
+            <p>ILO Global Flagship Programme</p>
+          </div> */}
       </header>
-      <Navbar />
       <ParallaxBanner
         className="masthead"
         style={{
-          height: 'calc(100vh - 170px)',
+          height: '100%',
         }}
         layers={[
           {
-            image: "/images/slide.jpg",
+            image: "/images/building-intro.jpg",
             amount: 0.2
           }
         ]}

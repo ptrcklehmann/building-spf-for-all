@@ -1,8 +1,8 @@
 .navbar {
-  background: #1E2DBE;
+  background: #fff;
+  justify-content: flex-start!important;;
   padding: 0;
   display: flex;
-  width: 100vw;
   z-index: 997;
   transition: all 0.3s ease;
 }
@@ -26,7 +26,7 @@
   font-weight: 700;
   font-size: 12px;
   line-height: 17px;
-  color: #fff;
+  color: #1E2DBE;
   white-space: nowrap;
   transition: 0.3s;
   border-left: 0.01px solid rgba(255, 255, 255, 0.2);
@@ -40,8 +40,8 @@
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #fff;
-  background-color: #151F85;
+  color: #151F85;
+  background: #BEDCFA;
   text-decoration: none;
   height: 100%;
 }
@@ -61,7 +61,7 @@
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #1E2DBE;
+  background: #fff;
   transition: 0.3s;
 }
 
@@ -86,8 +86,8 @@
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  color: #fff;
-  background: #151F85;
+  color: #151F85;
+  background: #BEDCFA;
 }
 
 .navbar .dropdown:hover > ul {
