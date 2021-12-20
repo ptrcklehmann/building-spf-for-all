@@ -1,9 +1,7 @@
 import * as React from "react"
-import PropTypes from "prop-types"
 import {Link} from "gatsby"
 import './topbar.css'
 import {IoIosMenu} from "react-icons/io";
-import {Row,Col,Container,ListGroup} from "react-bootstrap"
 
 const TopBar=() => {
     return (

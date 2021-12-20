@@ -18,7 +18,7 @@ export default function TheoryPage() {
         <Layout>
             <Seo title="Vision and value proposition" />
             <section id="theory" className="theory">
-            <HeroSmall title="Theory of change" bgImage='/images/approach/theory-of-change.jpg' />
+            <HeroSmall title="Theory of change" bgImage='/images/approach/theory-of-change.jpg' bgImageMobile='/images/approach/theory-of-change-mobile.jpg'/>
                 <div className="container">
                     <div className="row d-flex align-items-center justify-content-center space-vertical">
                         <ScrollAnimation animateIn="animate__fadeInUp">

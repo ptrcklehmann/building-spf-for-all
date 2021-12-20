@@ -24,13 +24,14 @@ SwiperCore.use([Pagination,Navigation,Autoplay]);
 const IndexPage=() => (
   <LandingLayout>
     <Seo title="Home" />
+
     <section id="about" className="about">
       <div className="container">
         <div className="py-5 row d-flex align-items-center justify-content-center">
-          <Parallax y={[-20,20]}>
+          {/* <Parallax y={[-20,20]}>
             <h1 className="section-title-bold">ILO Global Flagship Programme</h1>
-          </Parallax>
-          <div className="row align-items-center justify-content-center pb-3 space-vertical sm-column">
+          </Parallax> */}
+          <div className="row align-items-center justify-content-center pb-3  sm-column">
             <ScrollAnimation animateIn="animate__slideInUp" className="col-lg-3 col-md-12 col-sm-12 align-self-center">
               <div className="square-image">
                 <FlagshipLogo className="body-image-big" alt="ILO Flagship Programme" />

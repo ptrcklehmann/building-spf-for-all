@@ -240,11 +240,4 @@
     margin-top: 0px;
   }
 }
-.sticky {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  background: #1E2DBE;
-  transition: position 0.6 ease-out;
-}
+

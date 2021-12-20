@@ -8,16 +8,16 @@
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-end;
-  align-content: stretch;
-  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
   z-index: 15;
-  padding-bottom: 5rem;
+  transition: all 0.4 ease-in;
 }
 .triangle-intro {
-  position: absolute;
-  width: 20%;
-  top: -2rem;
+  position: relative;
+  width:10%;
+  top: 8rem;
   left: -6rem;
 }
 #hero-small {
@@ -45,7 +45,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: start;
+  align-items:center;
 }
 #hero-small .hero-row {
     width: 100vw;
@@ -68,6 +68,9 @@ padding-left: 5rem;
   flex-direction: column;
   flex-wrap: nowrap;
 }
+mark {
+  background: none;
+}
 .right-column .content {
   border-left: 1px solid #fa3c4b;
   padding-left: 2rem;
@@ -82,7 +85,6 @@ padding-left: 5rem;
 .hero-heading {
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
   margin-bottom: 0;
   width: 40%;
   /* background: #230050d8; */
@@ -95,10 +97,20 @@ padding-left: 5rem;
   font-size: 50px;
   line-height: 51px;
   letter-spacing: 0.3px;
+  padding-bottom: .8rem;
+}
+.hero-heading h2 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  color: #230050;
+  font-size: 32px;
+  line-height: 36.8px;
+  letter-spacing: 0.3px;
+  padding-bottom: 1.2rem;
 }
 .hero-heading p {
   font-family: "Overpass", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   color: #222EBE;
   font-size: 32px;
   line-height: 36.8px;
@@ -167,6 +179,9 @@ padding-left: 5rem;
     height: fit-content;
     min-height: 400px;
   }
+  mark {
+    background: #edf0f2;
+  }
   .hashtag {
     width: fit-content;
     border-radius: 1rem;
@@ -194,13 +209,34 @@ padding-left: 5rem;
     min-height: 180px;
   }
   .hero-row {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: start;
+    align-items:center;
   }
   .hero-heading {
-    width: 100%;
-    font-size: 22px;
-    line-height: 28px;
+
+    width: 80%;
+  }
+  .hero-heading h1 {
+    font-size: 36px;
+    line-height: 40px;
     padding: 1.5rem;
+  }
+  .masthead-small-mobile {
+    width: 100%;
+    height: calc(50vh - 30px);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    z-index: -2;
+  }
+  .masthead-small {
+    display: none;
   }
   .hero-highlight {
     font-size: 20px;
@@ -221,4 +257,8 @@ padding-left: 5rem;
   #hero h2 {
     font-size: 28px;
   }
+}
+
+.parallax-inner {
+  transition: position 0.5s ease-in-out;
 }

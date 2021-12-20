@@ -1,33 +1,12 @@
 import React from 'react'
-import { useState, useLayoutEffect, useRef } from "react";
 import {Link} from 'gatsby'
 import {IoIosArrowForward} from "react-icons/io";
 
 import './navbar.css'
 
 const Navbar = () => {
-  const ref = useRef();
-  const sticky = useStickyNavbar(140);
-  const navClasses = `navbar d-flex  align-items-center fluid ${sticky ? 'sticky' : ''}`
-
-  function useStickyNavbar(offset = 0) {
-    const [stick, setStick] = useState(false);
-
-    const handleScroll = () => {
-      setStick( window.scrollY > offset );
-    };
-
-    useLayoutEffect(() => {
-      window.addEventListener('scroll', handleScroll);
-
-      return(() => {
-        window.removeEventListener('scroll', handleScroll);
-      });
-    });
-    return stick;
-  }
   return (
-    <nav id="navbar" ref={ref} className={ navClasses } >
+    <nav id="navbar"  className='navbar d-flex align-items-center fluid' >
           <ul>
               <li><Link className="nav-link scrollto" activeClassName="active" to="/">Home</Link></li>
               <li className="dropdown">

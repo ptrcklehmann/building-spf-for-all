@@ -5,30 +5,48 @@ import Navbar from "./navbar"
 import {IoIosPlay} from "react-icons/io";
 import "./header.css"
 import ILOSocpro from '../images/ILO_socpro.svg'
+import { useState, useLayoutEffect, useRef } from "react";
+
 
 export default function Header(props) {
+  const ref = useRef();
+  const sticky = useStickyHeader(30);
+  const headerClasses = `header d-flex fluid ${sticky ? 'sticky' : ''}`
+  const hiddenBar = `hidden-bar ${sticky? 'active':''}`
 
+  function useStickyHeader(offset = 0) {
+    const [stick, setStick] = useState(false);
+
+    const handleScroll = () => {
+      setStick( window.scrollY > offset );
+    };
+
+    useLayoutEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+
+      return(() => {
+        window.removeEventListener('scroll', handleScroll);
+      });
+    });
+    return stick;
+  }
   console.log(props)
 
   return (
     <>
       <TopBar />
-      <header
-        id="header"
-        className="d-flex align-items-center justify-content-between">
-        <div className="container d-flex align-items-center justify-content-between">
-          <div className="logo">
+      <div className={hiddenBar}>
+      </div>
+      <header ref={ref} className={headerClasses}>
+        <div className="container d-flex align-items-between justify-content-between">
+          <div className="logo me-auto">
             <Link to="/">
               <ILOSocpro className="logo-socpro" />
             </Link>
           </div>
-          <div className="headline">
-            <h1><IoIosPlay className="tri-bullet" />Building social protection floors for all</h1>
-            <p>ILO Global Flagship Programme</p>
+          <Navbar />
           </div>
-        </div>
       </header>
-      <Navbar />
     </>
   )
 }

@@ -20,7 +20,7 @@ export default function VisionPage() {
     return (
         <Layout>
             <Seo title="Vision and value proposition" />
-            <HeroSmall title="Vision and value proposition" bgImage='/images/approach/vision-and-value.jpg' />
+            <HeroSmall title="Vision and value proposition" bgImage='/images/approach/vision-and-value-1.jpg' bgImageMobile='/images/approach/vision-and-value-mobile.jpg'/>
             <section id="vision" className="vision">
                 <div className="container">
                     <div className="row align-items-center justify-content-center space-vertical">
