@@ -18,6 +18,18 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-plugin-social-cards",
+      options: {
+
+        // image to use when no cover in frontmatter
+        backgroundImage: "./static/images/building-intro.jpg",
+        // author to use when no auth in frontmatter
+        defaultAuthor: "International Labour Organization",
+        // card design
+        design: "card", // 'default' or 'card'
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
