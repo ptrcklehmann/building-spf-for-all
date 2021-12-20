@@ -86,8 +86,7 @@ mark {
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
-  width: 40%;
-  /* background: #230050d8; */
+  width: 50%;
   align-items: flex-start;
 }
 .hero-heading h1 {
@@ -181,6 +180,7 @@ mark {
   }
   mark {
     background: #edf0f2;
+    padding: 0;
   }
   .hashtag {
     width: fit-content;
@@ -214,13 +214,11 @@ mark {
     align-items:center;
   }
   .hero-heading {
-
     width: 80%;
   }
   .hero-heading h1 {
     font-size: 36px;
     line-height: 40px;
-    padding: 1.5rem;
   }
   .masthead-small-mobile {
     width: 100%;

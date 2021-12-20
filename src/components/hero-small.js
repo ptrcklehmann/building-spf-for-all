@@ -10,6 +10,7 @@ export default function HeroSmall(props) {
                 className="masthead-small"
                 style={{
                     height: '50vh',
+                    minHeight: 'fit-content',
                 }}
                 layers={[
                     {
@@ -31,6 +32,7 @@ export default function HeroSmall(props) {
                 className="masthead-small-mobile"
                 style={{
                     height: '50vh',
+                    minHeight: 'fit-content',
                 }}
                 layers={[
                     {

@@ -12,11 +12,9 @@ export default function Hero() {
             </Parallax>
             <div className="hero-row">
                 <div className="hero-heading">
-                    <h1>
-                    Building social protection floors for all</h1>
+                    <h1>Building social protection floors for all</h1>
                     <h2>ILO Global Flagship Programme</h2>
-                    <p><mark>
-                    Changing the lives of millions of peopleto allow them to live a life in dignity.
+                    <p><mark>Changing the lives of millions of peopleto allow them to live a life in dignity.
                     </mark></p>
                 </div>
             </div>
