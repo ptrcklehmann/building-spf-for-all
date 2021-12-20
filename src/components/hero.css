@@ -16,9 +16,9 @@
 }
 .triangle-intro {
   position: relative;
-  width:10%;
-  top: 8rem;
-  left: -6rem;
+  width:15%;
+  top: 3rem;
+  left: -10rem;
 }
 #hero-small {
   height: 100%;
@@ -70,6 +70,7 @@ padding-left: 5rem;
 }
 mark {
   background: none;
+  padding: 0;
 }
 .right-column .content {
   border-left: 1px solid #fa3c4b;
@@ -174,13 +175,20 @@ mark {
 }
 
 @media (max-width: 992px) {
+  .triangle-intro {
+    position: relative;
+    width:25%;
+    top: 1rem;
+    left: -6rem;
+    z-index: -3;
+  }
   #hero {
     height: fit-content;
     min-height: 400px;
   }
   mark {
     background: #edf0f2;
-    padding: 0;
+    padding: .3rem 0;
   }
   .hashtag {
     width: fit-content;
