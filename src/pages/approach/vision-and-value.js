@@ -111,7 +111,7 @@ export default function VisionPage() {
                             <p className="col-lg-9 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be embedded in law to provide rights and obligations for current and future generations;</p>
                             <p className="col-lg-12 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be adequately and sustainably financed.</p>
                         </div>
-                        <div className="col-lg-6 col-md-12 mt-lg-2 col-sm-12">
+                        <div className="col-lg-6 col-md-12 mt-lg-2 col-sm-12 video-frame">
                             <DoubleBullet className="double-bullet" />
                             <h3 className='mb-1 video-title bold'>Mozambique</h3>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/babu1BLiNHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
