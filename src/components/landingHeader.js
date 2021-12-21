@@ -1,7 +1,7 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import TopBar from "./topbar"
-import Navbar from "./navbar"
+import MyNavbar from "./navbar"
 import "./header.css"
 import ILOSocpro from '../images/ILO_socpro.svg'
 import Hero from "./hero"
@@ -44,7 +44,7 @@ export default function LandingHeader(props) {
               <ILOSocpro className="logo-socpro" />
             </Link>
           </div>
-          <Navbar />
+          <MyNavbar />
         </div>
       </header>
       <ParallaxBanner
@@ -64,7 +64,7 @@ export default function LandingHeader(props) {
       <ParallaxBanner
         className="masthead-mobile"
         style={{
-          height: 'calc(100vh - 60px)',
+          height: '100%',
           transition: 'all 0.2s ease-in-out'
         }}
         layers={[

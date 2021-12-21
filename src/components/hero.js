@@ -6,7 +6,7 @@ import {Parallax} from 'react-scroll-parallax';
 
 export default function Hero() {
     return (
-        <section id="hero" className="container fluid">
+        <section id="hero" className="container">
             <Parallax y={[-80, 50]} className="triangle-intro">
             <TriangleIntro />
             </Parallax>

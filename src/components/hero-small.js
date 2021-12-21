@@ -5,12 +5,11 @@ import TriangleIntro from '../images/triangle-intro.svg'
 
 export default function HeroSmall(props) {
     return (
-        <section id="hero-small">
+        <section id="hero-small" className="container">
             <ParallaxBanner
                 className="masthead-small"
                 style={{
                     height: '50vh',
-                    minHeight: 'fit-content',
                 }}
                 layers={[
                     {
@@ -32,7 +31,6 @@ export default function HeroSmall(props) {
                 className="masthead-small-mobile"
                 style={{
                     height: '50vh',
-                    minHeight: 'fit-content',
                 }}
                 layers={[
                     {

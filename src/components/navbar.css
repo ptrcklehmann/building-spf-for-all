@@ -1,3 +1,20 @@
+.offcanvasNavbarLabel {
+  font-family: 'Noto Sans' sans-serif;
+  font-size: 4rem;
+  line-height: 1.1rem;
+}
+.social-logo-link {
+  padding: 0;
+  border: 0;
+  width:fit-content;
+}
+.social-logo-link a svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: .025rem;
+  fill: #82AFDC;
+
+}
 .navbar {
   background: #fff;
   justify-content: flex-start!important;;
@@ -15,8 +32,8 @@
   align-items: center;
   height: fit-content;
 }
-.navbar ul li a,
-.navbar ul li a:focus {
+.nav-item a,
+.nav-item  a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -25,21 +42,21 @@
   letter-spacing: -0.1px;
   font-weight: 700;
   font-size: 12px;
-  line-height: 17px;
+  line-height: 15px;
   color: #1E2DBE;
   white-space: nowrap;
   transition: 0.3s;
   border-left: 0.01px solid rgba(255, 255, 255, 0.2);
 }
 
-.navbar .last {
+.nav-item .last {
   border-right: 0.01px solid rgba(255, 255, 255, 0.2);
 }
 
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
+.nav-item > a:hover,
+.nav-item >.active,
+.nav-item >.active:focus,
+.nav-item:hover > a {
   color: #151F85;
   background: #BEDCFA;
   text-decoration: none;
@@ -53,7 +70,7 @@
   transform: rotate(90deg);
   transition: all 0.25s ease-out;
 }
-.navbar .dropdown ul {
+.dropdown-toggle .nav-item  {
   display: block;
   position: absolute;
   top: 100%;
@@ -64,8 +81,7 @@
   background: #fff;
   transition: 0.3s;
 }
-
-.navbar .dropdown a {
+.dropdown-toggle .nav-item a {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -74,18 +90,18 @@
   text-align: center;
 }
 
-.navbar .dropdown li a {
+.dropdown-toggle a {
   text-transform: none;
   text-decoration: none;
 }
 
-.navbar .dropdown ul a i {
+.navbar .dropdown-toggle ul a i {
   font-size: 12px;
 }
 
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown-toggle a:hover,
+.navbar .active:hover,
+.navbar .dropdown:hover > a {
   color: #151F85;
   background: #BEDCFA;
 }
@@ -172,6 +188,7 @@
   background-color: #fff;
   overflow-y: auto;
   transition: 0.3s;
+
 }
 
 .navbar-mobile a,
@@ -239,5 +256,28 @@
   .scrolled-offset {
     margin-top: 0px;
   }
+  .offcanvas-body {
+    display: none!important;
+  }
 }
 
+.offcanvas-body .nav-item {
+  height: fit-content!important;
+  display: flex;
+
+}
+.navbar-toggler {
+padding: 0.25rem 0.75rem;
+font-size: 1.25rem;
+line-height: 1;
+background-color: #fff;
+border: 0;
+
+}
+.navbar-toggler span {
+  color: #1E2DBE;
+}
+.navbar-expand-lg .offcanvas-body {
+  display: flex;
+  align-items: center;
+}

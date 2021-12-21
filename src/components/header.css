@@ -24,7 +24,6 @@
   align-items: flex-start;
   z-index: -2;
 }
-
 .masthead-small-mobile {
   display: none;
 }
@@ -111,8 +110,6 @@
   }
   .masthead {
     display: none;
-  }
-  .hero-row {
   }
   .masthead-mobile {
     width: 100%;

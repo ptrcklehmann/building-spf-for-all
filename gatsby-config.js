@@ -21,7 +21,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-social-cards",
       options: {
-
         // image to use when no cover in frontmatter
         backgroundImage: "./static/images/building-intro.jpg",
         // author to use when no auth in frontmatter
@@ -55,7 +54,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/ilo-favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/ilo-favicon-01.png`, // This path is relative to the root of the site.
       },
     },
     {
