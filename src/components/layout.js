@@ -19,7 +19,6 @@ const Layout=({children}) => {
       site {
         siteMetadata {
           title
-          headerImg
         }
       }
     }

@@ -1194,6 +1194,24 @@ a:hover {
   opacity: 1;
 }
 @media (max-width: 992px) {
+  .news-item .news-content {
+    margin: 0;
+  position: relative;
+  padding: 5px;
+  padding-left: 40px;
+  border: 2px solid #ebf5fd;
+  border-radius: 1px;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  }
+  .news-item.right .news-content {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
   .news-item .news-content:after,
   .news-item .news-content:before {
     display: none;

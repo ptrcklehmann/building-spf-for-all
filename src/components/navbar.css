@@ -12,7 +12,7 @@
   width: 1.5rem;
   height: 1.5rem;
   padding: .025rem;
-  fill: #82AFDC;
+  fill: #1E2DBE;
 
 }
 .navbar {
@@ -132,17 +132,20 @@
     left: -100%;
   }
 }
-
-.mobile-nav-toggle {
-  color: #fff;
-  cursor: pointer;
-  display: none;
-  line-height: 0;
-  transition: 0.5s;
+.offcanvas {
+  border: none;
 }
-
-.mobile-nav-toggle.bi-x {
-  color: #edf0f2;
+.btn-close {
+  color: #151F85!important;
+}
+.mobile-nav-toggle {
+  border: none !important;
+  display: none;
+}
+.mobile-nav-toggle svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #151F85;
   z-index: 100;
 }
 
@@ -258,6 +261,9 @@
   }
   .offcanvas-body {
     display: none!important;
+  }
+  .mobile-nav-toggle {
+    display: block !important;
   }
 }
 

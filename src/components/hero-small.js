@@ -1,11 +1,11 @@
 import React from 'react'
 import "./hero.css"
 import {ParallaxBanner,Parallax} from 'react-scroll-parallax';
-import TriangleIntro from '../images/triangle-intro.svg'
+import DoubleBullet from '../images/double-bullet.svg'
 
 export default function HeroSmall(props) {
     return (
-        <section id="hero-small" className="container">
+        <>
             <ParallaxBanner
                 className="masthead-small"
                 style={{
@@ -18,14 +18,14 @@ export default function HeroSmall(props) {
                     }
                 ]}
                 y={[1,3]}>
-                <Parallax y={[-80,50]} className="triangle-intro">
-                    <TriangleIntro />
-                </Parallax>
+                <section id="hero-small" className="container">
                 <div className="hero-row">
-                    <div className="hero-heading">
+                    <div className="hero-heading justify-items-start">
+                    <DoubleBullet className="double-bullet" />
                         <h1>{props.title}</h1>
                     </div>
                 </div>
+                </section>
             </ParallaxBanner>
             <ParallaxBanner
                 className="masthead-small-mobile"
@@ -39,16 +39,15 @@ export default function HeroSmall(props) {
                     }
                 ]}
                 y={[1,3]}>
-                <Parallax y={[-80,50]} className="triangle-intro">
-                    <TriangleIntro />
-                </Parallax>
+                <section id="hero-small" className="container">
                 <div className="hero-row">
                     <div className="hero-heading">
+                    <DoubleBullet className="double-bullet" />
                         <h1>{props.title}</h1>
                     </div>
                 </div>
+                </section>
             </ParallaxBanner>
-
-        </section>
+        </>
     )
 }

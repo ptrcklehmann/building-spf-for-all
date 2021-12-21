@@ -13,16 +13,16 @@
 }
 .masthead-small {
   width: 100%;
-  height: calc(50vh - 30px);
-  background-size: cover;
-  background-position: bottom center;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-end;
+  justify-content:center;
   align-content: flex-start;
-  align-items: flex-start;
+  align-items:flex-start;
+  background-position: center center;
+  background-size: cover;
   z-index: -2;
+  transition: all 0.4s ease-in-out;
 }
 .masthead-small-mobile {
   display: none;

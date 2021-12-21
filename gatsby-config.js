@@ -3,9 +3,8 @@ module.exports = {
   siteMetadata: {
     title: `Building social protection floors for all`,
     description: `ILO Global Flagship Programme website on Building social protection floors for all`,
-    author: `ILO, ptrcklehmann`,
+    author: `@soc_protection`,
     siteUrl: `https://buildingspfforall.gatsbyjs.io`,
-    headerImg: `/images/slide.jpg`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -72,6 +71,7 @@ module.exports = {
         // More options defined here https://purgecss.com/configuration.html#options
       },
     },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -24,7 +24,6 @@ SwiperCore.use([Pagination,Navigation,Autoplay]);
 const IndexPage=() => (
   <LandingLayout>
     <Seo title="Home" />
-
     <section id="about" className="about">
       <div className="container">
         <div className="py-5 row d-flex align-items-center justify-content-center">
@@ -85,11 +84,10 @@ const IndexPage=() => (
                 </div>
               </ScrollAnimation>
             </div>
-
             <div className="col-sm-12 col-md-12 col-lg-6 news-item right">
               <ScrollAnimation animateIn="animate__fadeInUp ">
                 <div className="news-content">
-                  <article >
+                  <article>
                     <h3>Adequacy and comprehensiveness</h3>
                     <p className="body-large">
                       Improve benefit adequacy and comprehensiveness for <span>10 million</span> people</p>
@@ -98,7 +96,6 @@ const IndexPage=() => (
                 </div>
               </ScrollAnimation>
             </div>
-
             <div className="col-sm-12 col-md-12 col-lg-6 news-item">
               <ScrollAnimation animateIn="animate__fadeInUp" >
                 <div className="news-content">
