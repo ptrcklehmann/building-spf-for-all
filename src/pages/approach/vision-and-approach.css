@@ -2,6 +2,10 @@
   background: #1E2DBE;
   width: 100vw;
 }
+.container .double-bullet {
+  width: 3rem;
+  padding-bottom: 1rem;
+}
 .white {
   color: #fff;
   text-align: right;

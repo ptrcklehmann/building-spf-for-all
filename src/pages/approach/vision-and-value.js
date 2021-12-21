@@ -7,14 +7,13 @@ import Elderly from '../../images/elder.svg'
 import Disability from '../../images/disability.svg'
 import Children from '../../images/children.svg'
 import Mother from '../../images/mother.svg'
-import Vision from '../../images/vision-illustration.svg'
 import ValueProposition from '../../images/value_proposition.svg'
 import "./vision-and-approach.css"
 import {IoIosPlay} from "react-icons/io";
-import {Parallax,ParallaxBanner} from 'react-scroll-parallax';
+import {ParallaxBanner} from 'react-scroll-parallax';
 import {Link} from "gatsby"
 import HeroSmall from "../../components/hero-small";
-
+import DoubleBullet from '../../images/double-bullet.svg'
 
 export default function VisionPage() {
     return (
@@ -113,6 +112,7 @@ export default function VisionPage() {
                             <p className="col-lg-12 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be adequately and sustainably financed.</p>
                         </div>
                         <div className="col-lg-6 col-md-12 mt-lg-2 col-sm-12">
+                            <DoubleBullet className="double-bullet" />
                             <h3 className='mb-1 video-title bold'>Mozambique</h3>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/babu1BLiNHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <p className="col-lg-12 col-md-12 col-sm-12 body-medium t-b"><IoIosPlay className="tri-bullet" />COVID 19 and my disability won't stop my search for work</p>
