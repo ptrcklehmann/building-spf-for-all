@@ -20,7 +20,7 @@ export default function VisionPage() {
     return (
         <Layout>
             <Seo title="Vision and value proposition" />
-            <HeroSmall title="Vision and value proposition" bgImage='/images/approach/vision-and-value-1.jpg' bgImageMobile='/images/approach/vision-and-value-mobile.jpg'/>
+            <HeroSmall title="Vision and value proposition" bgImage='/images/approach/vision-and-value-1.jpg' bgImageMobile='/images/approach/vision-and-value-mobile.jpg' />
             <section id="vision" className="vision">
                 <div className="container">
                     <div className="row align-items-center justify-content-center space-vertical">
@@ -100,7 +100,7 @@ export default function VisionPage() {
                 </ParallaxBanner>
                 {/* <Parallax bgImage="/images/divider-image.jpeg" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={-200}></Parallax> */}
                 <div className="container">
-                    <div className="row align-items-start justify-content-around pb-3  sm-column">
+                    <div className="row align-items-center justify-content-around pb-3  sm-column">
                         <ScrollAnimation animateIn="animate__fadeInUp">
                             <h1 className="section-title-bold space-vertical">Our vision</h1>
                         </ScrollAnimation>
@@ -112,8 +112,10 @@ export default function VisionPage() {
                             <p className="col-lg-9 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be embedded in law to provide rights and obligations for current and future generations;</p>
                             <p className="col-lg-12 col-md-12 col-sm-12 ident bold"><IoIosPlay className="tri-bullet" />Should be adequately and sustainably financed.</p>
                         </div>
-                        <div className="col-lg-3 col-md-12 mt-lg-2 col-sm-12 square-image">
-                            <Vision />
+                        <div className="col-lg-6 col-md-12 mt-lg-2 col-sm-12">
+                            <h3 className='mb-1 video-title bold'>Mozambique</h3>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/babu1BLiNHs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p className="col-lg-12 col-md-12 col-sm-12 body-medium t-b"><IoIosPlay className="tri-bullet" />COVID 19 and my disability won't stop my search for work</p>
                         </div>
                     </div>
                 </div>

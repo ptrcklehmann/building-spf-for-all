@@ -654,7 +654,7 @@ pre tt:after {
 .body-medium {
   font-size: 1rem;
   font-weight: 300;
-  color: #1f064d;
+  color: #1d2ebe;
   line-height: 1.3em;
   font-family: Overpass, sans-serif;
   margin-bottom: 0 !important;
@@ -669,6 +669,10 @@ pre tt:after {
 .body-large .tri-bullet {
   color: #fb636f;
   transform: translateY(-2px);
+}
+.body-medium .tri-bullet {
+  color: #fb636f;
+  transform: translateY(-1px);
 }
 
 .body-large-heading {
