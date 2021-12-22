@@ -172,7 +172,7 @@ const IndexPage=() => (
             </div>
           </SwiperSlide>
         </Swiper>
-        <div className="row align-items-end justify-content-end space-vertical-bottom" style={{backgroundImage: 'url(/images)'}}>
+        <div className="row align-items-end justify-content-end mx-1">
           <Link to="/news-and-events" className="standard-btn">See more</Link>
         </div>
       </div>

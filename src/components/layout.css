@@ -749,7 +749,12 @@ pre tt:after {
   height: 21rem;
   margin: auto;
 }
-
+.card .year {
+  padding: 0.2rem;
+  width: 2rem;
+  font-weight: 600;
+  font-family: Noto Sans, Arial, sans-serif;
+}
 .wrapper {
   background-size: cover;
   background-position: center center;
