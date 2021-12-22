@@ -5,8 +5,9 @@ import MyNavbar from "./navbar"
 import "./header.css"
 import ILOSocpro from '../images/ILO_socpro.svg'
 import Hero from "./hero"
-import {ParallaxBanner} from 'react-scroll-parallax';
-import {useState,useLayoutEffect,useRef} from "react";
+import {useState, useLayoutEffect, useRef} from "react";
+import useViewport from './hooks/useViewport'
+import {Parallax} from "react-parallax";
 
 
 export default function LandingHeader(props) {
@@ -14,14 +15,14 @@ export default function LandingHeader(props) {
   const sticky=useStickyHeader(30);
   const headerClasses=`header d-flex fluid ${sticky? 'sticky':''}`
   const hiddenBar=`hidden-bar ${sticky? 'active':''}`
+  const { width } = useViewport();
+  const breakpoint = 992;
 
   function useStickyHeader(offset=0) {
     const [stick,setStick]=useState(false);
-
     const handleScroll=() => {
       setStick(window.scrollY>offset);
     };
-
     useLayoutEffect(() => {
       window.addEventListener('scroll',handleScroll);
 
@@ -31,6 +32,7 @@ export default function LandingHeader(props) {
     });
     return stick;
   }
+
   console.log(props)
   return (
     <>
@@ -47,34 +49,9 @@ export default function LandingHeader(props) {
           <MyNavbar />
         </div>
       </header>
-      <ParallaxBanner
-        className="masthead"
-        style={{
-          height: '100%',
-          transition: 'all 0.2s ease-in-out'
-        }}
-        layers={[
-          {
-            image: "/images/building-intro.jpg",
-            amount: -0.2
-          },
-        ]}>
+      <Parallax bgImage={width < breakpoint ? '/images/building-intro-mobile.jpg' : "/images/building-intro.jpg"} strength={200}>
         <Hero />
-      </ParallaxBanner>
-      <ParallaxBanner
-        className="masthead-mobile"
-        style={{
-          height: '100%',
-          transition: 'all 0.2s ease-in-out'
-        }}
-        layers={[
-          {
-            image: "/images/building-intro-mobile.jpg",
-            amount: -0.2
-          }
-        ]}>
-        <Hero />
-      </ParallaxBanner>
+      </Parallax>
     </>
   )
 }

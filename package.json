@@ -34,6 +34,7 @@
     "gbimage-bridge": "^0.1.4",
     "hooks": "link:./src/hooks",
     "prop-types": "^15.7.2",
+    "rc-tooltip": "^5.1.1",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-background-slider": "^2.0.0",
@@ -46,6 +47,7 @@
     "react-responsive-carousel": "^3.2.22",
     "react-scroll-parallax": "^2.4.1",
     "react-spring": "^9.3.2",
+    "react-tooltip": "^4.2.21",
     "styled-components": "^5.3.3",
     "swiper": "^7.3.3"
   },

@@ -6,7 +6,7 @@ import Adequacy from '../images/adequacy.svg'
 import Effective from '../images/effective-coverage.svg'
 import Institutional from '../images/institutional-changes.svg'
 import Legal from '../images/legal-coverage.svg'
-import {Parallax, ParallaxBanner} from 'react-scroll-parallax';
+import {Parallax} from "react-parallax";
 import {Link} from "gatsby"
 import "animate.css";
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -18,6 +18,8 @@ import "swiper/css/effect-fade"
 import SwiperCore,{
   Pagination,Navigation,Autoplay,
 } from 'swiper';
+import DoubleBullet from '../images/double-bullet.svg'
+
 
 SwiperCore.use([Pagination,Navigation,Autoplay]);
 
@@ -47,25 +49,11 @@ const IndexPage=() => (
           </div>
         </div>
       </div>
-      <ParallaxBanner
-        className="image-divider"
-        layers={[
-          {
-            image: '/images/divider-image.jpeg',
-            amount: -0.2,
-          },
-        ]}
-        style={{
-          height: '25rem',
-          backgroundPosition: 'top',
-          backgroundSize: 'cover'
-        }}
-      >
-      </ParallaxBanner>
-      {/* <Parallax bgImage="" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={-200}></Parallax> */}
+      <Parallax bgImage="../images/divider-image.jpg" strength={200}>
+      </Parallax>
       <div className="container">
         <ScrollAnimation animateIn="animate__fadeInUp">
-          <h1 className="section-title-bold-center space-vertical">Our ambition 2025</h1>
+          <h1 className="section-title-bold space-vertical">Our ambition <Link className="news" to='/#'>{' '}2025</Link></h1>
         </ScrollAnimation>
         <div className="timeline">
           <div className="row">
@@ -106,7 +94,6 @@ const IndexPage=() => (
                 </div>
               </ScrollAnimation>
             </div>
-
             <div className="col-sm-12 col-md-12 col-lg-6 news-item right">
               <ScrollAnimation animateIn="animate__fadeInUp">
                 <div className="news-content">
@@ -120,7 +107,6 @@ const IndexPage=() => (
                 </div>
               </ScrollAnimation>
             </div>
-
           </div>
         </div>
       </div>
@@ -129,7 +115,7 @@ const IndexPage=() => (
           <h1 className="section-title-bold space-vertical">Latest from  <Link className="news" to='/news'>{' '}News & Events</Link></h1>
         </div>
         <Swiper
-          slidesPerGroup={1}
+          slidesPerGroup={2}
           loop={true}
           loopFillGroupWithBlank={true}
           pagination={{
@@ -137,10 +123,9 @@ const IndexPage=() => (
           }}
           navigation={true}
           autoplay={{
-            "delay": 3500,
+            "delay": 5500,
             "disableOnInteraction": false
           }}
-          className="mySwiper"
           style={{'--swiper-navigation-color': '#1F054D'}}
           breakpoints={{
             "640": {
@@ -149,17 +134,16 @@ const IndexPage=() => (
             },
             "768": {
               "slidesPerView": 2,
-              "spaceBetween": 10
+              "spaceBetween": 2
             },
             "1024": {
-              "slidesPerView": 3,
-              "spaceBetween": 5
+              "slidesPerView": 2,
+              "spaceBetween": 2
             }
           }}>
           <SwiperSlide>
             <div className="card-news">
-              <p className="year">2021</p>
-              <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/49849451172_d09bd9e01e_k.jpg)'}}>
+              <div className="wrapper" style={{backgroundImage: 'url(/images/49849451172_d09bd9e01e_k.jpg)'}}>
                 <div className="card-header ">
                   <h3 className="card-title "><Link to="# ">Cras elementum lacinia tristique. </Link></h3>
                   <Link to="# " className="standard-btn">Go to link</Link>
@@ -168,20 +152,8 @@ const IndexPage=() => (
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="card-news" >
-              <p className="year">2021</p>
-              <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/49846550311_7428f3a54a_k.jpg)'}}>
-                <div className="card-header ">
-                  <h3 className="card-title "><Link to="# ">Duis vulputate blandit ante nec bibendum.</Link></h3>
-                  <Link to="# " className="standard-btn">Go to link</Link>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
             <div className="card-news">
-              <p className="year">2021</p>
-              <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
+              <div className="wrapper" style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
                 <div className="card-header ">
                   <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
                   <Link to="#" className="standard-btn">Go to link</Link>
@@ -191,8 +163,7 @@ const IndexPage=() => (
           </SwiperSlide>
           <SwiperSlide>
             <div className="card-news">
-              <p className="year">2021</p>
-              <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
+              <div className="wrapper" style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
                 <div className="card-header ">
                   <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
                   <Link to="#" className="standard-btn">Go to link</Link>
@@ -205,22 +176,8 @@ const IndexPage=() => (
           <Link to="/news-and-events" className="standard-btn">See more</Link>
         </div>
       </div>
-      <ParallaxBanner
-        className="image-divider"
-        layers={[
-          {
-            image: '/images/divider-image-2.jpeg',
-            amount: -0.2,
-          },
-        ]}
-        style={{
-          height: '22rem',
-          backgroundPosition: 'top',
-          backgroundSize: 'cover'
-        }}
-      >
-      </ParallaxBanner>
-      {/* <Parallax bgImage="/images/divider-image-2.jpeg" className="image-divider" bgStyle={{backgroundPosition: 'bottom top',backgroundSize: 'cover'}} bgImageAlt="Building social protection floors for all" strength={200}></Parallax> */}
+      <Parallax bgImage="../images/index-divider-2.jpg" strength={200} >
+      </Parallax>
       <div className="container">
         <div className="row d-flex align-items-center justify-content-center p-0">
           <h1 className="section-title-bold space-vertical">Latest  <Link className="pub" to='/resources'>{' '} Publications</Link></h1>
@@ -230,7 +187,6 @@ const IndexPage=() => (
             <p className="year">2021</p>
             <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/strategy_for_the_second_phase.jpg)'}}>
               <div className="card-header">
-                {/* <span className="card-subject">Building social protection floors for all</span> */}
                 <h3 className="card-title "><Link to="# ">Strategy for the second phase 2021-2025</Link></h3>
                 <Link to="#" className="standard-btn">Go to link</Link>
               </div>
@@ -240,7 +196,6 @@ const IndexPage=() => (
             <p className="year">2021</p>
             <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/5-year-report.jpg)'}}>
               <div className="card-header ">
-                {/* <span className="card-subject ">Building social protection floors for all</span> */}
                 <h3 className="card-title "><Link to="# "> Report of the first phase 2016-2020</Link></h3>
                 <Link to="#" className="standard-btn">Go to link</Link>
               </div>
@@ -250,7 +205,6 @@ const IndexPage=() => (
             <p className="year">2021</p>
             <div className="wrapper d-flex justify-content-end flex-column " style={{backgroundImage: 'url(/images/annexes-thematic.jpg)'}}>
               <div className="card-header ">
-                {/* <span className="card-subject ">Building social protection floors for all</span> */}
                 <h3 className="card-title "><Link to="# ">Thematic areas prioritized in the second phase of Flagship Programme
                   2021-2025</Link></h3>
                 <Link to="#" className="standard-btn">Go to link</Link>
@@ -268,30 +222,6 @@ const IndexPage=() => (
         </div>
       </div>
     </section>
-
-    {/* <div className="row ">
-                <div className="mb-4 col-12 col-md-12 col-lg-12 animate ">
-                    <h2 className="level-1 rectangle square ">Life without social protection means</h2>
-                    <ol className="animate level-2-wrapper ">
-                        <li className="square ">
-                            <p className="level-2 rectangle lh-base ">People cannot access the health care services they need</p>
-                        </li>
-                        <li className="square ">
-                            <p className="level-2 rectangle lh-base ">Children have to work to help their parents</p>
-                        </li>
-                        <li className="square ">
-                            <p className="level-2 rectangle lh-base ">Women have to go back to work the day after deliveing their babies
-                            </p>
-                        </li>
-                        <li className="square ">
-                            <p className="level-2 rectangle lh-base ">Frail older persons have to work until they die</p>
-                        </li>
-                        <li className="square ">
-                            <p className="level-2 rectangle lh-base ">Persons with disability have no income on their own </p>
-                        </li>
-                    </ol>
-                </div>
-            </div> */}
   </LandingLayout>
 )
 

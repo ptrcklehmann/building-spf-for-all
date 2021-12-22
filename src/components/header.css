@@ -12,7 +12,7 @@
   transition: all 0.4s ease-in-out;
 }
 .masthead-small {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -47,7 +47,7 @@
   transition: all 0.2s ease-in-out;
 }
 .hidden-bar {
-  height: 116px;
+  height: 120px;
   width: 100vw;
   transition: all 0.2s ease-in-out;
   background: #ebf5fd;
