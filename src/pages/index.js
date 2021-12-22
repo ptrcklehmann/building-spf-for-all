@@ -50,6 +50,9 @@ const IndexPage=() => (
         </div>
       </div>
       <Parallax bgImage="../images/divider-image.jpg" strength={200}>
+      <div className="image-divider">
+
+          </div>
       </Parallax>
       <div className="container">
         <ScrollAnimation animateIn="animate__fadeInUp">
@@ -177,6 +180,9 @@ const IndexPage=() => (
         </div>
       </div>
       <Parallax bgImage="../images/index-divider-2.jpg" strength={200} >
+        <div className="image-divider">
+
+        </div>
       </Parallax>
       <div className="container">
         <div className="row d-flex align-items-center justify-content-center p-0">
