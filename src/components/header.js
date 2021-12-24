@@ -1,8 +1,8 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import TopBar from "./topbar"
-import Navbar from "./navbar"
-import {IoIosPlay} from "react-icons/io";
+import NewNavbar from "./newNavbar"
+// import {IoIosPlay} from "react-icons/io";
 import "./header.css"
 import ILOSocpro from '../images/ILO_socpro.svg'
 import { useState, useLayoutEffect, useRef } from "react";
@@ -44,7 +44,7 @@ export default function Header(props) {
               <ILOSocpro className="logo-socpro" />
             </Link>
           </div>
-          <Navbar />
+          <NewNavbar />
           </div>
       </header>
     </>

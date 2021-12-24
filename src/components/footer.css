@@ -51,6 +51,7 @@
 }
 .footer-info a:hover {
     text-decoration: underline;
+    color: #fff;
 }
 
 .footer-top h4 {

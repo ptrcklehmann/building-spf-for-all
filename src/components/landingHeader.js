@@ -1,7 +1,7 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import TopBar from "./topbar"
-import MyNavbar from "./navbar"
+import NewNavbar from "./newNavbar"
 import "./header.css"
 import ILOSocpro from '../images/ILO_socpro.svg'
 import Hero from "./hero"
@@ -46,7 +46,7 @@ export default function LandingHeader(props) {
               <ILOSocpro className="logo-socpro" />
             </Link>
           </div>
-          <MyNavbar />
+          <NewNavbar />
         </div>
       </header>
       <Parallax bgImage={width < breakpoint ? '/images/building-intro-mobile.jpg' : "/images/building-intro.jpg"} strength={200}>

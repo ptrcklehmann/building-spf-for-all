@@ -113,9 +113,9 @@ const IndexPage=() => (
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container space-vertical">
         <div className="row d-flex align-items-center justify-content-center">
-          <h1 className="section-title-bold space-vertical">Latest from  <Link className="news" to='/news'>{' '}News & Events</Link></h1>
+          <h1 className="section-title-bold space-vertical-bottom">Latest from  <Link className="news" to='/news'>{' '}News & Events</Link></h1>
         </div>
         <Swiper
           slidesPerGroup={2}
