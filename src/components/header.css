@@ -29,14 +29,11 @@
 }
 .header {
   background: #fff;
+  box-shadow: 0px 5px 15px 0px rgba(190, 220, 250, 0.09);
   padding: 18px 0;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.06);
-  transition: all 0.4s ease-in-out;
   z-index: 99;
-  position: absolute !important;
-  top: 30px !important;
-  left: 0 !important;
-  right: 0 !important;
+  transition: all 0.4s ease;
+  width: 100vw;
 }
 
 .headline h1 {
@@ -87,9 +84,6 @@
   .hidden-bar {
     height: 96px;
   }
-  .header {
-    padding: 18px 0;
-  }
   .masthead {
     display: none;
   }
@@ -124,16 +118,8 @@
   }
 }
 
-@media (max-width: 991px) {
-  .scrolled-offset {
-    margin-top: 0px;
-  }
-}
 .sticky {
   position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
   padding: 5px 0;
   transition: all 0.2s ease-in-out;
 }

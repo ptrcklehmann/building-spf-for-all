@@ -1,7 +1,7 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import TopBar from "./topbar"
-import NewNavbar from "./newNavbar"
+import Navbar from "./navbar"
 import "./header.css"
 import ILOSocpro from '../images/ILO_socpro.svg'
 import Hero from "./hero"
@@ -14,7 +14,6 @@ export default function LandingHeader(props) {
   const ref=useRef();
   const sticky=useStickyHeader(30);
   const headerClasses=`header d-flex fluid ${sticky? 'sticky':''}`
-  const hiddenBar=`hidden-bar ${sticky? 'active':''}`
   const { width } = useViewport();
   const breakpoint = 992;
 
@@ -37,8 +36,8 @@ export default function LandingHeader(props) {
   return (
     <>
       <TopBar />
-      <div className={hiddenBar}>
-      </div>
+      {/* <div className={hiddenBar}>
+      </div> */}
       <header ref={ref} className={headerClasses}>
         <div className="container d-flex align-items-between justify-content-between">
           <div className="logo me-auto">
@@ -46,7 +45,7 @@ export default function LandingHeader(props) {
               <ILOSocpro className="logo-socpro" />
             </Link>
           </div>
-          <NewNavbar />
+          <Navbar />
         </div>
       </header>
       <Parallax bgImage={width < breakpoint ? '/images/building-intro-mobile.jpg' : "/images/building-intro.jpg"} strength={200}>

@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect, useRef} from 'react'
 import {Link} from 'gatsby'
 import {
   IoIosArrowForward,
@@ -9,109 +9,76 @@ import {
   IoLogoInstagram,
   IoIosClose
 } from "react-icons/io";
-import {ListGroup} from 'react-bootstrap'
 import './navbar.css'
 
-const MyNavbar=() => {
+
+const Navbar=() => {
+  const ref = useRef()
   const [show,setShow]=useState(false);
   const handleClose=() => setShow(false);
   const toggleShow=() => setShow((s) => !s);
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      if (show && ref.current && !ref.current.contains(e.target)) {
+        handleClose()
+      }
+    }
 
+    document.addEventListener("mousedown", checkIfClickedOutside)
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [show])
   return (
-    <>
-      <nav id="navbar" className='navbar d-flex align-items-center fluid' >
-        <ul>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/">Home</Link></li>
-          <li className="dropdown">
-            <Link to="/approach" activeClassName="active" partiallyActive={true}><IoIosArrowForward className="arrow" /> Our approach</Link>
-            <ul>
-              <li><Link to="/approach/vision-and-value" activeClassName="active">Vision and value proposition</Link></li>
-              <li><Link to="/approach/theory-of-change" activeClassName="active">Theory of change</Link></li>
-              <li><Link to="/approach/team" activeClassName="active">Our team</Link></li>
+    <nav id="navbar" className='navbar navbar-expand-lg' ref={ref}>
+      <div className='container px-0'>
+        <button className='btn navbar-toggler' type='button' onClick={toggleShow} data-bs-toggle='offcanvas'
+          data-bs-target='#offcanvasExample' aria-controls='offcanvasExample'>
+          <IoIosMenu size="2em" />
+        </button>
+        <div className={`offcanvas offcanvas-start-lg ${show? 'show':''}`} tabindex='-1' id='offcanvasExample'
+          aria-labelledby='offcanvasExampleLabel' style={show? {visibility: 'visible'}:{visibility: 'hidden'}} aria-modal={show} role={show&&'dialog'} aria-hidden={show? false:true}>
+          <div className='offcanvas-header d-flex d-lg-none'>
+            <button type="button"
+              onClick={handleClose}
+              className='navbar-close'
+              data-bs-dismiss='offcanvas'
+              aria-label='close'>
+              <IoIosClose size="2em" />
+            </button>
+            <ul className='social-reach'>
+              <li className="social-link"><a href="http://twitter.com/soc_protection"><IoLogoTwitter /></a></li>
+              <li className="social-link"><a href="http://www.facebook.com/SPplatform"><IoLogoFacebook /></a></li>
+              <li className="social-link"><a href="http://www.facebook.com/SPplatform"><IoLogoLinkedin /></a></li>
+              <li className="social-link"><a href="https://www.youtube.com/channel/UCWf4KIllUoxGa3aeMf-jBvwm"><IoLogoYoutube /></a></li>
+              <li className="social-link"><a href="https://www.youtube.com/channel/https://www.instagram.com/socialprot3ction/-jBvwm"><IoLogoInstagram /></a></li>
             </ul>
-          </li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/countries">Countries</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/results">Results</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/resources">Resources</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/partners">Partners</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/funding-gaps">Funding gaps</Link></li>
-          <li><Link className="nav-link scrollto last" activeClassName="active" to="/news-and-events">News and events</Link></li>
-        </ul>
-        <button className="mobile-nav-toggle" onClick={toggleShow}><IoIosMenu size="2em" /></button>
-      </nav>
-      {show&&<div class="navbar-mobile navbar">
-      <div className="nav-header">
-        <button className="mobile-nav-close" onClick={toggleShow}><IoIosClose size="2em" /></button>
-          <ListGroup horizontal>
-            <ListGroup.Item className="social-link"><a href="http://twitter.com/soc_protection"><IoLogoTwitter /></a></ListGroup.Item>
-            <ListGroup.Item className="social-link"><a href="http://www.facebook.com/SPplatform"><IoLogoFacebook /></a></ListGroup.Item>
-            <ListGroup.Item className="social-link"><a href="http://www.facebook.com/SPplatform"><IoLogoLinkedin /></a></ListGroup.Item>
-            <ListGroup.Item className="social-link"><a href="https://www.youtube.com/channel/UCWf4KIllUoxGa3aeMf-jBvwm"><IoLogoYoutube /></a></ListGroup.Item>
-            <ListGroup.Item className="social-link"><a href="https://www.youtube.com/channel/https://www.instagram.com/socialprot3ction/-jBvwm"><IoLogoInstagram /></a></ListGroup.Item>
-          </ListGroup>
+          </div>
+          <div className='offcanvas-body p-lg-0'>
+            <ul className='navbar-nav'>
+              <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/">Home</Link></li>
+              <li className="nav-item dropdown">
+                <Link to="/approach" activeClassName="active" partiallyActive={true} className='nav-link dropdown-toggle'>
+                  Our approach <IoIosArrowForward className="arrow" /></Link>
+                <ul className='dropdown-menu'>
+                  <li><Link to="/approach/vision-and-value" className='dropdown-item' activeClassName="active">Vision and value proposition</Link></li>
+                  <li><Link to="/approach/theory-of-change" className='dropdown-item' activeClassName="active">Theory of change</Link></li>
+                  <li><Link to="/approach/team" className="dropdown-item" activeClassName="active">Our team</Link></li>
+                </ul>
+              </li>
+              <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/countries">Countries</Link></li>
+              <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/results">Results</Link></li>
+              <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/resources">Resources</Link></li>
+              <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/partners">Partners</Link></li>
+              <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/funding-gaps">Funding gaps</Link></li>
+              <li className='nav-item'><Link className="nav-link last" activeClassName="active" to="/news-and-events">News and events</Link></li>
+            </ul>
+          </div>
         </div>
-        <ul>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/">Home</Link></li>
-          <li className="dropdown">
-            <Link to="/approach" activeClassName="active" partiallyActive={true}><IoIosArrowForward className="arrow" /> Our approach</Link>
-            <ul>
-              <li><Link to="/approach/vision-and-value" activeClassName="active">Vision and value proposition</Link></li>
-              <li><Link to="/approach/theory-of-change" activeClassName="active">Theory of change</Link></li>
-              <li><Link to="/approach/team" activeClassName="active">Our team</Link></li>
-            </ul>
-          </li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/countries">Countries</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/results">Results</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/resources">Resources</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/partners">Partners</Link></li>
-          <li><Link className="nav-link scrollto" activeClassName="active" to="/funding-gaps">Funding gaps</Link></li>
-          <li><Link className="nav-link scrollto last" activeClassName="active" to="/news-and-events">News and events</Link></li>
-        </ul>
-      </div>}
-    </>
-    // <Navbar expand='lg' className='navbar' >
-    //     <Button onClick={toggleShow} className="mobile-nav-toggle" variant='mobile-nav-toggle'><IoIosMenu/></Button>
-    //     <Navbar.Offcanvas
-    //       aria-labelledby="offcanvasNavbarLabel"
-    //       placement="start" show={show} onHide={handleClose} backdrop={false} {...props}>
-    //       <Offcanvas.Header closeButton>
-    //         <ListGroup horizontal>
-    //           <ListGroup.Item className="social-logo-link"><a href="http://twitter.com/soc_protection"><IoLogoTwitter /></a></ListGroup.Item>
-    //           <ListGroup.Item className="social-logo-link"><a href="http://www.facebook.com/SPplatform"><IoLogoFacebook /></a></ListGroup.Item>
-    //           <ListGroup.Item className="social-logo-link"><a href="http://www.facebook.com/SPplatform"><IoLogoLinkedin /></a></ListGroup.Item>
-    //           <ListGroup.Item className="social-logo-link"><a href="https://www.youtube.com/channel/UCWf4KIllUoxGa3aeMf-jBvwm"><IoLogoYoutube /></a></ListGroup.Item>
-    //           <ListGroup.Item className="social-logo-link"><a href="https://www.youtube.com/channel/https://www.instagram.com/socialprot3ction/-jBvwm"><IoLogoInstagram /></a></ListGroup.Item>
-    //         </ListGroup>
-    //       </Offcanvas.Header>
-    //       <Nav.Item as='li'><Link className="nav-link" activeClassName="active" to="/">Home</Link></Nav.Item>
-    //       <NavDropdown title='Our approach' className="arrow" id="offcanvasNavbarDropdown" href="/approach">
-    //         <Nav.Item as='li'><Link to="/approach/vision-and-value" activeClassName="active">Vision and value proposition</Link></Nav.Item>
-    //         <Nav.Item as='li'><Link to="/approach/theory-of-change" activeClassName="active">Theory of change</Link></Nav.Item>
-    //         <Nav.Item as='li'><Link to="/approach/team" activeClassName="active">Our team</Link></Nav.Item>
-    //       </NavDropdown>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/countries">Countries</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/results">Results</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/resources">Resources</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/partners">Partners</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/funding-gaps">Funding gaps</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto last" activeClassName="active" to="/news-and-events">News and events</Link></Nav.Item>
-    //     </Navbar.Offcanvas>
-    //     <Offcanvas.Body as='ul'>
-    //       <Nav.Item as='li'><Link className="nav-link" activeClassName="active" to="/">Home</Link></Nav.Item>
-    //       <NavDropdown as='li' title='Our approach' className="arrow" gatsby buildid="offcanvasNavbarDropdown" href="/approach">
-    //         <Nav.Item as='li'><Link to="/approach/vision-and-value" activeClassName="active">Vision and value proposition</Link></Nav.Item>
-    //         <Nav.Item as='li'><Link to="/approach/theory-of-change" activeClassName="active">Theory of change</Link></Nav.Item>
-    //         <Nav.Item as='li'><Link to="/approach/team" activeClassName="active">Our team</Link></Nav.Item>
-    //       </NavDropdown>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/countries">Countries</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/results">Results</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/resources">Resources</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/partners">Partners</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto" activeClassName="active" to="/funding-gaps">Funding gaps</Link></Nav.Item>
-    //       <Nav.Item as='li'><Link className="nav-link scrollto last" activeClassName="active" to="/news-and-events">News and events</Link></Nav.Item>
-    //     </Offcanvas.Body>
-    // </Navbar>
+      </div>
+    </nav>
   )
-
 }
-export default MyNavbar
+export default Navbar
