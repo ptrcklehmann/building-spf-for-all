@@ -4,7 +4,7 @@ import {Parallax} from "react-parallax";
 import DoubleBullet from '../images/double-bullet.svg'
 import useViewport from './hooks/useViewport'
 
-export default function HeroSmall(props) {
+export default function                  (props) {
     const { width } = useViewport();
     const breakpoint = 992;
     return (

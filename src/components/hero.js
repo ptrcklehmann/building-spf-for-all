@@ -1,31 +1,32 @@
 import React from 'react'
 import "./hero.css"
 import DoubleBullet from '../images/double-bullet.svg'
-import {Parallax} from 'react-scroll-parallax';
-import { BsChevronDoubleDown } from "react-icons/bs";
-import Tooltip from 'rc-tooltip';
+import {BsChevronDoubleDown} from "react-icons/bs";
 
 
 export default function Hero() {
-
-
     return (
-        <>
+        <section id="hero">
+            <div className="container">
+                <DoubleBullet className="double-bullet" />
 
-        <section id="hero" className="container">
-            <div className="hero-row">
-                <div className="hero-heading">
-                    <DoubleBullet className="double-bullet" />
-                    <h1>Building social protection floors for all</h1>
+                <article className="uuper_box hero-heading container">
+
+
+                    <h1>Building social <br />protection  floors for all</h1>
                     <h2>ILO Global Flagship Programme</h2>
-                    <h3><mark>Changing the lives of millions of peopleto allow them to live a life in dignity.
-                    </mark></h3>
-                    <a href="#about" className='arrows' data-bs-toggle="tooltip" data-bs-placement="top" title="Learn more" >
-                    <BsChevronDoubleDown/>
-                    </a>
-                </div>
+                    <h3>
+                        <mark>
+                            Changing the lives of millions of people  <br /> to allow them to live a life in dignity.
+                        </mark>
+                    </h3>
+                </article>
+                <a href="#about" className='arrows' data-bs-toggle="tooltip" data-bs-placement="top" title="Learn more" >
+                    <BsChevronDoubleDown />
+                </a>
+                <small class="strong-copyright">Photo: Marcel Crozet</small>
             </div>
         </section>
-        </>
+
     )
 }

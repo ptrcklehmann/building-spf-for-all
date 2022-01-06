@@ -1,57 +1,47 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import TopBar from "./topbar"
-import Navbar from "./navbar"
 import "./header.css"
 import ILOSocpro from '../images/ILO_socpro.svg'
 import Hero from "./hero"
-import {useState, useLayoutEffect, useRef} from "react";
 import useViewport from './hooks/useViewport'
-import {Parallax} from "react-parallax";
+import {Parallax, Background} from "react-parallax";
+import {IoIosPlay} from "react-icons/io";
 
 
 export default function LandingHeader(props) {
-  const ref=useRef();
-  const sticky=useStickyHeader(30);
-  const headerClasses=`header d-flex fluid ${sticky? 'sticky':''}`
-  const { width } = useViewport();
-  const breakpoint = 992;
-
-  function useStickyHeader(offset=0) {
-    const [stick,setStick]=useState(false);
-    const handleScroll=() => {
-      setStick(window.scrollY>offset);
-    };
-    useLayoutEffect(() => {
-      window.addEventListener('scroll',handleScroll);
-
-      return (() => {
-        window.removeEventListener('scroll',handleScroll);
-      });
-    });
-    return stick;
-  }
-
   console.log(props)
   return (
     <>
       <TopBar />
-      {/* <div className={hiddenBar}>
-      </div> */}
-      <header ref={ref} className={headerClasses}>
-        <div className="container d-flex align-items-between justify-content-between">
-          <div className="logo me-auto">
+      <header className='header d-flex fluid'>
+        <div className="container d-flex">
+          <div className="logo">
             <Link to="/">
               <ILOSocpro className="logo-socpro" />
             </Link>
           </div>
-          <Navbar />
+          <div className="headline">
+            <h1> <IoIosPlay className="tri-bullet" /> Building social protection floors for all</h1>
+            <p>ILO Global Flagship Programme</p>
+          </div>
         </div>
       </header>
-      <Parallax bgImage={width < breakpoint ? '/images/building-intro-mobile.jpg' : "/images/building-intro.jpg"} strength={200}>
-        <Hero />
-      </Parallax>
-    </>
-  )
+      <Parallax strength={150} className="parallax-wrapper">
+        <Background className="hero-image-filter">
+          <div style={{
+              backgroundImage: 'url(/images/main-hero-01.jpg)',
+              width: '100vw',
+              height: '95vh',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center right',
+              WebkitClipPath: 'polygon(0 0,100% 0,100% calc(100% - 60px),0 100%)',
+              clipPath: 'polygon(0 0,100% 0,100% calc(100% - 60px),0 100%)'
+        }}  />
+          </Background>
+          <Hero />
+        </Parallax>
+        </>
+        )
 }
 

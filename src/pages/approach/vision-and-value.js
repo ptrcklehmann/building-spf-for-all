@@ -8,7 +8,7 @@ import Disability from '../../images/disability.svg'
 import Children from '../../images/children.svg'
 import Mother from '../../images/mother.svg'
 import ValueProposition from '../../images/value_proposition.svg'
-import "./vision-and-approach.css"
+import "./vision-and-value.css"
 import {IoIosPlay} from "react-icons/io";
 import {ParallaxBanner} from 'react-scroll-parallax';
 import {Link} from "gatsby"

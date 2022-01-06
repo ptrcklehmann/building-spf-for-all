@@ -1,71 +1,63 @@
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.masthead {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  background-position: center center;
-  background-size: cover;
-  z-index: -2;
-  transition: all 0.4s ease-in-out;
-}
-.masthead-small {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content:center;
-  align-content: flex-start;
-  align-items:flex-start;
-  background-position: center center;
-  background-size: cover;
-  z-index: -2;
-  transition: all 0.4s ease-in-out;
-}
-.masthead-small-mobile {
-  display: none;
-}
+
 .header {
-  background: #fff;
-  box-shadow: 0px 5px 15px 0px rgba(190, 220, 250, 0.09);
   padding: 18px 0;
-  z-index: 99;
-  transition: all 0.4s ease;
   width: 100vw;
+  background: none;
+  position: absolute;
+  top: 40px;
+  z-index: 98;
+}
+.header .d-flex {
+  justify-content: space-between;
 }
 
-.headline h1 {
+.headline {
+  display: flex;
   color: #fff;
+  align-items: flex-end;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: center;
+}
+.headline h1 {
   white-space: nowrap;
   font-size: 18px;
   letter-spacing: -0.3px;
-  line-height: 25px;
+  line-height: 15px;
   text-align: right;
   margin-bottom: 0;
+  transition: all 2ms ease-in;
 }
 
-.headline h1 .tri-bullet {
+.headline .tri-bullet {
   transform: translateY(-1px);
   color: #fa3c4b;
 }
 
-.header p {
+.headline p {
   font-size: 12px;
   letter-spacing: -0.3px;
   color: #edf0f2;
   text-align: right;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+}
+
+.hero-image-filter {
+  filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
 }
 
 .header .logo a svg {
-  fill: #1d2ebe;
+  fill: #fff;
   height: 80px;
   transition: all 0.4s ease-in-out;
 }
 .sticky .logo a svg {
-  fill: #1d2ebe;
+  fill: #fff;
   height: 44px !important;
 }
 .logo-socpro {
@@ -74,12 +66,7 @@
 .masthead-mobile {
   display: none;
 }
-.hidden-bar {
-  height: 116px;
-  width: 100vw;
-  transition: all 0.2s ease-in-out;
-  background: #1d2ebe;
-}
+
 @media (max-width: 991px) {
   .hidden-bar {
     height: 96px;
@@ -98,10 +85,10 @@
     transition: all 0.4s ease-in-out;
     height: calc(100vh - 60px);
   }
-  .header .container {
-    display: flex;
-    flex-direction: row;
+  .header .d-flex {
+    flex-direction: column;
     flex-wrap: wrap;
+    align-content: flex-start;
   }
   .header .logo a svg {
     height: 60px;
@@ -111,15 +98,9 @@
   }
   .headline h1 {
     font-size: 15px;
-    margin-top: 7px;
+    margin-top: 15px;
   }
   .headline p {
     display: none;
   }
-}
-
-.sticky {
-  position: fixed !important;
-  padding: 5px 0;
-  transition: all 0.2s ease-in-out;
 }

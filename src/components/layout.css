@@ -640,6 +640,28 @@ pre tt:after {
 .space-vertical-bottom {
   margin-bottom: 70px;
 }
+.body-text-emphasys {
+  font-family: Noto Sans, sans-serif;
+  font-size: 1.275rem;
+  line-height: normal;
+  letter-spacing: normal;
+  font-weight: 700;
+  color: #1f064d;
+}
+.body-text-emphasys span {
+  font-style: italic;
+  font-weight: 700;
+}
+.body-text {
+  font-family: Noto Sans, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6rem;
+  color: #000;
+}
+.image-sub {
+  height: 30rem;
+  width: 60%;
+}
 .body-large {
   font-size: 1.25rem;
   font-weight: 300;
@@ -696,6 +718,21 @@ pre tt:after {
 .body-xl-large {
   font-size: 28px;
   line-height: 36.4px;
+}
+.strong-copyright {
+  font-family: Noto Sans, sans-serif;
+  font-weight:500;
+  color: #1e2dbe;
+  font-size: 0.8125rem;
+  position: absolute;
+  bottom: 3rem;
+  padding: 0px 0.5rem;
+  right: 2.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+  z-index: 99;
 }
 
 .ambition-card {
@@ -809,14 +846,8 @@ a:hover {
 }
 .image-divider {
   height: 25rem;
-  width: 100vw;
-  position: relative;
 }
-.image-divider .double-bullet {
-  position: absolute;
-  right: 2rem;
-  bottom: 2rem;
-}
+
 .standard-btn {
   font-family: "Noto Sans", sans-serif;
   font-weight: 500;
@@ -885,27 +916,35 @@ a:hover {
 }
 
 .section-title-bold {
-  padding: 0;
+  width: 100%;
+  padding: 1rem 2rem;
   font-weight: 700;
-  color: #1f064d;
+  background: #1f064d;
+  color: #fff;
   font-size: 1.75rem;
-  line-height: 2rem;
+  font-size: 1.75rem;
   letter-spacing: 0.01em;
   font-family: Overpass, arial, sans-serif;
   z-index: 0;
   display: inline-block;
-  padding-bottom: 0.2rem;
+  -webkit-clip-path: polygon(calc(100% - 23px) 0,100% 23px,100% 100%,0 100%,0 0);
+  clip-path: polygon(calc(100% - 23px) 0,100% 23px,100% 100%,0 100%,0 0);
 }
 .section-subtitle-bold {
+  background: #1d2ebe;
   font-weight: 700;
-  color: #1f064d;
+  color: #fff;
   font-size: 1.45rem;
   line-height: 1.75rem;
   letter-spacing: 0.01em;
   font-family: Overpass, arial, sans-serif;
   z-index: 0;
   display: inline-block;
-  padding-bottom: 0.2rem;
+  padding: .5rem 1rem;
+  width: 50%;
+  -webkit-clip-path: polygon(calc(100% - 23px) 0,100% 23px,100% 100%,0 100%,0 0);
+  clip-path: polygon(calc(100% - 23px) 0,100% 23px,100% 100%,0 100%,0 0);
+
 }
 .section-title-bold-center {
   font-weight: 700;
@@ -925,7 +964,7 @@ a:hover {
   font-size: 1.75rem;
   letter-spacing: 0.02em;
   line-height: 1.55rem;
-  color: #1f064d;
+  color: #fff;
   transition: color 0.3s ease-out;
   overflow: hidden;
   position: relative;
@@ -961,7 +1000,7 @@ a:hover {
   font-size: 1.75rem;
   letter-spacing: 0.02em;
   line-height: 1.55rem;
-  color: #1f064d;
+  color: #fff;
   transition: color 0.3s ease-out;
   overflow: hidden;
   position: relative;
@@ -1150,3 +1189,160 @@ a:hover {
   align-items: center;
 }
 
+/* CARDS INTRO */
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #230050;
+}
+
+.postcard a {
+  color: inherit;
+}
+.postcard h1, .postcard .h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.postcard .small {
+  font-size: 80%;
+}
+.postcard .postcard__title {
+  font-size: 1.75rem;
+}
+.postcard .postcard__img  {
+  max-height: 120px;
+  object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+.sdg-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+.postcard .postcard__text {
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.postcard .postcard__preview-txt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 100%;
+}
+.postcard .postcard__tagbox {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  margin: 20px 0 0 0;
+  padding: 0;
+  justify-content: center;
+}
+.postcard .postcard__tagbox .tag__item {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 2.5px 10px;
+  margin: 0 5px 5px 0;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+
+.postcard:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+  }
+  .postcard .postcard__title {
+    font-size: 2rem;
+  }
+  .postcard .postcard__tagbox {
+    justify-content: start;
+  }
+  .postcard .postcard__img {
+    max-width: 160px;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+    margin: 1rem;
+  }
+  .postcard .postcard__text {
+    padding: 3rem;
+    width: 100%;
+  }
+  .postcard .media.postcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #18151f;
+    top: -20%;
+    height: 130%;
+    width: 55px;
+
+  }
+  .postcard:nth-child(2n+1) {
+    flex-direction: row;
+  }
+  .postcard:nth-child(2n+0) {
+    flex-direction: row-reverse;
+  }
+  .postcard:nth-child(2n+1) .postcard__text::before {
+    left: -12px !important;
+    transform: rotate(4deg);
+  }
+  .postcard:nth-child(2n+1) .postcard__text {
+    padding-left: 5rem;
+  }
+  .postcard:nth-child(2n+0) .postcard__text {
+    padding-right: 5rem;
+  }
+  .postcard:nth-child(2n+0) .postcard__text::before {
+    right: -12px !important;
+    transform: rotate(-4deg);
+
+  }
+}
+@media screen and (min-width: 1024px) {
+  .postcard__text {
+    padding: 2rem 3.5rem;
+  }
+
+  .postcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -20%;
+    height: 130%;
+    width: 55px;
+  }
+}
+.sub-par-wrapper {
+  width: 100%;
+  height: 25rem;
+  -webkit-clip-path: polygon(calc(100% - 45px) 0,100% 45px,100% 100%,0 100%,0 0);
+  clip-path: polygon(calc(100% - 45px) 0,100% 45px,100% 100%,0 100%,0 0);
+}

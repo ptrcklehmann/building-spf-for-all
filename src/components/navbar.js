@@ -58,14 +58,15 @@ const Navbar=() => {
           </div>
           <div className='offcanvas-body p-lg-0'>
             <ul className='navbar-nav'>
-              <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/">Home</Link></li>
+              <li className='nav-item'>
+                <Link className="nav-link" activeClassName="active" to="/">Home</Link></li>
               <li className="nav-item dropdown">
                 <Link to="/approach" activeClassName="active" partiallyActive={true} className='nav-link dropdown-toggle'>
                   Our approach <IoIosArrowForward className="arrow" /></Link>
                 <ul className='dropdown-menu'>
                   <li><Link to="/approach/vision-and-value" className='dropdown-item' activeClassName="active">Vision and value proposition</Link></li>
                   <li><Link to="/approach/theory-of-change" className='dropdown-item' activeClassName="active">Theory of change</Link></li>
-                  <li><Link to="/approach/team" className="dropdown-item" activeClassName="active">Our team</Link></li>
+                  <li><Link to="/approach/our-team" className="dropdown-item" activeClassName="active">Our team</Link></li>
                 </ul>
               </li>
               <li className='nav-item'><Link className="nav-link" activeClassName="active" to="/countries">Countries</Link></li>

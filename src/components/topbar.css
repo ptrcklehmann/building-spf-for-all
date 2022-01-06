@@ -2,24 +2,30 @@
 # Top Bar
 --------------------------------------------------------------*/
 
-#topbar {
+.topbar {
     background: #151F85;
     height: 30px;
-    color: #fff;
+    color: #EBF5FD;
     width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 99;
+    position: relative;
+    transition: all 0.6s ease-in-out;
 }
 
-#topbar a {
-    color: #fff;
+.topbar a {
+    color: #EBF5FD;
     transition: 0.3s;
     font-size: 12px;
-    line-height: 14px;
     text-align: left;
     text-decoration: none;
 }
-#topbar  a:hover {
-    text-decoration: underline;
+.topbar  a:hover {
+    color: #fff;
+    background: #1E2DBE;
+}
+.sticky {
+    position: fixed !important;
 }

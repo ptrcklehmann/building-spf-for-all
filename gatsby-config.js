@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`noto sans:400,400i,700`, `overpass:300,400,600,700`],
+        fonts: [`noto sans:400,400i,700,700i`, `overpass:300,400i;600,700,700i`],
         display: "swap",
       },
     },

@@ -4,11 +4,11 @@
 
 #hero {
   width: 100vw;
-  height: calc(100vh);
+  height: calc(100vh - 30px);
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-end;
   align-content: space-between;
   align-items: flex-start;
   z-index: 9;
@@ -46,48 +46,80 @@
 }
 .hero-row {
   z-index: 2;
-  width: 50%;
+  width: 100%;
 }
-#hero-small .hero-row {
-  z-index: 15;
+
+.uuper_box {
+  padding: 2rem 1rem 2rem 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #230050;
+  -webkit-clip-path: polygon(
+      calc(100% - 54px) 0,
+      100% 35px,
+      100% 100%,
+      0 100%,
+      0 0
+    );
+    clip-path: polygon(calc(100% - 35px) 0, 100% 35px, 100% 100%, 0 100%, 0 0);
+    width: 60%;
+}
+.strong-copyright {
+  font-family: Noto Sans, sans-serif;
+  font-weight:500;
+  color: #fff;
+  font-size: 0.8125rem;
+  position: absolute;
+  bottom: 3rem;
+  padding: 0px 0.5rem;
+  right: 2.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+  z-index: 99;
+  transition: all 0.4 ease-in;
 }
 mark {
-  color: #05d2d2;
+  color: #05D2D2;
   background: none;
   padding: 0;
 }
 .hero-heading {
-  width: 100%;
+  width: 70%;
 }
 .double-bullet {
+  display: inline-block;
+  position: relative;
+  transform: translateY(-4);
   width: 5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .hero-heading h1 {
   font-family: "Overpass", sans-serif;
-  font-weight: 700;
+  font-weight: bold;
   color: #fff;
-  font-size: 50px;
-  line-height: 51px;
-  letter-spacing: 0.3px;
-  padding-bottom: 0.8rem;
+  font-size: 40px;
+  line-height: 48.5px;
 }
 .hero-heading h2 {
   font-family: "Overpass", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   color: #ebf5fd;
-  font-size: 32px;
-  line-height: 36.8px;
+  font-size: 22px;
+  line-height: 26.8px;
   letter-spacing: 0.3px;
-  padding-bottom: 1.2rem;
+  margin-bottom: 0;
 }
 .hero-heading h3 {
   font-family: "Overpass", sans-serif;
-  font-weight: 300;
-  color: #05d2d2;
-  font-size: 32px;
-  line-height: 40px;
+  font-weight: 700;
+  color: #FFCD2D;
+  font-size: 20px;
   letter-spacing: 0.3px;
+  padding-top: 1rem;
+  margin-bottom: 0;
 }
 .hero-heading a {
   z-index: 9999;
@@ -119,8 +151,8 @@ mark {
   #hero {
     height: calc(100vh);
     min-height: 400px;
-    padding-top: 5rem;
-    justify-content: flex-start;
+    padding-bottom: 2rem;
+    justify-content: flex-end;
   }
   #hero-small {
     padding-top: 5rem;
@@ -140,7 +172,11 @@ mark {
     width: 100%;
   }
   .hero-heading {
-    width: 80%;
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    justify-content: space-between;
+
   }
   .hero-heading h1 {
     font-size: 36px;
@@ -155,23 +191,20 @@ mark {
     line-height: 33px;
     letter-spacing: 0.3px;
   }
-  .masthead-small-mobile {
-    width: 100%;
-    height: calc(50vh - 30px);
-    background-size: cover;
-    background-position: bottom center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-content: flex-start;
-    align-items: center;
-    z-index: -2;
+  .uuper_box {
+    width: 90%;
   }
+
   .masthead-small {
     display: none;
   }
   .arrows svg {
-    bottom: .5rem;
+    bottom: 0.5rem;
+  }
+  .strong-copyright {
+    transform: rotate(-90deg);
+    transition: all 0.4 ease-in;
+
   }
 }
 
@@ -180,9 +213,6 @@ mark {
     font-size: 28px;
   }
 }
-
-
-
 
 @keyframes arrow {
   0% {
@@ -214,7 +244,7 @@ mark {
   }
 }
 
-.arrows svg :nth-child(2){
+.arrows svg :nth-child(2) {
   fill: #fa3c4b;
   animation-delay: -1s;
   -webkit-animation-delay: -1s; /* Safari 和 Chrome */
@@ -224,3 +254,4 @@ mark {
   animation-delay: -0.5s;
   -webkit-animation-delay: -0.5s; /* Safari 和 Chrome */
 }
+
