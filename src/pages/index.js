@@ -54,7 +54,7 @@ const IndexPage=() => (
           <SDG3 style={{width: '100%',height: '100%',padding: '.3rem'}} />
           <SDG6 style={{width: '100%',height: '100%',padding: '.3rem'}} />
         </div>
-        <article class="col-lg-7 col-md-7 col-sm-8 ">
+        <article class="col-lg-7 col-md-7 col-sm-8">
           <div class="postcard__preview-txt body-text">Working across 50 priority countries, it aims to change the lives of millions of people by 2025 and provide evidence on ILO's contribution to the Sustainable Development Goals on social protection.</div>
           <div className="col-lg-7 col-md-7 col-sm-12 pt-2">
             <SDG2 style={{width: '3rem',height: '100%',marginRight: '.3rem'}} />
@@ -66,12 +66,8 @@ const IndexPage=() => (
           </div>
         </article>
       </div>
-      <div className="container m-auto row align-items-center justify-content-end">
-
-        <div class="col-lg-1 col-md-3 col-sm-2 justify-content-end space-vertical">
-          <DoubleBullet style={{width: '90%',padding: '.3rem'}} />
-        </div>
-        <article class="col-lg-7 col-md-7 col-sm-8 row align-items-center justify-content-end">
+      <div className="container m-auto row align-items-center justify-content-lg-end justify-content-md-center">
+        <article class="col-lg-8 col-md-12 col-sm-12 row align-items-center justify-content-lg-end justify-content-md-center p-0">
           <Parallax strength={-50} className="sub-par-wrapper">
             <Background className='image-sub'>
               <div style={{
@@ -81,62 +77,52 @@ const IndexPage=() => (
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }} className='image-sub'>
-                </div>
+              </div>
             </Background>
           </Parallax>
         </article>
       </div>
+      <div className="space-vertical-bottom"></div>
+      <div className="container m-auto align-items-center justify-content-start">
+        <h1 className="section-title-bold col-lg-7 col-md-10 col-sm-12 mb-0">
+          <ScrollAnimation animateIn="animate__fadeInUp">Our ambition <Link className="news" to='/approach/vision-and-value'>{' '}2025</Link></ScrollAnimation></h1>
+        <div className="card-bg col-lg-7 col-md-10 col-sm-12">
+          <article className="stats-card">
+            <div className="stats-card-info">
+              <h1 className="card-title">Institutional changes</h1>
+              <p className="body-text">Achieve over <span>90 institutional changes</span> to strengthen social protection systems</p>
+            </div>
+            <Institutional alt="Intitutional changes" className="stats-card-image" />
+          </article>
 
+          <article className="stats-card">
+            <div className="stats-card-info">
+              <h1 className="card-title">Adequacy and comprehensiveness</h1>
+              <p className="body-text">Improve benefit adequacy and comprehensiveness for <span>10 million</span> people</p>
+            </div>
+            <Adequacy alt="Adequacy" className="stats-card-image" />
+          </article>
 
-      <div className="container">
-        <ScrollAnimation animateIn="animate__fadeInUp">
-          <h1 className="section-title-bold space-vertical">Our ambition <Link className="news" to='/#'>{' '}2025</Link></h1>
-        </ScrollAnimation>
-        <article class="col-lg-9 col-md-9c col-sm- 12">
-          <div class="postcard__img_link" href="#">
-            <Institutional alt="Intitutional changes" class="postcard__img" />
-          </div>
-          <div class="postcard__text">
-            <h1 className="postcard__title">Institutional changes</h1>
-            <div class="postcard__preview-txt body-large">Achieve over <span>90 institutional changes</span> to strengthen social protection systems</div>
-          </div>
-        </article>
+          <article className="stats-card">
+            <div className="stats-card-info">
+              <h1 className="card-title">Legal coverage</h1>
+              <p className="body-text">Improve legal coverage for <span>20 million</span> people</p>
+            </div>
+            <Legal alt="Legal coverage" className="stats-card-image" />
+          </article>
 
-        <article class="col-lg-9 col-md-9 col-sm-12">
-          <div class="postcard__img_link" href="#">
-            <Adequacy alt="Adequacy" class="postcard__img" />
-          </div>
-          <div class="postcard__text">
-            <h1 className="postcard__title">Adequacy and comprehensiveness</h1>
-            <div class="postcard__preview-txt body-large">Improve benefit adequacy and comprehensiveness for <span>10 million</span> people</div>
-          </div>
-        </article>
-
-        <article class="col-lg-9 col-md-9c col-sm- 12">
-          <div class="postcard__img_link" href="#">
-            <Legal alt="Legal coverage" class="postcard__img" />
-          </div>
-          <div class="postcard__text">
-            <h1 className="postcard__title">Legal coverage</h1>
-            <div class="postcard__preview-txt body-large">Improve legal coverage for <span>20 million</span> people</div>
-          </div>
-        </article>
-
-        <article class="col-lg-9 col-md-9c col-sm- 12">
-          <div class="postcard__img_link" href="#">
-            <Effective alt="Effective coverage" class="postcard__img" />
-          </div>
-          <div class="postcard__text">
-            <h1 className="postcard__title">Effective coverage</h1>
-            <div class="postcard__preview-txt body-large"> Increase effective coverage for<span> 30 million</span> people</div>
-          </div>
-        </article>
+          <article className="stats-card">
+            <div className="stats-card-info">
+              <h1 className="card-title">Effective coverage</h1>
+              <p class="body-text">Increase effective coverage for<span> 30 million</span> people</p>
+            </div>
+            <Effective alt="Effective coverage" className="stats-card-image" />
+          </article>
+        </div>
       </div>
       <div className="space-vertical">
-        <div className="container">
-          <div className="row d-flex align-items-center justify-content-center">
-            <h1 className="section-title-bold space-vertical-bottom">Latest from  <Link className="news" to='/news-and-events'>{' '}News & Events</Link></h1>
-          </div>
+        <div className="container m-auto align-items-center justify-content-center">
+          <h1 className="section-title-bold col-lg-12 col-md-12 col-sm-12 space-vertical-bottom">Latest from  <Link className="news" to='/news-and-events'>{' '}News & Events</Link></h1>
           <Swiper
             slidesPerGroup={2}
             loop={true}

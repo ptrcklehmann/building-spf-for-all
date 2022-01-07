@@ -10,6 +10,7 @@ export default function OurTeamPage() {
             <section id="team" className="our-team">
                 <HeroSmall title="Our Team" bgImage='/images/approach/theory-of-change.jpg' bgImageMobile='/images/approach/theory-of-change-mobile.jpg' />
                 <div className="container">
+                    
                 </div>
             </section>
         </Layout>

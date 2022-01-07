@@ -2,26 +2,33 @@
     <defs>
         <style>
             .cls-1 {
-                fill: #9EF2F2;
+                fill: #230050;
             }
+
             .lupa-circle {
-                fill: #05BDBD;
+                fill: #FA3C4B;
             }
+
             .lupa-inside {
+                fill: #230050;
+            }
+
+            .lupa-detail {
                 fill: #05D2D2;
             }
-            .lupa-detail {
-                fill: #69E4E4;
-            }
+
             .lupa-pie {
-               fill: #FA3C4B;
+                fill: #FA3C4B;
             }
-.lupa-bar {
-    fill: #1E2DBE;
-}
-.lupa-legenda {
-fill: #FC8A93;
-}
+
+            .lupa-bar {
+                fill: #FB636F;
+            }
+
+            .lupa-legenda {
+                fill: #05D2D2;
+            }
+
             .cls-2 {
                 fill: none;
             }

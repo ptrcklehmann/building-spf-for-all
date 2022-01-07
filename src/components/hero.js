@@ -8,11 +8,8 @@ export default function Hero() {
     return (
         <section id="hero">
             <div className="container">
-                <DoubleBullet className="double-bullet" />
-
                 <article className="uuper_box hero-heading container">
-
-
+                {/* <DoubleBullet className="double-bullet" /> */}
                     <h1>Building social <br />protection  floors for all</h1>
                     <h2>ILO Global Flagship Programme</h2>
                     <h3>
