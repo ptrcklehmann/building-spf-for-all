@@ -45,20 +45,14 @@
   transition: 0.3s;
 }
 .nav-link.active, .nav-link.dropdown-toggle.active {
-  height:100%;
-  color: #fff;
+  height: 100%;
+  color: #EBF5FD;
 }
 .navbar .nav-link {
   padding: 0;
   height:100%
 }
 
-.navbar a:hover,
-.navbar .active:focus,
-.navbar li:hover > a {
-  color: #fff;
-  height: 100%;
-}
 .navbar a .arrow {
   color: #EBF5FD;
   transition: all 0.25s ease-out;
@@ -104,7 +98,6 @@
 .navbar .dropdown ul .active,
 .navbar .dropdown ul li:hover > a {
   color: #fff;
-
 }
 
 .navbar .dropdown:hover > ul {

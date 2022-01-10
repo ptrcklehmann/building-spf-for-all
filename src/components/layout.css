@@ -761,7 +761,6 @@ pre tt:after {
 }
 
 .card-news {
-  width: 95%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -769,8 +768,10 @@ pre tt:after {
   align-content: stretch;
   align-items: stretch;
   border: none;
-  height: 21rem;
+  min-height: 15rem;
+  height: 20rem;
   margin: auto;
+  position: relative;
 }
 .card {
   display: flex;
@@ -783,11 +784,17 @@ pre tt:after {
   height: 21rem;
   margin: auto;
 }
-.card .year {
-  padding: 0.2rem;
-  width: 2.3rem;
+.card-news .date {
+  position:absolute;
+  top: .5rem;
+  left: .65rem;
+  padding: 0.3rem 1rem 0.3rem 1.5rem;
+  background: #230050;
+  color: #fff;
   font-weight: 600;
   font-family: Noto Sans, Arial, sans-serif;
+  -webkit-clip-path: polygon(calc(100% - 10px) 0,100% 10px,100% 100%,0 100%,0 0);
+  clip-path: polygon(calc(100% - 10px) 0,100% 10px,100% 100%,0 100%,0 0);
 }
 .wrapper {
   background-size: cover;

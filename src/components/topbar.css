@@ -19,12 +19,11 @@
     color: #EBF5FD;
     transition: 0.3s;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
 }
 .topbar  a:hover {
     color: #fff;
-    background: #1E2DBE;
 }
 .sticky {
     position: fixed !important;

@@ -84,103 +84,84 @@ const IndexPage=() => (
       </div>
       <div className="space-vertical-bottom"></div>
       <div className="container m-auto align-items-center justify-content-start">
-        <h1 className="section-title-bold col-lg-7 col-md-10 col-sm-12 mb-0">
-          <ScrollAnimation animateIn="animate__fadeInUp">Our ambition <Link className="news" to='/approach/vision-and-value'>{' '}2025</Link></ScrollAnimation></h1>
+        <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
+          <div className="col-sm-12 col-md-10 col-lg-7">
+            <h1 className="section-title-bold">
+              Our ambition <Link className="news" to='/approach/vision-and-value'>{' '}2025</Link>
+            </h1>
+          </div>
+        </ScrollAnimation>
         <div className="card-bg col-lg-7 col-md-10 col-sm-12">
-          <article className="stats-card">
-            <div className="stats-card-info">
-              <h1 className="card-title">Institutional changes</h1>
-              <p className="body-text">Achieve over <span>90 institutional changes</span> to strengthen social protection systems</p>
-            </div>
-            <Institutional alt="Intitutional changes" className="stats-card-image" />
-          </article>
-
-          <article className="stats-card">
-            <div className="stats-card-info">
-              <h1 className="card-title">Adequacy and comprehensiveness</h1>
-              <p className="body-text">Improve benefit adequacy and comprehensiveness for <span>10 million</span> people</p>
-            </div>
-            <Adequacy alt="Adequacy" className="stats-card-image" />
-          </article>
-
-          <article className="stats-card">
-            <div className="stats-card-info">
-              <h1 className="card-title">Legal coverage</h1>
-              <p className="body-text">Improve legal coverage for <span>20 million</span> people</p>
-            </div>
-            <Legal alt="Legal coverage" className="stats-card-image" />
-          </article>
-
-          <article className="stats-card">
-            <div className="stats-card-info">
-              <h1 className="card-title">Effective coverage</h1>
-              <p class="body-text">Increase effective coverage for<span> 30 million</span> people</p>
-            </div>
-            <Effective alt="Effective coverage" className="stats-card-image" />
-          </article>
+          <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
+            <article className="stats-card">
+              <div className="stats-card-info">
+                <h1 className="card-title">Institutional changes</h1>
+                <p className="body-text">Achieve over <span>90 institutional changes</span> to strengthen social protection systems</p>
+              </div>
+              <Institutional alt="Intitutional changes" className="stats-card-image" />
+            </article>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
+            <article className="stats-card">
+              <div className="stats-card-info">
+                <h1 className="card-title">Adequacy and comprehensiveness</h1>
+                <p className="body-text">Improve benefit adequacy and comprehensiveness for <span>10 million</span> people</p>
+              </div>
+              <Adequacy alt="Adequacy" className="stats-card-image" />
+            </article>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
+            <article className="stats-card">
+              <div className="stats-card-info">
+                <h1 className="card-title">Legal coverage</h1>
+                <p className="body-text">Improve legal coverage for <span>20 million</span> people</p>
+              </div>
+              <Legal alt="Legal coverage" className="stats-card-image" />
+            </article>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} animateIn="animate__fadeInUp">
+            <article className="stats-card">
+              <div className="stats-card-info">
+                <h1 className="card-title">Effective coverage</h1>
+                <p class="body-text">Increase effective coverage for<span> 30 million</span> people</p>
+              </div>
+              <Effective alt="Effective coverage" className="stats-card-image" />
+            </article>
+          </ScrollAnimation>
         </div>
       </div>
       <div className="space-vertical">
         <div className="container m-auto align-items-center justify-content-center">
           <h1 className="section-title-bold col-lg-12 col-md-12 col-sm-12 space-vertical-bottom">Latest from  <Link className="news" to='/news-and-events'>{' '}News & Events</Link></h1>
-          <Swiper
-            slidesPerGroup={2}
-            loop={true}
-            loopFillGroupWithBlank={true}
-            pagination={{
-              "clickable": true
-            }}
-            navigation={true}
-            autoplay={{
-              "delay": 5500,
-              "disableOnInteraction": false
-            }}
-            style={{'--swiper-navigation-color': '#1F054D'}}
-            breakpoints={{
-              "640": {
-                "slidesPerView": 1,
-                "spaceBetween": 0
-              },
-              "768": {
-                "slidesPerView": 2,
-                "spaceBetween": 2
-              },
-              "1024": {
-                "slidesPerView": 2,
-                "spaceBetween": 2
-              }
-            }}>
-            <SwiperSlide>
-              <div className="card-news">
-                <div className="wrapper" style={{backgroundImage: 'url(/images/49849451172_d09bd9e01e_k.jpg)'}}>
-                  <div className="card-header ">
-                    <h3 className="card-title "><Link to="# ">Cras elementum lacinia tristique. </Link></h3>
-                    <Link to="# " className="standard-btn">Go to link</Link>
-                  </div>
+          <div className="row d-flex px-1 align-items-between justify-content-between">
+            <div className="card-news col-md-6 col-lg-6 py-2">
+              <span className="date">3 Jan 2022</span>
+              <div className="wrapper" style={{backgroundImage: 'url(/images/49849451172_d09bd9e01e_k.jpg)'}}>
+                <div className="card-header ">
+                  <h3 className="card-title "><Link to="# ">Cras elementum lacinia tristique. </Link></h3>
+                  <Link to="# " className="standard-btn">Go to link</Link>
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card-news">
-                <div className="wrapper" style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
-                  <div className="card-header ">
-                    <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
-                    <Link to="#" className="standard-btn">Go to link</Link>
-                  </div>
+            </div>
+            <div className="card-news col-md-6 col-lg-6 py-2">
+              <span className="date">27 Sept 2021</span>
+              <div className="wrapper" style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
+                <div className="card-header ">
+                  <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
+                  <Link to="#" className="standard-btn">Go to link</Link>
                 </div>
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="card-news">
-                <div className="wrapper" style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
-                  <div className="card-header ">
-                    <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
-                    <Link to="#" className="standard-btn">Go to link</Link>
-                  </div>
+            </div>
+            <div className="card-news col-md-6 col-lg-4 py-2">
+              <span className="date">22 Oct 2021</span>
+              <div className="wrapper" style={{backgroundImage: 'url(/images/49846440843_b876563475_k.jpg)'}}>
+                <div className="card-header ">
+                  <h3 className="card-title"><Link to="# ">Pellentesque nec dignissim neque</Link></h3>
+                  <Link to="#" className="standard-btn">Go to link</Link>
                 </div>
               </div>
-            </SwiperSlide>
-          </Swiper>
+            </div>
+          </div>
           <div className="row align-items-end justify-content-end mx-1">
             <Link to="/news-and-events" className="standard-btn">See more</Link>
           </div>
