@@ -1,0 +1,78 @@
+/*----------------------------------------*/
+/*  04. Pages CSS
+/*----------------------------------------*/
+
+/*=======================================
+    4.01 About CSS
+=========================================*/
+.about-content {
+    padding-left: 35px;
+    font-family: Noto Sans, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+    color: #230050;
+    @media #{$desktop-device, $tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+
+    & .title {
+        margin-bottom: 0;
+    }
+
+    & .btn {
+        margin-top: 40px;
+        @media #{$tablet-device, $large-mobile} {
+            margin-top: 20px;
+        }
+    }
+    &__first-text {
+        font-family: Noto Sans, sans-serif;
+        font-size: 1.275rem;
+        line-height: normal;
+        letter-spacing: normal;
+        font-weight: 700;
+        color: #230050;
+        margin-bottom: 30px;
+
+        @media #{$tablet-device, $large-mobile} {
+            margin-bottom: 20px;
+        }
+        & span {
+            font-style: italic;
+        }
+    }
+}
+.about-image-area {
+    position: relative;
+    & .about-image {
+        padding-right: 40px;
+        @media #{ $tablet-device, $large-mobile} {
+            padding-right: 10px;
+        }
+    }
+
+    & .shape-1 {
+        position: absolute;
+        margin-top: -176px;
+        margin-left: -50px;
+        z-index: -1;
+
+        @media #{$tablet-device, $large-mobile} {
+            display: none;
+        }
+    }
+}
+.about-negative-image {
+    position: relative;
+    margin-top: -220px;
+    z-index: 99;
+    margin-bottom: 80px;
+
+    @media #{$tablet-device} {
+        margin-top: 80px;
+    }
+    @media #{$large-mobile} {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}

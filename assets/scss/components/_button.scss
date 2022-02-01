@@ -1,0 +1,130 @@
+/*=======================================
+    03.04 Button CSS
+=========================================*/
+.btn {
+    font-size: 14px;
+    padding: .8rem 2rem;
+    border: 0px;
+    line-height: 1.5;
+    font-weight: 300;
+    border-radius: 1px;
+    transition: $transition-base;
+    width: fit-content;
+    &:active{
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    @media #{$small-mobile} {
+        padding: 15px 25px;
+
+        & i {
+            margin-left: 10px;
+        }
+    }
+}
+/* Button Color & Style (Solid) */
+@each $name, $value in $theme-colors {
+    .btn-#{$name} {
+        border-color: $value;
+        background-color: $value;
+
+        @if $name==primary {
+            color: #230050;
+            background-color: #FFCD2D;
+        }
+
+        @else if $name==dark {
+            color: $white;
+            background-color: $ilo-blue;
+        }
+
+        @else {
+            color: $white;
+        }
+        &:focus {
+            border-color: $value;
+            background-color: $value;
+
+            @if $name==primary {
+                color: #230050;
+                background-color: #FFDC6C;
+            }
+
+            @else if $name==dark {
+                color: $white;
+                background-color: $ilo-blue;
+            }
+
+            @else {
+                color: $white;
+            }
+        }
+    }
+}
+@each $name, $value in $theme-colors {
+    .btn-hover-#{$name} {
+        &:hover {
+            background-color: #151F85;
+            @if $name == primary {
+                color: $white;
+                background-color: #FFDC6C;
+            }
+            @else if $name == whited {
+                color: $headings-color;
+            }
+            @else if $name == secondary {
+                color: $ilo-white;
+                background-color: $ilo-legacy-blue;
+            }
+            @else {
+                color: $white;
+            }
+        }
+    }
+}
+/* Button Color & Style (Outline) */
+@each $name, $value in $theme-colors {
+    .btn-outline-#{$name} {
+        border-color: $value;
+        background-color: $value;
+
+        @if $name==primary {
+            color: $primary;
+            border: 2px solid $primary;
+            background-color: transparent;
+        }
+
+        @else if $name==whited {
+            color: $white;
+            background-color: transparent;
+            border: 2px solid $white;
+        }
+
+        @else {
+            color: $white;
+        }
+    }
+}
+@each $name, $value in $theme-colors {
+    .btn-outline-hover-#{$name} {
+        &:hover {
+            border-color: $value;
+            background-color: $value;
+            @if $name == light {
+                color: $white;
+                background-color: $headings-color;
+                border: 2px solid transparent;
+            }
+            @else if $name == primary {
+                background-color: $white;
+                color: $primary;
+                border: 2px solid $white;
+            }
+            @else {
+                color: $white;
+            }
+        }
+    }
+}

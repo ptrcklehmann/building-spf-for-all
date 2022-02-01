@@ -1,0 +1,81 @@
+/*=======================================
+    03.10 Gallery CSS
+=========================================*/
+.single-gallery {
+  border-radius: 1px;
+  margin-bottom: 20px;
+  height: 100%;
+  & .gallery-thumb {
+    & a {
+      display: block;
+      overflow: hidden;
+      border-radius: 1px;
+      transition: 0.3s;
+    }
+  }
+  &:hover {
+    // box-shadow: 0px 5px 5px 0.45px $ilo-pale-grey;
+    transition: 0.3s;
+  }
+}
+
+// Project gallery
+.single-gallery {
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    & .gallery-content {
+      bottom: 5%;
+      transition: 0.4s;
+      visibility: visible;
+    }
+  }
+}
+.gallery-content {
+  position: absolute;
+  bottom: -15%;
+  left: 0;
+  right: 0;
+  padding: 2rem 1rem;
+  background: rgb(255, 255, 255);
+  opacity: 0.9;
+  border-radius: 1px;
+  transition: 0.4s;
+  visibility: hidden;
+  z-index: 99;
+  @media #{$large-mobile, $tablet-device} {
+    margin: .5rem;
+    padding: .5rem;
+  }
+  & .title {
+    font-weight: 600;
+    font-size: 1rem;
+    @media #{$large-mobile, $tablet-device} {
+      font-size: .8rem;
+    }
+    & a {
+      color: $ilo-blue;
+      &:hover {
+        color: $ilo-dark-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+  & .read-more:hover {
+    padding-left: 18px;
+}
+  & .read-more::after{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    top: 35%;
+    font-size: .8rem;
+  }
+  & span {
+    padding-left: 15px;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    color: $ilo-blue;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,114 @@
+/*=======================================
+    03.12 Brand CSS
+=========================================*/
+.brand-slider,
+.brand-banner-area {
+    & .swiper-wrapper {
+        display: flex;
+        align-items: center;
+        & .swiper-slide {
+            @media #{$extra-small-mobile} {
+                text-align: center;
+            }
+        }
+    }
+
+    & .brand-item {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            background: #fcf9f8;
+            border-radius: 100%;
+            width: 70px;
+            height: 70px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        & img {
+            transition: $transition-base;
+            z-index: 1;
+
+            &:hover {
+                filter: invert(55%) sepia(73%) saturate(7057%) hue-rotate(14deg) brightness(96%) contrast(98%);
+                transition: $transition-base;
+            }
+        }
+    }
+}
+.brand-banner-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px;
+    background-color: rgb(37, 35, 50);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+    & .brand-item {
+        margin: 50px 40px;
+
+        & img {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            z-index: 1;
+            background-color: #312f41;
+        }
+
+        @media #{$desktop-device, $small-mobile} {
+            margin: 25px;
+        }
+        @media #{$extra-small-mobile} {
+            margin: 15px;
+        }
+    }
+
+    &::before {
+        content: url("../images/shape-animation/banner-shape-1.png");
+        position: absolute;
+        top: -60px;
+        left: -100px;
+        z-index: 1;
+        transform: scaleX(-1);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        z-index: 1;
+        transform: scaleX(-1);
+        background-image: url("../images/shape-animation/banner-shape-2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 275px;
+        height: 65px;
+    }
+
+    @media #{$extra-small-mobile} {
+        padding: 20px;
+    }
+}
+.section-title {
+    & .brand-content {
+        font-family: Noto Sans, sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.6rem;
+        color: #230050;
+        max-width: 450px;
+        & span {
+            font-weight: 600;
+            color: $ilo-red;
+        }
+        @media #{$tablet-device, $large-mobile} {
+            font-size: 1rem;
+            max-width: 100%;
+        }
+    }
+}

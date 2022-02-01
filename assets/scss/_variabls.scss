@@ -1,0 +1,98 @@
+//=======================
+// Developer Variable
+//=======================
+
+// Responsive Variables
+$extraBig-device: "only screen and (min-width: 1600px)";
+$laptop-device: "only screen and (min-width: 1200px) and (max-width: 1599px)";
+$desktop-device: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$tablet-device: "only screen and (min-width: 768px) and (max-width: 991px)";
+$large-mobile: "only screen and (max-width: 767px)";
+$small-mobile: "only screen and (max-width: 575px)";
+$extra-small-mobile: "only screen and (max-width: 479px)";
+
+//===============================
+// Bootstrap Variables Overright
+//===============================
+
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// Gray Color
+$gray-100: #fcf9f8;
+$gray-200: #c0c0c0;
+$gray-300: #888888;
+$gray-400: #8a8a8a;
+$gray-500: #4f4f4f;
+$gray-800: #252332;
+$gray-900: #212529;
+
+$primary: #1e2dbe;
+$secondary: #f44705;
+$success: #f7a582;
+$dark: #242326;
+$darken: #252332;
+$white: #ffffff;
+$overlay-black: #000000;
+$base-font-size: 16px;
+$screen-xs-min: 30rem;
+$screen-sm-min: 48rem;
+$screen-md-min: 64rem;
+$screen-lg-min: 75rem;
+$lg-max-width: 71rem;
+$base-padding: 2rem;
+$base-negative-padding: -2rem;
+$ilo-blue: #1e2dbe;
+$ilo-legacy-blue: #151f85;
+$ilo-dark-blue: #230050;
+$ilo-mauve: #584275;
+$ilo-red: #fa3c4b;
+$ilo-red-1: #c8303c;
+$ilo-white: #fff;
+$ilo-white-unselected: #b6b6b6;
+$ilo-turquoise: #05d2d2;
+$ilo-green: #8ce164;
+$ilo-yellow: #ffcd2d;
+$ilo-yellow-hover: #ffdc6c;
+$ilo-purple: #960a55;
+$ilo-lilac: #eeebf2;
+$ilo-pale-grey: #eceeff;
+$ilo-grey: #ebf5fd;
+$ilo-dark-grey: #a3a3a3;
+$ilo-canary: #d4e7f5;
+$type-black: #242323;
+$type-grey: #707071;
+
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+	"primary": $ilo-blue,
+	"secondary": $ilo-red,
+	"success": $ilo-turquoise,
+	"dark": $ilo-dark-blue,
+	"whited": $white,
+	"darken": $type-black,
+	"gray": $ilo-grey,
+);
+// scss-docs-end theme-colors-map
+
+// Options
+
+$body-color: $ilo-dark-blue;
+
+// Transition
+$transition-base: all 0.3s ease-in-out 0s;
+$transition-header: height 0.4s ease 0s;
+
+// stylelint-enable value-keyword-case
+$font-family-base: 'Noto Sans', sans-serif;
+
+
+$headings-font-family: 'Overpass', sans-serif;
+$headings-font-weight: 700;
+$headings-line-height: 1.3;
+$headings-color: $ilo-blue;
+
+$list-group-border-width: 0px;
+$list-group-border-radius: 1px;

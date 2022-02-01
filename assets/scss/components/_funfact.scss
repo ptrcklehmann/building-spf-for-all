@@ -1,0 +1,38 @@
+.single-funfact{
+    display: flex;
+    align-items: center;
+    
+    @media #{$large-mobile, $tablet-device} {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    & .counter-content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        @media #{$large-mobile, $tablet-device} {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    & .counter {
+        font-size: 60px;
+        font-family: $headings-font-family;
+        line-height: 1;
+        font-weight: 700;
+        color: $secondary;    
+        @media #{$desktop-device, $tablet-device, $large-mobile} {
+            font-size: 40px;
+        }
+    }
+    & .funfact-title {
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 400;
+        @media #{$large-mobile} {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+/*=======================================
+    03.03 Slider CSS
+=========================================*/
+.hero-layout {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 25px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    & .hero-background {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
+    }
+}
+
+.sub-hero-layout {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: calc(65vh - 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @media #{$tablet-device,
+        $large-mobile} {
+        height: calc(65vh - 25px);
+    }
+    @media #{$extra-small-mobile} {
+        width: 100%;
+    }
+    & .hero-background {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+    }
+    & .hero-heading {
+        padding-bottom: 4rem;
+    }
+}
+.hero-background {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+}
+
+.double-bullet {
+    transition: $transition-base;
+    width: 5rem;
+    @media #{$tablet-device, $large-mobile} {
+        width: 3rem;
+    }
+}
+.container {
+    overflow: visible;
+    &:hover {
+        & .double-bullet {
+            margin-left: 0.2rem;
+        }
+        & .uuper_box {
+            & > h1,
+            h2,
+            h3 {
+                margin-left: 0.2rem;
+            }
+        }
+    }
+}
+.hero-heading h1 {
+    transition: $transition-base;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    color: $ilo-blue;
+    width: 90%;
+    @media #{$tablet-device, $large-mobile} {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+        margin-right: auto;
+        width: 80%;
+    }
+    @media #{$extra-small-mobile} {
+        font-size: 32px;
+        line-height: 39px;
+    }
+}
+.hero-heading h2 {
+    transition: $transition-base;
+    font-family: "Overpass", sans-serif;
+    font-weight: 300;
+    color: $ilo-dark-blue;
+    margin-bottom: 0;
+    @media #{$tablet-device, $large-mobile} {
+        font-size: 23px;
+    }
+}
+.hero-heading h3 {
+    transition: $transition-base;
+    font-family: "Overpass", sans-serif;
+    font-weight: 200;
+    color: $ilo-turquoise;
+    padding-top: 1rem;
+    margin-bottom: 0;
+    width: 80%;
+    @media #{$tablet-device, $large-mobile} {
+        font-size: 19px;
+        width: 100%;
+    }
+    & > mark {
+        color: #9ef2f2;
+        background: $ilo-blue;
+        padding: 0.1rem 0;
+    }
+}
+
+// Animation Style
+.animation-style-01 {
+    & .slider-content,
+    & .slider-content-image {
+        opacity: 0;
+    }
+
+    & .swiper-slide-active {
+        & .slider-content,
+        & .slider-content-image {
+            opacity: 1;
+            & .title {
+                animation-name: zoomIn;
+                animation-delay: 0.4s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+            & .title-2 {
+                animation-name: fadeInUpBig;
+                animation-delay: 0.4s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+            & .title-3 {
+                animation-name: pulse;
+                animation-delay: 0.4s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+            & p {
+                animation-name: fadeInUpBig;
+                animation-delay: 0.8s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+            & .btn {
+                animation-name: fadeInUpBig;
+                animation-delay: 1.2s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+        }
+
+        & .slider-images {
+            opacity: 1;
+
+            & img {
+                animation-name: fadeInUpBig;
+                animation-delay: 1.2s;
+                animation-duration: 2s;
+                animation-fill-mode: both;
+            }
+        }
+    }
+}

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DMark - Corporate Agency Bootstrap 5 Template</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Vendor CSS (Icon Font) -->
+
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/icofont.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+
+    <!-- Plugins CSS (All Plugins Files) -->
+
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/aos.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/odometer.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/magnific-popup-min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/splitting.min.css" />
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+
+    <!-- 
+<link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
+<link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
+<link rel="stylesheet" href="assets/css/style.min.css">  
+-->
+
+    <!-- Main Style CSS -->
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+
+</head>
+
+<body>
+
+    <!-- Header Section Start -->
+    <div class="header">
+        <div class="sticky-header">
+            <div class="container">
+                <div class="header-wrapper">
+
+                    <!-- Header Logo Start -->
+                    <div class="header-logo">
+                        <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo"></a>
+                    </div>
+                    <!-- Header Logo End -->
+
+                    <!-- Header Menu Start -->
+                    <div class="main-menu d-none d-lg-flex">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="has-children">
+                                <a href="#/">Service</a>
+                                <ul class="sub-menu">
+                                    <li><a href="service.html">Service</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#/">Project</a>
+                                <ul class="sub-menu">
+                                    <li><a href="project.html">Project</a></li>
+                                    <li><a href="project-details.html">Project Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a class="active" href="#">Blog</a>
+                                <ul class="sub-menu">
+                                    <li><a href="blog-grid.html">Blog</a></li>
+                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                    <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
+                                    <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Header Menu End -->
+
+                    <!-- Header Social Actions Start -->
+                    <div class="header-social-actions">
+                        <div class="header-social d-none d-sm-block">
+                            <ul>
+                                <li>
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="header-actions">
+
+                            <!-- Search Hambarger Action Button Start -->
+                            <button class="header-action-btn header-action-search d-flex">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            <!-- Search Hambarger Action Button End -->
+
+                            <!-- Default Hambarger Action Button Start -->
+                            <button class="header-action-btn header-action-btn-menu d-flex d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"   aria-controls="offcanvasExample">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <!-- Default Hambarger Action Button End -->
+
+                            <!-- Mobile Menu Hambarger Action Button Start -->
+                            <button class="header-action-btn header-action-btn-menu d-none d-lg-flex" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <!-- Mobile Menu Hambarger Action Button End -->
+                        </div>
+
+                    </div>
+                    <!-- Header Social Actions End -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header Section End -->
+
+    <!-- Breadcrumb Section Start -->
+    <div class="section breadcrumb-section overlay" data-bg-image="assets/images/breadcrumb/1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Breadcrumb wrapper Start -->
+                    <div class="breadcrumb-wrapper">
+                        <h1 class="title text-color-secondary">Blog Details</h1>
+                        <p class="subtitle text-white" data-aos="fade-up" data-aos-duration="1100">More Details About Each <br> Single Blog Post</p>
+                    </div>
+                    <!-- Breadcrumb wrapper End -->
+
+                </div>
+            </div>
+        </div>
+        <!-- Layer Shape Start -->
+        <div class="layer-shape">
+            <img src="assets/images/shape-animation/breadcrumb-shape-one.png" alt="" class="layer-shape-one">
+            <img src="assets/images/shape-animation/breadcrumb-shape-two.png" alt="" class="layer-shape-two">
+            <img src="assets/images/shape-animation/breadcrumb-shape-three.png" alt="" class="layer-shape-three">
+            <img src="assets/images/shape-animation/breadcrumb-shape-three.png" alt="" class="layer-shape-four">
+        </div>
+        <!-- Layer Shape End -->
+    </div>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Blog Details Section Start -->
+    <div class="section section-margin">
+        <div class="container">
+
+            <div class="row m-b-n60">
+
+                <div class="col-xl-4 col-lg-4 m-b-60 order-2">
+                    <!-- Sidebar Start -->
+                    <div class="sidebar-wrapper m-b-n30 ms-0 ms-xl-4">
+
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget m-b-30" data-aos="fade-up" data-aos-duration="1100">
+                            <div class="sidebar-title-wrapper">
+                                <h4 class="sidebar-title">Search</h4>
+                                <span></span>
+                            </div>
+                            <form class="sidebar-form">
+                                <input class="searchbox-input" type="text" placeholder="Enter keywords">
+                                <button class="searchbox-btn" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <!-- Sidebar Widget End -->
+
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget m-b-30" data-aos="fade-up" data-aos-duration="1300">
+                            <div class="sidebar-title-wrapper">
+                                <h4 class="sidebar-title">Categories</h4>
+                                <span></span>
+                            </div>
+                            <ul class="sidebar-categories">
+                                <li><a href="#/">Email Marketing</a></li>
+                                <li><a href="#/">Keyword Research</a></li>
+                                <li><a href="#/">PPC Advertising</a></li>
+                                <li><a href="#/">Competitor Research</a></li>
+                                <li><a href="#/">Social Media Marketing</a></li>
+                                <li><a href="#/">Lead Generation</a></li>
+                            </ul>
+                        </div>
+                        <!-- Sidebar Widget End -->
+
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget m-b-30" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="sidebar-title-wrapper">
+                                <h4 class="sidebar-title">Recent Post</h4>
+                                <span></span>
+                            </div>
+                            <div class="blog-post-wrapper m-b-n30">
+                                <div class="single-blog-post m-b-20">
+                                    <div class="blog-post-thumb">
+                                        <a href="blog-details.html"><img src="assets/images/blog/blog-small/1.png" alt="Blog Post"></a>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <span>Posted on 18 March, 2021</span>
+                                        <h4 class="blog-post-title"><a href="blog-details.html">PPC advertising plays a great role.</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-blog-post m-b-20">
+                                    <div class="blog-post-thumb">
+                                        <a href="blog-details.html"><img src="assets/images/blog/blog-small/2.png" alt="Blog Post"></a>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <span>Posted on 10 March, 2021</span>
+                                        <h4 class="blog-post-title"><a href="blog-details.html">Email Marketing for your Business.</a></h4>
+                                    </div>
+                                </div>
+                                <div class="single-blog-post m-b-20">
+                                    <div class="blog-post-thumb">
+                                        <a href="blog-details.html"><img src="assets/images/blog/blog-small/3.png" alt="Blog Post"></a>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <span>Posted on 14 June, 2021</span>
+                                        <h4 class="blog-post-title"><a href="blog-details.html">How to Target main Keywords.</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sidebar Widget End -->
+
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget m-b-30" data-aos="fade-up" data-aos-duration="1900">
+                            <div class="sidebar-title-wrapper">
+                                <h4 class="sidebar-title">Follow us</h4>
+                                <span></span>
+                            </div>
+                            <ul class="sidebar-social m-b-n20">
+                                <li class="grid-item m-b-20">
+                                    <img src="assets/images/shape-animation/social-bg.png" alt="Social BG">
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li class="grid-item m-b-20">
+                                    <img src="assets/images/shape-animation/social-bg.png" alt="Social BG">
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li class="grid-item m-b-20">
+                                    <img src="assets/images/shape-animation/social-bg.png" alt="Social BG">
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                                </li>
+                                <li class="grid-item m-b-20">
+                                    <img src="assets/images/shape-animation/social-bg.png" alt="Social BG">
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li class="grid-item m-b-20">
+                                    <img src="assets/images/shape-animation/social-bg.png" alt="Social BG">
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-skype"></i></a>
+                                </li>
+                                <li class="grid-item m-b-20">
+                                    <img src="assets/images/shape-animation/social-bg.png" alt="Social BG">
+                                    <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-google-plus"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Sidebar Widget End -->
+
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget bg-transparent p-0 m-b-30" data-aos="fade-up" data-aos-duration="1700">
+                            <div class="blog-sidebar-banner">
+                                <img class="fit-image" src="assets/images/banner/sidebar-banner.png" alt="Blog Banner">
+                                <div class="banner-text">
+                                    <span class="banner-title m-b-30">Do you need <span class="text-color-secondary">help</span> for Digital Marketing</span>
+                                    <span class="banner-title"> <span class="text-color-secondary">Call us</span></span>
+                                    <span class="banner-number">0123456789</span>
+                                    <a href="#/">www.dmark.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sidebar Widget End -->
+
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget m-b-30" data-aos="fade-up" data-aos-duration="1900">
+                            <div class="sidebar-title-wrapper">
+                                <h4 class="sidebar-title">Tags</h4>
+                                <span></span>
+                            </div>
+                            <div class="blog-sidebar-tags">
+                                <a href="#/">Business</a>
+                                <a href="#/">Photography</a>
+                                <a href="#/">Branding</a>
+                                <a href="#/">SEO</a>
+                                <a href="#/">Marketing</a>
+                                <a href="#/">Interior Design</a>
+                                <a href="#/">Design</a>
+                            </div>
+                        </div>
+                        <!-- Sidebar Widget End -->
+
+                    </div>
+                    <!-- Sidebar End -->
+                </div>
+                <div class="col-xl-8 col-lg-8 m-b-60 order-1">
+                    <div class="blog-details-wrapper">
+                        <div class="blog-details-image m-b-60" data-aos="fade-up" data-aos-duration="1100">
+                            <img src="assets/images/blog/blog-large/blog-details.png" alt="Blog Details">
+                        </div>
+                        <div class="single-blog-meta m-b-20" data-aos="fade-up" data-aos-duration="1200">
+                            <span>Posted on March 20, 2021 - By: <a class="text-color-secondary" href="#/"> Jackuline</a></span>
+                        </div>
+                        <h2 class="blog-details-title m-b-20" data-aos="fade-up" data-aos-duration="1300">How Compititor Research plays a great role for Business</h2>
+                        <p class="text" data-aos="fade-up" data-aos-duration="1100">Voluptas sit aspernatur aut odit aut fugit, sed quia consequunt dolor es eos qui ratione volupt tem sequi nesciunt. Neque porro uam est, qui dolorem ipsum quia dolor sit amet, consectetur is a most of most effective solutions eligendi optio cumque nihil impedit quo minus id main a quod maxime placeat face re possimus, omnis voluptas assumenda est, omnis dolor repellen dus ee-learning-concept-banner-template.zip eligendi optio cumque</p>
+
+                        <div class="blog-content-image m-t-40 m-b-n50">
+                            <div class="blog-content-thumb m-b-50" data-aos="fade-up" data-aos-duration="1400">
+                                <img src="assets/images/blog/blog-medium/blog-details.png" alt="">
+                            </div>
+                            <div class="blog-content m-b-50" data-aos="fade-up" data-aos-duration="1600">
+                                <p>Voluptas sit aspernatur aut odit aut fugit, sed quia consequunt dolor es eos qui ratione volu tem sequi nesciunt. Neque porro uam est, qui a most of most effective solutions eligendi quod maxime placeat face re possimus, omn dus ee-learning-concept-banner more than a business consultant convence</p>
+                            </div>
+                        </div>
+
+                        <p class="text m-t-40" data-aos="fade-up" data-aos-duration="1100">Voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur mag ni dolores eos qui ratione voluptatem sequi nesciun Neque porro quisq uam est, qui dolorem ipsum quia dolor sit amet, consectetur some of the main Problems some of the main need more imporvement to solve the business policy qui dolorem simple ipsum consectetur</p>
+
+
+                        <div class="blockquote-area m-t-50 m-b-40" data-aos="fade-up" data-aos-duration="1500">
+                            <div class="custom-banner-wrapper">
+                                <span class="banner-shape-1"><img src="assets/images/shape-animation/banner-shape-1.png" alt="Banner Shape"></span>
+                                <span class="banner-shape-2"><img src="assets/images/shape-animation/banner-shape-2.png" alt="Banner Shape"></span>
+                                <!-- Banner Content Start -->
+                                <div class="banner-content">
+                                    <blockquote class="blockquote">
+                                        <p>Voluptas sit aut aspernatur aut odit aut fugit, sed aut quia conse quunt dolor es eos qui ratione volupt tem sequi nesciun uam is a most of most effective solutions eligendi optio </p>
+                                    </blockquote>
+                                    <span class="banner-shape-3 scene"><img data-depth="1" src="assets/images/shape-animation/banner-shape-3.png" alt="Banner Shape"></span>
+                                    <span class="quote-icon"><i class="icofont-quote-right"></i></span>
+                                </div>
+                                <!-- Banner Content End -->
+                            </div>
+
+                            <!-- 
+								<blockquote class="blockquote">
+									<p>Eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere some of the possimus, omnis voluptas assumenda est, omnis dolor repellendus solution of your business that can be manage the imporvement of your business analysis</p>
+								</blockquote> -->
+                        </div>
+                        <p class="text" data-aos="fade-up" data-aos-duration="1100">Voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur mag ni dolores eos qui ratione voluptatem sequi nesciun Neque porro quisq uam est, qui dolorem ipsum quia dolor sit amet, consectetur some of the main Problems some of the main need more imporvement to solve the business policy qui dolorem simple ipsum consectetur</p>
+
+                        <div class="blog-details-tags-share m-t-30" data-aos="fade-up" data-aos-duration="1700">
+                            <div class="blog-details-tags">
+                                <span class="lable">Tags - </span>
+                                <ul>
+                                    <li><a href="#/">Business, </a></li>
+                                    <li><a href="#/"> Marketing, </a></li>
+                                    <li><a href="#/"> Digital</a></li>
+                                </ul>
+                            </div>
+                            <div class="blog-details-share">
+                                <span class="lable">Share - </span>
+                                <ul>
+                                    <li><a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-skype"></i></a></li>
+                                    <li><a href="#/"><i class="fa fa-google"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4 class="comment-title" data-aos="fade-up" data-aos-duration="1100">Comments (03)</h4>
+
+                        <div class="authors">
+
+                            <!-- author-list start -->
+                            <div class="author-list d-flex flex-wrap" data-aos="fade-up" data-aos-duration="1100">
+                                <img src="assets/images/author/1.png" alt="profile" class="author-profile align-self-start">
+                                <div class="author-info">
+                                    <div class="author-title-meta">
+                                        <h3 class="author-title">Stephen Flemming, </h3>
+                                        <p class="author-meta">20 March, 2021//4.25 pm</p>
+                                    </div>
+                                    <p class="author-content">Voluptas sit aspernatur aut odit aut fugit, sed quia consequunt dolor es eos otherwise we tem sequi nesciunt. Neque porro uam est, qui dolorem ipsum quia dolor sit amet meet is a most of most effective solutions eligendi optio cumque </p>
+                                    <div class="author-icons">
+                                        <a href="#/" class="replay"><i class="fa fa-reply-all"></i> Reply</a>
+                                        <a href="#/" class="replay"><i class="fa fa-thumbs-o-up"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- author-list end -->
+
+                            <!-- author-list start -->
+                            <div class="author-list d-flex flex-wrap" data-aos="fade-up" data-aos-duration="1200">
+                                <img src="assets/images/author/2.png" alt="profile" class="author-profile align-self-start">
+                                <div class="author-info">
+                                    <div class="author-title-meta">
+                                        <h3 class="author-title">Jessica Luice,</h3>
+                                        <p class="author-meta">17 March, 2021//9.00 pm</p>
+                                    </div>
+                                    <p class="author-content">Voluptas sit aspernatur aut odit aut fugit, sed quia consequunt dolor es eos otherwise we tem sequi nesciunt. Neque porro uam est, qui dolorem ipsum quia dolor sit amet meet is a most of most effective solutions eligendi optio cumque </p>
+                                    <div class="author-icons">
+                                        <a href="#/" class="replay"><i class="fa fa-reply-all"></i> Reply</a>
+                                        <a href="#/" class="replay"><i class="fa fa-thumbs-o-up"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- author-list end -->
+
+                            <!-- author-list start -->
+                            <div class="author-list d-flex flex-wrap" data-aos="fade-up" data-aos-duration="1400">
+                                <img src="assets/images/author/3.png" alt="profile" class="author-profile align-self-start">
+                                <div class="author-info">
+                                    <div class="author-title-meta">
+                                        <h3 class="author-title">Devid Millan,</h3>
+                                        <p class="author-meta">12 March, 2021//12.00 pm</p>
+                                    </div>
+                                    <p class="author-content">Voluptas sit aspernatur aut odit aut fugit, sed quia consequunt dolor es eos otherwise we tem sequi nesciunt. Neque porro uam est, qui dolorem ipsum quia dolor sit amet meet is a most of most effective solutions eligendi optio cumque </p>
+                                    <div class="author-icons">
+                                        <a href="#/" class="replay"><i class="fa fa-reply-all"></i> Reply</a>
+                                        <a href="#/" class="replay"><i class="fa fa-thumbs-o-up"></i> Like</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- author-list end -->
+
+                        </div>
+
+                        <h4 class="comment-title" data-aos="fade-up" data-aos-duration="1100">Leave a Comment</h4>
+
+                        <div class="comment-form-wrap" data-aos="fade-up" data-aos-duration="1100">
+                            <form action="#" method="post">
+                                <div class="row g-3">
+                                    <div class="col-md-4 mb-2">
+                                        <input class="form-control" type="text" placeholder="Enter Your Name*">
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <input class="form-control" type="email" placeholder="Email Address*">
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <input class="form-control" type="text" placeholder="Phone">
+                                    </div>
+                                    <div class="col-12 mb-2">
+                                        <textarea class="form-control form-controll-textarea" rows="12" placeholder="Content"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-dark btn-hover-secondary">Submit Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Details Section End -->
+
+    <!-- Start Footer Area Wrapper -->
+    <footer class="section footer-area">
+        <div class="footer-top overlay" data-bg-color="#000" data-bg-image="assets/images/banner/footer.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Start Footer Widget Area -->
+                        <div class="footer-widget-area">
+                            <div class="row m-b-n40">
+                                <div class="col-sm-6 col-md-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="1100">
+                                    <div class="widget-item pb-sm-20">
+
+                                        <div class="footer-logo">
+                                            <a href="index.html">
+                                                <img src="assets/images/logo/footer-logo.png" alt="Logo Image">
+                                            </a>
+                                        </div>
+                                        <p class="desc-content m-t-30">Voluptas sit aspernatur aut odit aut fugit sed quia onsequuntur dolores eos qui am est, qui</p>
+                                        <!-- Contact Address Start -->
+                                        <div class="widget-address">
+                                            <span class="title">Call us</span>
+                                            <a class="contact-num" href="tel:123-123-456-789">+00 123 456 789</a>
+                                            <a class="contact-web" href="#/">www.dmark.com</a>
+                                        </div>
+                                        <!-- Contact Address End -->
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 d-flex justify-content-start justify-content-lg-center m-b-40" data-aos="fade-up" data-aos-duration="1500">
+
+                                    <div class="widget-item ps-lg-5">
+                                        <h4 class="widget-title">Quick Info</h4>
+                                        <div class="widget-list-two-col">
+                                            <ul class="widget-list">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About Us</a></li>
+                                                <li><a href="service.html">Service</a></li>
+                                                <li><a href="project.html">Project</a></li>
+                                                <li><a href="blog-details.html">Our Blog</a></li>
+                                            </ul>
+                                            <ul class="widget-list">
+                                                <li><a href="about.html">Team</a></li>
+                                                <li><a href="about.html">Pricing</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 d-flex justify-content-start justify-content-lg-center m-b-40" data-aos="fade-up" data-aos-duration="2000">
+
+                                    <div class="widget-item">
+                                        <h4 class="widget-title">Support</h4>
+                                        <ul class="widget-list">
+                                            <li><a href="contact.html">Terms & Conditions</a></li>
+                                            <li><a href="contact.html">Quick Support</a></li>
+                                            <li><a href="contact.html">Privecy Policy</a></li>
+                                            <li><a href="contact.html">Payment System</a></li>
+                                            <li><a href="contact.html">Faq & Updates</a></li>
+                                            <li><a href="contact.html">Refund Policy</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6 col-md-6 col-lg-3 m-b-40" data-aos="fade-up" data-aos-duration="2500">
+
+                                    <div class="widget-item footer-top__widget-right">
+                                        <h4 class="widget-title">Get in touch</h4>
+                                        <div class="widget-location">
+                                            <span class="title">Head Quarter</span>
+                                            <p>Your address goes here - House-ABC, Road-ABC, Country.</p>
+                                        </div>
+                                        <!-- Newsletter Form Start -->
+                                        <div class="newsletter-form-wrap m-t-25">
+                                            <span class="title">Subscribe now</span>
+                                            <form id="mc-form" class="mc-form">
+                                                <input type="email" id="mc-email" class="form-control email-box" placeholder="Your Email here" name="EMAIL">
+                                                <button id="mc-submit" class="newsletter-btn" type="submit"><i class="fa fa-paper-plane"></i></button>
+                                            </form>
+                                            <!-- mailchimp-alerts Start -->
+                                            <div class="mailchimp-alerts text-centre">
+                                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                                <div class="mailchimp-success text-success"></div><!-- mailchimp-success end -->
+                                                <div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->
+                                            </div>
+                                            <!-- mailchimp-alerts end -->
+
+                                        </div>
+                                        <!-- Newsletter Form End -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Footer Widget Area -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row m-b-n10">
+                    <div class="col-md-6 m-b-10 order-2 order-md-1">
+                        <div class="copyright-content">
+                            <p class="mb-0">© 2021 <strong class="text-color-gray">Dmark </strong> Made with <i class="icofont-heart-alt text-color-secondary"></i> by <a href="https://themeforest.net/user/codecarnival">Codecarnival</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 m-b-10 order-1 order-md-2">
+                        <ul class="social-footer">
+                            <li><a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-skype"></i></a></li>
+                            <li><a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--== End Footer Area Wrapper ==-->
+
+    <!-- Scroll Top Start -->
+    <a href="#" class="scroll-top show" id="scroll-top">
+        <i class="arrow-top icofont-bubble-up"></i>
+        <i class="arrow-bottom icofont-bubble-up"></i>
+    </a>
+    <!-- Scroll Top End -->
+
+    <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset text-start" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+
+            <!-- Offcanvas Wrapper Start -->
+            <div class="mobile-menu-inner-wrapper">
+
+
+
+                <div class="sidebar-widget p-0 bg-transparent">
+                    <div class="sidebar-title-wrapper">
+                        <h4 class="sidebar-title">About Us</h4>
+                        <span></span>
+                    </div>
+                    <div class="sidebar-content m-b-40">
+                        <p>Voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur dolores eos qui ratione voluptatem sequi nesciunt. Neque porro uam est, qui dolorem ipsum quia dolor sit consectetur</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget p-0 bg-transparent">
+                    <div class="sidebar-title-wrapper">
+                        <h4 class="sidebar-title">Recent Post</h4>
+                        <span></span>
+                    </div>
+                    <div class="blog-post-wrapper m-b-n30">
+                        <div class="single-blog-post m-b-20">
+                            <div class="blog-post-thumb">
+                                <a href="blog-details.html"><img src="assets/images/blog/blog-small/1.png" alt="Blog Post"></a>
+                            </div>
+                            <div class="blog-post-content">
+                                <span>Posted on 18 March, 2021</span>
+                                <h4 class="blog-post-title"><a href="blog-details.html">PPC advertising plays a great role.</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-blog-post m-b-20">
+                            <div class="blog-post-thumb">
+                                <a href="blog-details.html"><img src="assets/images/blog/blog-small/2.png" alt="Blog Post"></a>
+                            </div>
+                            <div class="blog-post-content">
+                                <span>Posted on 10 March, 2021</span>
+                                <h4 class="blog-post-title"><a href="blog-details.html">Email Marketing for your Business.</a></h4>
+                            </div>
+                        </div>
+                        <div class="single-blog-post m-b-20">
+                            <div class="blog-post-thumb">
+                                <a href="blog-details.html"><img src="assets/images/blog/blog-small/3.png" alt="Blog Post"></a>
+                            </div>
+                            <div class="blog-post-content">
+                                <span>Posted on 14 June, 2021</span>
+                                <h4 class="blog-post-title"><a href="blog-details.html">How to Target main Keywords.</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Links/Social Links Start -->
+                <div class="mt-auto bottom-0">
+
+                    <!-- Contact Links Start -->
+                    <ul class="contact-links">
+                        <li><i class="icofont-phone"></i><a href="tel:+0123456789"> +012 3456 789</a></li>
+                        <li><i class="icofont-envelope-open"></i><a href="mailto:info@example.com"> info@example.com</a></li>
+                        <li><i class="icofont-wall-clock"></i> <span>Monday - Sunday 9.00 - 18.00</span> </li>
+                    </ul>
+                    <!-- Contact Links End -->
+
+                    <div class="header-social">
+                        <ul class="d-flex align-items-center">
+                            <li class="ps-0">
+                                <h5 class="m-0">Share: </h5>
+                            </li>
+                            <li>
+                                <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Contact Links/Social Links End -->
+            </div>
+            <!-- Offcanvas Wrapper End -->
+
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+        <div class="offcanvas-header d-flex justify-content-end">
+            <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <!-- Mobile Menu Inner Wrapper Start -->
+            <div class="mobile-menu-inner-wrapper p-0">
+
+                <!-- Mobile Menu Start -->
+                <div class="mobile-navigation">
+                    <nav>
+                        <ul class="mobile-menu mt-0">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li class="has-children">
+                                <a href="#">Service <i class="icofont-dotted-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="service.html">Service</a></li>
+                                    <li><a href="service-details.html">Service Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">Project <i class="icofont-dotted-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="project.html">Project</a></li>
+                                    <li><a href="project-details.html">Porject Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-children">
+                                <a href="#">Blog <i class="icofont-dotted-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown">
+                                    <li><a href="blog-grid.html">Blog</a></li>
+                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                    <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
+                                    <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile Menu End -->
+
+                <!-- Contact Links/Social Links Start -->
+                <div class="mt-auto bottom-0">
+
+                    <!-- Contact Links Start -->
+                    <ul class="contact-links">
+                        <li><i class="icofont-phone"></i><a href="tel:+0123456789"> +012 3456 789</a></li>
+                        <li><i class="icofont-envelope-open"></i><a href="mailto:info@example.com"> info@example.com</a></li>
+                        <li><i class="icofont-wall-clock"></i> <span>Monday - Sunday 9.00 - 18.00</span> </li>
+                    </ul>
+                    <!-- Contact Links End -->
+
+                    <div class="header-social">
+                        <ul class="d-flex align-items-center">
+                            <li class="ps-0">
+                                <h5 class="m-0">Share: </h5>
+                            </li>
+                            <li>
+                                <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.example.com" rel="noreferrer" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Contact Links/Social Links End -->
+            </div>
+            <!-- Mobile Menu Inner Wrapper End -->
+
+        </div>
+    </div>
+
+    <!-- Offcanvas Search Start -->
+    <div class="offcanvas-search">
+        <div class="offcanvas-search-inner">
+
+            <!-- Button Close Start -->
+            <div class="offcanvas-btn-close">
+                <i class="icofont-close-line"></i>
+            </div>
+            <!-- Button Close End -->
+
+            <!-- Offcanvas Search Form Start -->
+            <form class="offcanvas-search-form" action="#">
+                <input type="text" placeholder="Search Here..." class="offcanvas-search-input">
+            </form>
+            <!-- Offcanvas Search Form End -->
+
+        </div>
+    </div>
+    <!-- Offcanvas Search End -->
+
+    <!-- Global Vendor, plugins JS -->
+
+    <!-- Vendor JS -->
+
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
+
+    <!-- Plugins JS -->
+
+    <script src="assets/js/plugins/aos.min.js"></script>
+    <script src="assets/js/plugins/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/plugins/odometer.min.js"></script>
+    <script src="assets/js/plugins/jquery-ui.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/parallax.min.js"></script>
+    <script src="assets/js/plugins/splitting.min.js"></script>
+    <script src="assets/js/plugins/jquery.magnific-popup.min.js"></script>
+
+    <!-- Use the minified version files listed below for better performance and remove the files listed above -->
+
+    <!-- 
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/plugins.min.js"></script>  
+    -->
+
+    <!--Main JS-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

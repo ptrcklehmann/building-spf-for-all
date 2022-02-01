@@ -1,0 +1,115 @@
+/*=======================================
+    03.18 Footer CSS
+=========================================*/
+
+.footer-top {
+    padding: 1rem 0;
+}
+.footer-row {
+    padding: 1.5rem 0;
+    @media #{$tablet-device, $large-mobile} {
+        padding: 0.5rem 0;
+    }
+}
+.footer-topbar {
+    border-bottom: 1px solid $ilo-white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    color: $ilo-white;
+    font-size: 12px;
+    & a {
+        color: $ilo-white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    & .footer-links {
+        color: $ilo-white;
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: flex-end;
+        align-items: center;
+        & li {
+            margin: 0 1rem;
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        & .footer-links {
+            padding-top: 1.5rem;
+            width: 100%;
+            & li {
+                margin: 0;
+            }
+        }
+    }
+}
+.footer-tagline {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    & .footer-logo {
+        height: 80px;
+    }
+    & .headline h1 {
+        color: #fff;
+        white-space: nowrap;
+        font-size: 18px;
+        letter-spacing: -0.3px;
+        line-height: 30px;
+        text-align: right;
+        margin-bottom: 0;
+        & .tri-bullet {
+            transform: translateY(-1px);
+            color: #fa3c4b;
+        }
+    }
+    & p {
+        font-size: 12px;
+        letter-spacing: -0.3px;
+        color: #b0b9e1;
+        text-align: right;
+    }
+    @media #{$tablet-device, $large-mobile} {
+        padding: 1rem 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+        & .footer-logo {
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+        & .headline {
+            width: 100%;
+            border-top: 1px solid $ilo-white;
+            padding: 2rem 0 0;
+            align-items: flex-start;
+            & h1 {
+                font-size: 15px;
+                text-align: left;
+            }
+        }
+    }
+}
+.footer-widget-area {
+    position: relative;
+    z-index: 9;
+}
+.footer-area {
+    background: #211e31;
+}

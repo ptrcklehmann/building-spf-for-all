@@ -1,0 +1,195 @@
+/*=======================================
+    03.08 Testimonial CSS
+=========================================*/
+.testimonial-carousel {
+    max-width: 350px;
+
+    @media #{$extra-small-mobile} {
+        max-width: 280px;
+    }
+    & .swiper-container {
+        width: 100%;
+        height: 100%;
+
+        & .testimonial-thumb {
+            max-width: 80px;
+            width: 100%;
+            cursor: pointer;
+            & img{
+                opacity: .3;
+            }
+        }
+
+        & .testimonial-inner {
+            width: 71px;
+        }
+        & .swiper-slide-active {
+            & .testimonial-thumb {
+                & img{
+                    opacity: 1;
+                }
+            }
+            & .testimonial-content {
+                display: block;
+            }
+        }
+
+    }
+
+    & .swiper-wrapper {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+}
+.testimonial-carousel-area {
+    width: calc(100% - 500px);
+    @media #{$tablet-device} {
+        width: 100%;
+        padding: 80px 0px;
+    }
+    @media #{$large-mobile} {
+        width: 100%;
+        padding: 60px 0px;
+    }
+    @media #{$extra-small-mobile} {
+        padding: 60px 10px;
+    }
+
+    & .testimonial-carousel-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+
+        & .testimonial-content {
+
+            & .title {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.banner-with-testimonial-area {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 600px;
+
+    @media #{$tablet-device, $large-mobile} {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+.custom-banner-wrapper {
+    background: $darken;
+    position: relative;
+    overflow: hidden;
+    padding: 160px 100px;
+    max-width: 500px;
+
+    @media #{$tablet-device, $large-mobile} {
+        max-width: 100%;
+    }
+
+    @media #{$small-mobile} {
+        padding: 140px 80px;
+    }
+    @media #{$extra-small-mobile} {
+        padding: 100px 40px;
+    }
+
+    & .banner-shape-1{
+        position: absolute;
+        top: -12px;
+        right: -20px;
+    }
+    & .banner-shape-2{
+        position: absolute;
+        bottom: 0;
+        left: -60px;
+    }
+    & .banner-shape-3{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    & .banner-content{
+        position: relative;
+        padding: 33px 0 25px 40px;
+
+        & .title {
+            color: $white;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 2;
+            @media #{$large-mobile} {
+                font-size: 40px;
+            }
+            @media #{$extra-small-mobile} {
+                font-size: 30px;
+            }
+        }
+        & .quote-icon {
+            position: absolute;
+            top: 0;
+            left: 15px;
+            color: $darken;
+            font-size: 18px;
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            background: $secondary;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    }
+}
+.single-client {
+    position: relative;
+
+    &_content {
+        display: none;
+    }
+}
+.swiper-slide-active {
+    .single-client {
+        &_content {
+            display: block;
+            position: absolute;
+            width: 300px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 25px;
+            &__title {
+                font-size: 18px;
+                margin-bottom: 0;
+                font-weight: 600;
+            }
+            & p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+.testimonial-top {
+    width: 100%;
+}
+.testimonial-shape {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 40px;
+    @media #{$extra-small-mobile} {
+        margin-top: 60px;
+    }
+}
