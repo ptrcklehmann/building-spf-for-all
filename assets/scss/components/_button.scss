@@ -24,35 +24,7 @@
         }
     }
 }
-.btn-turquoise {
-    font-size: 14px;
-    padding: 1rem 2rem;
-    border: 0px;
-    line-height: 1.5;
-    font-weight: 300;
-    border-radius: 2px;
-    transition: $transition-base;
-    width: fit-content;
-    background: $ilo-turquoise;
-    color: $ilo-dark-blue;
-    &:hover {
-        color: $ilo-dark-blue;
-        background: #69E4E4;
-    }
-    &:active{
-        &:focus {
-            box-shadow: none;
-        }
-    }
 
-    @media #{$small-mobile} {
-        padding: 15px 25px;
-
-        & i {
-            margin-left: 10px;
-        }
-    }
-}
 /* Button Color & Style (Solid) */
 @each $name, $value in $theme-colors {
     .btn-#{$name} {
@@ -95,7 +67,6 @@
 @each $name, $value in $theme-colors {
     .btn-hover-#{$name} {
         &:hover {
-            background-color: #151F85;
             @if $name == primary {
                 color: $white;
                 background-color: #FFDC6C;
