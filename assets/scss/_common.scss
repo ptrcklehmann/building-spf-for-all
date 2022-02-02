@@ -359,14 +359,15 @@ img {
     opacity: 1!important;
 }
 .tooltip-inner {
-    background: $ilo-blue;
+    background: $ilo-white;
     border-radius: 1px;
     font-family: Noto Sans, sans-serif;
     font-size: 12px;
-
+    color: $ilo-blue;
+    padding: .5rem 1rem;
 }
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
-    border-top-color: $ilo-blue!important;
+    border-top-color: $ilo-white!important;
 }
 .strong-copyright {
     position: absolute;
