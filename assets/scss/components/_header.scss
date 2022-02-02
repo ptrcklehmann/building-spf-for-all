@@ -35,6 +35,7 @@
             font-weight: 300;
             color: $ilo-white;
             position: relative;
+            transition: $transition-base;
             @media #{$large-mobile} {
                 font-size: 10px;
             }
@@ -62,7 +63,6 @@
             &::after {
                 color: $ilo-white;
                 width: 100%;
-                transition: $transition-base;
             }
             & > i::before {
                 color: $ilo-white;
@@ -79,6 +79,7 @@
     align-items: center;
     padding: 15px 0 0 0;
     mix-blend-mode: none!important;
+    transition: $transition-base;
     @media #{$tablet-device} {
         justify-content: flex-start;
         padding: 8px 0 8px 0;

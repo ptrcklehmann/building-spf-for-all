@@ -385,7 +385,6 @@ img {
         position: relative;
         display: inline-block;
         line-height: 2;
-
         &::after {
             position: absolute;
             content: "";
@@ -423,12 +422,13 @@ img {
 .info-slides {
     scroll-snap-type: y mandatory;
     z-index: -20;
+    padding-top: 150px;
 }
 .info-section {
     z-index: -20;
     scroll-snap-align: start;
     height: 100%;
-    min-height: calc(50vh - 117px);
+    min-height: calc(60vh - 117px);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -442,12 +442,18 @@ img {
     & .info-text {
         width: 60%;
     }
-    @media #{$tablet-device} {
+    @media #{$tablet-device, $large-mobile} {
+        flex-direction: column;
+        & .info-image {
+            width: 100%;
+            height: 30vh;
+            overflow: hidden;
+        }
+        & .info-text {
+            padding-top: 2rem;
+            width: 100%;
+        }
         height: 100%;
-    }
-    @media #{$large-mobile} {
-        height: 100%;
-        padding-right: 3rem;
     }
     & h3 {
         padding-top: 1rem;
@@ -467,13 +473,14 @@ img {
 }
 .lavalamp-menu {
     position: sticky;
-    top: 53px;
+    top: 0;
     left: 0;
     width: 100%;
     background: #fff;
     padding: 1rem 0 0 0;
     z-index: 1;
     & ul {
+        margin-top: 45px;
         display: flex;
         justify-content: space-between;
     }

@@ -122,11 +122,11 @@
         spaceBetween: 10,
       },
       992: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 20,
       },
       1200: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 30,
       },
     }
@@ -140,7 +140,7 @@
   }
 
   function bindEvents() {
-    window.addEventListener("wheel", wheelHandler)
+    window.addEventListener("wheel",wheelHandler)
   }
 
   function setStickyContainersSize() {
@@ -215,7 +215,7 @@
   /*----------------------------------------*/
   function scrollToTop() {
     let scrollUp=$('#scroll-top'),
-      lastScrollTop=0, swindow=$(window)
+      lastScrollTop=0,swindow=$(window)
     swindow.on('scroll',function() {
       let st=$(this).scrollTop()
       if(st>lastScrollTop) {
@@ -236,5 +236,9 @@
     })
   }
   scrollToTop()
+  var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList=tooltipTriggerList.map(function(tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
 
 })(jQuery)

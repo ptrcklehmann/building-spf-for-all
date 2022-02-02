@@ -1,7 +1,7 @@
 {
   "name": "building-spf-for-all",
   "private": false,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Building social protection floors for all - ILO Global Flagship Programme",
+  "version": "1.2.0",
+  "author": "Patrick Lehmann/ILO <ptrcklehmann@gmail.com>"
 }
