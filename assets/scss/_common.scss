@@ -348,6 +348,26 @@ img {
         width: 20rem;
     }
 }
+.circle-value {
+    transition: $transition-base;
+    opacity: .5;
+    &:hover {
+        opacity: 1;
+    }
+}
+.tooltip {
+    opacity: 1!important;
+}
+.tooltip-inner {
+    background: $ilo-blue;
+    border-radius: 1px;
+    font-family: Noto Sans, sans-serif;
+    font-size: 12px;
+
+}
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: $ilo-blue!important;
+}
 .strong-copyright {
     position: absolute;
     bottom: 1rem;
