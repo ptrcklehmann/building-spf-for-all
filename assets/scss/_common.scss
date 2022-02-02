@@ -320,16 +320,16 @@ img {
   transform: translateX(0rem);
 }
 .btn-arrow {
-  transform: translateX(-1.3rem);
+  transform: translateX(-1.2rem);
   text-decoration: none;
   transition-property: transform;
 }
 .btn-arrow:before {
-  margin-right: .7rem;
-  transform: translateX(-.6rem);
+  margin-right: .5rem;
+  transform: translateX(-.5rem);
 }
 .btn-arrow:after {
-  margin-left: .7rem;
+  margin-left: .5rem;
 }
 .btn-arrow:hover:before {
   opacity: 1;
