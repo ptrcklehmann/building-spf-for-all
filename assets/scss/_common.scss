@@ -297,6 +297,47 @@ img {
         }
     }
 }
+.btn-arrow,
+.btn-arrow:before,
+.btn-arrow:after {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+.btn-arrow:before,
+.btn-arrow:hover:after {
+  opacity: 0;
+}
+
+.btn-arrow:before,
+.btn-arrow:after {
+  content: "▶︎";
+  transition-property: transform, opacity;
+  color: $ilo-white;
+  font-size: .7rem;
+}
+.btn-arrow:hover,
+.btn-arrow:hover:before {
+  transform: translateX(0rem);
+}
+.btn-arrow {
+  transform: translateX(-1.3rem);
+  text-decoration: none;
+  transition-property: transform;
+}
+.btn-arrow:before {
+  margin-right: .7rem;
+  transform: translateX(-.6rem);
+}
+.btn-arrow:after {
+  margin-left: .7rem;
+}
+.btn-arrow:hover:before {
+  opacity: 1;
+}
+.btn-arrow:hover:after {
+  transform: translateX(1rem);
+}
 .vision-image {
     width: 100%;
     display: flex;
