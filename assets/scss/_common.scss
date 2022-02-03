@@ -296,11 +296,11 @@ img {
     }
     & i {
         font-size: 14px;
-        margin-left: .4rem;
+        margin-left: 0.4rem;
     }
     &.btn-small {
         font-size: 14px;
-        padding: .6rem 1.5rem;
+        padding: 0.6rem 1.5rem;
     }
 
     @media #{$small-mobile} {
@@ -337,7 +337,6 @@ img {
     45% {
         opacity: 1;
         transform: translateX(0px) scale(1);
-
     }
 }
 
@@ -361,7 +360,6 @@ img {
 }
 .tooltip {
     opacity: 1 !important;
-
 }
 .tooltip-inner {
     background: $ilo-white;
@@ -519,31 +517,40 @@ img {
 }
 .loading {
     .char {
-      overflow: hidden;
-      color: transparent;
-      color: $ilo-white;
-      &:before, &:after {
-        visibility: visible;
-      }
-      &:before{
-        animation: _before 1.8s cubic-bezier(0.9,0,.2,1) infinite;
-        animation-delay: calc( 0.9s + ( 0.1s * ( var(--char-index)) ) );
-        transform: translateY(0);
-        opacity: 1;
-      }
-      &:after{
-        animation: _after 1.8s cubic-bezier(0.9,0,.2,1) infinite;
-        animation-delay: calc( 0.9s + ( 0.1s * ( var(--char-index)) ) );
-        transform: translateY(100%);
-        opacity: .9;
-      }
+        overflow: hidden;
+        color: transparent;
+        color: $ilo-white;
+        &:before,
+        &:after {
+            visibility: visible;
+        }
+        &:before {
+            animation: _before 1.8s cubic-bezier(0.9, 0, 0.2, 1) infinite;
+            animation-delay: calc(0.9s + (0.1s * (var(--char-index))));
+            transform: translateY(0);
+            opacity: 1;
+        }
+        &:after {
+            animation: _after 1.8s cubic-bezier(0.9, 0, 0.2, 1) infinite;
+            animation-delay: calc(0.9s + (0.1s * (var(--char-index))));
+            transform: translateY(100%);
+            opacity: 0.9;
+        }
     }
-  }
+}
 
-  @keyframes _before{ to{ transform: translateY(-100%); opacity: .9;} }
-  @keyframes _after{ to{ transform: translate(0); opacity: 1; } }
-
-
+@keyframes _before {
+    to {
+        transform: translateY(-100%);
+        opacity: 0.9;
+    }
+}
+@keyframes _after {
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
 
 .life-w-section {
     height: 4px;
@@ -556,6 +563,11 @@ img {
     padding-top: 150px;
 }
 .info-section {
+    scroll-margin-top: 20rem;
+    &.pillars {
+        scroll-margin-top: 15rem;
+        margin-top: 1rem;
+    }
     z-index: -20;
     scroll-snap-align: start;
     height: 100%;
@@ -567,11 +579,26 @@ img {
     align-content: center;
     align-items: center;
     padding: 2rem 3rem;
+    margin: 6rem 0;
+    &.life-w {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        & h4 {
+            width: 70%;
+        }
+        & .info-text {
+            width: 60%;
+        }
+    }
     & .info-image {
         width: 30%;
     }
     & .info-text {
         width: 60%;
+        & a {
+            text-decoration: underline;
+            text-underline-offset: .1rem;
+        }
     }
     @media #{$tablet-device, $large-mobile} {
         flex-direction: column;
@@ -586,12 +613,11 @@ img {
         }
         height: 100%;
     }
-    & h3 {
-        padding-top: 1rem;
-        color: $ilo-dark-blue;
+    & h4 {
+        color: $ilo-blue;
         & .tri-bullet {
             color: $ilo-red;
-            font-size: 18px;
+            font-size: 14px;
             margin-right: 0.2rem;
         }
     }
@@ -604,75 +630,86 @@ img {
 }
 .lavalamp-menu {
     position: sticky;
-    top: 0;
+    top: 0rem;
     left: 0;
     width: 100%;
     background: #fff;
-    padding: 1rem 0 0 0;
+    padding: 4rem 0 0 0;
     z-index: 1;
+    &.pillars {
+        & ul {
+            margin-top: 1rem;
+        }
+    }
+    & h3 {
+        margin-top: 1rem;
+    }
     & ul {
-        margin-top: 45px;
         display: flex;
         justify-content: space-between;
     }
 }
 
-.lavalamp-menu li {
-    flex: 1 1 auto;
-    align-self: center;
-    display: inline-block;
-    vertical-align: center;
-    align-content: center;
-    zoom: 1;
-    *display: inline;
-    padding: 0.9rem 0;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
-    & path {
-        box-shadow: 2px 2px 0 0 rgba(30, 45, 190, 0.2);
-    }
-    & h4 {
-        color: $ilo-dark-blue;
-        line-height: 1;
-        margin-bottom: 0;
-        &::before {
-            content: "►";
-            color: $ilo-white;
-            font-size: 14px;
-            margin-right: 3px;
-            transition: $transition-base;
-        }
-    }
-    &.active {
+.lavalamp-menu {
+    & li {
+        flex: 1 1 auto;
+        align-self: center;
+        display: inline-block;
+        vertical-align: center;
+        align-content: center;
+        zoom: 1;
+        *display: inline;
+        padding: 0.9rem 0;
+        border-radius: 1px;
+        transition: 0.4s;
+        border: 2px solid;
+        border-color: $ilo-white;
         & h4 {
-            color: $ilo-blue;
-            &::before {
-                content: "►";
-                color: $ilo-red;
-                font-size: 14px;
-                margin-right: 3px;
+            color: $ilo-dark-blue;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+        &.active {
+            &.pillar1 {
+                border-color: $ilo-turquoise;
+                background: $ilo-grey;
+            }
+            &.pillar2 {
+                border-color: $ilo-red;
+                background: $ilo-grey;
+            }
+            &.pillar3 {
+                border-color: $ilo-blue;
+                background: $ilo-grey;
+            }
+            & h4 {
+                color: $ilo-blue;
             }
         }
     }
 }
 
-.lavalamp-menu .lavalamp {
-    position: absolute;
-    bottom: 0;
-    height: 4px;
-    clip-path: polygon(calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%, 0 0);
-    background: $ilo-blue;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    padding: 0;
+.lavalamp-menu {
+    & .lavalamp {
+        position: absolute;
+        bottom: 0;
+        height: 4px;
+        clip-path: polygon(calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%, 0 0);
+        background: $ilo-blue;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        padding: 0;
+    }
+    &.pillars {
+        & .lavalamp {
+            background: none;
+        }
+    }
 }
-
 .lavalamp-menu a {
     display: block;
     position: relative;
     line-height: 60px;
-    color: #444;
     text-decoration: none;
     padding: 0;
     -webkit-transition: 0.2s;
