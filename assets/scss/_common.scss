@@ -361,6 +361,7 @@ img {
 }
 .tooltip {
     opacity: 1 !important;
+
 }
 .tooltip-inner {
     background: $ilo-white;
@@ -376,6 +377,7 @@ img {
 .tooltip.bs-tooltip-right .tooltip-arrow::before {
     border-right-color: $ilo-white !important;
 }
+
 .strong-copyright {
     position: absolute;
     bottom: 1rem;
