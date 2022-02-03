@@ -567,6 +567,9 @@ img {
     &.pillars {
         scroll-margin-top: 10rem;
         margin-top: 1rem;
+        &:nth-child(2){
+            flex-direction: row-reverse;
+        }
     }
     z-index: -20;
     scroll-snap-align: start;
@@ -601,6 +604,11 @@ img {
         }
     }
     @media #{$tablet-device, $large-mobile} {
+        &.pillars {
+            &:nth-child(2){
+                flex-direction: column;
+            }
+        }
         flex-direction: column;
         & .info-image {
             width: 100%;
