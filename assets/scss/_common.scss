@@ -585,19 +585,25 @@ img {
     margin: 6rem 0;
     &.life-w {
         justify-content: flex-start;
+        align-items: flex-start;
         flex-wrap: wrap;
         & h4 {
             width: 70%;
+            @media #{$tablet-device, $large-mobile} {
+                width: 90%;
+            }
         }
         & .info-text {
             width: 60%;
+            @media #{$tablet-device, $large-mobile} {
+                font-size: .9rem;
+                width: 100%;
+            }
         }
     }
     & .info-image {
         width: 30%;
-        @media #{$tablet-device, $large-mobile} {
-            width: 100%;
-        }
+
     }
     & .info-text {
         width: 60%;
@@ -605,11 +611,10 @@ img {
             text-decoration: underline;
             text-underline-offset: .1rem;
         }
-        @media #{$tablet-device, $large-mobile} {
-            width: 100%;
-        }
+
     }
     @media #{$tablet-device, $large-mobile} {
+        padding: 0;
         &.pillars {
             &:nth-child(2){
                 flex-direction: column;
