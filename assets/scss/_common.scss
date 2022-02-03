@@ -345,7 +345,10 @@ img {
     display: flex;
     justify-content: center;
     @media #{$tablet-device,$large-mobile, $extra-small-mobile } {
-        display: none;
+        width: 70%;
+        & svg {
+            width: 8rem;
+        }
     }
     & img {
         width: 20rem;
