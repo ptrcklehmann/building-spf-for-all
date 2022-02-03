@@ -241,4 +241,6 @@
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 
+  Splitting()
+
 })(jQuery)

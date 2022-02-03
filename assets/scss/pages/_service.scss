@@ -86,9 +86,11 @@
     }
 }
 .single-service {
+    display: inline-block;
     margin: auto;
-    max-width: 35%;
-    padding: 1rem;
+    width: 100%;
+    max-width: 50%;
+    padding: 1rem 8rem 1rem 1rem;
     border-radius: 1px;
     transition: $transition-base;
     -webkit-clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%, 0 0);
@@ -96,9 +98,11 @@
     @media #{$tablet-device} {
         max-width: 300px;
         text-align: center;
+        padding: 1rem;
     }
     @media #{$large-mobile} {
         text-align: center;
+        padding: 1rem;
     }
     @media #{$extra-small-mobile} {
         max-width: 280px;
@@ -107,21 +111,16 @@
     & .service-icon {
         margin-bottom: 40px;
     }
-    & .title {
-        margin-bottom: 20px;
-        font-size: 24px;
-        font-weight: 600;
+    & h4 {
+        font-family: Noto Sans, sans-serif;;
         color: $ilo-white;
-        & a {
-            color: $ilo-white;
-        }
-    }
-    & p {
-        font-family: Noto Sans, sans-serif;
-        font-size: 1.125rem;
-        line-height: 1.6rem;
-        color: $ilo-white;
+        font-weight: 300;
+        line-height: 2;
+        text-align: left;
+        width: 100%;
+
         & span {
+            line-height: .8;
             font-weight: 600;
         }
     }

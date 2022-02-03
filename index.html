@@ -23,7 +23,14 @@
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/odometer.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/magnific-popup-min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/splitting.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting-cells.css"
+    />
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
@@ -406,7 +413,9 @@
                 </li>
                 <li><a href="countries.html">Countries</a></li>
                 <li><a href="thematic-areas.html">Thematic areas</a></li>
-                <li><a href="results.html">Results</a></li>
+                <li>
+                  <a href="results-and-impact.html">Results and Impact</a>
+                </li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="funding-gaps.html">Funding gaps</a></li>
@@ -443,7 +452,9 @@
       <figure
         class="hero-background"
         data-rellax-speed="3"
-        style=" background-image: url('assets/images/slider/esteban-benites.jpg');"
+        style="
+          background-image: url('assets/images/slider/esteban-benites.jpg');
+        "
       ></figure>
       <div class="section">
         <!-- Hero background -->
@@ -481,10 +492,7 @@
             <h1>Building social protection floors for all</h1>
             <h2>ILO Global Flagship Programme</h2>
             <h3>
-              <mark
-                >Changing the lives of millions of people <br />
-                to allow them to live a life in dignity.
-              </mark>
+              <mark>Helping millions of people live in dignity </mark>
             </h3>
           </article>
         </div>
@@ -553,12 +561,13 @@
     <!-- Ambition Section Start -->
     <div class="section section-margin section-padding service-section">
       <div class="container custom-container">
-        <div class="row">
+        <div class="row ambition" id="ambition" >
           <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
             <div class="text-left section-title">
               <h2 class="title" data-aos="zoom-in" data-aos-duration="2000">
                 Our ambition 2025
               </h2>
+              <h4>By 2025 the Flagship Programme aims to:</h4>
             </div>
           </div>
         </div>
@@ -575,13 +584,10 @@
                 alt="Institutional changes"
               />
             </div>
-            <h4 class="title">
-              <a href="#">Institutional changes </a>
+            <h4>
+              Achieve over <span class="loading" data-splitting>90 </span>institutional changes to strengthen social
+              protection systems
             </h4>
-            <p>
-              Achieve over <span> 90 institutional changes</span> to strengthen
-              social protection systems
-            </p>
           </div>
           <!-- Single Service End -->
 
@@ -589,7 +595,7 @@
           <div
             class="single-service m-b-10"
             data-aos="fade"
-            data-aos-duration="1400"
+            data-aos-duration="2400"
           >
             <div class="service-icon">
               <img
@@ -597,13 +603,10 @@
                 alt="Adequacy and comprehensiveness"
               />
             </div>
-            <h4 class="title">
-              <a href="service-details.html">Adequacy and comprehensiveness </a>
+            <h4>
+              Improve benefit adequacy and comprehensiveness for  <span class="loading"  data-splitting>10</span> <span>million </span>
+              people
             </h4>
-            <p>
-              Improve benefit adequacy and comprehensiveness for
-              <span> 10 million people</span>
-            </p>
           </div>
           <!-- Single Service End -->
 
@@ -619,10 +622,7 @@
                 alt="Legal coverage"
               />
             </div>
-            <h4 class="title">
-              <a href="service-details.html">Legal coverage</a>
-            </h4>
-            <p>Improve legal coverage for <span> 20 million people</span></p>
+            <h4>Improve legal coverage for  <span class="loading"  data-splitting> 20</span><span> million people</span></h4>
           </div>
           <!-- Single Service End -->
 
@@ -630,7 +630,7 @@
           <div
             class="single-service m-b-10"
             data-aos="fade"
-            data-aos-duration="1400"
+            data-aos-duration="2400"
           >
             <div class="service-icon">
               <img
@@ -638,44 +638,38 @@
                 alt="Effective coverage"
               />
             </div>
-            <h4 class="title">
-              <a href="service-details.html">Effective coverage</a>
+            <h4>
+              Increase effective coverage for  <span class="loading"  data-splitting>30</span> <span>million people</span>
             </h4>
-            <p>
-              Increase effective coverage for <span>30 million people</span>
-            </p>
           </div>
           <!-- Single Service End -->
+        </div>
+      </div>
+      <div class="container custom-container">
+        <div class="row justify-content-end">
+          <a
+              href="results-and-impac.html"
+              class="btn-turquoise btn-small m-t-50"
+              >See our progress <i class="fa fa-angle-right"></i></a
+            >
         </div>
       </div>
     </div>
     <!-- Ambition Section End -->
 
     <!-- Publications Section Start -->
-    <div class="section overflow-hidden project-home-section m-b-n30">
+    <div class="section overflow-hidden project-home-section">
       <div class="container">
         <div class="project-with-title">
           <div
             class="section-title"
-            data-aos="fade-up"
+            data-aos="fade-in"
             data-aos-duration="2000"
           >
             <h2 class="title">
-              Our latest
-              <span data-aos="zoom-in" data-aos-duration="1000"
-                >publications</span
-              >
+              Key publications
             </h2>
-            <p>
-              Voluptas sit aspernatur aut odit aut fugit sed quia consequuntur
-              dolores eos qui am est, qui dolorem ipsum quia dolor sit most
-              effective solutions
-            </p>
-            <a
-              href="project.html"
-              class="btn btn-dark btn-hover-secondary m-t-20"
-              >View All</a
-            >
+
           </div>
           <div
             class="project-slider-wrapper"
@@ -684,20 +678,21 @@
           >
             <div class="swiper-container project-slider">
               <div class="swiper-wrapper">
+
                 <div class="swiper-slide">
                   <div class="single-gallery">
                     <div class="gallery-thumb">
                       <a href="project-details.html">
                         <img
                           class="fit-image"
-                          src="assets/images/project/5-year-report.jpg"
+                          src="assets/images/project/strategy_for_the_second_phase.jpg"
                           alt="Gallery Image"
                         />
                       </a>
                     </div>
                     <div class="gallery-content">
-                      <a href="project-details.html" class="title">
-                        Report of the first phase 2016-2020</a
+                      <a href="project-details.html" class="title"
+                        >Strategy for the second phase 2021-2026</a
                       >
                       <br />
                       <span>Building social protection floors for all</span>
@@ -730,14 +725,14 @@
                       <a href="project-details.html">
                         <img
                           class="fit-image"
-                          src="assets/images/project/strategy_for_the_second_phase.jpg"
+                          src="assets/images/project/5-year-report.jpg"
                           alt="Gallery Image"
                         />
                       </a>
                     </div>
                     <div class="gallery-content">
-                      <a href="project-details.html" class="title"
-                        >Strategy for the second phase 2021-2026</a
+                      <a href="project-details.html" class="title">
+                        Report of the first phase 2016-2020</a
                       >
                       <br />
                       <span>Building social protection floors for all</span>
@@ -749,14 +744,23 @@
           </div>
         </div>
       </div>
-      <div class="p-0 container-fluid d-none d-lg-block">
-        <div class="navigation-wrp">
+      <div class="container d-none d-lg-flex">
+        <div class="row navigation-wrp">
           <div class="swiper-nav-button swiper-button-prev">
             <i class="fa fa-angle-left"></i>
           </div>
           <div class="swiper-nav-button swiper-button-next">
             <i class="fa fa-angle-right"></i>
           </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row publications-link">
+          <a
+              href="project.html"
+              class="btn-turquoise btn-small mt-0"
+              >View All <i class="fa fa-angle-right"></i></a
+            >
         </div>
       </div>
     </div>
@@ -881,9 +885,9 @@
         <div class="row">
           <a
             href="project.html"
-            class="btn btn-turquoise btn-arrow m-t-20 m-auto fw-bold"
-            >Become a development partner</a
-          >
+            class="btn-turquoise btn-arrow m-t-20 m-auto fw-bold"
+            >Become a development partner <i class="fa fa-play"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -978,7 +982,7 @@
         <div class="p-0 mobile-menu-inner-wrapper">
           <!-- Mobile Menu Start -->
           <div class="header-logo me-auto">
-            <a href="../index.html">
+            <a href="../">
               <svg
                 id="logo-socpro"
                 class="logo-socpro"
@@ -1327,7 +1331,9 @@
                   </ul>
                 </li>
                 <li><a href="countries.html">Countries</a></li>
-                <li><a href="results.html">Results</a></li>
+                <li>
+                  <a href="results-and-impact.html">Results and Impact</a>
+                </li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="partners.html">Partners</a></li>
                 <li><a href="funding-gaps.html">Funding gaps</a></li>
@@ -1404,7 +1410,7 @@
     <script src="assets/js/plugins/aos.min.js"></script>
     <script src="assets/js/plugins/swiper-bundle.min.js"></script>
     <script src="assets/js/plugins/parallax.min.js"></script>
-    <script src="assets/js/plugins/splitting.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="assets/js/plugins/rellax.min.js"></script>
     <script src="assets/js/plugins/menuspy.js"></script>
 
