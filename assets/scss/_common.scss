@@ -758,6 +758,50 @@ img {
     }
 }
 
+#carouselThematics {
+    .carousel-caption {
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        flex-direction: column;
+        font-size: 15px;
+        background: $ilo-blue;
+        text-align: left;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        & img {
+             clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+        }
+
+        & h5 {
+            padding: 0 .5rem;
+            color: $ilo-white;
+        }
+        & p {
+            padding: .5rem .5rem;
+            line-height: 1.4;
+            color: $ilo-white;
+            & a {
+                color: $ilo-white;
+                text-decoration: underline;
+            }
+        }
+        & .list-group {
+            & .list-group-item {
+                padding: 0.5rem 0.5rem;
+                line-height: 1.4;
+                font-size: 13px;
+                color: $ilo-white;
+                background: none;
+                border: 1px solid rgba($ilo-white-unselected,.125);
+
+            }
+        }
+    }
+}
+
 // Social Share
 .social-share {
     display: flex;
