@@ -824,19 +824,31 @@ img {
                 &:nth-child(1){
                     border-top: none;
                 }
+                & i {
+                    font-size: 11px;
+                    line-height: 1.5;
+                    color: $ilo-red;
+                }
             }
         }
     }
 }
 .thematic-card {
-    background: $ilo-dark-blue;
+    transition: $transition-base;
     padding: .6rem;
     min-height: 10rem;
     width: 100%;
     height: 100%;
     font-size: 13px;
+    line-height: 1.5;
+    font-weight: 600;
     color: $ilo-white;
     text-align: left;
+    cursor: pointer;
+    background-color: #22075085;
+    &:hover {
+        background-color: #22075048;
+    }
 }
 // Social Share
 .social-share {
