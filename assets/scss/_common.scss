@@ -569,7 +569,7 @@ img {
     &.pillars {
         scroll-margin-top: 10rem;
         margin-top: 1rem;
-        &:nth-child(2){
+        &:nth-child(2) {
             flex-direction: row-reverse;
         }
     }
@@ -581,7 +581,7 @@ img {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-content:center;
+    align-content: center;
     align-items: flex-start;
     padding: 2rem 1rem;
     margin: 4rem 0;
@@ -598,7 +598,7 @@ img {
         & .info-text {
             width: 60%;
             @media #{$tablet-device, $large-mobile} {
-                font-size: .9rem;
+                font-size: 0.9rem;
                 width: 100%;
             }
         }
@@ -612,24 +612,22 @@ img {
             overflow: hidden;
             margin-bottom: 1.5rem;
         }
-
     }
     & .info-text {
         width: 55%;
         & a {
             text-decoration: underline;
-            text-underline-offset: .1rem;
+            text-underline-offset: 0.1rem;
         }
         @media #{$tablet-device, $large-mobile} {
-            font-size: .9rem;
+            font-size: 0.9rem;
             width: 100%;
         }
-
     }
     @media #{$tablet-device, $large-mobile} {
         padding: 0;
         &.pillars {
-            &:nth-child(2){
+            &:nth-child(2) {
                 flex-direction: column;
             }
         }
@@ -657,11 +655,11 @@ img {
     left: 0;
     width: 100%;
     background: #fff;
-    padding: 4rem 0 0 0;
+    padding: 4rem 0 0.3rem 0;
     z-index: 1;
     &.pillars {
         & ul {
-            margin-top: 1rem;
+            margin: 1.5rem 0 0.3rem 0;
         }
     }
     & h3 {
@@ -683,6 +681,7 @@ img {
         zoom: 1;
         *display: inline;
         padding: 0.9rem 0;
+
         border-radius: 1px;
         transition: 0.4s;
         border: 2px solid;
@@ -759,49 +758,86 @@ img {
 }
 
 #carouselThematics {
+    .carousel-inner {
+        background: $ilo-blue;
+    }
+    & .fit-image-c {
+        clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+
+    }
     .carousel-caption {
         display: flex;
-        justify-content: space-between;
-        align-items:flex-start;
+        justify-content: space-around;
+        align-items: flex-start;
         flex-direction: column;
         font-size: 15px;
-        background: $ilo-blue;
         text-align: left;
+        padding: 1rem;
         left: 0;
         top: 0;
         bottom: 0;
         right: 0;
-        & img {
-             clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+        z-index: 1;
+        &:nth-last-child(2){
+            &::before {
+                margin-right: auto;
+                clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            background: $ilo-dark-blue;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+            z-index: -1;
+
         }
 
         & h5 {
-            padding: 0 .5rem;
-            color: $ilo-white;
+            padding: 0 0.5rem;
+            color: $ilo-red;
+            width: 70%;
         }
         & p {
-            padding: .5rem .5rem;
+            padding: 0.5rem 0.5rem;
             line-height: 1.4;
             color: $ilo-white;
+            width: 75%;
             & a {
                 color: $ilo-white;
                 text-decoration: underline;
             }
         }
         & .list-group {
+            width: 70%;
             & .list-group-item {
                 padding: 0.5rem 0.5rem;
                 line-height: 1.4;
-                font-size: 13px;
+                font-size: 15px;
                 color: $ilo-white;
                 background: none;
-                border: 1px solid rgba($ilo-white-unselected,.125);
-
+                border-top: 1px solid rgba($ilo-white-unselected, 0.125);
+                &:nth-child(1){
+                    border-top: none;
+                }
             }
         }
     }
 }
-
+.thematic-card {
+    background: $ilo-dark-blue;
+    padding: .6rem;
+    min-height: 10rem;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    color: $ilo-white;
+    text-align: left;
+}
 // Social Share
 .social-share {
     display: flex;
