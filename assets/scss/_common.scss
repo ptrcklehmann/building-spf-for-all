@@ -759,11 +759,7 @@ img {
 
 #carouselThematics {
     .carousel-inner {
-        background: $ilo-blue;
-    }
-    & .fit-image-c {
-        clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
-
+        background: $ilo-white;
     }
     .carousel-caption {
         display: flex;
@@ -787,7 +783,7 @@ img {
         &::before {
             content: '';
             position: absolute;
-            background: $ilo-dark-blue;
+            background: $ilo-white;
             left: 0;
             top: 0;
             width: 100%;
@@ -799,16 +795,15 @@ img {
 
         & h5 {
             padding: 0 0.5rem;
-            color: $ilo-red;
+            color: $ilo-blue;
             width: 70%;
         }
         & p {
             padding: 0.5rem 0.5rem;
             line-height: 1.4;
-            color: $ilo-white;
+            color: $ilo-dark-blue;
             width: 75%;
             & a {
-                color: $ilo-white;
                 text-decoration: underline;
             }
         }
@@ -818,9 +813,9 @@ img {
                 padding: 0.5rem 0.5rem;
                 line-height: 1.4;
                 font-size: 15px;
-                color: $ilo-white;
+                color: $ilo-dark-blue;
                 background: none;
-                border-top: 1px solid rgba($ilo-white-unselected, 0.125);
+                border-top: 1px solid rgba($ilo-blue, 0.125);
                 &:nth-child(1){
                     border-top: none;
                 }
@@ -845,9 +840,13 @@ img {
     color: $ilo-white;
     text-align: left;
     cursor: pointer;
-    background-color: #22075085;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    background-color: #1e2ebe9a;
     &:hover {
-        background-color: #22075048;
+        background-color: #1e2ebe48;
+
     }
 }
 // Social Share
