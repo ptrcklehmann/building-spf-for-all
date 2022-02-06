@@ -3,6 +3,7 @@ Chart.defaults.font.family='Noto Sans','sans-serif';
 Chart.defaults.borderWidth=0
 
 Chart.register(ChartDataLabels);
+
 const labels=[
     'Step 1',
     'Step 2',
@@ -47,6 +48,9 @@ const config={
             },
         },
         plugins: {
+            deferred: {
+                yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+            },
             title: {
                 display: false,
                 // color: '#230050',
@@ -130,6 +134,11 @@ const impactConfig1={
             },
         },
         plugins: {
+            deferred: {
+                xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+                yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+                delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+            },
             title: {
                 display: false,
             },
@@ -207,6 +216,11 @@ const impactConfig2={
             },
         },
         plugins: {
+            deferred: {
+                xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+                yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+                delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+            },
             title: {
                 display: false,
             },
@@ -284,6 +298,11 @@ const impactConfig3={
             },
         },
         plugins: {
+            deferred: {
+                xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+                yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+                delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+              },
             title: {
                 display: false,
             },
@@ -324,10 +343,7 @@ const impactConfig3={
 
 };
 
-const institutionalChangesChart=new Chart(
-    document.getElementById('institutional-changes'),
-    config
-)
+const institutionalChangesChart=new Chart(document.getElementById('institutional-changes'),config)
 const impactOnPeopleChart1st=new Chart(document.getElementById('impact-on-people-1st'),impactConfig1)
 const impactOnPeopleChart2nd=new Chart(document.getElementById('impact-on-people-2nd'),impactConfig2)
 const impactOnPeopleChart3rd=new Chart(document.getElementById('impact-on-people-3rd'),impactConfig3)

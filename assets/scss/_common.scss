@@ -848,6 +848,9 @@ img {
     }
 }
 .results-and-impact {
+    a {
+        text-decoration: underline;
+    }
     .steps {
         width: 5rem;
         min-height: 5rem;
