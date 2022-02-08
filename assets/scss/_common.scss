@@ -1037,19 +1037,19 @@ img {
         cursor: pointer;
         height: 12px;
         width: 12px;
-        border: 2px solid $ilo-dark-blue;
+        border: 2px solid $ilo-grey;
         background-color: transparent;
         opacity: 1;
         &:last-child {
             margin-right: 0;
         }
         &:hover {
-            background: $ilo-turquoise;
+            background: $ilo-blue;
             transition: 0.6s;
             opacity: 1;
         }
         &.swiper-pagination-bullet-active {
-            background: $ilo-turquoise;
+            background: $ilo-blue;
             transition: 0.6s;
         }
     }
@@ -1064,7 +1064,7 @@ img {
 .swiper-nav-button {
     margin-top: 0;
     display: flex;
-    color: $ilo-dark-blue;
+    color: $ilo-grey;
     font-size: 36px;
     transition: $transition-base;
     outline: none;
@@ -1076,7 +1076,7 @@ img {
     }
 
     &:hover {
-        color: $ilo-turquoise;
+        color: $ilo-blue;
     }
 
     &::after {
@@ -1107,7 +1107,7 @@ img {
         height: 25px;
         display: flex;
         align-items: center;
-        border: 1px solid $ilo-dark-blue;
+        border: 1px solid $ilo-grey;
         align-items: center;
         justify-content: center;
         margin: 0 5px;
@@ -1116,8 +1116,8 @@ img {
         &.active,
         &:hover {
             color: $white;
-            background: $ilo-turquoise;
-            border-color: $ilo-blue;
+            background: $ilo-blue;
+            border-color: $ilo-dark-blue;
         }
     }
     & span {
@@ -1132,7 +1132,7 @@ img {
             content: "";
             width: 5px;
             height: 5px;
-            background: $gray-400;
+            background: $ilo-grey;
             border-radius: 100%;
             bottom: 0;
         }
