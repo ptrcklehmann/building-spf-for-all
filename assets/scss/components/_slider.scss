@@ -20,6 +20,9 @@
     z-index: 1;
     width: 100%;
     height: calc(65vh - 30px);
+    &.team {
+        height: calc(95vh - 30px);
+    }
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -38,6 +41,7 @@
         padding-bottom: 4rem;
     }
 }
+
 .hero-background {
     background-repeat: no-repeat;
     background-position: 50%;
