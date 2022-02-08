@@ -889,7 +889,6 @@ img {
             color: $ilo-turquoise;
         }
     }
-
     & .legend-solo {
         padding-bottom: 0.7rem;
         display: flex;
@@ -914,21 +913,19 @@ img {
         background: #bedcfa;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         height: 5rem;
         margin: 0.1rem 0;
+        padding: .5rem;
         border-radius: 1px;
-        &.i1 {
-            width: 50%;
-        }
         & img {
             height: 2.5rem;
         }
         &.mid {
-            width: 75%;
-            min-height: 10.2rem;
+            height: 5rem;
             background: $ilo-blue;
             color: white;
+            width: 75%;
         }
         & p {
             font-size: 12px;
