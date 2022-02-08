@@ -757,72 +757,21 @@ img {
     }
 }
 
-#carouselThematics {
-    .carousel-inner {
-        background: $ilo-white;
+.thematic-areas {
+    & a {
+        text-decoration: underline;
     }
-    .carousel-caption {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-direction: column;
-        font-size: 15px;
-        text-align: left;
-        padding: 1rem;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
-        &:nth-last-child(2) {
-            &::before {
-                margin-right: auto;
-                clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
-            }
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            background: $ilo-white;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
-            z-index: -1;
-        }
-
-        & h5 {
-            padding: 0 0.5rem;
-            color: $ilo-blue;
-            width: 70%;
-        }
-        & p {
-            padding: 0.5rem 0.5rem;
-            line-height: 1.4;
+    & .list-group {
+        & .list-group-item {
             color: $ilo-dark-blue;
-            width: 75%;
-            & a {
-                text-decoration: underline;
+            background: none;
+            border-top: 1px solid rgba($ilo-blue, 0.125);
+            &:nth-child(1) {
+                border-top: none;
             }
-        }
-        & .list-group {
-            width: 70%;
-            & .list-group-item {
-                padding: 0.5rem 0.5rem;
-                line-height: 1.4;
-                font-size: 15px;
-                color: $ilo-dark-blue;
-                background: none;
-                border-top: 1px solid rgba($ilo-blue, 0.125);
-                &:nth-child(1) {
-                    border-top: none;
-                }
-                & i {
-                    font-size: 11px;
-                    line-height: 1.5;
-                    color: $ilo-red;
-                }
+            & i {
+                font-size: 12px;
+                color: $ilo-red;
             }
         }
     }
@@ -836,6 +785,10 @@ img {
     font-size: 13px;
     line-height: 1.5;
     font-weight: 600;
+    & span {
+        color: $ilo-red;
+        font-weight: 300;
+    }
     color: $ilo-white;
     text-align: left;
     cursor: pointer;
@@ -909,7 +862,6 @@ img {
         }
     }
     .legend {
-
         height: 40rem;
         max-height: 100%;
         display: flex;
@@ -925,7 +877,6 @@ img {
             align-items: center;
             font-size: 14px;
             text-align: left;
-
         }
         & span {
             font-size: 2rem;
@@ -940,7 +891,7 @@ img {
     }
 
     & .legend-solo {
-        padding-bottom: .7rem;
+        padding-bottom: 0.7rem;
         display: flex;
         align-content: flex-start;
         justify-content: center;
