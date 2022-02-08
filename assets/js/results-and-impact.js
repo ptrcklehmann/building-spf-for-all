@@ -42,7 +42,7 @@ const config={
             delay: (context) => {
                 let delay=0;
                 if(context.type==='data'&&context.mode==='default'&&!delayed) {
-                    delay=context.dataIndex*600+context.datasetIndex*300;
+                    delay=context.dataIndex*1000+context.datasetIndex*400;
                 }
                 return delay;
             },
@@ -210,7 +210,7 @@ const impactConfig2={
             delay: (context) => {
                 let delay=0;
                 if(context.type==='data'&&context.mode==='default'&&!delayed) {
-                    delay=context.dataIndex*600+context.datasetIndex*300;
+                    delay=context.dataIndex*1000+context.datasetIndex*500;
                 }
                 return delay;
             },
@@ -292,7 +292,7 @@ const impactConfig3={
             delay: (context) => {
                 let delay=0;
                 if(context.type==='data'&&context.mode==='default'&&!delayed) {
-                    delay=context.dataIndex*600+context.datasetIndex*300;
+                    delay=context.dataIndex*1000+context.datasetIndex*400;
                 }
                 return delay;
             },
