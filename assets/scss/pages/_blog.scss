@@ -71,8 +71,8 @@
 
 .sidebar-widget {
     background: $ilo-white;
-    border-radius: 2px;
-    padding: 35px 35px 20px;
+    border-radius: 1px;
+    padding: 10px 10px 5px;
     border: $ilo-grey solid 1px;
     &.categories {
         padding: 10px 10px 5px;
@@ -146,12 +146,6 @@
                     color: $white;
                     background: $ilo-blue;
                     border-color: $ilo-legacy-blue;
-                }
-            }
-
-            &:last-child {
-                & a {
-                    margin-bottom: 0;
                 }
             }
         }
@@ -281,15 +275,14 @@
     & .blog-sidebar-tags {
         margin-bottom: -10px;
         & a {
-            color: $dark;
-            border: 1px solid $gray-200;
+            color: $ilo-dark-blue;
+            border: 1px solid $ilo-grey;
             padding: 8px 10px;
-            border-radius: 5px;
+            border-radius: 1px;
             margin: 0 10px 10px 0;
             display: inline-block;
             line-height: 1;
             font-size: 14px;
-
             &:hover {
                 color: $primary;
                 border-color: $primary;
