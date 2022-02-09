@@ -1138,7 +1138,12 @@ img {
         }
     }
 }
-
+.noUi-connect {
+    background: $ilo-blue;
+}
+.noUi-tooltip {
+    font-family: Noto Sans, sans-serif;
+}
 // Read More
 .read-more {
     position: relative;

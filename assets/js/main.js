@@ -243,4 +243,32 @@
 
   Splitting()
 
+  const yearSlider=document.querySelector('.year-slider');
+
+  noUiSlider.create(yearSlider,{
+    tooltips: [
+      true,
+      true // tooltip with default formatting
+    ],
+    start: [2016,2022],
+    connect: true,
+    step: 1,
+    range: {
+      'min': 2016,
+      'max': 2022
+    },
+    format: {
+      // 'to' the formatted value. Receives a number.
+      to: function(value) {
+        return value+'';
+      },
+      // 'from' the formatted value.
+      // Receives a string, should return a number.
+      from: function(value) {
+        return Number(value.replace(',-',''));
+      }
+    }
+  })
+  const rangeSliderValueElement=document.querySelector('.year-slider-value');
+
 })(jQuery)

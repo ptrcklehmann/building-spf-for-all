@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/odometer.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/magnific-popup-min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/splitting/dist/splitting.css"
@@ -533,6 +534,28 @@
                 data-aos="fade-up"
                 data-aos-duration="1300"
               >
+                <ul class="sidebar-searchRange">
+                  <li>
+                    <p>Date:</p>
+                  </li>
+                  <li>
+                    <div class="year-slider"></div>
+                  </li>
+                  <li>
+                    <p class="country-select">Country:</p>
+                  </li>
+                  <li>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>All</option>
+                      <option value="1">Mozambique</option>
+                      <option value="2">Burquina Fasso</option>
+                      <option value="3">Equador</option>
+                    </select>
+                  </li>
+                </ul>
                 <ul class="sidebar-categories">
                   <li><a class="active" href="#/">All</a></li>
                   <li><a href="#/">Statistics</a></li>
@@ -541,26 +564,12 @@
                   <li><a href="#/">Tools and guides</a></li>
                   <li><a href="#/">eLearning</a></li>
                   <li><a href="#/">Other resources</a></li>
-                </ul>
-                <ul class="sidebar-searchRange">
-                  <li>
-                    <label for="dateRange" class="form-label">Date </label>
-                    <input
-                      type="range"
-                      class="form-range"
-                      min="2000"
-                      max="2022"
-                      id="dateRange"
-                      oninput="this.nextElementSibling.value = this.value"
-                    />
-                    <output>2000</output>
-                  </li>
                   <li>
                     <form class="sidebar-form">
                       <input
                         class="searchbox-input"
                         type="text"
-                        placeholder="Enter keywords"
+                        placeholder="Search"
                       />
                       <button class="searchbox-btn" type="submit">
                         <i class="fa fa-search"></i>
@@ -1353,6 +1362,7 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="assets/js/plugins/rellax.min.js"></script>
     <script src="assets/js/plugins/menuspy.js"></script>
+    <script src="assets/js/plugins/nouislider.min.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 

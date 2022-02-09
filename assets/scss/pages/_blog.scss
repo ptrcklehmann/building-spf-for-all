@@ -51,12 +51,11 @@
             margin-bottom: 18px;
             font-size: 24px;
             & a {
-                color: #1E2DBE;
+                color: #1e2dbe;
                 &:hover {
                     text-decoration: underline;
                     text-decoration-thickness: 1px;
                     text-underline-offset: 1px;
-
                 }
             }
             @media #{$large-mobile} {
@@ -108,7 +107,7 @@
             padding: 0 10px;
             color: $ilo-dark-blue;
             &::placeholder {
-                color: $ilo-grey;
+                color: $ilo-blue;
             }
         }
 
@@ -120,7 +119,6 @@
             padding: 0 10px;
             color: $ilo-blue;
             transition: 0.3s;
-
             &:hover {
                 color: $ilo-legacy-blue;
                 transition: 0.3s;
@@ -128,17 +126,53 @@
         }
     }
     & .sidebar-searchRange {
+        padding: 10px 10px;
         display: flex;
         justify-content: flex-end;
         width: fit-content;
         align-items: center;
-        margin-left: auto;
+        margin-right: auto;
         & li {
-                padding: 15px 15px;
-                margin-right: 15px;
-                border-radius: 1px;
-                width: 100%;
-                line-height: 1;
+            margin-right: 15px;
+            border-radius: 1px;
+            line-height: 1;
+            & p {
+                margin-right: 1rem;
+            }
+        }
+        & .year-slider {
+            width: 10rem;
+        }
+        & .noUi-connects {
+            border-radius: 1px;
+        }
+        & .noUi-handle {
+            box-shadow: none;
+            width: 28px;
+            border-radius: 1px;
+            &:after,
+            &:before {
+                background: none;
+            }
+        }
+        & .country-select {
+            margin-left: 30px;
+            margin-right: 0;
+        }
+        & .form-select {
+            border-radius: 1px;
+            &:focus {
+                border-color: $ilo-blue;
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+
+        & .noUi-tooltip {
+            transform: translate(-50%, 0);
+            left: 50%;
+            bottom: -1%;
+            border-radius: 1px;
         }
     }
 
@@ -156,7 +190,8 @@
                 display: flex;
                 justify-content: center;
                 line-height: 1;
-                &:hover,&.active {
+                &:hover,
+                &.active {
                     color: $white;
                     background: $ilo-blue;
                     border-color: $ilo-legacy-blue;
