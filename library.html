@@ -541,6 +541,20 @@
                   <li><a href="#/">Tools and guides</a></li>
                   <li><a href="#/">eLearning</a></li>
                   <li><a href="#/">Other resources</a></li>
+                </ul>
+                <ul class="sidebar-searchRange">
+                  <li>
+                    <label for="dateRange" class="form-label">Date </label>
+                    <input
+                      type="range"
+                      class="form-range"
+                      min="2000"
+                      max="2022"
+                      id="dateRange"
+                      oninput="this.nextElementSibling.value = this.value"
+                    />
+                    <output>2000</output>
+                  </li>
                   <li>
                     <form class="sidebar-form">
                       <input
@@ -569,7 +583,6 @@
               >
                 <div class="sidebar-title-wrapper">
                   <h4 class="sidebar-title">Tags</h4>
-
                 </div>
                 <div class="blog-sidebar-tags">
                   <a href="#/">Social Protection</a>
