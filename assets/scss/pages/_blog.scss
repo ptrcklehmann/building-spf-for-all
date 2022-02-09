@@ -148,7 +148,8 @@
         }
         & .noUi-handle {
             box-shadow: none;
-            width: 28px;
+            width: 26px;
+            height: 26px;
             border-radius: 1px;
             &:after,
             &:before {
@@ -171,8 +172,10 @@
         & .noUi-tooltip {
             transform: translate(-50%, 0);
             left: 50%;
-            bottom: -1%;
+            bottom: -10%;
             border-radius: 1px;
+            font-size: 13px;
+            padding: .4rem
         }
     }
 
