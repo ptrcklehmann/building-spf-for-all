@@ -254,6 +254,7 @@ img {
     background: rgba(255, 255, 255, 0.6);
     padding: 1rem 1rem 2rem 25rem;
     margin-left: -25rem;
+    margin-bottom: -5%;
     overflow: visible;
     position: relative;
 
@@ -380,12 +381,10 @@ img {
 }
 
 .strong-copyright {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    margin-left: auto;
     font-family: Noto Sans, sans-serif;
     font-weight: 500;
-    color: $ilo-dark-blue;
+    color: #141f85b7;
     font-size: 0.8125rem;
     text-align: right;
     overflow: hidden;
