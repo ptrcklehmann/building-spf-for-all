@@ -53,7 +53,8 @@
                 color: $ilo-blue;
                 background: none;
                 font-weight: bold;
-                border-right: solid 2px $ilo-blue;
+                border-right: solid 2px;
+                border-right-color: $ilo-blue;
             }
             @media #{$tablet-device, $large-mobile } {
                 padding: 0.2rem .5rem;
@@ -61,12 +62,14 @@
                 margin: 0.3rem 0.2rem;
                 font-size: .7rem;
                 border-bottom-width: 2px;
+                border-bottom-color: $ilo-white;
+                border-bottom-style: solid;
                 &.active {
                     color: $ilo-blue;
                     background: none;
                     font-weight: 500;
                     border-right: none;
-                    border-bottom: 2px solid $ilo-blue;
+                    border-bottom-color: $ilo-blue;
                 }
             }
         }
