@@ -48,16 +48,8 @@ const config={
             },
         },
         plugins: {
-            deferred: {
-                yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
-            },
             title: {
                 display: false,
-                // color: '#230050',
-                // text: 'Number of institutional changes achieved in countries',
-                // font: {
-                //     size: 16,
-                // }
             },
             legend: {
                 display: false,
