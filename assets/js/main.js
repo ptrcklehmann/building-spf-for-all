@@ -244,8 +244,7 @@
   Splitting()
 
   const yearSlider=document.querySelector('.year-slider');
-
-  noUiSlider.create(yearSlider,{
+  (yearSlider) && noUiSlider.create(yearSlider,{
     tooltips: [
       true,
       true // tooltip with default formatting

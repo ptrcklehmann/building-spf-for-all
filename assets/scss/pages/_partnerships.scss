@@ -1,0 +1,29 @@
+/*----------------------------------------*/
+/*  04. Pages CSS
+/*----------------------------------------*/
+
+/*=======================================
+    4.01 About CSS
+=========================================*/
+.partnerships-section {
+    & .list-group {
+        font-size: 14px;
+        padding-right: 3rem;
+        & .list-group-item {
+            transition: $transition-base;
+            cursor: pointer;
+                &:hover {
+                    background-color: $ilo-grey;
+                }
+        }
+    }
+    #partnerships-diagram {
+        & .blue {
+            transition: $transition-base;
+            fill: #82afdc;
+            &.active {
+                fill: $ilo-blue;
+            }
+        }
+    }
+}
