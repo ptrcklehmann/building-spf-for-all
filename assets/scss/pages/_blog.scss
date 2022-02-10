@@ -209,7 +209,7 @@
                 &.active {
                     color: $white;
                     background: $ilo-blue;
-                    border-color: $ilo-legacy-blue;
+                    border-color: $ilo-blue;
                 }
             }
         }
@@ -348,8 +348,8 @@
             line-height: 1;
             font-size: 14px;
             &:hover {
-                color: $primary;
-                border-color: $primary;
+                color: $ilo-blue;
+                border-color: $ilo-blue;
             }
         }
     }
