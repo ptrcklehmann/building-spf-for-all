@@ -29,16 +29,22 @@
 }
 .partners-panel {
     & .nav-pills {
+        margin-right: 1rem;
         & .nav-link {
-            font-size: 1.2rem;
+            min-width: 250px;
+            transition: $transition-base;
+            border-radius: 0px;
+            font-size: 1rem;
+            white-space: nowrap;
             color: $ilo-dark-blue;
             text-align: left;
             margin-bottom: 1rem;
-            padding: 0;
+            padding: 0 0;
             &.active {
                 color: $ilo-blue;
                 background: none;
                 font-weight: bold;
+                border-right: solid 2px $ilo-blue;
             }
         }
     }
@@ -74,6 +80,14 @@
                 & h5 {
                     font-size: 1.1rem;
                     color: $ilo-blue;
+                }
+                & p {
+                    border-top: 1px solid $ilo-blue;
+                    margin-top: .5rem;
+                    padding-top: .5rem;
+                    font-size: 14px;
+                    line-height: 1.3;
+                    color: $ilo-dark-blue;
                 }
             }
         }
