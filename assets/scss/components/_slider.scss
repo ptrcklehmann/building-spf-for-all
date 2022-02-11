@@ -67,7 +67,7 @@
             margin-left: 0.2rem;
         }
         & .uuper_box {
-            & > h1, h2, h4, h5 {
+            & > * {
                 margin-left: 0.2rem;
             }
         }
@@ -121,7 +121,7 @@
 }
 .hero-heading h5 {
     transition: $transition-base;
-    background:  $ilo-dark-blue;
+    background:  $ilo-blue;
     color: $ilo-white;
     width: fit-content;
     padding: 0.2rem;
