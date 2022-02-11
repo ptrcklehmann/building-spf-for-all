@@ -67,9 +67,7 @@
             margin-left: 0.2rem;
         }
         & .uuper_box {
-            & > h1,
-            h2,
-            h3 {
+            & > h1, h2, h4, h5 {
                 margin-left: 0.2rem;
             }
         }
@@ -81,6 +79,7 @@
     font-weight: bold;
     color: $ilo-blue;
     width: 90%;
+    margin-bottom: 0;
     @media #{$tablet-device, $large-mobile} {
         font-size: 2.2rem;
         line-height: 2.5rem;
@@ -119,6 +118,18 @@
         background: $ilo-dark-blue;
         padding: 0.1rem 0;
     }
+}
+.hero-heading h5 {
+    transition: $transition-base;
+    background:  $ilo-dark-blue;
+    color: $ilo-white;
+    width: fit-content;
+    padding: 0.2rem;
+    line-height: 1;
+}
+.hero-heading h4 {
+    transition: $transition-base;
+    color: $ilo-dark-blue;
 }
 
 // Animation Style

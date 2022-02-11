@@ -1,0 +1,128 @@
+/*----------------------------------------*/
+/*  04. Pages CSS
+/*----------------------------------------*/
+
+/*=======================================
+    4.01 About CSS
+=========================================*/
+.thematic-areas-single {
+    & p {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+    & a {
+        color: $ilo-blue;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+    & .list-group {
+        & .list-group-item {
+            padding: 0;
+            padding-left: 1.3rem;
+            border-color: #1e2ebe2d;
+            & p {
+                color: $ilo-dark-blue;
+                padding: .5rem 0;
+                text-indent: -.6rem;
+                & i {
+                    font-size: 11px;
+                    color: $ilo-red;
+                    margin-right: .2rem;
+                }
+            }
+        }
+    }
+}
+.expertise-tab {
+    & .nav-tabs {
+        margin-top: 2.5rem;
+        border-bottom: 1px solid $ilo-grey;
+        .nav-link {
+            color: #5A87CD;
+            font-family: 'Overpass', sans-serif;
+            line-height: 20px;
+            font-size: 18px;
+            padding-top: .7rem;
+            padding-bottom: .7rem;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            &.active {
+                font-weight: bold;
+                color: $ilo-blue;
+                border-color: $ilo-grey $ilo-grey #fff;
+            }
+        }
+    }
+    & .tab-pane {
+        height: 100%;
+    }
+    & article {
+        margin: 2rem .5rem;
+        & p {
+            width: 100%;
+            text-align: left;
+        }
+        h6 {
+            vertical-align: middle;
+            & i {
+                font-size: 11px;
+                color: $ilo-red;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+.expertise-container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px 15px;
+    & figure {
+        background-color: $ilo-blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10%;
+        width: 100%;
+        height: 15rem;
+        cursor: pointer;
+        border: 1px solid $ilo-grey;
+        @media #{$tablet-device, $large-mobile } {
+            height: 10rem;
+        }
+        & img {
+            width: 20%;
+        }
+        & h4 {
+            color: $ilo-white;
+            margin-left: 1rem;
+            margin-top: 3rem;
+            font-size: 1.8rem;
+        }
+        & figcaption {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            padding: 1rem;
+            background: $ilo-dark-blue;
+            & h5 {
+                font-size: 1.1rem;
+                color: $ilo-red;
+            }
+            & p {
+                margin-top: 0.5rem;
+                padding-top: 0.5rem;
+                font-size: 14px;
+                line-height: 1.3;
+                color: $ilo-white;
+                & i {
+                    font-size: 11px;
+                    color: $ilo-red;
+                    transform: translateY(-1px);
+                }
+            }
+        }
+    }
+}
