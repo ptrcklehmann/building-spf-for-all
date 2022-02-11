@@ -349,6 +349,48 @@ img {
         }
     }
 }
+.btn-blue {
+    font-size: 14px;
+    padding: 1rem 2rem;
+    border: 0px;
+    line-height: 1.5;
+    font-weight: 300;
+    border-radius: 1px;
+    display: block;
+    transition: $transition-base;
+    width: fit-content;
+    background: $ilo-blue;
+    color: $ilo-white!important;
+    text-decoration: none !important;
+    &:hover {
+        color: $ilo-white;
+        background: $ilo-legacy-blue;
+        & i {
+            animation: referringArrow 1s ease;
+            color: $ilo-white;
+        }
+    }
+    &:active {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    & i {
+        font-size: 14px;
+        margin-left: 0.4rem;
+    }
+    &.btn-small {
+        letter-spacing: 0.1;
+        font-size: 12px;
+        padding: 0.5rem 1rem;
+    }
+    @media #{$small-mobile} {
+        padding: 15px 25px;
+        & i {
+            margin-left: 10px;
+        }
+    }
+}
 .publications-link {
     position: absolute;
     bottom: 110px;
