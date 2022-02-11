@@ -27,7 +27,7 @@
                 & i {
                     font-size: 11px;
                     color: $ilo-red;
-                    margin-right: .2rem;
+                    margin-right: .3rem;
                 }
             }
         }
@@ -57,7 +57,7 @@
         height: 100%;
     }
     & article {
-        margin: 2rem .5rem;
+        margin: 2rem 0;
         & p {
             width: 100%;
             text-align: left;
@@ -65,6 +65,7 @@
         h6 {
             vertical-align: middle;
             & i {
+                margin-right: .2rem;
                 font-size: 11px;
                 color: $ilo-red;
                 transform: translateY(-1px);
