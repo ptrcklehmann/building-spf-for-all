@@ -132,6 +132,42 @@
         & .list-group p {
             color: $ilo-white;
         }
+        & .funding-grid {
+            padding-bottom: .5rem;
+            display: grid;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px 10px;
+            & .funding-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding: .4rem;
+                & img {
+                    width: 25%;
+                    margin-bottom: .5rem;
+                }
+                & p {
+                    text-align: center;
+                    line-height: normal;
+                    font-size: 12px;
+                    margin-bottom: 0;
+                    width: 85%;
+                    &:nth-child(1) {
+                        font-size: 13px;
+                    }
+                }
+            }
+            @media #{$tablet-device, $large-mobile } {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px 5px;
+                & img {
+                    width: 45%;
+                    margin-bottom: .5rem;
+                }
+            }
+        }
     }
 }
 .expertise-tab {
@@ -319,7 +355,7 @@
         margin-bottom: 0;
     }
     & .e-grid {
-        padding: 0 .75rem;
+        padding: 0 0.75rem;
         display: grid;
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
@@ -379,7 +415,7 @@
     padding-top: 1rem;
     border-top: 1px solid $ilo-grey;
     & i {
-        color: #BEDCFA;
+        color: #bedcfa;
         font-size: 14px;
         @media #{$large-mobile, $small-mobile} {
             font-size: 11px;
@@ -391,7 +427,7 @@
         align-items: center;
         & .list-group {
             & .list-group-item {
-                padding-left: .75rem;
+                padding-left: 0.75rem;
                 font-size: 13px;
                 line-height: normal;
                 color: #707071;
@@ -408,7 +444,7 @@
         justify-content: flex-end;
         align-items: center;
         & p {
-            padding-left: .5rem;
+            padding-left: 0.5rem;
             font-size: 13px;
             color: #707071;
             @media #{$large-mobile, $small-mobile} {
