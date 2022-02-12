@@ -83,6 +83,15 @@ h2 {
 }
 h3 {
     font-size: 30px;
+    @media #{$tablet-device} {
+        font-size: 25px;
+    }
+    @media #{$large-mobile} {
+        font-size: 20px;
+    }
+    @media #{$extra-small-mobile} {
+        font-size: 20px;
+    }
 }
 h4 {
     font-size: 20px;
@@ -453,6 +462,14 @@ img {
         letter-spacing: 0.1;
         font-size: 12px;
         padding: 0.5rem 1rem;
+        @media #{$tablet-device, $large-mobile, $small-mobile} {
+            font-size: 11px;
+            padding: 5px 10px;
+            & i {
+                font-size: 10px;
+                margin-left: 2px;
+            }
+        }
     }
     @media #{$small-mobile} {
         padding: 15px 25px;
