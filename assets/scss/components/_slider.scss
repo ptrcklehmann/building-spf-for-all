@@ -63,8 +63,8 @@
     right: 0;
     &.t-climate {
         @media #{$tablet-device,
-            $large-mobile} {
-                 background-position: top 25% left 50%;
+            $large-mobile, $extra-small-mobile} {
+                 background-position: top 25% left 75%!important;
             }
     }
 
