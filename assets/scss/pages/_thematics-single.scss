@@ -6,6 +6,35 @@
     4.01 About CSS
 =========================================*/
 .thematic-areas-single {
+    & .tools {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: row dense;
+
+        gap: 15px 15px;
+        grid-template-areas: ". . . .";
+        @media #{$tablet-device, $large-mobile, $small-mobile} {
+            grid-template-areas: ". .";
+        }
+        @media #{$small-mobile} {
+            grid-template-areas:
+                "."
+                ".";
+        }
+        & .item {
+            background: transparent !important;
+            border-color: #fff;
+            padding: 1rem;
+            text-align: center;
+            & p {
+                text-indent: 0;
+            }
+
+            & img {
+                width: 35%;
+            }
+        }
+    }
     #latestsILOprojects {
         & .accordion-button {
             padding: 0;
@@ -59,21 +88,7 @@
                 }
             }
         }
-        &.tools {
-            & .list-group-item {
-                background: transparent !important;
-                border-color: #fff;
-                padding: 2rem;
-                text-align: center;
-                & p {
-                    text-indent: 0;
-                }
 
-                & img {
-                    width: 35%;
-                }
-            }
-        }
         &.funding {
             border-color: $ilo-blue;
             & .list-group-item {
@@ -231,10 +246,11 @@
     grid-auto-flow: row dense;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 15px 15px;
-    grid-template-areas:
-        ". . . . .";
+    grid-template-areas: ". . . . .";
+    @media #{$tablet-device, $large-mobile, $small-mobile} {
+        grid-template-areas: ". .";
+    }
     & .gallery-content {
         padding: 0.5rem;
         line-height: 1.5;
@@ -248,10 +264,11 @@
     grid-auto-flow: row dense;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 15px 15px;
-    grid-template-areas:
-        ". . . . .";
+    grid-template-areas: ". . . . .";
+    @media #{$tablet-device, $large-mobile, $small-mobile} {
+        grid-template-areas: ". .";
+    }
     & figure {
         background-color: #fff;
         display: flex;
@@ -282,6 +299,110 @@
                 line-height: 1.3;
                 color: $ilo-dark-blue;
             }
+        }
+    }
+}
+.thematics-events {
+    & .list-group {
+        & .list-group-item {
+            p {
+                font-size: 12px;
+                line-height: 1.2;
+                text-indent: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+.thematics-experts {
+    & h3 {
+        margin-bottom: 0;
+    }
+    & .e-grid {
+        padding: 0 .75rem;
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px 15px;
+        @media #{$large-mobile, $small-mobile} {
+            padding: 0;
+            display: grid;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr;
+        }
+    }
+    & .expert-card {
+        width: fit-content;
+        @media #{$large-mobile, $small-mobile} {
+            margin-top: 1rem;
+        }
+        & .expert-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 0 0.75rem 0;
+            & .avatar-badge {
+                background-size: cover;
+                background-position: center;
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                margin: 0 10px 0 0;
+            }
+            & .name-badge {
+                font-family: "Noto Sans", sans-serif;
+                font-size: 14px;
+                line-height: 11.7px;
+                font-weight: bold;
+                color: $ilo-dark-blue;
+                margin-bottom: 0;
+            }
+        }
+        & .expert-info {
+            padding-top: 5px;
+            border-top: 1px solid $ilo-grey;
+            display: flex;
+            justify-content: flex-start;
+            & .triangle {
+                width: 1rem;
+                height: 1rem;
+            }
+            & p {
+                font-size: 14px;
+                color: #707071;
+                line-height: normal;
+            }
+        }
+    }
+}
+.bottom-tags {
+    padding-top: 1rem;
+    border-top: 1px solid $ilo-grey;
+    & i {
+        color: #BEDCFA;
+        font-size: 14px;
+    }
+    & .tags {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        & .list-group {
+            & .list-group-item {
+                padding-left: .75rem;
+                font-size: 13px;
+                color: #707071;
+                border: 0;
+            }
+        }
+    }
+    & .last-updated {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        & p {
+            padding-left: .5rem;
+            font-size: 13px;
+            color: #707071;
         }
     }
 }

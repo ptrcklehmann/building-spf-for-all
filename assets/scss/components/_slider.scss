@@ -37,9 +37,19 @@
         -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
     }
-    & .hero-heading {
-        padding-bottom: 4rem;
+    & .above {
+        z-index: 4;
+        margin-bottom: -30%;
+        @media #{$tablet-device,
+            $large-mobile} {
+                margin-bottom: -20%;
+            }
     }
+    & .rotate {
+        transform: rotate(-90deg);
+
+    }
+
 }
 
 .hero-background {
@@ -51,6 +61,13 @@
     top: -5px;
     left: 0;
     right: 0;
+    &.t-climate {
+        @media #{$tablet-device,
+            $large-mobile} {
+                 background-position: top 25% left 50%;
+            }
+    }
+
 }
 
 .double-bullet {
@@ -72,64 +89,6 @@
             }
         }
     }
-}
-.hero-heading h1 {
-    transition: $transition-base;
-    font-family: "Overpass", sans-serif;
-    font-weight: bold;
-    color: $ilo-blue;
-    width: 90%;
-    margin-bottom: 0;
-    @media #{$tablet-device, $large-mobile} {
-        font-size: 2.2rem;
-        line-height: 2.5rem;
-        margin-right: auto;
-        width: 80%;
-    }
-    @media #{$extra-small-mobile} {
-        font-size: 32px;
-        line-height: 39px;
-    }
-}
-.hero-heading h2 {
-    transition: $transition-base;
-    font-family: "Overpass", sans-serif;
-    font-weight: 300;
-    color: $ilo-dark-blue;
-    margin-bottom: 0;
-    @media #{$tablet-device, $large-mobile} {
-        font-size: 23px;
-    }
-}
-.hero-heading h3 {
-    transition: $transition-base;
-    font-family: "Overpass", sans-serif;
-    font-weight: 200;
-    color: $ilo-turquoise;
-    padding-top: 1rem;
-    margin-bottom: 0;
-    width: 80%;
-    @media #{$tablet-device, $large-mobile} {
-        font-size: 19px;
-        width: 100%;
-    }
-    & > mark {
-        color: $ilo-red;
-        background: $ilo-dark-blue;
-        padding: 0.1rem 0;
-    }
-}
-.hero-heading h5 {
-    transition: $transition-base;
-    background:  $ilo-blue;
-    color: $ilo-white;
-    width: fit-content;
-    padding: 0.2rem;
-    line-height: 1;
-}
-.hero-heading h4 {
-    transition: $transition-base;
-    color: $ilo-dark-blue;
 }
 
 // Animation Style
