@@ -38,7 +38,6 @@ body {
     visibility: visible;
     overflow: scroll;
     scroll-behavior:smooth;
-    scroll: vertical;
     &[dir="rtl"] {
         text-align: right;
     }
