@@ -40,15 +40,14 @@
             padding-left: 1.3rem;
             border-color: #1e2ebe2d;
             .accordion-header {
-                    padding: 0.5rem 0;
-                    text-indent: -0.6rem;
+                padding: 0.5rem 0;
+                text-indent: -0.6rem;
                 & i {
                     font-size: 11px;
                     color: $ilo-red;
                     margin-right: 0.3rem;
                 }
             }
-
         }
         & .accordion-button {
             padding: 0;
@@ -70,7 +69,6 @@
                 box-shadow: none;
             }
         }
-
     }
     & p {
         font-size: 14px;
@@ -193,7 +191,7 @@
             &.active {
                 // font-weight: bold;
                 color: $ilo-legacy-blue;
-                border-color:  #1e2ebe2d #1e2ebe2d #fff;
+                border-color: #1e2ebe2d #1e2ebe2d #fff;
             }
             &:hover {
                 color: $ilo-legacy-blue;
@@ -310,9 +308,86 @@
     }
 }
 .thematics-multimedia {
-    & h3 {
-        background: $ilo-dark-blue;
-        color: $ilo-turquoise;
+    #thumbnail-slider {
+        padding: 0;
+        position: relative;
+        & .splide__arrows {
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            & .splide__arrow {
+                position: relative;
+                top: 0;
+                transform: none;
+                left: 0!important;
+                right: 0!important;
+                &.splide__arrow--prev svg {
+                    transform: rotate(-90deg);
+                }
+                &.splide__arrow--next svg {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        & .splide__track {
+            padding: 0;
+            width: 100%;
+            height: fit-content;
+            border: none !important;
+        }
+        & .splide__list {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+
+            & .splide__slide {
+                width: 100%;
+                border: none;
+                filter: brightness(.5);
+                margin-right: 0!important;
+                &.is-active {
+                    filter: brightness(1);
+                    border-left: 1px solid $ilo-turquoise;
+                }
+                & img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+        }
+    }
+    & .thumbnails-wrapper {
+        background: $ilo-turquoise;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // border-left: 1px solid $ilo-grey;
+        & .btn-blue {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background: #D2FBFB!important;
+            color: $ilo-blue!important;
+            text-align: right!important;
+            & i {
+                margin-top: .1rem;
+            }
+        }
     }
     & .splide {
         & .splide__slide {
@@ -321,7 +396,7 @@
         }
         & .splide__arrows {
             & .splide__arrow {
-                background: #230050b7;
+                background: #23005050;
                 opacity: 1;
                 & svg {
                     fill: $ilo-white;
@@ -330,7 +405,7 @@
         }
         & .splide__video {
             & .splide__video__play {
-                background: #230050b7;
+                background: #23005050;
                 opacity: 1;
                 &::after {
                     border-color: transparent transparent transparent $ilo-white;
@@ -339,12 +414,11 @@
         }
         & .splide__pagination {
             & .splide__pagination__page {
-                background: #D2FBFB;
+                background: #d2fbfb;
                 opacity: 1;
             }
         }
     }
-
 }
 .thematics-partners {
     display: grid;
@@ -362,11 +436,11 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 10rem;
+        height: 15rem;
         cursor: pointer;
         border: 1px solid $ilo-grey;
         @media #{$tablet-device, $large-mobile } {
-            height: 10rem;
+            height: 13rem;
         }
         & img {
             width: 50%;
@@ -380,7 +454,7 @@
             }
             & p {
                 padding-top: 0.5rem;
-                font-size: 12px;
+                font-size: 13px;
                 line-height: 1.3;
                 color: $ilo-dark-blue;
                 & a {
@@ -396,7 +470,7 @@
             & a {
                 font-size: 14px;
                 line-height: 1.5;
-                }
+            }
             p {
                 font-size: 12px;
                 line-height: 1.2;
@@ -496,7 +570,8 @@
             }
         }
     }
-    & .last-updated {
+    & .last-up
+    d {
         display: flex;
         justify-content: flex-end;
         align-items: center;
