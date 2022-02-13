@@ -36,6 +36,20 @@
         }
     }
     #latestsILOprojects {
+        & .accordion-item {
+            padding-left: 1.3rem;
+            border-color: #1e2ebe2d;
+            .accordion-header {
+                    padding: 0.5rem 0;
+                    text-indent: -0.6rem;
+                & i {
+                    font-size: 11px;
+                    color: $ilo-red;
+                    margin-right: 0.3rem;
+                }
+            }
+
+        }
         & .accordion-button {
             padding: 0;
             font-size: 12px;
@@ -56,17 +70,11 @@
                 box-shadow: none;
             }
         }
-        & p {
-            & i {
-                font-size: 11px;
-                color: $ilo-red;
-                margin-right: 0.3rem;
-            }
-        }
+
     }
     & p {
         font-size: 14px;
-        line-height: 1.85;
+        line-height: normal;
     }
     & a {
         color: $ilo-blue;
@@ -133,7 +141,7 @@
             color: $ilo-white;
         }
         & .funding-grid {
-            padding-bottom: .5rem;
+            padding-bottom: 0.5rem;
             display: grid;
             grid-auto-rows: 1fr;
             grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -143,10 +151,10 @@
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                padding: .4rem;
+                padding: 0.4rem;
                 & img {
                     width: 25%;
-                    margin-bottom: .5rem;
+                    margin-bottom: 0.5rem;
                 }
                 & p {
                     text-align: center;
@@ -164,7 +172,7 @@
                 gap: 10px 5px;
                 & img {
                     width: 45%;
-                    margin-bottom: .5rem;
+                    margin-bottom: 0.5rem;
                 }
             }
         }
@@ -173,9 +181,9 @@
 .expertise-tab {
     & .nav-tabs {
         margin-top: 2.5rem;
-        border-bottom: 1px solid $ilo-grey;
+        border-bottom: 1px solid #1e2ebe2d;
         .nav-link {
-            color: #5a87cd;
+            color: #707071;
             line-height: 20px;
             font-size: 15px;
             padding-top: 0.7rem;
@@ -184,8 +192,11 @@
             border-top-right-radius: 2px;
             &.active {
                 // font-weight: bold;
-                color: $ilo-blue;
-                border-color: $ilo-grey $ilo-grey #fff;
+                color: $ilo-legacy-blue;
+                border-color:  #1e2ebe2d #1e2ebe2d #fff;
+            }
+            &:hover {
+                color: $ilo-legacy-blue;
             }
         }
     }
@@ -196,6 +207,7 @@
         margin: 2rem 0;
         & h4 {
             margin-bottom: 1rem;
+            color: $ilo-red;
         }
         & p {
             width: 100%;
@@ -288,12 +300,51 @@
         grid-template-areas: ". .";
     }
     & .gallery-content {
-        padding: 0.5rem;
-        line-height: 1.5;
+        margin: 0;
+        width: 100%;
+        padding: 2.5rem 1.5rem;
+        line-height: normal;
         & a {
             font-size: 13px;
         }
     }
+}
+.thematics-multimedia {
+    & h3 {
+        background: $ilo-dark-blue;
+        color: $ilo-turquoise;
+    }
+    & .splide {
+        & .splide__slide {
+            background-blend-mode: multiply;
+            background: $ilo-blue;
+        }
+        & .splide__arrows {
+            & .splide__arrow {
+                background: #230050b7;
+                opacity: 1;
+                & svg {
+                    fill: $ilo-white;
+                }
+            }
+        }
+        & .splide__video {
+            & .splide__video__play {
+                background: #230050b7;
+                opacity: 1;
+                &::after {
+                    border-color: transparent transparent transparent $ilo-white;
+                }
+            }
+        }
+        & .splide__pagination {
+            & .splide__pagination__page {
+                background: #D2FBFB;
+                opacity: 1;
+            }
+        }
+    }
+
 }
 .thematics-partners {
     display: grid;
@@ -301,7 +352,7 @@
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 15px 15px;
-    grid-template-areas: ". . . . .";
+    grid-template-areas: ". . . .";
     @media #{$tablet-device, $large-mobile, $small-mobile} {
         grid-template-areas: ". .";
     }
@@ -328,12 +379,13 @@
                 color: $ilo-blue;
             }
             & p {
-                border-top: 1px solid $ilo-blue;
-                margin-top: 0.5rem;
                 padding-top: 0.5rem;
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 1.3;
                 color: $ilo-dark-blue;
+                & a {
+                    position: relative;
+                }
             }
         }
     }
@@ -341,6 +393,10 @@
 .thematics-events {
     & .list-group {
         & .list-group-item {
+            & a {
+                font-size: 14px;
+                line-height: 1.5;
+                }
             p {
                 font-size: 12px;
                 line-height: 1.2;
@@ -350,6 +406,7 @@
         }
     }
 }
+
 .thematics-experts {
     & h3 {
         margin-bottom: 0;
@@ -388,7 +445,7 @@
             & .name-badge {
                 font-family: "Noto Sans", sans-serif;
                 font-size: 14px;
-                line-height: 11.7px;
+                line-height: 1.3;
                 font-weight: bold;
                 color: $ilo-dark-blue;
                 margin-bottom: 0;

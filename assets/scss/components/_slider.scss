@@ -42,6 +42,7 @@
         margin-bottom: -30%;
         @media #{$tablet-device,
             $large-mobile} {
+                padding-left: 0;
                 margin-bottom: -20%;
             }
     }
@@ -64,7 +65,7 @@
     &.t-climate {
         @media #{$tablet-device,
             $large-mobile, $extra-small-mobile} {
-                 background-position: top 25% left 75%!important;
+                 background-position: top 25% left 0%!important;
             }
     }
 

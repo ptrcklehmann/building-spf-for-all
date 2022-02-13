@@ -11,8 +11,20 @@
       $('.sticky-header').removeClass('sticky')
     }
   })
+  const tag = document.createElement('script');
 
-  /*--
+  tag.src = "https://www.youtube.com/iframe_api";
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    new Splide('.splide', {
+      heightRatio: 0.5625,
+      cover: true,
+      video: {
+        loop: true,
+      },
+    }).mount(window.splide.Extensions);
+  /*--}
       Custom script to call Background
       Image & Color from html data attribute
   -----------------------------------*/

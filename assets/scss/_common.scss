@@ -272,8 +272,9 @@ img {
         width: 100%;
         margin-bottom: -1%;
     }
-    @media #{$extra-small-mobile } {
-        padding-left: 2rem;
+    @media #{$extra-small-mobile }{
+        padding: 1rem .5rem .5rem;
+        padding-left: 1rem;
         margin-left: -2rem;
         width: 110%;
     }
