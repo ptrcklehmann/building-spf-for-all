@@ -387,6 +387,10 @@
             & i {
                 margin-top: .1rem;
             }
+
+        }
+        @media #{$large-mobile, $small-mobile} {
+            display: none;
         }
     }
     & .splide {
@@ -570,8 +574,7 @@
             }
         }
     }
-    & .last-up
-    d {
+    & .last-updated {
         display: flex;
         justify-content: flex-end;
         align-items: center;

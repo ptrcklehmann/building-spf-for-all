@@ -18,6 +18,11 @@ document.addEventListener('DOMContentLoaded',function() {
         video: {
             loop: true,
         },
+        breakpoints: {
+            640: {
+                arrows: true,
+            },
+      }
     })
 
     multimediasplide.sync(thumbnails)
