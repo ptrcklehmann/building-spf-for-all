@@ -1,6 +1,5 @@
 (function($) {
   "use strict"
-
   /*----------------------------------------
   Sticky Header Activation
   ------------------------------------------*/
@@ -12,18 +11,12 @@
     }
   })
 
-  const currentLocation = location.href;
-  console.log(currentLocation, 'currentLocation')
-  const menuItem = document.querySelectorAll('.main-menu ul li a')
-  console.log(menuItem, 'menu items')
-  const menuLength = menuItem.length
-  for (let i = 0; i<menuLength; i++) {
-    console.log(menuItem[i].href, 'menuItem[i].href')
-    if(menuItem[i].href === currentLocation) {
-      menuItem[i].classList.add('active')
-    } else menuItem[i].classList.remove('active')
-  }
-
+  $(".main-menu ul a").on("click", function () {
+    $(".main-menu ul").find("li a.active").removeClass("active")
+    $(this).addClass("active")
+  })
+  console.log($(".main-menu ul a"))
+  console.log($(".main-menu ul").find("li a.active"))
 
   /*--}
       Custom script to call Background

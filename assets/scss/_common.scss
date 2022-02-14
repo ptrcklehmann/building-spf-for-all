@@ -263,9 +263,17 @@ img {
     background: rgba(255, 255, 255, 0.6);
     padding: 2.5rem 1rem 2rem 25rem;
     margin-left: -25rem;
-    margin-bottom: -3%;
+    margin-bottom: 0%;
     overflow: visible;
     position: relative;
+    &.thematics {
+        margin-bottom: -2%;
+    }
+    &.home {
+        width: 110%;
+        padding: 2.5rem 1rem 5rem 25rem;
+        margin-bottom: 2%;
+    }
     @media #{$desktop-device, $tablet-device, $large-mobile} {
         padding-left: 10rem;
         margin-left: -10rem;
@@ -537,7 +545,7 @@ img {
     border-radius: 1px;
     font-family: Noto Sans, sans-serif;
     font-size: 13px;
-    color: $ilo-blue;
+    color: $ilo-dark-blue;
     padding: 0.5rem 1rem;
     text-align: left;
 }
@@ -653,7 +661,6 @@ img {
     & .title {
         margin-bottom: 25px;
         margin-top: 10px;
-
         @media #{$extra-small-mobile} {
             margin-top: 0;
         }
@@ -661,6 +668,7 @@ img {
             color: $ilo-red;
             font-size: 1.4rem;
             vertical-align: middle;
+            margin-bottom: .2rem;
         }
     }
     & .title-shape {
