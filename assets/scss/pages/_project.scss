@@ -68,9 +68,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 65%,rgba(255,255,255,.3) 70%, rgba(255,255,255,1) 100%);
         z-index: 2;
-        background-blend-mode: darken;
         @media #{$tablet-device, $large-mobile} {
             background: none;
         }
