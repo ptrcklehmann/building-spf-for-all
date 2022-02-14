@@ -27,16 +27,16 @@ $ilo-canary: #d4e7f5;
 $type-black: #242323;
 $type-grey: #707071;
 
-$tooltip-font-size:                 14px;
-$tooltip-max-width:                 200px;
-$tooltip-color:                     $ilo-white;
-$tooltip-bg:                        $ilo-blue;
-$tooltip-border-radius:             1px;
-$tooltip-opacity:                   .9;
-$tooltip-margin:                    0;
+$tooltip-font-size: 14px;
+$tooltip-max-width: 200px;
+$tooltip-color: $ilo-white;
+$tooltip-bg: $ilo-blue;
+$tooltip-border-radius: 1px;
+$tooltip-opacity: 0.9;
+$tooltip-margin: 0;
 
-$tooltip-arrow-width:               .8rem;
-$tooltip-arrow-height:              .4rem;
-$tooltip-arrow-color:               $tooltip-bg;
+$tooltip-arrow-width: 0.8rem;
+$tooltip-arrow-height: 0.4rem;
+$tooltip-arrow-color: $tooltip-bg;
 
-$transition-duration: .2s;
+$transition-duration: 0.2s;

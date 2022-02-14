@@ -541,20 +541,27 @@ img {
 
 }
 .tooltip-inner {
-    background: $ilo-white;
+    background: $ilo-grey;
     border-radius: 1px;
     font-family: Noto Sans, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: normal;
     color: $ilo-dark-blue;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     text-align: left;
+    & span {
+        font-weight: bold;
+    }
 }
 
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
-    border-top-color: $ilo-white !important;
+    border-top-color: $ilo-grey !important;
 }
 .tooltip.bs-tooltip-right .tooltip-arrow::before {
-    border-right-color: $ilo-white !important;
+    border-right-color: $ilo-grey  !important;
+}
+.tooltip.bs-tooltip-left .tooltip-arrow::before {
+    border-left-color: $ilo-grey  !important;
 }
 
 .strong-copyright {
