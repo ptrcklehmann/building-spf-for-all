@@ -6,6 +6,29 @@
     4.01 About CSS
 =========================================*/
 .partnerships-section {
+    & .pillar3 {
+            flex: 1 1 auto;
+            align-self: center;
+            display: inline-block;
+            vertical-align: center;
+            align-content: center;
+            zoom: 1;
+            *display: inline;
+            padding: 0.6rem 1rem;
+            border-radius: 1px;
+            transition: 0.4s;
+            border: 2px solid;
+            border-color: $ilo-blue;
+            background: #BEDCFA;
+            & a {
+                text-decoration: none;
+            }
+            & h4 {
+                color: $ilo-blue;
+                line-height: 1.5;
+                margin-bottom: 0;
+            }
+    }
     & .list-group {
         font-size: 14px;
         padding-right: 3rem;

@@ -5,72 +5,47 @@ Chart.defaults.elements.bar.inflateAmount=10
 Chart.register(ChartDataLabels);
 
 
-const databudget = {
+const databudget={
     labels: [
-        'Estimated budget'
+        'Resources mobilized', 'Funding gap', 'ILO contribution'
     ],
     datasets: [
         {
-            label: 'Resources mobilized',
-            backgroundColor: '#230050',
-            data: [80],
+            label: 'Estimated budget ⎼ in USD millions',
+            backgroundColor:  ['#1E2DBE','#FA3C4B','#05D2D2'],
+            data: [80, 70, 10],
             datalabels: {
-                color: '#fff'
+                color: ['#fff','#230050','#230050']
             }
-        },{
-            label: 'Funding gap',
-            backgroundColor: '#FA3C4B',
-            data: [70],
-            datalabels: {
-                color: '#230050'
-            }
-        },{
-            label: 'ILO contribution',
-            backgroundColor: '#1E2DBE',
-            data: [10],
-            datalabels: {
-                color: '#fff'
-            }
-        }]
+        }
+    ]
 };
 
-const datadist = {
+const datadist={
     labels: [
-        'Budget distribution country/thematic support '
+        'In-country support','Thematic approaches','M&E and knowledge distribuition'
     ],
     datasets: [
         {
-            label: 'In-country support',
-            backgroundColor: '#230050',
-            font: { size: 8 },
-            data: [133],
+            data: [133,24,3],
+            label: 'Budget distribution country/thematic support',
+            backgroundColor: ['#1E2DBE','#FA3C4B','#05D2D2'],
+            font: {size: 8},
             datalabels: {
-                color: '#fff'
+                color: ['#fff','#230050','#230050']
             }
-        },{
-            label: 'Thematic approaches',
-            backgroundColor: '#FA3C4B',
-            data: [24],
-            datalabels: {
-                color: '#230050'
-            }
-        },{
-            label: 'M&E and knowledge distribuition',
-            backgroundColor: '#1E2DBE',
-            data: [3],
-            datalabels: {
-                color: '#fff'
-            }
-        }]
+        }
+    ]
 };
 
 
 let delayed;
 
 const configBudget={
-    type: 'bar',
+    type: 'pie',
     data: databudget,
     options: {
+        borderWidth: 0,
         layout: {
             padding: {
                 top: 30,
@@ -131,15 +106,15 @@ const configBudget={
     }
 }
 const configDist={
-    type: 'bar',
+    type: 'pie',
     data: datadist,
     options: {
+        borderWidth: 0,
         layout: {
             padding: {
-                top: 30,
+                top: 0,
             }
         },
-        indexAxis: 'y',
         animation: {
             onComplete: () => {
                 delayed=true;
@@ -162,35 +137,37 @@ const configDist={
                 position: 'bottom',
                 font: {
                     size: 7
+                },
+                padding: {
+                        top: 0,
                 }
             },
             tooltip: {
                 backgroundColor: '#1E2DBE'
+            },
+            grid: {
+                gridLineOptions: {
+                    display: false
+                }
             }
         },
-        responsive: true,
         scales: {
             x: {
-                stacked: true,
                 display: false,
                 grid: {
                     display: false
                 }
             },
             y: {
-                stacked: true,
                 display: false,
                 grid: {
                     display: false
                 }
             }
         },
-        grid: {
-            gridLineOptions: {
-                display: false
-            }
-        }
+
     }
 }
+
 const estBudget=new Chart(document.getElementById('est-budget'),configBudget)
 const budgetDist=new Chart(document.getElementById('budget-dist'),configDist)

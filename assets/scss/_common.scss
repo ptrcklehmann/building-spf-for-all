@@ -37,7 +37,7 @@ body {
     line-height: 2;
     visibility: visible;
     overflow: scroll;
-    scroll-behavior:smooth;
+    scroll-behavior: smooth;
     &[dir="rtl"] {
         text-align: right;
     }
@@ -280,8 +280,8 @@ img {
         width: 100%;
         margin-bottom: -1%;
     }
-    @media #{$extra-small-mobile }{
-        padding: 1rem .5rem .5rem;
+    @media #{$extra-small-mobile } {
+        padding: 1rem 0.5rem 0.5rem;
         padding-left: 1rem;
         margin-left: -2rem;
         width: 110%;
@@ -334,7 +334,7 @@ img {
     }
     & h5 {
         transition: $transition-base;
-        background:  $ilo-blue;
+        background: $ilo-blue;
         color: $ilo-white;
         width: fit-content;
         padding: 0.2rem;
@@ -357,6 +357,7 @@ img {
     width: fit-content;
     background: $ilo-turquoise;
     color: $ilo-dark-blue;
+    text-decoration: none !important;
     &:hover {
         color: $ilo-dark-blue;
         background: #69e4e4;
@@ -399,7 +400,7 @@ img {
     color: $ilo-dark-blue;
     &:hover {
         color: $ilo-dark-blue;
-        background: #FB636F;
+        background: #fb636f;
         & i {
             animation: referringArrow 1s ease;
             color: $ilo-dark-blue;
@@ -423,7 +424,7 @@ img {
         &.btn-small {
             letter-spacing: 0.1;
             font-size: 10px;
-            padding: 0.3rem .5rem;
+            padding: 0.3rem 0.5rem;
             & i {
                 font-size: 9px;
                 margin-left: 0.2rem;
@@ -448,7 +449,7 @@ img {
     transition: $transition-base;
     width: fit-content;
     background: $ilo-blue;
-    color: $ilo-white!important;
+    color: $ilo-white !important;
     text-decoration: none !important;
     &:hover {
         color: $ilo-white;
@@ -538,7 +539,6 @@ img {
 }
 .tooltip {
     opacity: 1 !important;
-
 }
 .tooltip-inner {
     background: $ilo-grey;
@@ -552,16 +552,22 @@ img {
     & span {
         font-weight: bold;
     }
+    & a {
+        color: $ilo-blue;
+        & i {
+            vertical-align: middle;
+        }
+    }
 }
 
 .tooltip.bs-tooltip-top .tooltip-arrow::before {
     border-top-color: $ilo-grey !important;
 }
 .tooltip.bs-tooltip-right .tooltip-arrow::before {
-    border-right-color: $ilo-grey  !important;
+    border-right-color: $ilo-grey !important;
 }
 .tooltip.bs-tooltip-left .tooltip-arrow::before {
-    border-left-color: $ilo-grey  !important;
+    border-color: $ilo-grey !important;
 }
 
 .strong-copyright {
@@ -584,10 +590,10 @@ img {
     & i {
         color: $ilo-blue;
         font-size: 8px;
-        margin-right: .2rem;
+        margin-right: 0.2rem;
     }
     @media #{$tablet-device,$large-mobile, $extra-small-mobile } {
-        margin-left: auto!important;
+        margin-left: auto !important;
         font-size: 8px;
         & i {
             color: $ilo-blue;
@@ -595,7 +601,6 @@ img {
             margin-top: 0rem;
         }
     }
-
 }
 
 /* Section Spacing */
@@ -675,7 +680,7 @@ img {
             color: $ilo-red;
             font-size: 1.4rem;
             vertical-align: middle;
-            margin-bottom: .2rem;
+            margin-bottom: 0.2rem;
         }
     }
     & .title-shape {
@@ -704,7 +709,6 @@ img {
         }
     }
     & p {
-        max-width: 530px;
         font-family: Noto Sans, sans-serif;
         font-size: 1.125rem;
         line-height: 1.6rem;
@@ -812,8 +816,19 @@ img {
     & .info-text {
         width: 55%;
         & a {
-            text-decoration: underline;
-            text-underline-offset: 0.1rem;
+            color: $ilo-blue;
+            & i {
+                vertical-align: middle;
+                &::before {
+                    transition: $transition-base;
+                }
+            }
+            &:hover {
+                color: $ilo-legacy-blue;
+                & i::before {
+                    margin-left: 0.1rem;
+                }
+            }
         }
         @media #{$tablet-device, $large-mobile} {
             font-size: 0.9rem;
@@ -876,8 +891,7 @@ img {
         align-content: center;
         zoom: 1;
         *display: inline;
-        padding: 0.9rem 0;
-
+        padding: 0.6rem 0;
         border-radius: 1px;
         transition: 0.4s;
         border: 2px solid;
@@ -890,15 +904,15 @@ img {
         &.active {
             &.pillar1 {
                 border-color: $ilo-turquoise;
-                background: $ilo-grey;
+                background: #d2fbfb;
             }
             &.pillar2 {
                 border-color: $ilo-red;
-                background: $ilo-grey;
+                background: #fed8db;
             }
             &.pillar3 {
                 border-color: $ilo-blue;
-                background: $ilo-grey;
+                background: #bedcfa;
             }
             & h4 {
                 color: $ilo-blue;
@@ -952,6 +966,35 @@ img {
         opacity: 0.6;
     }
 }
+.countries-section {
+    & .pillar1 {
+        width: fit-content;
+        padding: 0.6rem 1rem;
+        border-radius: 1px;
+        transition: 0.4s;
+        border: 2px solid;
+        border-color: $ilo-turquoise;
+        background: #d2fbfb;
+        & a {
+            text-decoration: none;
+            & h4 {
+                color: $ilo-blue;
+                width: 100%;
+                margin-bottom: 0;
+                line-height: 1.5;
+            }
+        }
+    }
+    & .countries-desc {
+        padding-top: 1rem;
+        font-size: 14px;
+        color: #707071;
+    }
+
+    & .sub-red {
+        color: $ilo-red;
+    }
+}
 
 .thematic-areas {
     & .pillar2 {
@@ -962,23 +1005,35 @@ img {
         align-content: center;
         zoom: 1;
         *display: inline;
-        padding: 0.9rem 2rem;
+        padding: 0.6rem 1rem;
         border-radius: 1px;
         transition: 0.4s;
         border: 2px solid;
         border-color: $ilo-red;
-        background: $ilo-grey;
+        background: #fed8db;
         & a {
             text-decoration: none;
         }
         & h4 {
             color: $ilo-blue;
-            line-height: 1;
+            line-height: 1.5;
             margin-bottom: 0;
         }
     }
     & a {
-        text-decoration: underline;
+        color: $ilo-blue;
+        & i {
+            vertical-align: middle;
+            &::before {
+                transition: $transition-base;
+            }
+        }
+        &:hover {
+            color: $ilo-legacy-blue;
+            & i::before {
+                margin-left: 0.1rem;
+            }
+        }
     }
     & .list-group {
         & .list-group-item {
@@ -994,6 +1049,16 @@ img {
             }
         }
     }
+    & p {
+        font-size: 16px;
+        line-height: 1.5em;
+        & span {
+            color: $ilo-red;
+        }
+    }
+}
+.sub-red {
+    color: $ilo-red;
 }
 .thematic-card {
     transition: $transition-base;
@@ -1135,7 +1200,7 @@ img {
         justify-content: flex-end;
         height: 5rem;
         margin: 0.1rem 0;
-        padding: .2rem;
+        padding: 0.2rem;
         border-radius: 1px;
         & img {
             height: 2.2rem;
@@ -1355,7 +1420,6 @@ img {
         top: 25%;
         left: 0;
         transform: translateY(-50%);
-        // background: $ilo-grey;
         z-index: -1;
         transition: $transition-base;
     }
@@ -1364,7 +1428,6 @@ img {
         padding-left: 20px;
         &::after {
             color: $ilo-red;
-
             background: none;
         }
     }

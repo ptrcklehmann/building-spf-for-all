@@ -71,3 +71,11 @@ $(".partn-list .global-coalition").hover (
       $(".civil-society").removeClass("active")
     }
 )
+$(document).ready(function(){
+  $('.usp-tooltip').tooltip({
+    placement: 'right',
+    html: true,
+    title: "<p>Created in 2016, and co-chaired by the ILO and World Bank, USP2030 promotes both global policy development and country-level implementation</p><a href='https://www.usp2030.org/gimi/USP2030.action' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>",
+    delay: {show: 500, hide: 1000}
+  });
+});

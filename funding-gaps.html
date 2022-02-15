@@ -433,7 +433,9 @@
                   >Results and impact</a
                 >
                 <a class="nav-link" href="our-team.html">Our team</a>
-                <a class="nav-link active" href="funding-gaps.html">Funding gaps</a>
+                <a class="nav-link active" href="funding-gaps.html"
+                  >Funding gaps</a
+                >
                 <a class="nav-link" href="library.html">Library</a>
                 <a class="nav-link" href="news-and-events.html"
                   >News and events</a
@@ -540,22 +542,36 @@
       </div>
 
       <div class="container">
-        <div class="row align-items-start text-center justify-content-center px-0">
+        <div
+          class="row align-items-start text-left justify-content-between px-0"
+        >
           <div class="col-lg-6 col-md-12">
-            <h5>Estimated budget in USD millions</h5>
-            <canvas id="est-budget"></canvas>
+            <h5>Estimated budget ⎼ in USD millions</h5>
           </div>
           <div class="col-lg-6 col-md-12">
             <h5>
               Budget distribution country/thematic support ⎼ in USD millions
             </h5>
+          </div>
+        </div>
+        <div
+          class="row align-items-start text-center justify-content-between px-0"
+        >
+          <div class="col-5">
+            <canvas id="est-budget"></canvas>
+          </div>
+
+          <div class="col-5">
             <canvas id="budget-dist"></canvas>
           </div>
         </div>
       </div>
       <div class="container m-t-60">
         <div class="row">
-          <a href="project.html" class="btn-turquoise btn-arrow m-t-20 m-auto fw-bold">
+          <a
+            href="project.html"
+            class="btn-turquoise btn-small m-t-20 m-auto fw-bold"
+          >
             Become a development partner <i class="fa fa-play"></i>
           </a>
         </div>

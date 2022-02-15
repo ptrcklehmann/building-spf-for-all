@@ -14,7 +14,7 @@
         & .title {
             margin-bottom: 5px;
             font-size: 24px;
-            @media #{$desktop-device} {    
+            @media #{$desktop-device} {
                 font-size: 22px;
             }
         }
@@ -64,6 +64,18 @@
                     }
                 }
             }
+        }
+    }
+}
+.team-videos {
+    background: $ilo-dark-blue;
+    & h5 {
+        margin-top: .6rem;
+        color: $ilo-white;
+        & i {
+            color: $ilo-red;
+            font-size: 15px;
+            vertical-align: middle;
         }
     }
 }
