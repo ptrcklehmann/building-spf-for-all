@@ -7,27 +7,27 @@
 =========================================*/
 .partnerships-section {
     & .pillar3 {
-            flex: 1 1 auto;
-            align-self: center;
-            display: inline-block;
-            vertical-align: center;
-            align-content: center;
-            zoom: 1;
-            *display: inline;
-            padding: 0.6rem 1rem;
-            border-radius: 1px;
-            transition: 0.4s;
-            border: 2px solid;
-            border-color: $ilo-blue;
-            background: #BEDCFA;
-            & a {
-                text-decoration: none;
-            }
-            & h4 {
-                color: $ilo-blue;
-                line-height: 1.5;
-                margin-bottom: 0;
-            }
+        flex: 1 1 auto;
+        align-self: center;
+        display: inline-block;
+        vertical-align: center;
+        align-content: center;
+        zoom: 1;
+        *display: inline;
+        padding: 0.6rem 1rem;
+        border-radius: 1px;
+        transition: 0.4s;
+        border: 2px solid;
+        border-color: $ilo-blue;
+        background: #bedcfa;
+        & a {
+            text-decoration: none;
+        }
+        & h4 {
+            color: $ilo-blue;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
     }
     & .list-group {
         font-size: 14px;
@@ -58,7 +58,7 @@
     }
     & .nav-pills {
         @media #{$tablet-device, $large-mobile } {
-            flex-direction: row!important;
+            flex-direction: row !important;
             justify-content: space-between;
         }
         margin-right: 1rem;
@@ -80,10 +80,10 @@
                 border-right-color: $ilo-blue;
             }
             @media #{$tablet-device, $large-mobile } {
-                padding: 0.2rem .5rem;
+                padding: 0.2rem 0.5rem;
                 min-width: fit-content;
                 margin: 0.3rem 0.2rem;
-                font-size: .7rem;
+                font-size: 0.7rem;
                 border-bottom-width: 2px;
                 border-bottom-color: $ilo-white;
                 border-bottom-style: solid;
@@ -151,6 +151,42 @@
                     font-size: 14px;
                     line-height: 1.3;
                     color: $ilo-dark-blue;
+                }
+            }
+        }
+    }
+}
+.popover {
+    border-radius: 1px;
+    border-color: #1e2ebe52 !important;
+
+    & .popover-arrow {
+        border-left-color: #1e2ebe52 !important;
+    }
+    & .popover-header {
+        background-color: #fff!important;
+        border-bottom-color: #1e2ebe52 !important;
+        & img {
+            width: 25%;
+        }
+    }
+    .popover-body {
+        & p {
+            font-family: Noto Sans, sans-serif;
+            font-size: 13px;
+            color: $ilo-dark-blue;
+            margin-bottom: 0.3rem;
+        }
+        & a {
+            color: $ilo-blue;
+            font-size: 13px;
+            & i {
+                transition: $transition-base;
+                vertical-align: middle;
+            }
+            &:hover {
+                & i {
+                    margin-left: 0.1rem;
                 }
             }
         }
