@@ -73,6 +73,7 @@ const configBudget={
                 display: true,
                 align: 'center',
                 position: 'bottom',
+                color: '#230050',
                 font: {
                     size: 7
                 },

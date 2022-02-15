@@ -372,8 +372,9 @@ img {
         }
     }
     & i {
-        font-size: 14px;
+        font-size: 11px;
         margin-left: 0.4rem;
+        vertical-align: middle;
     }
     &.btn-small {
         font-size: 14px;
@@ -1085,6 +1086,9 @@ img {
     }
 }
 .results-and-impact {
+    & p {
+        line-height: 1.5;
+    }
     a {
         text-decoration: underline;
     }
