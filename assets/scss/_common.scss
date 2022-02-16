@@ -538,6 +538,7 @@ img {
     }
 }
 .circle-value {
+    cursor: pointer;
     transition: $transition-base;
     opacity: 0.5;
     &:hover {
