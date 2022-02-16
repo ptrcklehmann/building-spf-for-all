@@ -521,6 +521,12 @@ img {
     width: 100%;
     display: flex;
     justify-content: center;
+    & svg {
+        width: 100%;
+        &:focus {
+            border-color: none;
+        }
+    }
     @media #{$tablet-device,$large-mobile, $extra-small-mobile } {
         width: 70%;
         & svg {
@@ -767,13 +773,6 @@ img {
 }
 .info-section {
     scroll-margin-top: 20rem;
-    &.pillars {
-        scroll-margin-top: 10rem;
-        margin-top: 1rem;
-        &:nth-child(2) {
-            flex-direction: row-reverse;
-        }
-    }
     z-index: -20;
     scroll-snap-align: start;
     height: 100%;
@@ -783,9 +782,30 @@ img {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: center;
-    align-items: flex-start;
-    padding: 2rem 1rem;
-    margin: 4rem 0;
+    align-items: center;
+    padding: 1rem 0;
+    margin: 2rem 0;
+    &.pillars {
+        scroll-margin-top: 10rem;
+        margin-top: 1rem;
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+    }
+    &.countries {
+        padding: 2rem 0 0 0;
+        scroll-margin-top: 3rem;
+        margin-top: 3rem;
+        & p {
+            line-height: 1.5;
+        }
+        &:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+        &:nth-child(3) {
+            margin-bottom: 7rem;
+        }
+    }
     &.life-w {
         justify-content: flex-start;
         align-items: flex-start;
@@ -849,9 +869,9 @@ img {
     & h4 {
         color: $ilo-blue;
         & .tri-bullet {
+            vertical-align: middle;
             color: $ilo-red;
             font-size: 14px;
-            margin-right: 0.2rem;
         }
     }
     & p {
@@ -867,11 +887,11 @@ img {
     left: 0;
     width: 100%;
     background: #fff;
-    padding: 4rem 0 0.3rem 0;
+    padding: 50px 0 0 0;
     z-index: 1;
     &.pillars {
         & ul {
-            margin: 1.5rem 0 0.3rem 0;
+            margin: 2rem 0 0 0;
         }
     }
     & h3 {

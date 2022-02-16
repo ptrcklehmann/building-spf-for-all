@@ -11,13 +11,6 @@
     }
   })
 
-  $(".main-menu ul a").on("click", function () {
-    $(".main-menu ul").find("li a.active").removeClass("active")
-    $(this).addClass("active")
-  })
-  console.log($(".main-menu ul a"))
-  console.log($(".main-menu ul").find("li a.active"))
-
   /*--}
       Custom script to call Background
       Image & Color from html data attribute
@@ -38,20 +31,7 @@
   -----------------------------------*/
   new Rellax('.hero-background')
 
-  /*---------------------------
-    Life without social protection menuspy
-  -----------------------------------*/
-  const lavalampElm=document.querySelector('.lavalamp')
-  const positionLavalamp=function(activeElm) {
-    lavalampElm.style.width=activeElm.elm.offsetWidth+'px'
-    lavalampElm.style.left=activeElm.elm.offsetLeft+'px'
-  }
-  const elm=document.querySelector('#info-header')
-  const ms=new MenuSpy(elm,{
-    threshold: 45,
-    callback: positionLavalamp
-  })
-  $(elm&&positionLavalamp({elm: elm.querySelector('li.active')}))
+
 
 
   /*----------------------------------------
@@ -89,6 +69,20 @@
     AOS.init({
       once: true,
     })
+    /*---------------------------
+  Life without social protection menuspy
+-----------------------------------*/
+    const lavalampElm=document.querySelector('.lavalamp')
+    const positionLavalamp=function(activeElm) {
+      lavalampElm.style.width=activeElm.elm.offsetWidth+'px'
+      lavalampElm.style.left=activeElm.elm.offsetLeft+'px'
+    }
+    const elm=document.querySelector('#info-header')
+    const ms=new MenuSpy(elm,{
+      threshold: 45,
+      callback: positionLavalamp
+    })
+    $(elm&&positionLavalamp({elm: elm.querySelector('li.active')}))
   })
 
 
@@ -250,7 +244,7 @@
   Splitting()
 
   const yearSlider=document.querySelector('.year-slider');
-  (yearSlider) && noUiSlider.create(yearSlider,{
+  (yearSlider)&&noUiSlider.create(yearSlider,{
     tooltips: [
       true,
       true // tooltip with default formatting
