@@ -35,7 +35,7 @@
             padding-left: 0;
             border-bottom: 1px solid #1e2ebe42;
             @media #{$extra-small-mobile } {
-                font-size: 13px;
+                font-size: 12px;
             }
             &::before {
                 color: $ilo-red;
@@ -135,10 +135,17 @@
         }
     }
 }
+.border-red {
+    border-right: 1px solid $ilo-red;
+    @media #{$extra-small-mobile } {
+        border-right: none;
+    }
+}
 .country-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
+
     & .stat-card {
         padding: 1rem;
         background: $ilo-blue;
@@ -186,6 +193,10 @@
     align-content: center;
     justify-items: center;
     align-items: center;
+    @media #{$extra-small-mobile } {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
     & .stat-card {
         padding: 1rem;
         display: grid;
