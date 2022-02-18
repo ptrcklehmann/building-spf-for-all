@@ -516,7 +516,11 @@ img {
         transform: translateX(0px) scale(1);
     }
 }
-
+.vision-section {
+    .value-text {
+        line-height: 1.6;
+    }
+}
 .vision-image {
     width: 100%;
     display: flex;
@@ -544,9 +548,14 @@ img {
     &:hover {
         opacity: 1;
     }
+    &:focus {
+        border-radius: 1px!important;
+        border: none !important;
+    }
 }
 .tooltip {
     opacity: 1 !important;
+
 }
 .tooltip-inner {
     background: $ilo-grey;
@@ -565,6 +574,10 @@ img {
         & i {
             vertical-align: middle;
         }
+    }
+    & h6 {
+        margin-bottom: 0;
+        text-align: center;
     }
 }
 
