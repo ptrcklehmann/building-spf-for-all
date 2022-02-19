@@ -68,6 +68,12 @@
                  background-position: top 25% left 0%!important;
             }
     }
+    &.t-country {
+        @media #{$tablet-device,
+            $large-mobile, $extra-small-mobile} {
+                 background-position: top 25% right 50%!important;
+            }
+    }
 
 }
 
