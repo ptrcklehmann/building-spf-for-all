@@ -494,7 +494,7 @@
         display: grid;
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 15px 15px;
+        gap: 30px 15px;
         @media #{$large-mobile, $small-mobile} {
             padding: 0;
             display: grid;
@@ -503,7 +503,7 @@
         }
     }
     & .expert-card {
-        width: fit-content;
+        width: 100%;
         @media #{$large-mobile, $small-mobile} {
             margin-top: 1rem;
         }
@@ -512,6 +512,7 @@
             justify-content: flex-start;
             align-items: center;
             padding: 0 0 0.75rem 0;
+            width: 100%;
             & .avatar-badge {
                 background-size: cover;
                 background-position: center;
@@ -539,8 +540,8 @@
                 height: 1rem;
             }
             & p {
-                font-size: 14px;
-                color: #707071;
+                font-size: 13px;
+                color: $type-grey;
                 line-height: normal;
             }
         }

@@ -42,6 +42,7 @@
             @media #{$extra-small-mobile } {
                 font-size: 12px;
             }
+
             &::before {
                 font-family: "Material Icons";
                 content: "play_arrow ";
@@ -51,6 +52,9 @@
                 @media #{$extra-small-mobile } {
                     font-size: 10px;
                 }
+            }
+            &:last-child {
+                border-bottom: none;
             }
         }
         &.country-results {
@@ -62,6 +66,23 @@
                     font-size: 18px;
                     vertical-align: middle;
                     color: $ilo-blue;
+                }
+                & a {
+                    color: $ilo-dark-blue;
+                    transition: $transition-base;
+                    &::after {
+                        transition: $transition-base;
+                        font-family: "Material Icons";
+                        content: "navigate_next";
+                        font-size: 18px;
+                        vertical-align: middle;
+                    }
+                    &:hover {
+                        color: $ilo-legacy-blue;
+                        &::after {
+                            margin-left: 0.2rem;
+                        }
+                    }
                 }
             }
         }
@@ -113,12 +134,14 @@
         & .accordion-button {
             padding: 0;
             font-size: 12px;
+            line-height: 1.3;
             margin: 0;
             justify-content: flex-end;
             color: $ilo-blue;
             width: fit-content;
             margin-left: auto;
             &::after {
+                color: $ilo-blue;
                 flex-shrink: 0;
                 width: 1.25rem;
                 height: 1rem;
@@ -130,45 +153,109 @@
                 box-shadow: none;
             }
             &:focus {
+                color: $ilo-blue;
                 box-shadow: none;
             }
         }
     }
-    .branches-covered {
-        justify-content: space-between;
-        align-items: stretch;
-        justify-items: stretch;
-        & .list-group {
-            & .list-group-item {
-                &::before {
-                    font-family: "Material Icons";
-                    content: "play_arrow ";
-                    text-rendering: auto;
-                    color: $ilo-red;
-                    font-size: 18px;
-                    vertical-align: middle;
-                    margin-right: 0.2rem;
-                }
+    .branches-conventions {
+        & .branches {
+            @media #{$tablet-device, $large-mobile, $extra-small-mobile } {
+                padding-top: 2rem;
             }
-        }
-        & > .list-group-item {
-            padding: 0;
-            border-color: #fff !important;
-            &::before {
-                content: "";
-                font-size: 12px;
+            & .horizontal {
+                justify-content: space-between;
+                align-items: stretch;
+                justify-items: stretch;
+                & .list-group {
+                    & .list-group-item {
+                        &::before {
+                            font-family: "Material Icons";
+                            content: "play_arrow ";
+                            text-rendering: auto;
+                            color: $ilo-red;
+                            font-size: 18px;
+                            vertical-align: middle;
+                            margin-right: 0.2rem;
+                        }
+
+                    }
+                }
+
+                & > .list-group-item {
+                    padding: 0;
+                    border-color: #fff !important;
+                    &::before {
+                        content: "";
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
     .results-section {
         & .list-group-item {
             font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .funding-gaps-section {
+        & .funding-gaps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px 10px;
+            justify-content: stretch;
+            align-content: center;
+            justify-items: stretch;
+            align-items: start;
+            @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            & .funding-item {
+                padding: 0.5rem;
+                display: grid;
+                grid-auto-rows: 1fr;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1.25fr;
+                justify-items: center;
+                align-items: center;
+                justify-content: stretch;
+                align-content: stretch;
+                margin-left: -5px;
+                border-right: 1px solid #d4e7f5;
+                @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
+                    border-right: none;
+                    &:nth-child(3), &:nth-child(4){
+                        border-top: 1px solid #d4e7f5;
+                    }
+                }
+                &:last-child {
+                    border-right: none;
+                }
+                & .icon {
+                    font-size: 3.5rem;
+                    line-height: 1;
+                    color: $ilo-red;
+                }
+                & p {
+                    text-align: center;
+                    font-size: 12px;
+                    margin-bottom: 0;
+                    line-height: 1.5;
+                    &:first-child {
+                        font-size: 12px;
+                        color: $ilo-blue;
+                    }
+                }
+            }
         }
     }
 }
 .border-red {
     border-right: 1px solid $ilo-red;
-    @media #{$extra-small-mobile } {
+    @media #{$tablet-device, $extra-small-mobile } {
         border-right: none;
     }
 }
@@ -176,7 +263,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
-
     & .stat-card {
         padding: 1rem;
         background: $ilo-blue;
@@ -185,11 +271,13 @@
         grid-template-columns: 1fr 2.5fr;
         grid-template-rows: 1fr;
         justify-items: start;
-        align-items: stretch;
+        align-items: center;
         align-content: center;
         grid-template-areas: ". .";
-        & img {
-            width: 60%;
+        & .icon {
+            font-size: 4rem;
+            color: $ilo-white;
+            line-height: 1;
         }
         & article {
             display: grid;
@@ -199,6 +287,7 @@
             align-content: center;
             justify-items: start;
             align-items: center;
+            grid-gap: 10px 0;
             & p {
                 color: $ilo-white;
                 font-size: 13px;
@@ -206,7 +295,7 @@
                 line-height: 1.2;
             }
             & h4 {
-                font-size: 18px;
+                font-size: 20px;
                 color: $ilo-white;
                 margin-bottom: 0;
             }
@@ -224,7 +313,7 @@
     align-content: center;
     justify-items: center;
     align-items: center;
-    @media #{$extra-small-mobile } {
+    @media #{$extra-small-mobile, $tablet-device, $large-mobile } {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
@@ -265,7 +354,7 @@
     }
 }
 .bottom-tags {
-    & .list-group{
+    & .list-group {
         & .list-group-item {
             &::before {
                 content: "";
@@ -274,6 +363,48 @@
                 text-rendering: auto;
                 vertical-align: middle;
             }
+        }
     }
+}
+.impacts-section {
+    & .impacts-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        @media #{$extra-small-mobile, $tablet-device, $large-mobile } {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        & .impact-card {
+            border-radius: 1px;
+            border: 1px solid $ilo-canary;
+            padding: 0.6rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr;
+            gap: 0px 1rem;
+            justify-content: space-evenly;
+            align-content: center;
+            justify-items: stretch;
+            align-items: center;
+            & .impact-image {
+                height: 100%;
+                & img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+            }
+            & p {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+            & h5 {
+                color: $ilo-dark-blue;
+                margin-bottom: 0.2rem;
+            }
+        }
     }
 }
