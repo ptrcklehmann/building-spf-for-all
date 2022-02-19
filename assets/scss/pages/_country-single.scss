@@ -12,6 +12,10 @@
     & .red-link {
         color: $ilo-red;
         & i {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
             vertical-align: middle;
             transition: $transition-base;
         }
@@ -29,22 +33,26 @@
         }
     }
     & .list-group-item {
-            font-size: 16px;
-            line-height: 1.5;
-            color: $ilo-dark-blue;
-            padding-left: 0;
-            border-bottom: 1px solid #1e2ebe42;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $ilo-dark-blue;
+        padding-left: 0;
+        border-bottom: 1px solid #1e2ebe42;
+        @media #{$extra-small-mobile } {
+            font-size: 12px;
+        }
+        &::before {
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            color: $ilo-red;
+            content: "▶  ";
+            font-size: 12px;
             @media #{$extra-small-mobile } {
-                font-size: 12px;
+                font-size: 10px;
             }
-            &::before {
-                color: $ilo-red;
-                content: '▶  ';
-                font-size: 12px;
-                @media #{$extra-small-mobile } {
-                    font-size: 10px;
-                }
-            }
+        }
     }
     #latestsILOprojects {
         & a {
@@ -62,11 +70,15 @@
                 font-size: 15px;
                 & a {
                     & i {
+                        font: normal normal normal 14px/1 FontAwesome;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
                         vertical-align: middle;
                     }
                     &::before {
                         color: $ilo-red;
-                        content: '▶  ';
+                        content: "▶  ";
                         font-size: 12px;
                         @media #{$extra-small-mobile } {
                             font-size: 10px;
@@ -112,9 +124,13 @@
         & .list-group {
             & .list-group-item {
                 &::before {
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
                     color: $ilo-red;
-                    margin-right: .2rem;
-                    content: '▶  ';
+                    margin-right: 0.2rem;
+                    content: "▶  ";
                     font-size: 12px;
                 }
             }
@@ -123,11 +139,10 @@
             padding: 0;
             border-color: #fff !important;
             &::before {
-                content: '';
+                content: "";
                 font-size: 12px;
             }
         }
-
     }
     .results-section {
         & .list-group-item {
