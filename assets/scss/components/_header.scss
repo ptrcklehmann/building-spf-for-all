@@ -117,9 +117,9 @@
         display: none;
         transition: $transition-base;
     }
-    & i {
+    & .icon.red {
         vertical-align: middle;
-        font-size: 14px;
+        font-size: 22px!important;
         color: #fa3c4b;
     }
 }
