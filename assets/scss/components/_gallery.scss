@@ -3,18 +3,16 @@
 =========================================*/
 .single-gallery {
   border-radius: 1px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   height: 100%;
   & .gallery-thumb {
+    // background: #eceeff85;
     & a {
       display: block;
       overflow: hidden;
       border-radius: 1px;
       transition: 0.3s;
     }
-  }
-  &:hover {
-    transition: 0.3s;
   }
 }
 
@@ -24,8 +22,7 @@
   overflow: hidden;
   &:hover {
     & .gallery-content {
-      bottom: 5%;
-      transition: 0.4s;
+      bottom: 0%;
       visibility: visible;
     }
   }
@@ -39,7 +36,7 @@
   background: rgb(255, 255, 255);
   opacity: 0.9;
   border-radius: 1px;
-  transition: 0.4s;
+  transition: 0.3s;
   visibility: hidden;
   z-index: 99;
   @media #{$large-mobile, $tablet-device} {
