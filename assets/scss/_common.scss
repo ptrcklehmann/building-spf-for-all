@@ -257,6 +257,35 @@ img {
     padding-left: 0;
     padding-right: 0;
 }
+
+// Material icons
+.icon {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: inherit; /* Preferred icon size */
+    display: inline-block;
+    line-height: inherit;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+    &.red {
+        color: $ilo-red;
+    }
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
 .uuper_box {
     clip-path: polygon(calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%, 0 0);
     width: 100%;
@@ -549,13 +578,12 @@ img {
         opacity: 1;
     }
     &:focus {
-        border-radius: 1px!important;
+        border-radius: 1px !important;
         border: none !important;
     }
 }
 .tooltip {
     opacity: 1 !important;
-
 }
 .tooltip-inner {
     background: $ilo-grey;
