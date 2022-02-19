@@ -315,7 +315,6 @@
         padding: 0;
         position: relative;
         & .splide__arrows {
-
             position: absolute;
             top: 0;
             left: 0;
@@ -361,7 +360,7 @@
                 margin-right: 0!important;
                 &.is-active {
                     filter: brightness(1);
-                    border-left: 1px solid $ilo-turquoise;
+                    border-left: 1px solid $ilo-blue;
                 }
                 & img {
                     width: 100%;
@@ -372,7 +371,7 @@
         }
     }
     & .thumbnails-wrapper {
-        background: $ilo-turquoise;
+        background: $ilo-pale-grey;
         width: 100%;
         height: 100%;
         position: relative;
@@ -384,7 +383,7 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            background: #D2FBFB!important;
+            background: $ilo-grey!important;
             color: $ilo-blue!important;
             text-align: right!important;
             & i {
@@ -403,7 +402,7 @@
         }
         & .splide__arrows {
             & .splide__arrow {
-                background: #23005050;
+                background: #eceeff48;
                 opacity: 1;
                 & svg {
                     fill: $ilo-white;
@@ -412,6 +411,7 @@
         }
         & .splide__video {
             & .splide__video__play {
+                border-radius: 1px!important;
                 background: #23005050;
                 opacity: 1;
                 &::after {
@@ -483,6 +483,7 @@
                 line-height: 1.2;
                 text-indent: 0;
                 padding: 0;
+                padding-left: 1.4rem;
             }
         }
     }
