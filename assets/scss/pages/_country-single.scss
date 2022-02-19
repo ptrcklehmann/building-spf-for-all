@@ -45,12 +45,13 @@
 
             &::before {
                 font-family: "Material Icons";
-                content: "play_arrow ";
+                content: "play_arrow";
                 vertical-align: middle;
                 color: $ilo-red;
                 font-size: 18px;
+                margin-left: -4px;
                 @media #{$extra-small-mobile } {
-                    font-size: 10px;
+                    font-size: 16px;
                 }
             }
             &:last-child {
@@ -108,17 +109,7 @@
                         text-rendering: auto;
                         vertical-align: middle;
                     }
-                    // &::before {
-                    //     font-family: "Material Icons";
-                    //     content: "▶ ";
-                    //     font-size: inherit;
-                    //     text-rendering: auto;
-                    //     color: $ilo-red;
-                    //     font-size: 12px;
-                    //     @media #{$extra-small-mobile } {
-                    //         font-size: 10px;
-                    //     }
-                    // }
+
                 }
             }
             .accordion-body {
