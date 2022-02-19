@@ -73,7 +73,8 @@
         line-height: 30px;
         text-align: right;
         margin-bottom: 0;
-        & .tri-bullet {
+        & .icon.red {
+            font-size: 16px;
             transform: translateY(-1px);
             color: #fa3c4b;
         }
