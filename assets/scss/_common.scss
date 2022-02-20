@@ -1481,7 +1481,7 @@ img {
 // Read More
 .read-more {
     position: relative;
-    padding-left: 15px;
+    padding-left: 19px;
     color: $ilo-blue;
     &::after {
         position: absolute;
@@ -1498,7 +1498,7 @@ img {
     }
 
     &:hover {
-        padding-left: 20px;
+        padding-left: 24px;
         &::after {
             color: $ilo-red;
             background: none;

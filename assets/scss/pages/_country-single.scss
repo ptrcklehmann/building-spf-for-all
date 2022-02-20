@@ -193,25 +193,26 @@
     .funding-gaps-section {
         & .funding-gaps-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr;
             gap: 10px 10px;
             justify-content: stretch;
             align-content: center;
             justify-items: stretch;
             align-items: start;
+
             @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
             }
             & .funding-item {
-                padding: 0.5rem;
+                padding: 0.7rem;
                 display: grid;
                 grid-auto-rows: 1fr;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 1.25fr;
+                grid-template-columns: .60fr 2fr;
+                grid-template-rows: 1fr;
                 justify-items: center;
-                align-items: center;
+                align-items: start;
                 justify-content: stretch;
                 align-content: stretch;
                 margin-left: -5px;
@@ -225,20 +226,17 @@
                 &:last-child {
                     border-right: none;
                 }
-                & .icon {
-                    font-size: 3.5rem;
-                    line-height: 1;
-                    color: $ilo-red;
+                & .funding-icon {
+                    height: 75px;
+                }
+                & h6 {
+                    margin-bottom: .2rem;
                 }
                 & p {
-                    text-align: center;
-                    font-size: 12px;
-                    margin-bottom: 0;
+                    text-align: left;
+                    font-size: 15px;
+                    margin-bottom: .3rem;
                     line-height: 1.5;
-                    &:first-child {
-                        font-size: 12px;
-                        color: $ilo-blue;
-                    }
                 }
             }
         }
