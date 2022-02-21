@@ -80,6 +80,7 @@
 .double-bullet {
     transition: $transition-base;
     width: 5rem;
+    margin-bottom: 1rem;
     @media #{$tablet-device, $large-mobile} {
         width: 3rem;
     }

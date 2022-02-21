@@ -199,8 +199,7 @@
             justify-content: stretch;
             align-content: center;
             justify-items: stretch;
-            align-items: start;
-
+            align-items: center;
             @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
@@ -209,12 +208,12 @@
                 padding: 0.7rem;
                 display: grid;
                 grid-auto-rows: 1fr;
-                grid-template-columns: .60fr 2fr;
+                grid-template-columns: .75fr 2fr;
                 grid-template-rows: 1fr;
-                justify-items: center;
+                justify-items: start;
                 align-items: start;
-                justify-content: stretch;
-                align-content: stretch;
+                justify-content: start;
+                align-content: start;
                 margin-left: -5px;
                 border-right: 1px solid #d4e7f5;
                 @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
@@ -227,7 +226,7 @@
                     border-right: none;
                 }
                 & .funding-icon {
-                    height: 75px;
+                    height: 85px;
                 }
                 & h6 {
                     margin-bottom: .2rem;
@@ -317,6 +316,7 @@
         justify-content: center;
         align-content: center;
         & img {
+
             height: 3rem;
         }
         & article {
