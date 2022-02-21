@@ -31,7 +31,6 @@
             color: $ilo-legacy-blue;
         }
     }
-
     .list-group {
         & .list-group-item {
             font-size: 16px;
@@ -109,7 +108,6 @@
                         text-rendering: auto;
                         vertical-align: middle;
                     }
-
                 }
             }
             .accordion-body {
@@ -169,10 +167,8 @@
                             vertical-align: middle;
                             margin-right: 0.2rem;
                         }
-
                     }
                 }
-
                 & > .list-group-item {
                     padding: 0;
                     border-color: #fff !important;
@@ -208,17 +204,17 @@
                 padding: 0.7rem;
                 display: grid;
                 grid-auto-rows: 1fr;
-                grid-template-columns: .75fr 2fr;
+                grid-template-columns: 0.75fr 2fr;
                 grid-template-rows: 1fr;
                 justify-items: start;
                 align-items: start;
                 justify-content: start;
                 align-content: start;
-                margin-left: -5px;
                 border-right: 1px solid #d4e7f5;
                 @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
                     border-right: none;
-                    &:nth-child(3), &:nth-child(4){
+                    &:nth-child(3),
+                    &:nth-child(4) {
                         border-top: 1px solid #d4e7f5;
                     }
                 }
@@ -229,12 +225,12 @@
                     height: 85px;
                 }
                 & h6 {
-                    margin-bottom: .2rem;
+                    margin-bottom: 0.2rem;
                 }
                 & p {
                     text-align: left;
                     font-size: 15px;
-                    margin-bottom: .3rem;
+                    margin-bottom: 0.3rem;
                     line-height: 1.5;
                 }
             }
@@ -316,7 +312,6 @@
         justify-content: center;
         align-content: center;
         & img {
-
             height: 3rem;
         }
         & article {
@@ -384,7 +379,6 @@
                     object-fit: cover;
                     object-position: center;
                 }
-
             }
             & p {
                 font-size: 13px;

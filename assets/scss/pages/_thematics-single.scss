@@ -35,6 +35,56 @@
             }
         }
     }
+    .funding-gaps-section {
+        & .funding-gaps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px 10px;
+            justify-content: stretch;
+            align-content: center;
+            justify-items: stretch;
+            align-items: center;
+            @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            & .funding-item {
+                padding: 0.7rem;
+                display: grid;
+                grid-auto-rows: 1fr;
+                grid-template-columns: 0.75fr 2fr;
+                grid-template-rows: 1fr;
+                justify-items: start;
+                align-items: start;
+                justify-content: start;
+                align-content: start;
+                border-right: 1px solid #d4e7f5;
+                @media #{$extra-small-mobile, $tablet-device, $large-mobile} {
+                    border-right: none;
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                        border-top: 1px solid #d4e7f5;
+                    }
+                }
+                &:last-child {
+                    border-right: none;
+                }
+                & .funding-icon {
+                    height: 85px;
+                }
+                & h6 {
+                    margin-bottom: 0.2rem;
+                }
+                & p {
+                    text-align: left;
+                    font-size: 15px;
+                    margin-bottom: 0.3rem;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
     #latestsILOprojects {
         & .accordion-item {
             padding-left: 1.3rem;
