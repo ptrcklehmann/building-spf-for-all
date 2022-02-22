@@ -124,19 +124,6 @@
             font-weight: 600;
         }
     }
-
-    &:hover {
-        box-shadow: 0px 0px 5px 0px rgba( 21, 31, 133, 0.24);
-        transition: $transition-base;
-        background-color: $ilo-legacy-blue;
-        -webkit-clip-path: polygon(calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%, 0 0);
-    clip-path: polygon(calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%, 0 0);
-        & .title {
-            & a {
-                color: $ilo-turquoise;
-            }
-        }
-    }
 }
 .right-curve-image-area {
     position: relative;

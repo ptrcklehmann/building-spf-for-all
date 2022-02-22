@@ -5,6 +5,7 @@
   border-radius: 1px;
   // margin-bottom: 20px;
   height: 100%;
+  width: 95%;
   & .gallery-thumb {
     // background: #eceeff85;
     & a {
@@ -47,7 +48,6 @@
     font-weight: 600;
     font-size: 1rem;
     color: $ilo-blue;
-    padding-right: 3rem;
     &:hover {
       text-decoration: underline;
     }
@@ -61,4 +61,8 @@
     color: $ilo-dark-blue;
     font-weight: 600;
   }
+}
+
+.splide__slide {
+  margin: 0 .5rem;
 }
