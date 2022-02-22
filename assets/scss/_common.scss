@@ -1169,7 +1169,7 @@ img {
         align-items: center;
         justify-items: center;
         font-size: 15px;
-        border-bottom: 1px solid #0000ff4b;
+        border-bottom: 1px solid #0000ff28;
         .event-date {
             width: 20%;
             font-size: 12px;
@@ -1189,11 +1189,15 @@ img {
             &:not(.collapsed) {
                 background-color: $ilo-white;
                 box-shadow: none;
+                background-image: url('../images/icon/arrow-accordion.svg');
             }
             &:focus {
                 border-color: $ilo-pale-grey;
                 outline: 0;
                 box-shadow:none !important;
+            }
+            &::after {
+                background-image: url('../images/icon/arrow-accordion.svg');
             }
 
             }
