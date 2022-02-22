@@ -22,7 +22,6 @@
                 clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%, 0 0);
                 transition: 0.5s;
                 & img {
-                    opacity: 0.8;
                     transition: 0.5s;
                     transform: scale(1);
                 }
@@ -57,18 +56,18 @@
                     opacity: 0;
                     transition: $transition-base;
                     font-family: "Material Icons";
-                        font-weight: normal;
-                        font-style: normal;
-                        font-size: inherit; /* Preferred icon size */
-                        display: inline-block;
-                        line-height: inherit;
-                        text-transform: none;
-                        letter-spacing: normal;
-                        word-wrap: normal;
-                        white-space: nowrap;
-                        direction: ltr;
-                        vertical-align: middle;
-                        content: "chevron_right";
+                    font-weight: normal;
+                    font-style: normal;
+                    font-size: inherit; /* Preferred icon size */
+                    display: inline-block;
+                    line-height: inherit;
+                    text-transform: none;
+                    letter-spacing: normal;
+                    word-wrap: normal;
+                    white-space: nowrap;
+                    direction: ltr;
+                    vertical-align: middle;
+                    content: "chevron_right";
                 }
                 &:hover {
                     color: $ilo-legacy-blue;

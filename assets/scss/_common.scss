@@ -193,9 +193,14 @@ img {
     transition: $transition-base;
     &.small {
         clip-path: none;
+
+        height: 100%;
     }
     &:hover {
         clip-path: polygon(calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%, 0 0);
+        &.small {
+            clip-path: none;
+        }
     }
 }
 /* Section Style */
@@ -648,8 +653,8 @@ img {
     clip-path: polygon(calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%, 0 0);
     & i {
         color: $ilo-blue;
-        font-size: 8px;
-        margin-right: 0.2rem;
+        font-size: 13px;
+
     }
     @media #{$tablet-device,$large-mobile, $extra-small-mobile } {
         margin-left: auto !important;
@@ -721,8 +726,10 @@ img {
 /* Section TItle */
 .section-title {
     z-index: 1;
-    padding-bottom: 40px;
     height: 100%;
+    & h2 {
+        width: 80%;
+    }
     @media #{$tablet-device} {
         padding-bottom: 30px;
     }
@@ -730,7 +737,6 @@ img {
         padding-bottom: 20px;
     }
     & .title {
-        margin-bottom: 25px;
         margin-top: 10px;
         @media #{$extra-small-mobile} {
             margin-top: 0;
@@ -1160,9 +1166,11 @@ img {
     }
 }
 .upcomingEvents {
+    height: 100%;
     background-color: $ilo-white;
 }
 #upcomingEvents {
+    height: 100%;
     background: transparent !important;
     & .accordion-header {
         background: transparent !important;
