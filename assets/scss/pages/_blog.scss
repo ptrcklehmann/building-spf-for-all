@@ -32,14 +32,14 @@
     & .single-blog-content {
         padding: 36px 0px 0px 0;
         & .blog-meta {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.2;
-            margin-bottom: 15px;
-
+            margin-bottom: 10px;
+            color: $type-grey;
             & a {
-                color: $ilo-blue;
+                color: $ilo-legacy-blue;
                 &:hover {
-                    color: $ilo-legacy-blue;
+                    color: $ilo-blue;
                 }
                 &.active {
                     color: $ilo-legacy-blue;
@@ -52,10 +52,29 @@
             font-size: 24px;
             & a {
                 color: #1e2dbe;
+                transition: $transition-base;
+                &::after {
+                    opacity: 0;
+                    transition: $transition-base;
+                    font-family: "Material Icons";
+                        font-weight: normal;
+                        font-style: normal;
+                        font-size: inherit; /* Preferred icon size */
+                        display: inline-block;
+                        line-height: inherit;
+                        text-transform: none;
+                        letter-spacing: normal;
+                        word-wrap: normal;
+                        white-space: nowrap;
+                        direction: ltr;
+                        vertical-align: middle;
+                        content: "chevron_right";
+                }
                 &:hover {
-                    text-decoration: underline;
-                    text-decoration-thickness: 1px;
-                    text-underline-offset: 1px;
+                    color: $ilo-legacy-blue;
+                    &::after {
+                        opacity: 1;
+                    }
                 }
             }
             @media #{$large-mobile} {

@@ -430,8 +430,8 @@ img {
     transition: $transition-base;
     width: fit-content;
     background: $ilo-red;
-    color: $ilo-dark-blue!important;
-    text-decoration: none!important;
+    color: $ilo-dark-blue !important;
+    text-decoration: none !important;
     &:hover {
         color: $ilo-dark-blue;
         background: #fb636f;
@@ -1131,8 +1131,9 @@ img {
     }
 }
 
-.sub-red, .text-red {
-    color: $ilo-red!important;
+.sub-red,
+.text-red {
+    color: $ilo-red !important;
 }
 .thematic-card {
     transition: $transition-base;
@@ -1162,9 +1163,9 @@ img {
     background-color: $ilo-white;
 }
 #upcomingEvents {
-    background: transparent!important;
+    background: transparent !important;
     & .accordion-header {
-        background: transparent!important;
+        background: transparent !important;
         display: flex;
         align-items: center;
         justify-items: center;
@@ -1178,8 +1179,8 @@ img {
             margin-bottom: 0;
         }
         & .accordion-button {
-            background: transparent!important;
-            padding: .6rem .9rem;
+            background: transparent !important;
+            padding: 0.6rem 0.9rem;
             width: 80%;
             color: $ilo-blue;
             font-weight: 700;
@@ -1189,21 +1190,20 @@ img {
             &:not(.collapsed) {
                 background-color: $ilo-white;
                 box-shadow: none;
-                background-image: url('../images/icon/arrow-accordion.svg');
+                background-image: url("../images/icon/arrow-accordion.svg");
             }
             &:focus {
                 border-color: $ilo-pale-grey;
                 outline: 0;
-                box-shadow:none !important;
+                box-shadow: none !important;
             }
             &::after {
-                background-image: url('../images/icon/arrow-accordion.svg');
+                background-image: url("../images/icon/arrow-accordion.svg");
             }
-
-            }
+        }
     }
     & .accordion-body {
-        background: transparent!important;
+        background: transparent !important;
         & p {
             font-size: 12px;
             color: $ilo-dark-blue;
@@ -1217,8 +1217,8 @@ img {
         }
     }
     .accordion-item {
-        background: transparent!important;
-        border-radius: 1px!important;
+        background: transparent !important;
+        border-radius: 1px !important;
         border: none;
         border-bottom: none;
     }
@@ -1550,25 +1550,26 @@ img {
 // Read More
 .read-more {
     position: relative;
-    padding-left: 19px;
     color: $ilo-blue;
-    &::after {
-        position: absolute;
-        content: "►";
+    font-size: 14px;
+    line-height: 1.2;
+    vertical-align: middle;
+    &::before {
         color: $ilo-canary;
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        top: 25%;
-        left: 0;
-        transform: translateY(-50%);
         z-index: -1;
         transition: $transition-base;
+        font-family: "Material Icons";
+        font-weight: normal;
+        font-style: inherit;
+        font-size: 18px;
+        vertical-align: middle;
+        content: "play_arrow";
+        margin-left: -5px;
+        padding-bottom: 3px;
     }
-
     &:hover {
-        padding-left: 24px;
-        &::after {
+        &::before {
+            padding-right: 3px;
             color: $ilo-red;
             background: none;
         }
