@@ -91,14 +91,7 @@
   /*----------------------------------------*/
   Splitting()
 
-  var splideKeyPublications = new Splide( '.splide-key-publications', {
-    type: 'loop',
-    perPage: 3,
-    perMove: 1,
-    rewind : true,
-  } );
 
-  splideKeyPublications.mount();
 
   /*---------------------------------
     Project's Slider Activation

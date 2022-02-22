@@ -92,33 +92,39 @@
             width: 85px;
         }
     }
+    .form-select {
+        color: $ilo-dark-blue;
+        font-size: 14px;
+    }
 
     & .sidebar-form {
         position: relative;
         display: flex;
-
+        width: 100%;
         & .searchbox-input {
+            margin-left: auto;
+            height: 37px;
             width: 100%;
-            border: 1px solid $ilo-grey;
+            border: 1px solid $ilo-dark-grey;
             background: $ilo-white;
             border-right: 0px;
             border-radius: 1px 0 0 1px;
-            height: 50px;
             padding: 0 10px;
             color: $ilo-dark-blue;
             &::placeholder {
-                color: $ilo-blue;
+                font-size: 15px;
+                color: $ilo-dark-blue;
             }
         }
-
         & .searchbox-btn {
-            border: 1px solid $ilo-grey;
+            border: 1px solid $ilo-dark-grey;
             background: $ilo-white;
             border-left: 0px;
-            border-radius: 0px 5px 5px 0px;
+            border-radius: 0px 1px 1px 0px;
             padding: 0 10px;
             color: $ilo-blue;
             transition: 0.3s;
+
             &:hover {
                 color: $ilo-legacy-blue;
                 transition: 0.3s;
@@ -126,25 +132,24 @@
         }
     }
     & .sidebar-searchRange {
-        padding: 10px 10px;
+        padding: 10px 5px;
         display: flex;
         justify-content: flex-end;
-        width: fit-content;
+        width: 100%;
         align-items: center;
         margin-right: auto;
         & li {
-            margin-right: 15px;
             border-radius: 1px;
             line-height: 1;
             & p {
                 font-size: 14px;
-                margin-right: 1rem;
                 font-weight: 700;
                 color: $ilo-blue;
             }
         }
         & .year-slider {
             width: 10rem;
+            margin-left: 1rem;
         }
         & .noUi-connects {
             border-radius: 1px;
@@ -160,11 +165,11 @@
             }
         }
         & .country-select {
-            margin-left: 30px;
-            margin-right: 0;
+            margin-left: auto;
         }
         & .form-select {
             border-radius: 1px;
+            border-color: $ilo-dark-grey;
             &:focus {
                 border-color: $ilo-blue;
                 outline: 0;
@@ -174,8 +179,8 @@
         & .noUi-target {
             background: $ilo-white;
             border-radius: 1px;
-            border: 1px solid $ilo-grey;
-            box-shadow: inset 0 1px 1px $ilo-grey, 0 2px 2px -2px $ilo-grey;
+            border: 1px solid $ilo-dark-grey;
+            box-shadow: inset 0 1px 1px $ilo-dark-grey, 0 2px 2px -2px $ilo-dark-grey;
         }
 
         & .noUi-tooltip {
@@ -184,27 +189,33 @@
             bottom: -10%;
             border-radius: 1px;
             font-size: 13px;
-            padding: .4rem;
-            border: 1px solid $ilo-grey;
-            cursor:grab;
+            padding: 0.4rem;
+            border: 1px solid $ilo-dark-grey;
+            cursor: grab;
         }
     }
 
     & .sidebar-categories {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: stretch;
         width: 100%;
+        padding: 10px 5px;
         & li {
+            margin: 0.2rem 0.2rem;
             & a {
-                font-size: 14px;
-                text-align: center;
-                padding: 15px 15px;
+                height: 100%;
+                padding: 10px 20px;
                 border: 1px solid $ilo-blue;
                 border-radius: 1px;
-                width: 100%;
+                font-size: 12px;
+                text-align: center;
+                width: fit-content;
                 display: flex;
                 justify-content: center;
-                line-height: 1;
+                align-items: center;
+                line-height: 1.2;
                 &:hover,
                 &.active {
                     color: $white;
@@ -337,19 +348,16 @@
     }
 
     & .blog-sidebar-tags {
-        margin-bottom: -10px;
+        display: inline-block;
         & a {
             color: $ilo-dark-blue;
-            border: 1px solid $ilo-grey;
-            padding: 8px 10px;
-            border-radius: 1px;
-            margin: 0 10px 10px 0;
-            display: inline-block;
-            line-height: 1;
-            font-size: 14px;
+            border: 1px solid $ilo-pale-grey;
+            padding: 5px 5px;
+            display: inline-flex;
+            line-height: 1.3;
+            font-size: 12px;
             &:hover {
                 color: $ilo-blue;
-                border-color: $ilo-blue;
             }
         }
     }
@@ -528,6 +536,28 @@
         color: $gray-500;
     }
 }
+.publications-grid {
+    width: auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows:auto;
+    grid-auto-flow: dense;
+    align-items: center;
+    //  .single-gallery:nth-child(1){
+    //     grid-column: span 2;
+    // }
+    // .single-gallery:nth-child(2){
+    //     grid-column: span 2;
+    // }
+    // .single-gallery:nth-child(3){
+    //     grid-column: span 2;
+    // }
+    // .single-gallery:nth-child(2){
+    //     grid-row: span 2;
+    // }
+}
+
 .comment-title {
     font-size: 36px;
     position: relative;
@@ -550,6 +580,7 @@
 
     & .author-list {
         margin-bottom: 50px;
+
         @media #{$small-mobile} {
             flex-direction: column;
         }
