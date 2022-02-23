@@ -174,7 +174,11 @@
     }
 
   }
-
+  var e = $(".custom-select,select.#tinynav1");
+  e.easyDropDown({
+      cutOff: 10,
+      wrapperClass: "custom-select"
+  })
 
 
   /*---------------------------------

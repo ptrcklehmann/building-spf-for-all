@@ -29,12 +29,19 @@
         }
     }
     & .single-blog-content {
-        padding: 36px 0px 0px 0;
+        padding: 1rem 0px 0px 0;
         & .blog-meta {
             font-size: 13px;
             line-height: 1.2;
-            margin-bottom: 10px;
+            margin-bottom: .7rem;
             color: $type-grey;
+            & .subject {
+                font-size: 14px;
+                line-height: 1.2;
+                color: $ilo-dark-blue;
+                font-weight: bold;
+                margin-bottom: 0;
+            }
             & a {
                 color: $ilo-legacy-blue;
                 &:hover {
@@ -47,7 +54,7 @@
         }
 
         & .title {
-            margin-bottom: 18px;
+            margin-bottom: .6rem;
             font-size: 24px;
             & a {
                 color: #1e2dbe;
@@ -554,7 +561,7 @@
     }
 }
 .publications-grid {
-    width: auto;
+    width: 100%;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
