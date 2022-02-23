@@ -21,8 +21,8 @@
     <link rel="stylesheet" href="assets/css/plugins/aos.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/odometer.min.css" />
-    <link rel="stylesheet" href="assets/css/plugins/magnific-popup-min.css" />
+    >
+    <link rel="stylesheet" href="assets/css/plugins/custom-select.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/splitting/dist/splitting.css"
@@ -534,6 +534,7 @@
           <div class="col-8">
             <aside class="mb-3 meta-data searchBox">
               <form method="post" action="" name="FilterByMMYYYY">
+                <div class="select-wrapper">
                 <select class="dropMenu" name="months" id="EasyDropDownDA987E">
                   <option value="">All Months</option>
                   <option value=""></option>
@@ -572,6 +573,7 @@
                   value="Search"
                   name="searchbutton"
                 />
+              </div>
               </form>
             </aside>
             <div class="news-grid">
@@ -708,7 +710,12 @@
           <div class="col-4">
             <aside class="mb-3 meta-data searchBox">
               <form method="post" action="" name="FilterByMMYYYY">
-                <select class="dropMenu" name="months" id="EasyDropDownDA987E">
+                <div class="select-wrapper">
+                <select
+                  class="monthsDropdown"
+                  name="months"
+                  id="monthsDropdown"
+                >
                   <option value="">All Months</option>
                   <option value=""></option>
                   <option value="01">January</option>
@@ -724,7 +731,7 @@
                   <option value="11">November</option>
                   <option value="12">December</option>
                 </select>
-                <select class="dropMenu" name="years" id="EasyDropDownE611C2">
+                <select class="yearsDropdown" name="years" id="yearsDropdown">
                   <option value="">All Years</option>
                   <option value=""></option>
                   <option value="2022">2022</option>
@@ -746,6 +753,7 @@
                   value="Search"
                   name="searchbutton"
                 />
+              </div>
               </form>
             </aside>
             <div class="events-grid"></div>
@@ -845,7 +853,7 @@
         <div class="p-0 mobile-menu-inner-wrapper">
           <!-- Mobile Menu Start -->
           <div class="header-logo me-auto">
-            <a href="../">
+            <a href="/" alt="International Labour Organization">
               <svg
                 id="logo-socpro"
                 class="logo-socpro"
@@ -1276,7 +1284,7 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="assets/js/plugins/rellax.min.js"></script>
     <script src="assets/js/plugins/menuspy.js"></script>
-    <script src="assets/js/plugins/easydropdown.js"></script>
+    <script src="assets/js/plugins/custom-select.min.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
@@ -1284,6 +1292,7 @@
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/plugins.min.js"></script>
     -->
+    <script src="assets/js/lib/news-and-events.js"></script>
 
     <!--Main JS-->
     <script src="assets/js/main.js"></script>

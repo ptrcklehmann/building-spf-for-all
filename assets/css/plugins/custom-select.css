@@ -1,0 +1,78 @@
+.custom-select-container {
+  position: relative;
+  box-sizing: border-box;
+}
+.custom-select-container * {
+  box-sizing: border-box;
+}
+.custom-select-container.is-disabled {
+  opacity: .333;
+}
+.custom-select-opener {
+  background-color: #fff;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #eceeff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  width: 160px;
+  padding-left: 0.5em;
+}
+.custom-select-opener::after {
+  font-family: "Material Icons";
+  content: 'arrow_drop_down';
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  background: #1e2dbe;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+  padding-top: 2%;
+}
+.custom-select-container select {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.custom-select-panel {
+  max-height: 0;
+  transition: max-height .2s ease-out, overflow-y 0.1s 0.2s;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  width: 160px;
+  font-size: 14px;
+}
+.custom-select-container.is-open .custom-select-panel {
+  max-height: 15em;
+  overflow-y: auto;
+  border: 1px solid #eceeff;
+}
+.custom-select-option {
+  padding: 0.5em;
+}
+.custom-select-option.has-focus {
+  background-color: #fa3c4b;
+  color: #fff;
+}
+.custom-select-option.is-selected::before {
+  font-family: "Material Icons";
+  content: "done";
+  padding-right: 0.3em;
+}
+.custom-select-optgroup > .custom-select-option {
+  padding-left: 2em;
+}
+.custom-select-optgroup::before {
+  content: attr(data-label);
+  display: block;
+  padding: 0.5em;
+  color: #eceeff;
+}
