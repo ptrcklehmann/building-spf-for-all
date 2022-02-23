@@ -127,9 +127,9 @@
             grid-template-columns: 0.5fr 1.5fr;
             gap: 2em 5px;
             justify-content: space-between;
-            align-content: center;
+            align-content:space-between;
             justify-items: center;
-            align-items: center;
+            align-items: space-between;
             & .news-image {
                 & .fit-image {
                     object-fit: cover;
@@ -159,18 +159,15 @@
             }
             & .news-headline {
                 padding-left: .5rem;
-                & .subject {
-                    margin-bottom: 0.2rem;
-                    font-size: 14px;
-                    line-height: 1.2;
-                    color: $ilo-dark-blue;
-                    font-weight: bold;
-                }
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: .5rem 0;
                 & .title {
                     cursor: pointer;
                     font-family: 'Overpass', sans-serif;
                     margin-bottom: 0.6rem;
-                    font-size: 18px;
+                    font-size: 20px;
                     color: #1e2dbe;
                     transition: $transition-base;
                     font-weight: bold;
@@ -204,6 +201,7 @@
                     line-height: 1.2;
                     margin-bottom: 0;
                     color: $type-grey;
+
                     & a {
                         color: $ilo-legacy-blue;
                         &:hover {
