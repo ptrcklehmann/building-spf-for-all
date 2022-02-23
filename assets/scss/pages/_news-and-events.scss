@@ -2,6 +2,12 @@
 /*  09. News and events page CSS
 /*----------------------------------------*/
 .news-and-envents-section {
+    & .upcoming-events {
+        & h2 {
+            color: $ilo-dark-blue;
+            margin-bottom: 3rem;
+        }
+    }
     & .select-wrapper {
         display: grid;
         grid-auto-flow: row dense;
@@ -65,9 +71,11 @@
                 & .title {
                     margin-bottom: 0;
                     font-size: 22px;
+                    line-height: 1.1;
                     & a {
                         color: #1e2dbe;
                         transition: $transition-base;
+
                         &::after {
                             opacity: 0;
                             transition: $transition-base;
