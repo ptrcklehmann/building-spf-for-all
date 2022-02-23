@@ -225,6 +225,7 @@
         }
     }
     .searchBox {
+        width: fit-content;
         & .searchbox-input {
             margin-left: auto;
             height: 37px;
@@ -255,6 +256,68 @@
                 transition: 0.3s;
                 background: $ilo-pale-grey;
             }
+        }
+    }
+    & .events-grid {
+        height: 100%;
+        background: transparent !important;
+        & .accordion-header {
+            background: transparent !important;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            font-size: 15px;
+            border-bottom: 1px solid #0000ff28;
+            .event-date {
+                width: 20%;
+                font-size: 12px;
+                text-align: right;
+                color: $type-grey;
+                margin-bottom: 0;
+            }
+            & .accordion-button {
+                background: transparent !important;
+                padding: 0.6rem 0.9rem;
+                width: 80%;
+                color: $ilo-blue;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 1.2;
+                border-bottom: none;
+                &:not(.collapsed) {
+                    background-color: $ilo-white;
+                    box-shadow: none;
+                    background-image: url("../images/icon/arrow-accordion.svg");
+                }
+                &:focus {
+                    border-color: $ilo-pale-grey;
+                    outline: 0;
+                    box-shadow: none !important;
+                }
+                &::after {
+                    background-image: url("../images/icon/arrow-accordion.svg");
+                }
+            }
+        }
+        & .accordion-body {
+            background: transparent !important;
+            & p {
+                font-size: 12px;
+                color: $ilo-dark-blue;
+                line-height: 1.5;
+                margin-bottom: 0.2rem;
+            }
+            & a {
+                font-size: 12px;
+                color: $ilo-blue;
+                line-height: 1.5;
+            }
+        }
+        .accordion-item {
+            background: transparent !important;
+            border-radius: 1px !important;
+            border: none;
+            border-bottom: none;
         }
     }
 }
