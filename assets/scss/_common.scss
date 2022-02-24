@@ -33,9 +33,9 @@ html {
     scroll-behavior: smooth;
 }
 @media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 body {
@@ -317,6 +317,10 @@ img {
         width: 110%;
         // padding: 2.5rem 1rem 5rem 25rem;
         margin-bottom: 2%;
+        @media #{$extra-small-mobile } {
+            margin-bottom: 15%;
+            padding-bottom: 3rem;
+        }
     }
     @media #{$desktop-device, $tablet-device, $large-mobile} {
         padding-left: 10rem;
@@ -327,8 +331,9 @@ img {
     @media #{$extra-small-mobile } {
         padding: 1rem 0.5rem 0.5rem;
         padding-left: 1rem;
-        margin-left: -2rem;
+        margin-left: -1rem;
         width: 110%;
+        margin-bottom: 10rem;
     }
     & h1 {
         transition: $transition-base;
@@ -656,14 +661,14 @@ img {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
     clip-path: polygon(calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%, 0 0);
     & i {
         color: $ilo-blue;
         font-size: 13px;
-
     }
     @media #{$tablet-device,$large-mobile, $extra-small-mobile } {
+        z-index: -1;
+        margin-top: 1rem;
         margin-left: auto !important;
         font-size: 8px;
         & i {
@@ -1152,6 +1157,9 @@ img {
 .upcomingEvents {
     height: 100%;
     background-color: $ilo-white;
+    @media #{$large-mobile, $small-mobile, $extra-small-mobile} {
+        margin-bottom: 4rem;
+    }
 }
 #upcomingEvents {
     height: 100%;
