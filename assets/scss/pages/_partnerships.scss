@@ -33,6 +33,7 @@
         font-size: 14px;
         padding-right: 3rem;
         & .list-group-item {
+            color: $ilo-dark-blue;
             transition: $transition-base;
             cursor: pointer;
             &:hover {

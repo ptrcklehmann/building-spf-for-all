@@ -790,29 +790,6 @@ img {
         color: $ilo-white;
     }
 }
-.loading {
-    .char {
-        overflow: hidden;
-        color: transparent;
-        color: $ilo-white;
-        &:before,
-        &:after {
-            visibility: visible;
-        }
-        &:before {
-            animation: _before 1.8s cubic-bezier(0.9, 0, 0.2, 1) infinite;
-            animation-delay: calc(0.9s + (0.1s * (var(--char-index))));
-            transform: translateY(0);
-            opacity: 1;
-        }
-        &:after {
-            animation: _after 1.8s cubic-bezier(0.9, 0, 0.2, 1) infinite;
-            animation-delay: calc(0.9s + (0.1s * (var(--char-index))));
-            transform: translateY(100%);
-            opacity: 0.9;
-        }
-    }
-}
 
 @keyframes _before {
     to {
