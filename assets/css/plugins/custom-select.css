@@ -20,13 +20,15 @@
   font-size: 14px;
   width: 160px;
   padding-left: 0.5em;
+  height: 2rem;
 }
 
 .custom-select-opener.library {
   width: 260px;
 }
 .custom-select-opener.select-date {
-background: #d4e7f536;
+  background: #d4e7f536;
+  margin-right: .2rem;
 }
 .custom-select-opener::after {
   font-family: "Material Icons";
