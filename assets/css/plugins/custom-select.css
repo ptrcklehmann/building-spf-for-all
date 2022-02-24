@@ -13,7 +13,7 @@
   background-color: #fff;
   display: block;
   cursor: pointer;
-  border: 1px solid #eceeff;
+  border: 1px solid #d4e7f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,8 +21,12 @@
   width: 160px;
   padding-left: 0.5em;
 }
+
 .custom-select-opener.library {
   width: 260px;
+}
+.custom-select-opener.select-date {
+background: #d4e7f536;
 }
 .custom-select-opener::after {
   font-family: "Material Icons";
@@ -37,6 +41,10 @@
   text-align: center;
   padding-top: 3%;
 }
+.custom-select-opener.select-date::after {
+  background: #ebf5fd;
+  color: #707071;
+  }
 .custom-select-container select {
   visibility: hidden;
   position: absolute;
@@ -59,6 +67,10 @@
 .custom-select-panel.library {
   width: 260px;
 }
+.custom-select-panel.select-date > .custom-select-option.has-focus {
+  background-color: #eceeff;
+  color: #1e2dbe;
+}
 .custom-select-container.is-open .custom-select-panel {
   max-height: 15em;
   overflow-y: auto;
@@ -71,8 +83,9 @@
 }
 .custom-select-option.has-focus {
   background-color: #1e2dbe;
-  color: #fff;
+  color: #eeebf2;
 }
+
 .custom-select-option.is-selected::before {
   font-family: "Material Icons";
   content: "done";
