@@ -339,3 +339,13 @@ const institutionalChangesChart=new Chart(document.getElementById('institutional
 const impactOnPeopleChart1st=new Chart(document.getElementById('impact-on-people-1st'),impactConfig1)
 const impactOnPeopleChart2nd=new Chart(document.getElementById('impact-on-people-2nd'),impactConfig2)
 const impactOnPeopleChart3rd=new Chart(document.getElementById('impact-on-people-3rd'),impactConfig3)
+
+document.addEventListener('DOMContentLoaded',function() {
+    $(".accordion-header").parent('.accordion-item').hover(
+        function() {
+          $(this).children('.collapse').collapse('show');
+        }, function() {
+          $(this).children('.collapse').collapse('hide');
+        }
+      );
+})

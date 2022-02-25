@@ -24,8 +24,6 @@
     <link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
 
-
-
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
     <!--
@@ -39,7 +37,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
@@ -396,7 +394,12 @@
             <!-- Header Menu Start -->
             <div class="main-menu d-none d-lg-flex">
               <nav class="nav">
-                <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a>
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/building-spf-for-all/"
+                  >Home</a
+                >
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -509,8 +512,8 @@
           </article>
           <div class="col-12">
             <small class="strong-copyright ms-auto"
-            ><i class="icon">play_arrow</i> Photo: Benaissa S./ILO</small
-          >
+              ><i class="icon">play_arrow</i> Photo: Benaissa S./ILO</small
+            >
           </div>
         </div>
       </div>
@@ -527,12 +530,12 @@
           <div class="col-lg-6 col-md-12">
             <h4>Institutional changes are results...</h4>
             <div class="row align-items-center">
-              <div class="col-2">
+              <div class="col-2 my-3">
                 <div class="steps">
                   <span>Step 1</span>
                 </div>
               </div>
-              <div class="col-10">
+              <div class="col-10 my-3">
                 <div class="results-chart step-1">
                   <p>
                     The endorsement or reform of a new social protection
@@ -542,12 +545,12 @@
               </div>
             </div>
             <div class="row align-items-center">
-              <div class="col-2">
+              <div class="col-2 my-3">
                 <div class="steps s2">
                   <span>Step 2</span>
                 </div>
               </div>
-              <div class="col-10">
+              <div class="col-10 my-3">
                 <div class="results-chart step-2-1">
                   <p>
                     The adoption of a social protection law or legal framework
@@ -556,12 +559,12 @@
               </div>
             </div>
             <div class="row align-items-center">
-              <div class="col-2">
+              <div class="col-2 my-3">
                 <div class="steps s3">
                   <span>Step 3</span>
                 </div>
               </div>
-              <div class="col-10">
+              <div class="col-10 my-3">
                 <div class="results-chart step-3">
                   <p>
                     The adoption or operationalisation of policy measures to
@@ -572,7 +575,7 @@
               </div>
             </div>
           </div>
-          <div class="mb-5 col-lg-6 col-md-12 text-end">
+          <div class="mb-5 col-lg-6 col-md-12">
             <div class="row">
               <div class="col-12">
                 <h4 class="col-12 pe-3">
@@ -580,41 +583,173 @@
                 </h4>
               </div>
             </div>
-            <div class="row align-items-end justify-content-end">
-              <div class="col-12 pe-3">
-                <div class="text-center impact-col i1 ms-auto">
-                  <p>Increased potential coverage</p>
+            <div class="row align-items-center justify-content-end">
+              <div class="col-12 my-3">
+                <div class="accordion step-1" id="impact-step-1-accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingStepOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseStepOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Increased potential coverage
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseStepOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingStepOne"
+                      data-bs-parent="#impact-step-1-accordion"
+                    >
+                      <div class="accordion-body">
+                        Number of persons potentially covered by the strategy
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row text-end align-items-end justify-content-end">
-              <div class="col-12">
-                <div class="impact-col mid ms-auto">
-                  <img
-                    src="assets/images/icon/legal-coverage.png"
-                    alt="Legal coverage"
-                  />
-                  <p>Increased legal coverage</p>
+            <div class="row align-items-center justify-content-end">
+              <div class="col-5 my-3 pe-1 ps-0">
+                <div class="accordion step-2" id="impact-step-2-1-accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingStepTwo-1">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseStepTwo-1"
+                        aria-expanded="false"
+                        aria-controls="collapseStepTwo-1"
+                      >
+                        Increased effective coverage
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseStepTwo-1"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingStepTwo-1"
+                      data-bs-parent="#impact-step-2-1-accordion"
+                    >
+                      <div class="accordion-body">
+                        Number of persons effectively covered (registered and
+                        contributing)
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingStepTwo-3">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseStepTwo-3"
+                        aria-expanded="false"
+                        aria-controls="collapseStepTwo-3"
+                      >
+                        Increased adequacy
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseStepTwo-3"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingStepTwo-3"
+                      data-bs-parent="#impact-step-2-1-accordion"
+                    >
+                      <div class="accordion-body">
+                        Number of persons with higher benefits (adequacy)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5 my-3 ps-1 ps-0">
+                <div class="accordion step-2" id="impact-step-2-2-accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingStepTwo-2">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseStepTwo-2"
+                        aria-expanded="true"
+                        aria-controls="collapseStepTwo-2"
+                      >
+                        Increased comprehensiveness
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseStepTwo-2"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingStepTwo-2"
+                      data-bs-parent="#impact-step-2-2-accordion"
+                    >
+                      <div class="accordion-body">
+                        Number of persons with more comprehensive social
+                        protection (additional risks covered)​
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingStepTwo-4">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseStepTwo-4"
+                        aria-expanded="true"
+                        aria-controls="collapseStepTwo-4"
+                      >
+                        Increased legal coverage
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseStepTwo-4"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingStepTwo-4"
+                      data-bs-parent="#impact-step-2-2-accordion"
+                    >
+                      <div class="accordion-body">
+                        Number of persons entitled to social protection by law
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row align-items-end justify-content-end">
-              <div class="px-1 col-4">
-                <div class="impact-col i3">
-                  <img
-                    src="assets/images/icon/effective-coverage.png"
-                    alt="Effective coverage"
-                  />
-                  <p>Increased effective coverage</p>
-                </div>
-              </div>
-              <div class="px-1 col-4 pe-3">
-                <div class="impact-col i3">
-                  <img
-                    src="assets/images/icon/adequacy.png"
-                    alt="Adequacy and comprehensiveness"
-                  />
-                  <p>Increased adequacy and comprehensiveness</p>
+            <div class="row align-items-center justify-content-end">
+              <div class="col-7 my-3 ps-0">
+                <div class="accordion step-3" id="impact-accordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Increased access
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#impact-accordion"
+                    >
+                      <div class="accordion-body">
+                        Number of persons with a better access to social
+                        protection (single registry, online application, one
+                        stop service…)
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

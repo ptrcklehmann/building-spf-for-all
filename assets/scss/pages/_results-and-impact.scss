@@ -1,0 +1,123 @@
+/*----------------------------------------*/
+/*  04. Pages CSS
+/*----------------------------------------*/
+
+/*=======================================
+    4.01 About CSS
+=========================================*/
+.results-and-impact {
+    & .accordion {
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & .accordion-item {
+            background-color: transparent;
+            border-radius: 2px !important;
+            box-shadow: none;
+            border: none;
+            margin: 0.1rem 0;
+            transition: height 0.5s ease;
+
+        }
+        & .accordion-header {
+            font-family: "Noto Sans", sans-serif;
+            font-size: 12px;
+            background-color: transparent;
+        }
+        & .accordion-body {
+            background-color: transparent;
+            font-size: 12px;
+            line-height: 1.5;
+            padding: 0.5rem 0.8rem 0.7rem 0.8rem;
+            border-radius: 2px;
+        }
+        & .accordion-button {
+            border: none !important;
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-size: 12px;
+            color: $ilo-dark-blue;
+            text-align: left;
+            background-color: transparent;
+            font-weight: bold;
+
+            &::after {
+                background-image: none;
+            }
+            &:not(.collapsed) {
+                color: $ilo-dark-blue;
+                background-color: transparent;
+                box-shadow: none;
+                padding: 0.7rem 0.8rem 0.5rem 0.8rem;
+                &::after {
+                    background-image: none;
+                }
+            }
+            padding: 0.7rem 0.8rem;
+            &.collapsed{
+                padding: 0.7rem 0.8rem;
+            }
+        }
+        &.step-1 {
+            & .accordion-item {
+                background: #bedcfa;
+            }
+            & .accordion-body {
+                background: #EBF5FD;
+            }
+        }
+        &.step-2 {
+            & .accordion-item {
+                background: $ilo-blue;
+            }
+            & .accordion-button,
+            .accordion-body {
+                color: #fff;
+            }
+            & .accordion-body {
+                background: #3264C8;
+            }
+        }
+        &.step-3 {
+            & .accordion-item {
+                background: $ilo-dark-blue;
+            }
+            & .accordion-button,
+            .accordion-body {
+                color: #fff;
+            }
+            & .accordion-body {
+                background: #151F85;
+            }
+        }
+    }
+    & .impact-col {
+        background: #bedcfa;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0.1rem 0;
+        padding: 0.2rem;
+        border-radius: 1px;
+        & img {
+            height: 2.2rem;
+        }
+        &.mid {
+            background: $ilo-blue;
+            color: white;
+            width: 75%;
+        }
+        & p {
+            font-size: 12px;
+            line-height: 1.1;
+        }
+        &.i3 {
+            background: $ilo-dark-blue !important;
+            color: white;
+        }
+    }
+}
