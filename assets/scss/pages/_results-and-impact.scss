@@ -7,18 +7,17 @@
 =========================================*/
 .results-and-impact {
     & .accordion {
-        height: 5rem;
+        height: 4.8rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         & .accordion-item {
             background-color: transparent;
             border-radius: 2px !important;
             box-shadow: none;
             border: none;
-            margin: 0.1rem 0;
             transition: height 0.5s ease;
+
 
         }
         & .accordion-header {
@@ -32,6 +31,7 @@
             line-height: 1.5;
             padding: 0.5rem 0.8rem 0.7rem 0.8rem;
             border-radius: 0px 0 2px 2px;
+            cursor: pointer;
         }
         & .accordion-button {
             border: none !important;
@@ -52,13 +52,14 @@
                 color: $ilo-dark-blue;
                 box-shadow: none;
                 padding: 0.7rem 0.8rem 0.5rem 0.8rem;
+                margin-top: -.2rem;
                 &::after {
                     background-image: none;
                 }
             }
 
             &.collapsed {
-                height: 3.5rem;
+
                 padding: 0.7rem 0.8rem;
             }
         }
@@ -73,6 +74,7 @@
         &.step-2 {
             & .accordion-item {
                 background: $ilo-blue;
+                margin-bottom: .1rem;
             }
             & .accordion-button,
             .accordion-body {
