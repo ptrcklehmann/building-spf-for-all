@@ -31,7 +31,7 @@
             font-size: 12px;
             line-height: 1.5;
             padding: 0.5rem 0.8rem 0.7rem 0.8rem;
-            border-radius: 2px;
+            border-radius: 0px 0 2px 2px;
         }
         & .accordion-button {
             border: none !important;
@@ -50,7 +50,7 @@
             }
             &:not(.collapsed) {
                 color: $ilo-dark-blue;
-                background-color: transparent;
+
                 box-shadow: none;
                 padding: 0.7rem 0.8rem 0.5rem 0.8rem;
                 &::after {
