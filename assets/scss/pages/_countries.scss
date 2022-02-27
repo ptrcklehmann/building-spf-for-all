@@ -1,0 +1,138 @@
+m/*----------------------------------------*/
+/*  04. Single countrie page CSS
+/*----------------------------------------*/
+.countries-page {
+    & p {
+        font-size: 16px;
+        line-height: 1.6;
+        @media #{$extra-small-mobile } {
+            font-size: 14px;
+        }
+    }
+
+    & .pillar1 {
+        width: fit-content;
+        padding: 0.6rem 1rem;
+        border-radius: 1px;
+        transition: 0.4s;
+        border: 2px solid;
+        border-color: $ilo-turquoise;
+        background: #d2fbfb;
+        & a {
+            text-decoration: none;
+            & h4 {
+                color: $ilo-blue;
+                width: 100%;
+                margin-bottom: 0;
+                line-height: 1.5;
+            }
+        }
+    }
+    & .countries-desc {
+        padding-top: 1rem;
+        font-size: 14px;
+        color: #707071;
+    }
+
+    & .info-section {
+        flex-direction: row;
+        &.countries {
+            & p {
+                line-height: 1.5;
+            }
+            &:nth-child(2) {
+                flex-direction: row-reverse;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.three-step-approach section, .three-step-approach article {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 4fr;
+    grid-column: 1 / span 2;
+    grid-template-rows: auto;
+    & .info-image {
+        width: 60%
+    }
+    & h2 {
+        color: $ilo-dark-blue;
+        top: 1rem;
+        scroll-margin-top: 2rem;
+        line-height: 1.2;
+        font-size: 1.8rem;
+        background:#fff;
+        z-index: -1;
+    }
+    .bd-heading {
+        top: 9rem;
+        scroll-margin-top: 9rem;
+        & h3 {
+            line-height: 1.5;
+
+        }
+
+
+    }
+}
+
+.list-group {
+    & .list-group-item {
+        top: 2rem;
+        scroll-margin-top: 2rem;
+        border: none;
+        display: flex;
+        align-items: center;
+        border-radius: 0;
+        padding: 1rem 0;
+        transition: $transition-base;
+        margin-right: auto;
+        & h1 {
+            width: 100%;
+            text-align: left;
+            transition: $transition-base;
+            color: $type-grey;
+            margin-bottom: 0;
+            @media #{$extra-small-mobile } {
+                font-size: 22px;
+            }
+        }
+        &.active {
+            background: $ilo-white;
+            padding-left: 50%;
+            & h1 {
+                color: $ilo-blue;
+            }
+        }
+    }
+    &.country-results {
+        & .list-group-item {
+            padding: 1.1rem 0;
+            line-height: 1.5;
+            &::before {
+                content: "beenhere";
+                font-size: 18px;
+                vertical-align: middle;
+                color: $ilo-blue;
+            }
+            & a {
+                color: $ilo-dark-blue;
+                transition: $transition-base;
+                &::after {
+                    transition: $transition-base;
+                    font-family: "Material Icons";
+                    content: "navigate_next";
+                    font-size: 18px;
+                    vertical-align: middle;
+                }
+                &:hover {
+                    color: $ilo-legacy-blue;
+                    &::after {
+                        margin-left: 0.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

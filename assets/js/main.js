@@ -69,6 +69,10 @@
     AOS.init({
       once: true,
     })
+    var scrollSpy = new bootstrap.ScrollSpy(document.body.querySelector('.steps-info-grid'), {
+      target: '#list-steps',
+      offset: 100,
+    })
     /*---------------------------
   Life without social protection menuspy
 -----------------------------------*/
@@ -85,11 +89,6 @@
     $(elm&&positionLavalamp({elm: elm.querySelector('li.active')}))
   })
 
-
-  /*----------------------------------------*/
-  /*  Splitting When Document is Loading, do
-  /*----------------------------------------*/
-  Splitting()
 
 
 
@@ -240,7 +239,6 @@
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 
-  Splitting()
 
   const yearSlider=document.querySelector('.year-slider');
   (yearSlider)&&noUiSlider.create(yearSlider,{

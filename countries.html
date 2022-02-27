@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
 
-
-
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
     <!--
@@ -40,8 +38,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
-  <body>
-    <!-- Header Section Start -->
+  <body data-bs-spy="scroll" data-bs-target="#list-steps" offset="100">
     <!-- topbar -->
     <div class="topbar">
       <div class="container align-items-center justify-content-between me-auto">
@@ -394,7 +391,12 @@
             <!-- Header Menu Start -->
             <div class="main-menu d-none d-lg-flex">
               <nav class="nav">
-                <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a>
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/building-spf-for-all/"
+                  >Home</a
+                >
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -478,11 +480,7 @@
         <!-- Hero background -->
         <div class="container">
           <div class="row m-b-2 align-items-start">
-            <div
-              class="col-lg-6"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
               <svg
                 class="double-bullet"
                 xmlns="http://www.w3.org/2000/svg"
@@ -519,9 +517,9 @@
     <!-- Hero Section End -->
 
     <!-- Countries Section Start -->
-    <div class="section section-margin countries-section">
+    <div class="section section-margin countries-page">
       <div class="container">
-        <div class="row m-b-n60 align-items-start">
+        <div class="row align-items-center">
           <div class="mb-4 col-12">
             <div class="pillar1 me-auto">
               <a href="/our-approach/theory-of-change.html#pillar1"
@@ -549,134 +547,128 @@
             </p>
           </div>
 
-          <div
-            class="col-12 m-b-60"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <div class="col-12" data-aos="fade-up" data-aos-duration="2000">
             <img
               src="assets/images/slider/countries-map.jpg"
               alt="Flagship countries"
             />
           </div>
-          <div class="col-12 m-b-n10">
-            <h4 class="sub-red">Three step-approach</h4>
-          </div>
-          <div class="col-12">
-            <div class="lavalamp-menu" id="info-header">
-              <ul>
-                <li class="active">
-                  <a href="#step1"><h4>Step 1</h4></a>
-                </li>
-                <li>
-                  <a href="#step2"><h4>Step 2</h4></a>
-                </li>
-                <li>
-                  <a href="#step3"><h4>Step 3</h4></a>
-                </li>
-              </ul>
-              <div class="lavalamp"></div>
-            </div>
-            <main class="mb-5 info-slides pillars">
-              <section
-                class="info-section countries"
-                id="step1"
-                data-aos="fade-up"
-                data-aos-duration="700"
-                data-aos-delay="800"
-              >
-                <div class="info-image">
-                  <img
-                    class="fit-image"
-                    src="assets/images/about/pillar1.jpg"
-                    alt="Step 1"
-                  />
-                </div>
-                <article class="info-text">
-                  <h4 class="fw-bold">
-                    Adopting a national social protection strategy
-                  </h4>
-                  <p>
-                    Through relevant monitoring, diagnostic studies and a
-                    participatory assessment-based national dialogue (ABND), the
-                    ILO supports the development of a long-term vision for
-                    social protection. This process involves a
-                    whole-of-government approach, including social security
-                    institutions, and a broad national dialogue with workers and
-                    employers’ representatives and other stakeholders, supported
-                    by relevant United Nations agencies, civil society
-                    organizations, IFIs and other development partners. It uses
-                    ILO social security standards, in particular Recommendation
-                    No. 202, which provides a framework against which countries
-                    can assess their national systems and prioritize action.
-                  </p>
-                </article>
-              </section>
-              <section
-                class="info-section countries"
-                id="step2"
-                data-aos="fade-up"
-                data-aos-duration="700"
-                data-aos-delay="800"
-              >
-                <div class="info-image">
-                  <img
-                    class="fit-image"
-                    src="assets/images/about/pillar2.jpg"
-                    alt="Step 2"
-                  />
-                </div>
-                <article class="info-text">
-                  <h4 class="fw-bold">Designing and reforming schemes</h4>
-                  <p>
-                    Based on the priorities established in the NSPS or specific
-                    demand from ILO constituents, the ILO supports the design
-                    and reform of social protection schemes or programmes. This
-                    covers various areas of social protection, with the
-                    objective of extending social protection to groups that are
-                    so far excluded from comprehensive and adequate social
-                    protection.
-                  </p>
-                </article>
-              </section>
-              <section
-                class="info-section countries"
-                id="step3"
-                data-aos="fade-up"
-                data-aos-duration="700"
-                data-aos-delay="800"
-              >
-                <div class="info-image">
-                  <img
-                    class="fit-image"
-                    src="assets/images/about/pillar3.jpg"
-                    alt="Step 3"
-                  />
-                </div>
-                <article class="mb-5 info-text">
-                  <h4 class="fw-bold">Improving operations</h4>
-                  <p>
-                    Once the law is passed, the ILO supports the implementation
-                    of social protection schemes and programmes or improves
-                    their operations, administrative and financial governance.
-                    This step aims to strengthen administrative and delivery
-                    capacities, including management information systems (MISs)
-                    and one-stopshops for beneficiary registration and payment
-                    of benefits, as well as complaints and appeals mechanisms.
-                    It also improves coordination across the schemes and
-                    institutions involved in policy design, financing and
-                    delivery of social protection. It strengthens the tripartite
-                    governance of the scheme and ensures the participation of
-                    those concerned at the national, regional and local levels.
-                  </p>
-                </article>
-              </section>
-            </main>
-          </div>
-          <div class="mb-5 col-12">
-            <span> </span>
-          </div>
         </div>
+      </div>
+      <div class="container three-step-approach">
+        <section id="3-step-approach">
+          <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">
+            3 step approach
+          </h2>
+          <article
+            class="my-5"
+            id="step-1"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="800"
+          >
+            <div
+              class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+            >
+              <h3>Step 1</h3>
+            </div>
+            <div>
+            <div class="info-image">
+              <img
+                class="fit-image"
+                src="assets/images/about/pillar1.jpg"
+                alt="Step 1"
+              />
+            </div>
+            <h3 class="step-title">
+              Adopting a national social protection strategy
+            </h3>
+            <p>
+              Through relevant monitoring, diagnostic studies and a
+              participatory assessment-based national dialogue (ABND), the ILO
+              supports the development of a long-term vision for social
+              protection. This process involves a whole-of-government approach,
+              including social security institutions, and a broad national
+              dialogue with workers and employers’ representatives and other
+              stakeholders, supported by relevant United Nations agencies, civil
+              society organizations, IFIs and other development partners. It
+              uses ILO social security standards, in particular Recommendation
+              No. 20ll
+            </p>
+            </div>
+          </article>
+          <article
+            class="my-5"
+            id="step-2"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="800"
+          >
+            <div
+              class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+            >
+              <h3>Step 2</h3>
+            </div>
+            <div>
+              <div class="info-image">
+                <img
+                  class="fit-image"
+                  src="assets/images/about/pillar2.jpg"
+                  alt="Step 2"
+                />
+              </div>
+              <h3 class="step-title">Designing and reforming schemes</h3>
+              <p>
+                Through relevant monitoring, diagnostic studies and a
+                participatory assessment-based national dialogue (ABND), the ILO
+                supports the development of a long-term vision for social
+                protection. This process involves a whole-of-government
+                approach, including social security institutions, and a broad
+                national dialogue with workers and employers’ representatives
+                and other stakeholders, supported by relevant United Nations
+                agencies, civil society organizations, IFIs and other
+                development partners. It uses ILO social security standards, in
+                particular Recommendation No. 20ll
+              </p>
+            </div>
+          </article>
+          <article
+            class="my-5"
+            id="step-3"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            data-aos-delay="800"
+          >
+            <div
+              class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
+            >
+              <h3>Step 3</h3>
+            </div>
+            <div>
+            <div class="info-image">
+              <img
+                class="fit-image"
+                src="assets/images/about/pillar3.jpg"
+                alt="Step 3"
+              />
+            </div>
+            <h3 class="step-title">Improving operations</h3>
+            <p>
+              Once the law is passed, the ILO supports the implementation of
+              social protection schemes and programmes or improves their
+              operations, administrative and financial governance. This step
+              aims to strengthen administrative and delivery capacities,
+              including management information systems (MISs) and one-stopshops
+              for beneficiary registration and payment of benefits, as well as
+              complaints and appeals mechanisms. It also improves coordination
+              across the schemes and institutions involved in policy design,
+              financing and delivery of social protection. It strengthens the
+              tripartite governance of the scheme and ensures the participation
+              of those concerned at the national, regional and local levels.
+            </p>
+          </div>
+          </article>
+        </section>
       </div>
     </div>
     <!-- Countries Section End -->
