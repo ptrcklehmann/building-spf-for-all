@@ -69,10 +69,7 @@
     AOS.init({
       once: true,
     })
-    var scrollSpy = new bootstrap.ScrollSpy(document.body.querySelector('.steps-info-grid'), {
-      target: '#list-steps',
-      offset: 100,
-    })
+
     /*---------------------------
   Life without social protection menuspy
 -----------------------------------*/

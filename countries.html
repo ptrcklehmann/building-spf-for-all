@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
-  <body data-bs-spy="scroll" data-bs-target="#list-steps" offset="100">
+  <body data-bs-spy="scroll" data-bs-target="#list-steps" offset="50">
     <!-- topbar -->
     <div class="topbar">
       <div class="container align-items-center justify-content-between me-auto">
@@ -519,9 +519,9 @@
     <!-- Countries Section Start -->
     <div class="section section-margin countries-page">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="mb-4 col-12">
-            <div class="pillar1 me-auto">
+        <div class="row align-items-center countries-page">
+          <div class="col-12">
+            <div class="pillar-1 mb-4">
               <a href="/our-approach/theory-of-change.html#pillar1"
                 ><h4>Pillar 1</h4></a
               >
@@ -556,23 +556,27 @@
         </div>
       </div>
       <div class="container three-step-approach">
-        <section id="3-step-approach">
-          <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">
+        <div class="sticky-top" id="three-step-approach">
+          <h2 class="fw-bold pt-5 pt-xl-5 pb-xl-2">
             3 step approach
           </h2>
+          <div id="list-steps" class="list-group list-group-horizontal">
+            <a class="list-group-item list-group-item-action" href="#step-1"><h3>Step 1</h3></a>
+            <a class="list-group-item list-group-item-action" href="#step-2"><h3>Step 2</h3></a>
+            <a class="list-group-item list-group-item-action" href="#step-3"><h3>Step 3</h3></a>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-12">
+          <h2 id="step-1">STEP 1</h2>
+        </div>
+      </div>
           <article
-            class="my-5"
-            id="step-1"
+
             data-aos="fade-up"
             data-aos-duration="700"
             data-aos-delay="800"
           >
-            <div
-              class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
-            >
-              <h3>Step 1</h3>
-            </div>
-            <div>
             <div class="info-image">
               <img
                 class="fit-image"
@@ -580,6 +584,7 @@
                 alt="Step 1"
               />
             </div>
+            <div>
             <h3 class="step-title">
               Adopting a national social protection strategy
             </h3>
@@ -597,26 +602,26 @@
             </p>
             </div>
           </article>
+          <div class="row mb-3">
+            <div class="col-12">
+            <h2 id="step-2">STEP 2</h2>
+          </div>
+        </div>
           <article
-            class="my-5"
-            id="step-2"
+
             data-aos="fade-up"
             data-aos-duration="700"
             data-aos-delay="800"
           >
-            <div
-              class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
-            >
-              <h3>Step 2</h3>
-            </div>
-            <div>
-              <div class="info-image">
+
+              <div class="info-image"  >
                 <img
                   class="fit-image"
                   src="assets/images/about/pillar2.jpg"
                   alt="Step 2"
                 />
               </div>
+              <div>
               <h3 class="step-title">Designing and reforming schemes</h3>
               <p>
                 Through relevant monitoring, diagnostic studies and a
@@ -632,26 +637,25 @@
               </p>
             </div>
           </article>
+          <div class="row mb-3">
+            <div class="col-12">
+            <h2  id="step-3">STEP 2</h2>
+          </div>
+        </div>
           <article
-            class="my-5"
-            id="step-3"
+
             data-aos="fade-up"
             data-aos-duration="700"
             data-aos-delay="800"
           >
-            <div
-              class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2"
-            >
-              <h3>Step 3</h3>
-            </div>
-            <div>
-            <div class="info-image">
+            <div class="info-image" >
               <img
                 class="fit-image"
                 src="assets/images/about/pillar3.jpg"
                 alt="Step 3"
               />
             </div>
+            <div>
             <h3 class="step-title">Improving operations</h3>
             <p>
               Once the law is passed, the ILO supports the implementation of
@@ -668,7 +672,7 @@
             </p>
           </div>
           </article>
-        </section>
+        </div>
       </div>
     </div>
     <!-- Countries Section End -->
