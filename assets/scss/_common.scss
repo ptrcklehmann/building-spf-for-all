@@ -1209,7 +1209,7 @@ img {
     .steps {
         width: 4.8rem;
         min-height: 4.8rem;
-        background: #EBF5FD;
+        background: #bedcfa;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1220,11 +1220,11 @@ img {
         border-radius: 2px;
         cursor: pointer;
         &.s2 {
-            background: #3264C8;
+            background: $ilo-blue;
             color: #fff;
         }
         &.s3 {
-            background: #151F85;
+            background: $ilo-dark-blue;
             color: #fff;
         }
     }
