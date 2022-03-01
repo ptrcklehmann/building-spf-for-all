@@ -88,9 +88,6 @@ m/*----------------------------------------*/
         padding: 5rem 0;
         align-content: center;
         align-items: center;
-        &:nth-child(2) {
-            grid-direction: row-reverse;
-        }
     }
     & .info-image {
         width: 100%;
@@ -124,6 +121,7 @@ m/*----------------------------------------*/
                 margin-bottom: 0;
                 width: fit-content;
                 padding-right: 1rem;
+                transition: $transition-base;
             }
             &.active {
                 background: #fff;
