@@ -6,6 +6,17 @@
     4.01 About CSS
 =========================================*/
 .results-and-impact {
+    transition: $transition-base;
+    & p {
+        line-height: 1.5;
+    }
+    a {
+        color: $ilo-blue;
+        transition: text-decoration .5s ease;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
     & .accordion {
         height: 4.8rem;
         display: flex;
