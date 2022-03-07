@@ -26,6 +26,9 @@
 .custom-select-opener.library {
   width: 260px;
 }
+.custom-select-opener.select-country {
+  width: 100%;
+}
 .custom-select-opener.select-date {
   background: #d4e7f536;
   margin-right: .2rem;
@@ -68,6 +71,9 @@
 }
 .custom-select-panel.library {
   width: 260px;
+}
+.custom-select-panel.select-country {
+  width: 100%;
 }
 .custom-select-panel.select-date > .custom-select-option.has-focus {
   background-color: #eceeff;

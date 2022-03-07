@@ -51,6 +51,74 @@
         }
     }
 }
+.table {
+    color: $ilo-dark-blue;
+    font-size: 14px;
+    & thead {
+        font-size: 16px;
+        & tr {
+            & th {
+                padding: .3rem;
+                background: $ilo-canary;
+                transition: $transition-base;
+                &:hover {
+                    background: $ilo-lilac;
+                }
+            }
+        }
+    }
+    & tbody {
+        & tr {
+            & th {
+                padding: .3rem .6rem .3rem .3rem;
+            }
+        }
+    }
+}
+.form-select {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $ilo-dark-blue;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid $ilo-canary;
+    border-radius: 1px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    appearance: none;
+    padding: 0;
+    &:focus {
+        border-color: $ilo-canary;
+        outline: 0;
+        box-shadow: none;
+    }
+    & optgroup {
+        padding: .5rem 0rem;
+    }
+    & option {
+        font-weight: normal;
+        display: block;
+        white-space: nowrap;
+        min-height: 1.2em;
+        padding: .5rem .2rem;
+        &:checked {
+            background-color: $ilo-canary !important;
+            color: $ilo-dark-blue !important;
+        }
+        & [selected] {
+            background-color: $ilo-canary !important;
+            color: $ilo-dark-blue !important;
+        }
+    }
+}
+.form-select[multiple] {
+    padding-right: 0rem;
+    background-image: none;
+}
 .partners-panel {
     & .nav-panel {
         @media #{$tablet-device, $large-mobile } {

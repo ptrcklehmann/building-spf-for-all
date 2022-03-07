@@ -75,3 +75,9 @@ var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
   return new bootstrap.Popover(popoverTriggerEl)
 })
+const countrySelect = customSelect('.select-country', {
+  openerClass: 'custom-select-opener select-country',
+  panelClass: 'custom-select-panel select-country',
+})
+
+Sortable.init()
