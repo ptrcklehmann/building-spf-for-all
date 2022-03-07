@@ -6,6 +6,9 @@
     4.01 About CSS
 =========================================*/
 .partnerships-section {
+    & .dark-blue {
+        color: $ilo-dark-blue;
+    }
     & .pillar3 {
         flex: 1 1 auto;
         align-self: center;
@@ -58,7 +61,8 @@
         font-size: 16px;
         & tr {
             & th {
-                padding: .3rem;
+                padding: 10px 10px;
+                vertical-align: middle;
                 background: $ilo-canary;
                 transition: $transition-base;
                 &:hover {
@@ -70,7 +74,8 @@
     & tbody {
         & tr {
             & th {
-                padding: .3rem .6rem .3rem .3rem;
+                padding: 10px 10px;
+                vertical-align: middle;
             }
         }
     }
