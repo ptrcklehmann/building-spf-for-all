@@ -562,14 +562,70 @@
 }
 .publications-grid {
     width: 100%;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: min-content max-content auto;
-    grid-auto-flow: dense;
-    justify-content: start;
-    align-items: center;
-    height: auto;
+    height: 100%;
+    // display: grid;
+    // gap: 10px;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // grid-auto-rows: min-content max-content auto;
+    // grid-auto-flow: dense;
+    // justify-content: start;
+    // align-items: center;
+    // height: auto;
+    & .publication-item {
+        width: 22.5%;
+        position: relative;
+        &.item-lg {
+            width: 30.5%;
+        }
+        & .gallery-content {
+            position: absolute;
+            bottom: -15%;
+            left: 0;
+            right: 0;
+            padding: 1rem .5rem;
+            background: rgb(255, 255, 255);
+            opacity: 0.9;
+            border-radius: 1px;
+            transition: 0.3s;
+            visibility: hidden;
+            z-index: 99;
+            font-size: 16px;
+            line-height: 1.3;
+            @media #{$large-mobile, $tablet-device} {
+              margin: .5rem;
+              padding: .5rem;
+            }
+            & .title {
+              transition: $transition-base;
+              font-weight: 600;
+              color: $ilo-blue;
+              & i {
+                transition: $transition-base;
+              }
+              &:hover {
+                color: $ilo-legacy-blue;
+                & i {
+                  margin-left: 3px;
+                }
+              }
+              @media #{$large-mobile, $tablet-device} {
+                font-size: .8rem;
+              }
+            }
+            & span {
+              font-size: 12px;
+              line-height: 1;
+              color: $ilo-dark-blue;
+              font-weight: 600;
+            }
+          }
+        &:hover {
+            & .gallery-content {
+              bottom: 0%;
+              visibility: visible;
+            }
+          }
+    }
 }
 
 .comment-title {
