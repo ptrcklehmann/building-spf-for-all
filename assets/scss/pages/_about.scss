@@ -91,12 +91,12 @@
         "thumbnails thumbnails";
     @media #{$large-mobile, $small-mobile, $extra-small-mobile} {
         grid-template-columns: 1fr;
-        grid-template-rows: .70fr .70fr;
+        grid-template-rows: 0.7fr 0.7fr;
         gap: 10px 10px;
         grid-template-areas:
-        "."
-        "."
-        "thumbnails";
+            "."
+            "."
+            "thumbnails";
     }
     & figure {
         cursor: pointer;
@@ -104,38 +104,21 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-content: stretch;
-        align-items: flex-start;
-        padding: 5%;
-        &:hover {
-            & .desc {
-                opacity: 0;
-            }
-        }
-        &.one {
-            background: #fff;
-            border: 1px solid #eb1c2d;
-            & figcaption {
-                background: #eb1c2d;
-            }
-        }
-        &.three {
-            background: #fff;
-            border: 1px solid #279b48;
-            & figcaption {
-                background: #279b48;
-            }
-        }
+        justify-content: center;
+        align-content: center;
+        align-items: center;
         & p {
             transition: inherit;
-            color: $ilo-dark-blue;
-            padding-left: 1rem;
+            color: $ilo-white;
+            font-family: 'Overpass', sans-serif;
+            font-weight: bold;
             line-height: normal;
-            font-size: 13px;
+            font-size: 16px;
             width: 90%;
+            margin-bottom: 0;
+            padding: 0 .5rem;
             @media #{$large-mobile, $small-mobile, $extra-small-mobile} {
-                font-size: 16px;
+                font-size: 14px;
             }
         }
         & img {
@@ -143,16 +126,27 @@
         }
         & figcaption {
             padding: 5%;
-            background: #279b48;
-            & h3 {
-                color: #fff;
-                font-size: 15px;
-            }
             & p {
                 padding-left: 0;
                 font-size: 12px;
                 color: #fff;
                 opacity: 1;
+                & h3 {
+                    color: #fff;
+                    font-size: 15px;
+                }
+            }
+        }
+        &.one {
+            background: #eb1c2d;
+            & figcaption {
+                background: #eb1c2d;
+            }
+        }
+        &.three {
+            background: #279b48;
+            & figcaption {
+                background: #279b48;
             }
         }
     }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thematic areas | Building social protection floors for all</title>
+    <title>Our approach | Building social protection floors for all</title>
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="assets/images/favicon.png" />
@@ -21,7 +21,19 @@
     <link rel="stylesheet" href="assets/css/plugins/aos.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
-
+    <link rel="stylesheet" href="assets/css/plugins/splitting.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/accordion-js@3.2.0/dist/accordion.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/animations/scale.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/themes/light.css"
+    />
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
@@ -36,12 +48,11 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#list-pillars" data-bs-method="offset" offset="50">
     <!-- Header Section Start -->
-    <!-- topbar -->
     <div class="topbar">
       <div class="container align-items-center justify-content-between me-auto">
         <a href="https://www.ilo.org/global/lang--en/index.htm"
@@ -55,14 +66,13 @@
         </a>
       </div>
     </div>
-    <!-- Header -->
     <div class="header">
       <div class="sticky-header">
         <div class="container">
           <div class="header-wrapper">
             <!-- Header Logo Start -->
             <div class="header-logo me-auto">
-              <a href="/building-spf-for-all/">
+              <a href="/">
                 <svg
                   id="logo-socpro"
                   class="logo-socpro"
@@ -393,17 +403,47 @@
             <!-- Header Menu Start -->
             <div class="main-menu d-none d-lg-flex">
               <nav class="nav">
-                <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a>
-                <a class="nav-link" href="our-approach.html">Our approach</a>
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="building-spf-for-all/"
+                  >Home</a
+                >
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  id="approachDrop"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Our Approach
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="approachDrop">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="vision-and-value-proposition.html"
+                      >Vision and value proposition</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="theory-of-change.html"
+                      >Theory of change</a
+                    >
+                  </li>
+                </ul>
                 <a class="nav-link" href="countries.html">Countries</a>
-                <a class="nav-link active" href="thematic-areas.html"
+                <a class="nav-link" href="thematic-areas.html"
                   >Thematic areas</a
                 >
                 <a class="nav-link" href="partnerships.html">Partnerships</a>
                 <a class="nav-link" href="results-and-impact.html"
                   >Results and impact</a
                 >
-                <a class="nav-link" href="our-team.html">Our team</a>
+                <a class="nav-link" aria-current="page" href="our-team.html"
+                  >Our team</a
+                >
                 <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
                 <a class="nav-link" href="library.html">Library</a>
                 <a class="nav-link" href="news-and-events.html"
@@ -412,6 +452,7 @@
               </nav>
             </div>
             <!-- Header Menu End -->
+
             <!-- Header Actions Start -->
             <div class="header-social-actions d-lg-none ms-md-auto">
               <div class="header-actions">
@@ -440,326 +481,1616 @@
     <div class="sub-hero-layout">
       <figure
         class="hero-background"
-        data-rellax-speed="3"
+        data-rellax-speed="2"
         style="
-          background-image: url('assets/images/slider/countries.jpg');
+          background-image: url('assets/images/slider/vision-value.jpg');
           background-position: top;
+          filter: brightness(0.95);
         "
       ></figure>
       <div class="section">
         <!-- Hero background -->
-        <div class="container-fluid">
-          <div class="container">
-            <div class="row align-items-start">
-              <div
-                class="col-lg-6 pb-lg-3 pb-sm-2"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <svg
-                  class="double-bullet"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 965 992.05"
-                >
-                  <polygon
-                    points="965 496.02 105.86 0 105.86 992.05 965 496.02"
-                    style="fill: #9ef2f2"
-                  />
-                  <polygon
-                    points="675 496.02 0 106.31 0 885.74 675 496.02"
-                    style="fill: #1e2dbe"
-                  />
-                </svg>
-              </div>
-            </div>
-            <article
-              class="uuper_box hero-heading"
-              data-aos="fade-up"
-              data-aos-duration="1800"
+        <div class="container">
+          <div
+            class="pb-3 col-lg-6"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <svg
+              class="double-bullet"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 965 992.05"
             >
-              <h1>Thematic areas</h1>
-            </article>
-            <div class="row justify-content-between m-b-n50 p-t-10">
-              <div class="col-12">
-                <small class="strong-copyright ms-auto"
-                  ><i class="icon">play_arrow</i>  Photo: Marcel Crozet</small
-                >
-              </div>
-            </div>
+              <polygon
+                points="965 496.02 105.86 0 105.86 992.05 965 496.02"
+                style="fill: #9ef2f2"
+              />
+              <polygon
+                points="675 496.02 0 106.31 0 885.74 675 496.02"
+                style="fill: #1e2dbe"
+              />
+            </svg>
+          </div>
+          <article
+            class="uuper_box hero-heading m-b-n20"
+            data-aos="fade-up"
+            data-aos-duration="1800"
+          >
+            <h1>Vision and value proposition</h1>
+          </article>
+          <div class="col-12">
+            <small class="strong-copyright ms-auto"
+              ><i class="icon">play_arrow</i> Photo: Marcel Crozet/ILO</small
+            >
           </div>
         </div>
       </div>
     </div>
     <!-- Hero Section End -->
 
-    <!-- Countries Section Start -->
-    <div class="section section-margin-top thematic-areas">
+    <!-- Intro Section Start -->
+    <!-- Brand Section Start -->
+    <div class="section section-margin-bottom our-approach">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="mb-5 col-12">
-            <div class="pillar-2 mb-4">
-              <h4>Pillar 2</h4>
-            </div>
-            <p class=" fw-bold">
-              The Flagship Programme supports the three-step approach at country
-              level by providing specialized knowledge in <span>16 thematic areas</span> in
-              order to support Member States in building national social
-              protection systems that are comprehensive and adequate, universal
-              and robust.
-            </p>
-            <p>
-              Thematic support is provided in the 50 priority countries under
-              pillar 1 but it may also be provided to other countries, based on
-              their demand for specialized technical assistance.
-            </p>
+        <div class="row align-items-start justify-content-between">
+          <div
+            class="col-md-6 col-lg-6 mt-5"
+          >
+            <h3 class="my-5 lh-1">
+              Social security is a
+              human right</h3>
+            <h4 class="dark-blue fw-normal ms-auto w-65">
+              Despite this, <span class="sub-red">4 billion people</span> have
+              no access to social protection and are left totally unprotected.
+            </h4>
           </div>
           <div
-            class="mb-5 col-12 thematic-areas"
-            data-aos="fade-up"
-            data-aos-duration="2000"
+            class="col-md-6 col-lg-6 mt-5 justify-content-center align-items-center"
           >
-            <h3>
-              Role of the Flagship programme in the 16 thematic areas
-            </h3>
-
-            <ul class="list-group list-group-flush" data-aos="fade-in"
-            data-aos-duration="2000">
-              <li class="list-group-item">
-                <i class="fa fa-play"></i> The development of policy and
-                technical methodologies and tools aligned with ILO principles
-                and good practices collected from around the world
-              </li>
-              <li class="list-group-item">
-                <i class="fa fa-play"></i> The implementation of these
-                methodologies and tools in the Flagship priority countries and
-                other countries that request support
-              </li>
-              <li class="list-group-item">
-                <i class="fa fa-play"></i> The development or consolidation of
-                the Technical Support Facility to provide on-demand and timely specialized services
-              </li>
-              <li class="list-group-item">
-                <i class="fa fa-play"></i> The documentation of relevant country
-                experiences
-              </li>
-              <li class="list-group-item">
-                <i class="fa fa-play"></i> The organization of regional and
-                global seminars on the topic to share experiences, country cases
-                and promote South-South learning
-              </li>
-              <li class="list-group-item">
-                <i class="fa fa-play"></i> The further dissemination of ILO
-                approaches through global networks
-              </li>
-            </ul>
+            <img
+              src="assets/images/illustrations/our-approsch-globe.svg"
+              class="approach-globe p-5 ms-5"
+              alt="53% of the population has no access to social protection"
+            />
           </div>
         </div>
-        <div class="mb-5 row" data-aos="fade-in"
-        data-aos-duration="2000">
-        <h3>Technical Support Facility</h3>
-        <p>
-          The Technical Support Facility (TSF) allows the Social Protection Department and its Global
-          Technical Team to provide timely and high quality support on
-          strengthening different areas of social protection in line with ILO
-          standards. It is composed of experts that are entirely dedicated to
-          supporting ILO constituents at country level; based on this support,
-          TSF experts also document good practices and further develop the
-          knowledge base related to their area of technical expertise (for
-          example policy and technical briefs, good practices guides,
-          capacity-building packages, online quantitative tools and so on).
-        </p>
-        <p>Find out more about the TSF in our
-          <a href="#">dedicated brochure<i class="icofont-rounded-right"></i></a> <span>(upcoming)</span>
-        </p>
       </div>
-    </div>
       <div class="container">
-        <div class="row">
-            <p>
-              The thematic approaches, tools and knowledge products will be
-              adjusted and further developed through a dynamic feedback loop,
-              leading to the development or improvement of good practices guides
-              and tools.
-            </p>
-            <p class="fw-bold">
-              Learn more about each thematic area by visiting their dedicated workspaces or reading the <a href="https://www.social-protection.org/gimi/RessourcePDF.action?id=57507" alt="See Thematic Annex">Thematic Annex</a> that summarises our approach.
-            </p>
-          </div>
-          </div>
+        <div id="info-header ">
+          <h4
+            class="section-title dark-blue mt-3"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            Life without social protection means
+          </h4>
         </div>
-
-      <div class="container">
         <div class="row">
-          <div class="py-5 section">
-            <div class="row g-4">
-              <div class="text-center col-lg-6 col-md-12">
-                <h4 class="mb-3 col-12 sub-red ">
-                  Realizing the human right to social security
-                </h4>
-                <div class="border-end thematic-thumbnails">
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/old-age.jpg');
-                      "
-                    >
-                      Old-age pensions
-                    </div>
-                    <a href="social-health-protection.html">
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/social-health.jpg');
-                      "
-                    >
-                      Social health protection
-                    </div>
-                  </a>
-
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/unemployment.jpg');
-                      "
-                    >
-                      Unemployment protection
-                    </div>
-
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/informal-economy.jpg');
-                      "
-                    >
-                      Informal economy
-                    </div>
-
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/disability.jpg');
-                      "
-                    >
-                      Disability inclusive social protection
-                    </div>
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/migrants.jpg');
-                      "
-                    >
-                      Migrants and forcibly displaced persons
-                    </div>
-
-                    <a href="climate-change-and-just-transition.html">
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/climate-change.jpg');
-                      "
-                    >
-                      Social protection, climate change and just transition
-                    </div>
-                  </a>
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/gender-equality.jpg');
-                      "
-                    >
-                      Gender equality
-                    </div>
-                </div>
-              </div>
-              <div class="text-center col-lg-6 col-md-12">
-                <h4 class="mb-3 col-12 sub-red ">
-                  Robust and sustainable social protection systems
-                </h4>
-                <div class="thematic-thumbnails">
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/social-dialogue.jpg');
-                      "
-                    >
-                      Social dialogue
-                    </div>
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/rights-based.jpg');
-                      "
-                    >
-                      Rights-based social protection systems
-                    </div>
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/adaptative.jpg');
-                      "
-                    >
-                      Adaptive social protection systems to new and emerging
-                      challenges
-                    </div>
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/culture.jpg');
-                      "
-                    >
-                      Culture of social protection
-                    </div>
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/financing.jpg');
-                      "
-                    >
-                      Financing
-                    </div>
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/statistics.jpg');
-                      "
-                    >
-                      Social protection statistics, monitoring and evaluation
-                      frameworks
-                    </div>
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/actuarial.jpg');
-                      "
-                    >
-                      Actuarial valuations
-                    </div>
-
-                    <div
-                      class="thematic-card"
-                      style="
-                        background-image: url('assets/images/thematics/digital-transformation.webp');
-                      "
-                    >
-                      Digital transformation
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="col-12 accordion-life-whithout-social-protection">
+            <div class="item">
+              <img
+                src="assets/images/icon/healthcare.svg"
+                alt="People cannot access the health care services they need"
+              />
+            </div>
+            <div class="info">
+              <h6>
+                <i class="icon red">play_arrow</i> People cannot access the
+                health care services they need
+              </h6>
+              <p class="info-text">
+                While 66 per cent of the global population are protected by a
+                health scheme of some kind, significant coverage and adequacy
+                gaps remain. These include large out-of-pocket payments for
+                health services, physical distance, limitations in the range,
+                quality and acceptability of health services, and long waiting
+                times.
+              </p>
+            </div>
+            <div class="item">
+              <img
+                src="assets/images/icon/children.svg"
+                alt="Children have to work to help their parents"
+              />
+            </div>
+            <div class="info">
+              <h6>
+                <i class="icon red">play_arrow</i> Children have to work to help
+                their parents
+              </h6>
+              <p class="info-text">
+                Social protection, together with broader interventions such as
+                access to quality education, is vital in preventing and
+                eradicating child labour. Social protection helps children
+                attain their full potential, support family livelihoods and care
+                needs, thus helping break vicious cycles of poverty and
+                socio-economic vulnerability. Despite this, only 26 per cent of
+                children receive social protection benefits.
+              </p>
+            </div>
+            <div class="item">
+              <img
+                src="assets/images/icon/mother.svg"
+                alt="Women have to go back to work the day after deliveing their
+                  babies"
+              />
+            </div>
+            <div class="info">
+              <h6>
+                <i class="icon red">play_arrow</i> Women have to go back to work
+                the day after delivering their babies
+              </h6>
+              <p class="info-text">
+                Only 45 pmer cent of women with newborns worldwide receive a
+                maternity cash benefit. Lack of income security forces many
+                women, especially those in the informal economy, to keep working
+                into the very late stages of pregnancy and/or to return to work
+                prematurely, thereby exposing themselves and their children to
+                significant health risks.
+              </p>
+            </div>
+            <div class="item">
+              <img
+                src="assets/images/icon/elder.svg"
+                alt="Frail older persons have to work until they die"
+              />
+            </div>
+            <div class="info">
+              <h6>
+                <i class="icon red">play_arrow</i> Frail older persons have to
+                work until they die
+              </h6>
+              <p class="info-text">
+                Although pensions are the most widespread form of social
+                protection in the world, with 78 per cent of people above
+                retirement age receiving some form of support, major
+                discrepancies still exist across regions, between rural and
+                urban areas, and between women and men.
+              </p>
+            </div>
+            <div class="item">
+              <img
+                src="assets/images/icon/heathcare_1.svg"
+                alt="Persons with disability have no income on their own"
+              />
+            </div>
+            <div class="info">
+              <h6>
+                <i class="icon red">play_arrow</i> People cannot access the
+                health care services they need
+              </h6>
+              <p class="info-text">
+                While 66 per cent of the global population are protected by a
+                health scheme of some kind, significant coverage and adequacy
+                gaps remain. These include large out-of-pocket payments for
+                health services, physical distance, limitations in the range,
+                quality and acceptability of health services, and long waiting
+                times.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Countries Section End -->
+    <!-- Brand Section End -->
+
+    <!-- Service Section Start -->
+    <div class="section vision-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12" data-aos="fade-up" data-aos-duration="1100">
+            <div class="text-right section-title">
+              <h2 class="title" data-aos="fade-in" data-aos-duration="2000">
+                Our vision
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pb-3 row align-items-center justify-content-around sm-column"
+        >
+          <div class="col-lg-6 col-md-12 col-sm-12 lh-base pe-5">
+            <h4 class="pb-4 col-lg-11 col-md-12 col-sm-12">
+              Our vision is a world where all countries have national social
+              protection systems that:
+            </h4>
+            <p class="col-lg-9 col-md-12 col-sm-12">
+              <i class="fa fa-play tri-bullet"></i> Provide adequate social
+              protection to all their population throughout their lives, prevent
+              poverty, reduce inequality and combat social exclusion;
+            </p>
+            <p class="col-lg-8 col-md-12 col-sm-12">
+              <i class="fa fa-play tri-bullet"></i> Are not temporary
+              arrangements, but robust, reliable and sustainable mechanisms;
+            </p>
+            <p class="col-lg-11 col-md-12 col-sm-12">
+              <i class="fa fa-play tri-bullet"></i> Should be built on national
+              consensus achieved through inclusive social dialogue;
+            </p>
+            <p class="col-lg-9 col-md-12 col-sm-12">
+              <i class="fa fa-play tri-bullet"></i> Should be embedded in law to
+              provide rights and obligations for current and future generations;
+            </p>
+            <p class="col-lg-12 col-md-12 col-sm-12">
+              <i class="fa fa-play tri-bullet"></i> Should be adequately and
+              sustainably financed.
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-12 mt-lg-2 col-sm-12 mt-md-3 pt-sm-2">
+            <svg
+              class="double-bullet mt-md-3 m-t-sm-3"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 965 992.05"
+            >
+              <polygon
+                points="965 496.02 105.86 0 105.86 992.05 965 496.02"
+                style="fill: #9ef2f2"
+              />
+              <polygon
+                points="675 496.02 0 106.31 0 885.74 675 496.02"
+                style="fill: #1e2dbe"
+              />
+            </svg>
+            <div class="ratio ratio-16x9">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/babu1BLiNHs"
+                title="COVID-19 and my disability won't stop my search for work"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="col-lg-12 col-md-12 col-sm-12 fw-bold lh-sm">
+              <i class="fa fa-play tri-bullet"></i> COVID-19 and my disability
+              won't stop my search for work
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Service Section End -->
+
+    <!-- Vision and value proposition Section Start -->
+    <div class="section section-padding service-section vision-section">
+      <div class="container">
+        <div
+          class="pb-3 row align-items-center justify-content-between sm-column"
+        >
+          <div class="col-lg-6 col-md-12 mt-lg-2 col-sm-12 body-medium">
+            <svg viewBox="0 0 487.88 430.09">
+              <circle
+                cx="215.68"
+                cy="215.74"
+                r="212.46"
+                style="fill: #151f85"
+                id="coherent"
+                class="circle-value"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-html="true"
+                title="<h6>Coherent and adaptable</h6>"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              />
+              <circle
+                cx="215.68"
+                cy="253.2"
+                r="175"
+                style="fill: #3264c8"
+                id="lnob"
+                class="circle-value"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-html="true"
+                title="<h6>Universal and Leave no one behind</h6>"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              />
+              <circle
+                cx="215.68"
+                cy="284.76"
+                r="143.44"
+                style="fill: #5a87cd"
+                id="comprehensive"
+                class="circle-value"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-html="true"
+                title="<h6>Comprehensive</h6>"
+                data-aos="fade-up"
+                data-aos-duration="900"
+              />
+              <circle
+                cx="215.68"
+                cy="320.91"
+                r="107.29"
+                style="fill: #82afdc"
+                id="sustainable"
+                class="circle-value"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-html="true"
+                title="<h6>Sustainable and responsive</h6>"
+                data-aos="fade-up"
+                data-aos-duration="1100"
+              />
+              <circle
+                cx="215.68"
+                cy="365.7"
+                r="62.49"
+                style="fill: #bedcfa"
+                id="social-dialogue"
+                class="circle-value"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-html="true"
+                title="<h6>Based on inclusive social dialogue</h6>"
+                data-aos="fade-up"
+                data-aos-duration="1300"
+              />
+              <g id="text-content" data-aos="fade-up" data-aos-duration="3000">
+                <text
+                  transform="translate(186.1 335.74)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.01904296875em;
+                  "
+                >
+                  Governments
+                </text>
+                <text
+                  transform="translate(226.84 367.35)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Employers
+                </text>
+                <text
+                  transform="translate(161.63 367.51)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                  "
+                >
+                  <tspan style="letter-spacing: -0.013997395833333334em">
+                    W
+                  </tspan>
+                  <tspan
+                    x="8.45"
+                    y="0"
+                    style="letter-spacing: 0.0020616319444444445em"
+                  >
+                    o
+                  </tspan>
+                  <tspan
+                    x="14"
+                    y="0"
+                    style="letter-spacing: 0.007975260416666666em"
+                  >
+                    r
+                  </tspan>
+                  <tspan
+                    x="18.02"
+                    y="0"
+                    style="letter-spacing: -0.01904296875em"
+                  >
+                    k
+                  </tspan>
+                  <tspan
+                    x="23.14"
+                    y="0"
+                    style="letter-spacing: 0.004014756944444444em"
+                  >
+                    e
+                  </tspan>
+                  <tspan
+                    x="28.4"
+                    y="0"
+                    style="letter-spacing: 0.016981336805555556em"
+                  >
+                    r
+                  </tspan>
+                  <tspan x="32.51" y="0">s</tspan>
+                </text>
+                <text
+                  transform="translate(191.76 401.5)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Civil society
+                </text>
+                <text
+                  transform="translate(155.56 272.87)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Financial and administrative
+                  <tspan x="33.88" y="10.8">governance</tspan>
+                </text>
+                <text
+                  transform="translate(277.22 314.87)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Costing
+                  <tspan x="9.04" y="10.8">and</tspan>
+                  <tspan x="-2.73" y="21.6">financing</tspan>
+                </text>
+                <text
+                  transform="translate(136.54 289.65)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Legal
+                  <tspan x="-13.21" y="10.8">frameworks</tspan>
+                </text>
+                <text
+                  transform="translate(116.67 320.27)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Data and
+                  <tspan x="1.63" y="10.8">statistics</tspan>
+                </text>
+                <text
+                  transform="translate(187.92 231.18)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Policy design
+                  <tspan style="letter-spacing: -0.01904296875em">
+                    <tspan x="-19.81" y="10.8">Adaptation to new and</tspan>
+                  </tspan>
+                  <tspan x="-16.88" y="21.6">emerging challenges</tspan>
+                </text>
+                <text
+                  transform="translate(257.47 295.05)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Strategies
+                </text>
+                <text
+                  transform="translate(280.64 358.12)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Culture
+                </text>
+                <text
+                  transform="translate(126.98 358.12)"
+                  style="
+                    font-size: 9px;
+                    fill: #230050;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  MIS
+                </text>
+                <text
+                  transform="translate(139.2 192.77)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Maternity
+                </text>
+                <text
+                  transform="rotate(-.56 17002.4454953 -17096.70884292)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Child &amp; family benefits
+                  <tspan x="11.73" y="10.8">Survivor benefits</tspan>
+                </text>
+                <text
+                  transform="translate(76.81 270.48)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Disability
+                </text>
+                <text
+                  transform="translate(301.74 159.16)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.019097222222222224em;
+                  "
+                >
+                  Persons with
+                  <tspan style="letter-spacing: -0.018988715277777776em">
+                    <tspan x="5.84" y="10.8">disabilities</tspan>
+                  </tspan>
+                </text>
+                <text
+                  transform="translate(136.31 48.76)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Link with
+                  <tspan x="-7.92" y="10.8">formalization</tspan>
+                </text>
+                <text
+                  transform="translate(249.7 48.76)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Link with
+                  <tspan x="-8.88" y="10.8">green policies</tspan>
+                </text>
+                <text
+                  transform="translate(324.94 79.62)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Link with
+                  <tspan x="-11.04" y="10.8">labour market</tspan>
+                  <tspan x="-16.83" y="21.6">and employment</tspan>
+                  <tspan x="4.68" y="32.4">policies</tspan>
+                </text>
+                <text
+                  transform="translate(62.13 85.02)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Link with
+                  <tspan x="4.49" y="10.8">labour</tspan>
+                  <tspan x="-1.62" y="21.6">migration</tspan>
+                </text>
+                <text
+                  transform="translate(90.23 233.19)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Employment
+                  <tspan x="14.71" y="10.8">injury</tspan>
+                </text>
+                <text
+                  transform="translate(118.49 212.66)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Sickness
+                </text>
+                <text
+                  transform="translate(258.01 192.77)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.019097222222222224em;
+                  "
+                >
+                  Old age
+                </text>
+                <text
+                  transform="translate(256.08 212.66)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Unemployment
+                </text>
+                <text
+                  transform="translate(292.33 233.19)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Long term
+                  <tspan x="14.04" y="10.8">care</tspan>
+                </text>
+                <text
+                  transform="translate(320.26 270.48)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Health
+                </text>
+                <text
+                  transform="translate(247.75 116.72)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Victims of
+                  <tspan x="-12.64" y="10.8">climate change</tspan>
+                </text>
+                <text
+                  transform="translate(138.78 113.99)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Informal
+                  <tspan x="-.93" y="10.8">economy</tspan>
+                </text>
+                <text
+                  transform="translate(80.55 159.16)"
+                  style="
+                    font-size: 9px;
+                    fill: #fff;
+                    font-family: Noto Sans;
+                    font-weight: 300;
+                    letter-spacing: -0.018988715277777776em;
+                  "
+                >
+                  Gender
+                  <tspan x="-7.31" y="10.8">responsive</tspan>
+                </text>
+              </g>
+              <g id="partnerships">
+                <path
+                  d="M216.91 345.38a5.16 5.16 0 0 1 .22 1.51l.29-.28h261.69v-1.23Z"
+                  style="fill: #fff"
+                />
+                <path
+                  d="M479.16 348a2 2 0 1 0-1.57-1.57 2 2 0 0 0 1.57 1.57Zm-261.92-.28a2 2 0 1 0-1.58-1.57 2 2 0 0 0 1.58 1.57Z"
+                  style="fill: #fff"
+                />
+                <text
+                  transform="translate(389.63 360.95)"
+                  style="
+                    font-size: 10px;
+                    fill: #fa3c4b;
+                    font-family: NotoSans-Bold, Noto Sans;
+                    font-weight: 700;
+                    letter-spacing: -0.032421875em;
+                  "
+                >
+                  P
+                  <tspan x="5.96" y="0" style="letter-spacing: -0.0228515625em">
+                    a
+                  </tspan>
+                  <tspan
+                    x="11.77"
+                    y="0"
+                    style="letter-spacing: 0.00400390625em"
+                  >
+                    r
+                  </tspan>
+                  <tspan
+                    x="16.35"
+                    y="0"
+                    style="letter-spacing: -0.01884765625em"
+                  >
+                    tn
+                  </tspan>
+                  <tspan
+                    x="26.88"
+                    y="0"
+                    style="letter-spacing: -0.01474609375em"
+                  >
+                    e
+                  </tspan>
+                  <tspan
+                    x="32.65"
+                    y="0"
+                    style="letter-spacing: -0.00947265625em"
+                  >
+                    r
+                  </tspan>
+                  <tspan
+                    x="37.09"
+                    y="0"
+                    style="letter-spacing: -0.0166015625em"
+                  >
+                    s
+                  </tspan>
+                  <tspan x="41.9" y="0" style="letter-spacing: -0.02421875em">
+                    h
+                  </tspan>
+                  <tspan
+                    x="48.23"
+                    y="0"
+                    style="letter-spacing: -0.02255859375em"
+                  >
+                    i
+                  </tspan>
+                  <tspan
+                    x="51.05"
+                    y="0"
+                    style="letter-spacing: -0.0123046875em"
+                  >
+                    p
+                  </tspan>
+                  <tspan x="57.26" y="0" style="letter-spacing: -0.025em">
+                    s:
+                  </tspan>
+                  <tspan
+                    style="
+                      font-size: 9px;
+                      fill: #fc8a93;
+                      font-family: NotoSans, Noto Sans;
+                      font-weight: 400;
+                      letter-spacing: -0.019422743055555556em;
+                    "
+                  >
+                    <tspan x="-23.8" y="11">U</tspan>
+                    <tspan
+                      x="-17.4"
+                      y="11"
+                      style="letter-spacing: -0.0166015625em"
+                    >
+                      SP
+                    </tspan>
+                    <tspan
+                      x="-7.31"
+                      y="11"
+                      style="letter-spacing: -0.020724826388888888em"
+                    >
+                      2
+                    </tspan>
+                    <tspan
+                      x="-2.54"
+                      y="11"
+                      style="letter-spacing: -0.009223090277777778em"
+                    >
+                      0
+                    </tspan>
+                    <tspan
+                      x="2.33"
+                      y="11"
+                      style="letter-spacing: -0.0008680555555555555em"
+                    >
+                      3
+                    </tspan>
+                    <tspan
+                      x="7.28"
+                      y="11"
+                      style="letter-spacing: -0.008355034722222222em"
+                    >
+                      0
+                    </tspan>
+                    <tspan
+                      x="12.17"
+                      y="11"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      ,
+                    </tspan>
+                    <tspan
+                      x="16.3"
+                      y="11"
+                      style="letter-spacing: -0.0166015625em"
+                    >
+                      S
+                    </tspan>
+                    <tspan
+                      x="21.09"
+                      y="11"
+                      style="letter-spacing: -0.020833333333333332em"
+                    >
+                      P
+                    </tspan>
+                    <tspan
+                      x="26.35"
+                      y="11"
+                      style="letter-spacing: 0.027777777777777776em"
+                    >
+                      I
+                    </tspan>
+                    <tspan
+                      x="29.65"
+                      y="11"
+                      style="letter-spacing: -0.025065104166666668em"
+                    >
+                      A
+                    </tspan>
+                    <tspan
+                      x="35.18"
+                      y="11"
+                      style="letter-spacing: -0.08723958333333333em"
+                    >
+                      C
+                    </tspan>
+                    <tspan
+                      x="40.08"
+                      y="11"
+                      style="letter-spacing: 0.004340277777777778em"
+                    >
+                      -
+                    </tspan>
+                    <tspan
+                      x="43.18"
+                      y="11"
+                      style="letter-spacing: -0.0026041666666666665em"
+                    >
+                      B
+                    </tspan>
+                    <tspan
+                      x="49"
+                      y="11"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      ,
+                    </tspan>
+                    <tspan
+                      x="53.14"
+                      y="11"
+                      style="letter-spacing: -0.03700086805555555em"
+                    >
+                      P
+                    </tspan>
+                    <tspan
+                      x="58.25"
+                      y="11"
+                      style="letter-spacing: -0.008463541666666666em"
+                    >
+                      4
+                    </tspan>
+                    <tspan
+                      x="63.13"
+                      y="11"
+                      style="letter-spacing: -0.0026041666666666665em"
+                    >
+                      H
+                    </tspan>
+                    <tspan
+                      x="69.78"
+                      y="11"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      ,
+                    </tspan>
+                    <tspan
+                      x="73.92"
+                      y="11"
+                      style="letter-spacing: -0.016059027777777776em"
+                    >
+                      I
+                    </tspan>
+                    <tspan
+                      x="76.82"
+                      y="11"
+                      style="letter-spacing: 0.017578125em"
+                    >
+                      F
+                    </tspan>
+                    <tspan
+                      x="81.65"
+                      y="11"
+                      style="letter-spacing: 0.0003255208333333333em"
+                    >
+                      I
+                    </tspan>
+                    <tspan
+                      x="84.71"
+                      y="11"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      s
+                    </tspan>
+                  </tspan>
+                  <tspan
+                    style="
+                      font-size: 9px;
+                      fill: #fc8a93;
+                      font-family: NotoSans, Noto Sans;
+                      font-weight: 400;
+                      letter-spacing: -0.013671875em;
+                    "
+                  >
+                    <tspan x="-.82" y="21">U</tspan>
+                    <tspan
+                      x="5.64"
+                      y="21"
+                      style="letter-spacing: -0.025065104166666668em"
+                    >
+                      N
+                    </tspan>
+                    <tspan
+                      x="14.36"
+                      y="21"
+                      style="letter-spacing: -0.0166015625em"
+                    >
+                      S
+                    </tspan>
+                    <tspan
+                      x="19.15"
+                      y="21"
+                      style="letter-spacing: -0.022677951388888888em"
+                    >
+                      P
+                    </tspan>
+                    <tspan
+                      x="24.39"
+                      y="21"
+                      style="letter-spacing: -0.025065104166666668em"
+                    >
+                      F
+                    </tspan>
+                    <tspan
+                      x="30.95"
+                      y="21"
+                      style="letter-spacing: -0.015950520833333332em"
+                    >
+                      in
+                    </tspan>
+                    <tspan
+                      x="38.55"
+                      y="21"
+                      style="letter-spacing: -0.007052951388888889em"
+                    >
+                      i
+                    </tspan>
+                    <tspan
+                      x="40.81"
+                      y="21"
+                      style="letter-spacing: -0.009223090277777778em"
+                    >
+                      t
+                    </tspan>
+                    <tspan
+                      x="43.97"
+                      y="21"
+                      style="letter-spacing: -0.020833333333333332em"
+                    >
+                      i
+                    </tspan>
+                    <tspan
+                      x="46.11"
+                      y="21"
+                      style="letter-spacing: -0.011393229166666666em"
+                    >
+                      a
+                    </tspan>
+                    <tspan
+                      x="51.05"
+                      y="21"
+                      style="letter-spacing: -0.009331597222222222em"
+                    >
+                      t
+                    </tspan>
+                    <tspan
+                      x="54.22"
+                      y="21"
+                      style="letter-spacing: 0.0006510416666666666em"
+                    >
+                      i
+                    </tspan>
+                    <tspan
+                      x="56.54"
+                      y="21"
+                      style="letter-spacing: -0.017035590277777776em"
+                    >
+                      v
+                    </tspan>
+                    <tspan
+                      x="60.96"
+                      y="21"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      e
+                    </tspan>
+                  </tspan>
+                  <tspan
+                    style="
+                      font-size: 9px;
+                      fill: #fc8a93;
+                      font-family: NotoSans, Noto Sans;
+                      font-weight: 400;
+                      letter-spacing: -0.030707465277777776em;
+                    "
+                  >
+                    <tspan x="-16.38" y="31">W</tspan>
+                    <tspan
+                      x="-8.29"
+                      y="31"
+                      style="letter-spacing: -0.012261284722222222em"
+                    >
+                      o
+                    </tspan>
+                    <tspan
+                      x="-2.95"
+                      y="31"
+                      style="letter-spacing: -0.006184895833333333em"
+                    >
+                      r
+                    </tspan>
+                    <tspan x=".71" y="31" style="letter-spacing: -0.03515625em">
+                      k
+                    </tspan>
+                    <tspan
+                      x="5.2"
+                      y="31"
+                      style="letter-spacing: -0.010416666666666666em"
+                    >
+                      e
+                    </tspan>
+                    <tspan
+                      x="10.18"
+                      y="31"
+                      style="letter-spacing: 0.0029296875em"
+                    >
+                      r
+                    </tspan>
+                    <tspan
+                      x="13.93"
+                      y="31"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      s
+                    </tspan>
+                    <tspan
+                      x="20.13"
+                      y="31"
+                      style="letter-spacing: -0.014865451388888888em"
+                    >
+                      a
+                    </tspan>
+                    <tspan
+                      x="25.04"
+                      y="31"
+                      style="letter-spacing: -0.011067708333333334em"
+                    >
+                      n
+                    </tspan>
+                    <tspan
+                      x="30.5"
+                      y="31"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      d
+                    </tspan>
+                    <tspan
+                      x="37.93"
+                      y="31"
+                      style="letter-spacing: -0.010416666666666666em"
+                    >
+                      e
+                    </tspan>
+                    <tspan
+                      x="42.91"
+                      y="31"
+                      style="letter-spacing: -0.014865451388888888em"
+                    >
+                      m
+                    </tspan>
+                    <tspan
+                      x="51.19"
+                      y="31"
+                      style="letter-spacing: -0.011501736111111112em"
+                    >
+                      p
+                    </tspan>
+                    <tspan
+                      x="56.63"
+                      y="31"
+                      style="letter-spacing: -0.012261284722222222em"
+                    >
+                      l
+                    </tspan>
+                    <tspan
+                      x="58.84"
+                      y="31"
+                      style="letter-spacing: -0.017469618055555556em"
+                    >
+                      o
+                    </tspan>
+                    <tspan
+                      x="64.13"
+                      y="31"
+                      style="letter-spacing: -0.016384548611111112em"
+                    >
+                      y
+                    </tspan>
+                    <tspan
+                      x="68.57"
+                      y="31"
+                      style="letter-spacing: -0.010416666666666666em"
+                    >
+                      e
+                    </tspan>
+                    <tspan
+                      x="73.55"
+                      y="31"
+                      style="letter-spacing: 0.0029296875em"
+                    >
+                      r
+                    </tspan>
+                    <tspan
+                      x="77.29"
+                      y="31"
+                      style="letter-spacing: -0.025065104166666668em"
+                    >
+                      s
+                    </tspan>
+                  </tspan>
+                  <tspan
+                    style="
+                      font-size: 9px;
+                      fill: #fc8a93;
+                      font-family: NotoSans, Noto Sans;
+                      font-weight: 400;
+                      letter-spacing: -0.012478298611111112em;
+                    "
+                  >
+                    <tspan x="13.08" y="41">n</tspan>
+                    <tspan
+                      x="18.53"
+                      y="41"
+                      style="letter-spacing: -0.008029513888888888em"
+                    >
+                      e
+                    </tspan>
+                    <tspan x="23.54" y="41" style="letter-spacing: 0.0234375em">
+                      t
+                    </tspan>
+                    <tspan
+                      x="26.99"
+                      y="41"
+                      style="letter-spacing: -0.014756944444444444em"
+                    >
+                      w
+                    </tspan>
+                    <tspan
+                      x="33.94"
+                      y="41"
+                      style="letter-spacing: -0.012261284722222222em"
+                    >
+                      o
+                    </tspan>
+                    <tspan
+                      x="39.27"
+                      y="41"
+                      style="letter-spacing: -0.006076388888888889em"
+                    >
+                      r
+                    </tspan>
+                    <tspan
+                      x="42.93"
+                      y="41"
+                      style="letter-spacing: 0.009006076388888888em"
+                    >
+                      k
+                    </tspan>
+                    <tspan
+                      x="47.82"
+                      y="41"
+                      style="letter-spacing: -0.025065104166666668em"
+                    >
+                      s
+                    </tspan>
+                  </tspan>
+                  <tspan
+                    style="
+                      font-size: 9px;
+                      fill: #fc8a93;
+                      font-family: NotoSans, Noto Sans;
+                      font-weight: 400;
+                      letter-spacing: -0.006401909722222222em;
+                    "
+                  >
+                    <tspan x="-16.64" y="51">G</tspan>
+                    <tspan
+                      x="-10.15"
+                      y="51"
+                      style="letter-spacing: -0.012261284722222222em"
+                    >
+                      lo
+                    </tspan>
+                    <tspan
+                      x="-2.6"
+                      y="51"
+                      style="letter-spacing: -0.009982638888888888em"
+                    >
+                      b
+                    </tspan>
+                    <tspan
+                      x="2.84"
+                      y="51"
+                      style="letter-spacing: -0.015082465277777778em"
+                    >
+                      a
+                    </tspan>
+                    <tspan
+                      x="7.76"
+                      y="51"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      l
+                    </tspan>
+                    <tspan
+                      x="11.97"
+                      y="51"
+                      style="letter-spacing: -0.022243923611111112em"
+                    >
+                      c
+                    </tspan>
+                    <tspan
+                      x="16.09"
+                      y="51"
+                      style="letter-spacing: -0.009982638888888888em"
+                    >
+                      o
+                    </tspan>
+                    <tspan
+                      x="21.44"
+                      y="51"
+                      style="letter-spacing: -0.015082465277777778em"
+                    >
+                      a
+                    </tspan>
+                    <tspan
+                      x="26.35"
+                      y="51"
+                      style="letter-spacing: -0.016167534722222224em"
+                    >
+                      l
+                    </tspan>
+                    <tspan
+                      x="28.53"
+                      y="51"
+                      style="letter-spacing: -0.007052951388888889em"
+                    >
+                      i
+                    </tspan>
+                    <tspan
+                      x="30.79"
+                      y="51"
+                      style="letter-spacing: -0.009223090277777778em"
+                    >
+                      t
+                    </tspan>
+                    <tspan
+                      x="33.95"
+                      y="51"
+                      style="letter-spacing: -0.015516493055555556em"
+                    >
+                      i
+                    </tspan>
+                    <tspan
+                      x="36.13"
+                      y="51"
+                      style="letter-spacing: -0.012261284722222222em"
+                    >
+                      o
+                    </tspan>
+                    <tspan
+                      x="41.47"
+                      y="51"
+                      style="letter-spacing: -0.025065104166666668em"
+                    >
+                      n
+                    </tspan>
+                    <tspan
+                      x="48.92"
+                      y="51"
+                      style="letter-spacing: -0.012803819444444444em"
+                    >
+                      fo
+                    </tspan>
+                    <tspan
+                      x="57.23"
+                      y="51"
+                      style="letter-spacing: -0.025065104166666668em"
+                    >
+                      r
+                    </tspan>
+                    <tspan
+                      x="62.84"
+                      y="51"
+                      style="letter-spacing: -0.0166015625em"
+                    >
+                      S
+                    </tspan>
+                    <tspan
+                      x="67.63"
+                      y="51"
+                      style="letter-spacing: -0.022677951388888888em"
+                    >
+                      P
+                    </tspan>
+                    <tspan
+                      x="72.87"
+                      y="51"
+                      style="letter-spacing: 0.0007595486111111111em"
+                    >
+                      F
+                    </tspan>
+                    <tspan
+                      x="77.55"
+                      y="51"
+                      style="letter-spacing: -0.024956597222222224em"
+                    >
+                      s
+                    </tspan>
+                  </tspan>
+                </text>
+              </g>
+            </svg>
+          </div>
+          <div
+            class="col-lg-5 col-md-12 mt-lg-2 col-sm-12 body-medium justify-content-end"
+          >
+            <h2
+              class="py-5 proposition-title"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
+              Our value proposition
+            </h2>
+            <p
+              class="white text-end value-text"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              Based on inclusive social dialogue and the application of
+              international social security standards, the Flagship Programme
+              supports Member States in building national social protection
+              systems that are sustainable and adapted to new and emerging
+              challenges, are universal and leave no one behind, are
+              comprehensive across the life cycle and are coherent with other
+              policies. Through partnerships, the Flagship Programme increases
+              ownership for universal social protection and the application of
+              international social security standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Blog Section End -->
+
+    <div class="section section-margin theory-of-change">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 section-margin-top" data-aos="fade-up" data-aos-duration="2000">
+                <h2 class="mt-5">Theory of change</h2>
+              <p class="me-auto">
+                The first phase of the Flagship Programme laid the foundations for the development of robust social protection systems in 21 priority countries through concrete institutional changes leading to impacts on people. The second phase builds on these achievements, expanding to 50 countries, and is based on three inter-linking pillars.
+                </p>
+            </div>
+            <div class="col-lg-12 col-md-12 mt-lg-2 col-sm-12 justify-content-center">
+                <h4 data-aos="fade-in" data-aos-duration="700" class="mt-5 dark-blue">
+                  Theory
+                  of change diagram
+                </h4>
+              </div>
+              <div class="py-5 d-lg-block d-md-block col-lg-12 col-md-12 mt-lg-2 d-sm-none">
+                <img
+                  data-aos="fade-in" data-aos-duration="700"
+                  src="../assets/images/illustrations/theory-of-change-diagram-horizontal.svg"
+                  alt="Theory of Change"
+                />
+              </div>
+          </div>
+        </div>
+        <div class="container inter-linking-pillars">
+            <div class="sticky-top" id="inter-linking-pillars">
+                <h3 class="fw-bold pt-5 pt-xl-5 pb-xl-2">
+                    Inter-linking pillars
+                </h3>
+              <div id="list-pillars" class="list-group list-group-horizontal">
+                <a class="list-group-item list-group-item-action" href="#pillar-1"><h4>Pillar 1</h4></a>
+                <a class="list-group-item list-group-item-action" href="#pillar-2"><h4>Pillar 2</h4></a>
+                <a class="list-group-item list-group-item-action" href="#pillar-3"><h4>Pillar 3</h4></a>
+              </div>
+            </div>
+              <article
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="800"
+                id="pillar-1"
+              >
+                <div class="info-image">
+                    <img
+                    class="fit-image"
+                    src="../assets/images/about/pillar_1.png"
+                    alt="Pillar 1"
+                  />
+                </div>
+                <div>
+                    <h4 class="fw-bold">
+                        Supporting 50 priority countries to develop their national
+                        social protection systems following a three-pillar approach.
+                      </h4>
+                      <p>
+                        <span> Step 1:</span> Adopting a national social protection
+                        strategy <br>
+
+                        <span>Step 2:</span> Designing and reforming schemes <br>
+
+                        <span>Step 3:</span> Improving operations
+                      </p>
+                       <p>Read more about each
+                        step <a href="../countries.html" alt="Countries page">here<i class="icofont-rounded-right"></i></a></p>
+                </div>
+              </article>
+              <article
+                id="pillar-2"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="800"
+              >
+
+                  <div class="info-image"  >
+                    <img
+                  class="fit-image"
+                  src="../assets/images/about/pillar_2.jpg"
+                  alt="Pillar 2"
+                />
+                  </div>
+                  <div>
+                    <h4 class="fw-bold">
+                        Supporting countries in 16 thematic areas and strengthening the
+                        knowledge base.
+                      </h4>
+                      <p>
+                        Through the Technical Support Facility (TSF), ILO thematic experts
+                        support their colleagues in country to provide very specific
+                        expertise such as drafting or reviewing legal documents,
+                        ensuring gender sensitive social protection or putting in place
+                        management information systems in alignment with ILO social
+                        protection standards. The experiences at country level feed
+                        back into the thematic work across 16 thematic areas and allow
+                        for the development of knowledge products, exchanges across
+                        countries and south-south learning.
+                        <p> Learn more about each
+                        thematic area <a href="../thematic-areas.html" alt="Thematic areas"> here<i class="icofont-rounded-right"></i></a></p>
+                      </p>
+                </div>
+              </article>
+              <article
+              id="pillar-3"
+                data-aos="fade-up"
+                data-aos-duration="700"
+                data-aos-delay="800"
+                class="mb-5"
+              >
+                <div class="info-image" >
+                    <img
+                    class="fit-image"
+                    src="../assets/images/about/pillar_3.png"
+                    alt="Pillar 3"
+                  />
+                </div>
+                <div>
+                    <h4 class="fw-bold">
+                        Working with social partners, development partners, the UN
+                        family, and the social protection community.
+                      </h4>
+                      <p>
+                        Strategic partnerships support pillar 1 and 2 to multiply impact
+                        and promote a rights-based social protection approach in line
+                        with ILO standards. The ILO involvement in delivering as One UN
+                        is at the heart of these partnerships. The Flagship Programme
+                        collaborates with employers and workers organisations through
+                        the Global Business Network for Social Protection Floors as well
+                        as the Social Protection, Freedom and Justice for Workers
+                        Network. Development partners are crucial for achieving policy
+                        coherence at country level, and in creating a global coalition
+                        for social protection. <p>See more of our Partners
+                          <a href="../partnerships.html" alt="Partnerships"> here<i class="icofont-rounded-right"></i></a></p>
+
+              </div>
+              </article>
+        </div>
+      </div>
 
     <!-- Start Footer Area Wrapper -->
     <footer class="section footer-area">
@@ -801,33 +2132,32 @@
                     </li>
                   </ul>
                 </div>
-                <div class="footer-tagline footer-row">
-                  <div>
-                    <a href="https://www.ilo.org/global/lang--en/index.htm">
-                      <img
-                        class="footer-logo"
-                        src="assets/images/logo/ilo_logo.svg"
-                        alt="Back to ILO main site"
-                      />
-                    </a>
-                  </div>
-                  <div class="headline">
-                    <h1>
-                      <i class="icon red">play_arrow</i>Advancing social
-                      justice, promoting decent work
-                    </h1>
-                    <p>ILO is a specialized agency of the United Nations</p>
-                  </div>
+              </div>
+              <div class="footer-tagline footer-row">
+                <div>
+                  <a href="https://www.ilo.org/global/lang--en/index.htm">
+                    <img
+                      class="footer-logo"
+                      src="assets/images/logo/ilo_logo.svg"
+                      alt="Back to ILO main site"
+                    />
+                  </a>
+                </div>
+                <div class="headline">
+                  <h1>
+                    <span class="tri-bullet">►</span> Advancing social justice,
+                    promoting decent work
+                  </h1>
+                  <p>ILO is a specialized agency of the United Nations</p>
                 </div>
               </div>
             </div>
-            <!-- End Footer Widget Area -->
           </div>
+          <!-- End Footer Widget Area -->
         </div>
       </div>
     </footer>
     <!--== End Footer Area Wrapper ==-->
-
     <!-- Scroll Top Start -->
     <a href="#" class="scroll-top show" id="scroll-top">
       <i class="arrow-top icofont-rounded-up"></i>
@@ -848,10 +2178,11 @@
       </div>
       <div class="offcanvas-body">
         <!-- Mobile Menu Inner Wrapper Start -->
+
         <div class="p-0 mobile-menu-inner-wrapper">
           <!-- Mobile Menu Start -->
           <div class="header-logo me-auto">
-            <a href="../">
+            <a href="">
               <svg
                 id="logo-socpro"
                 class="logo-socpro"
@@ -1175,7 +2506,6 @@
             <i class="icon red">play_arrow</i> Building social protection floors
             for all
           </h1>
-
           <div class="mobile-navigation">
             <nav>
               <ul class="mt-0 mobile-menu">
@@ -1201,11 +2531,13 @@
                 <li><a href="countries.html">Countries</a></li>
                 <li><a href="thematic-areas.html">Thematic areas</a></li>
                 <li><a href="partnerships.html">Partnerships</a></li>
-                <li><a href="results-and-impact.html">Results and impact</a></li>
+                <li>
+                  <a href="results-and-impact.html">Results and impact</a>
+                </li>
                 <li><a href="our-team.html">Our team</a></li>
                 <li><a href="funding-gaps.html">Funding gaps</a></li>
                 <li><a href="library.html">Library</a></li>
-                <li><a href="funding-gaps.html">News and events</a></li>
+                <li><a href="news-and-events.html">News and events</a></li>
               </ul>
             </nav>
           </div>
@@ -1274,14 +2606,15 @@
     <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
     <script src="assets/js/vendor/modernizr-3.11.2.min.js"></script>
-
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <!-- Plugins JS -->
     <script src="assets/js/plugins/aos.min.js"></script>
     <script src="assets/js/plugins/swiper-bundle.min.js"></script>
     <script src="assets/js/plugins/parallax.min.js"></script>
-
+    <script src="assets/js/plugins/splitting.min.js"></script>
     <script src="assets/js/plugins/rellax.min.js"></script>
     <script src="assets/js/plugins/menuspy.js"></script>
+    <script src="https://unpkg.com/accordion-js@3.2.0/dist/accordion.min.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
@@ -1292,5 +2625,6 @@
 
     <!--Main JS-->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/lib/our-approach.js"></script>
   </body>
 </html>

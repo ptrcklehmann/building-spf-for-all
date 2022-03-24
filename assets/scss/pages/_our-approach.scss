@@ -1,0 +1,169 @@
+.our-approach {
+    & .subtitle {
+        line-height: 1.2;
+    }
+    & .description {
+        color: $ilo-dark-blue;
+    }
+    & .sub-turquoise {
+        color: $ilo-turquoise;
+        font-size: 3rem;
+    }
+    & .dark-blue {
+        color: $ilo-dark-blue;
+    }
+    & .approach-globe {
+        width: 60%;
+    }
+    .accordion-life-whithout-social-protection {
+        width: 100%;
+        margin: 20px auto;
+        height: 100%;
+        max-height: 30vh;
+        overflow: hidden;
+        & .item {
+            width: 10%;
+            float: left;
+            cursor: pointer;
+            margin-right: 1rem;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            height: 115px;
+            overflow: hidden;
+            transition: $transition-base;
+            & img {
+                width: 100%;
+                max-height: 105px;
+                transition: width 2ms ease-in-out, height 2ms ease-in-out;
+                padding-right: 0.5rem;
+            }
+            &:hover {
+                opacity: (0.8);
+            }
+        }
+        & .info {
+            width: 0;
+            float: left;
+            height: fit-content;
+            display: none;
+            border-left: 1px solid $ilo-blue;
+            padding: 0.5rem;
+            overflow: hidden;
+            & .icon {
+                margin-left: -0.3rem;
+            }
+        }
+    }
+}
+.theory-of-change {
+    & .dark-blue {
+        color: $ilo-dark-blue;
+    }
+}
+.inter-linking-pillars {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+
+    & .row {
+        & h2 {
+            margin-top: 5rem;
+            color: #fff;
+        }
+    }
+    & .sticky-top {
+        z-index: 1;
+        padding-top: 1rem;
+    }
+    & article {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr 2fr;
+        padding: 10rem 0 0 0;
+        align-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+        scroll-padding-top: 1rem;
+        & a {
+            color: $ilo-blue;
+            & i {
+                vertical-align: middle;
+                &::before {
+                    transition: $transition-base;
+                }
+            }
+            &:hover {
+                color: $ilo-legacy-blue;
+                & i::before {
+                    margin-left: 0.1rem;
+                }
+            }
+        }
+    }
+    & .info-image {
+        width: 100%;
+    }
+    & h3 {
+        color: $ilo-dark-blue;
+        top: 1rem;
+        line-height: 1.2;
+        font-size: 1.8rem;
+        background: #fff;
+        z-index: -1;
+        margin-bottom: 0;
+        scroll-snap-align: start;
+        scroll-snap-type: proximity;
+    }
+    & .list-group {
+        & .list-group-item-action:focus,
+        .list-group-item-action:hover {
+            background: #fff;
+        }
+        & .list-group-item {
+            padding: 0;
+            border: none;
+            transition: $transition-base;
+            & h4 {
+                color: $ilo-canary;
+                top: 1rem;
+                line-height: 1.2;
+                background: #fff;
+                z-index: -1;
+                margin-bottom: 0;
+                width: fit-content;
+                padding-right: 1rem;
+                transition: $transition-base;
+            }
+            &.active {
+                background: #fff;
+                &:nth-child(1) {
+                    & h4 {
+                        border-bottom: 2px solid $ilo-turquoise;
+                    }
+                }
+                &:nth-child(2) {
+                    & h4 {
+                        border-bottom: 2px solid $ilo-red;
+                    }
+                }
+                &:nth-child(3) {
+                    & h4 {
+                        border-bottom: 2px solid $ilo-blue;
+                    }
+                }
+                & h4 {
+                    color: $ilo-blue;
+                }
+            }
+        }
+    }
+    .bd-heading {
+        top: 9rem;
+        scroll-margin-top: 9rem;
+        & h4 {
+            line-height: 1.5;
+        }
+    }
+}

@@ -29,21 +29,17 @@ m/*----------------------------------------*/
     }
 
     .pillar-1 {
-        width: fit-content;
-        padding: 0.6rem 1rem;
-        border-radius: 1px;
-        transition: 0.4s;
-        border: 2px solid;
-        border-color: $ilo-turquoise;
-        background: #d2fbfb;
-        & a {
-            text-decoration: none;
-            & h4 {
-                color: $ilo-blue;
-                width: 100%;
-                margin-bottom: 0;
-                line-height: 1.5;
-            }
+        & h4 {
+            color: $ilo-blue;
+            top: 1rem;
+            line-height: 1.2;
+            background: #fff;
+            z-index: -1;
+            margin-bottom: 0;
+            width: fit-content;
+            padding-right: 1rem;
+            transition: $transition-base;
+            border-bottom: 2px solid $ilo-turquoise;
         }
     }
     & .countries-desc {
@@ -87,7 +83,67 @@ m/*----------------------------------------*/
         grid-template-columns: 1fr 1fr;
         padding: 5rem 0;
         align-content: center;
-        align-items: center;
+        align-items: end;
+        @media #{$tablet-device, $large-mobile, $extra-small-mobile } {
+            grid-template-columns: 1fr;
+        }
+        & a {
+            color: $ilo-blue;
+            & i {
+                vertical-align: middle;
+                &::before {
+                    transition: $transition-base;
+                }
+            }
+            &:hover {
+                color: $ilo-legacy-blue;
+                & i::before {
+                    margin-left: 0.1rem;
+                }
+            }
+        }
+        & .country-example {
+            position: relative;
+            height: 90%;
+            & p {
+                width: 55%;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+            & a {
+                font-size: 14px;
+            }
+            & .country-flag {
+                clip-path: circle(50% at 50% 50%);
+                position: absolute;
+                right: 10rem;
+                top: 0rem;
+                width: 5rem;
+                height: 5rem;
+                background-size: cover;
+                background-position: center;
+                @media #{$large-mobile, $extra-small-mobile } {
+                    right: 8rem;
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            & .country-project-img {
+                border: 2px solid $ilo-dark-blue;
+                clip-path: circle(50% at 50% 50%);
+                position: absolute;
+                right: 2rem;
+                top: 2rem;
+                width: 10rem;
+                height: 10rem;
+                background-size: cover;
+                background-position: right center;
+                @media #{$large-mobile, $extra-small-mobile } {
+                    width: 8rem;
+                    height: 8rem;
+                }
+            }
+        }
     }
     & .info-image {
         width: 100%;
@@ -98,17 +154,18 @@ m/*----------------------------------------*/
         scroll-margin-top: 2rem;
         line-height: 1.2;
         font-size: 1.8rem;
-        background:#fff;
+        background: #fff;
         z-index: -1;
         margin-bottom: 0;
     }
     & .list-group {
-        & .list-group-item-action:focus, .list-group-item-action:hover {
+        & .list-group-item-action:focus,
+        .list-group-item-action:hover {
             background: #fff;
         }
         & .list-group-item {
             padding: 0;
-            border: none;;
+            border: none;
             transition: $transition-base;
             & h3 {
                 color: $ilo-canary;
@@ -116,7 +173,7 @@ m/*----------------------------------------*/
                 scroll-margin-top: 2rem;
                 line-height: 1.2;
                 font-size: 1.8rem;
-                background:#fff;
+                background: #fff;
                 z-index: -1;
                 margin-bottom: 0;
                 width: fit-content;
@@ -131,7 +188,6 @@ m/*----------------------------------------*/
                 }
             }
         }
-
     }
     .bd-heading {
         top: 9rem;

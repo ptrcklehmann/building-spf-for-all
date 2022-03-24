@@ -73,17 +73,19 @@
     /*---------------------------
   Life without social protection menuspy
 -----------------------------------*/
-    const lavalampElm=document.querySelector('.lavalamp')
-    const positionLavalamp=function(activeElm) {
-      lavalampElm.style.width=activeElm.elm.offsetWidth+'px'
-      lavalampElm.style.left=activeElm.elm.offsetLeft+'px'
-    }
-    const elm=document.querySelector('#info-header')
-    const ms=new MenuSpy(elm,{
-      threshold: 45,
-      callback: positionLavalamp
-    })
-    $(elm&&positionLavalamp({elm: elm.querySelector('li.active')}))
+    // const lavalampElm=document.querySelector('.lavalamp')
+    // const positionLavalamp=function(activeElm) {
+    //   lavalampElm.style.width=activeElm.elm.offsetWidth+'px'
+    //   lavalampElm.style.left=activeElm.elm.offsetLeft+'px'
+    // }
+    // const elm=document.querySelector('#info-header')
+    // const ms=new MenuSpy(elm,{
+    //   threshold: 45,
+    //   callback: positionLavalamp
+    // })
+    // $(elm&&positionLavalamp({elm: elm.querySelector('li.active')}))
+
+
   })
 
 

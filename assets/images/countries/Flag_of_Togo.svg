@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 558.6 500" style="enable-background:new 0 0 558.6 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#006A4E;}
+	.st1{fill:#FFCE00;}
+	.st2{fill:#D21034;}
+	.st3{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M0,0h558.6v500H0V0z"/>
+<path class="st1" d="M0,100h558.6v100H0V100z"/>
+<path class="st2" d="M0,0h273.8v350H0V0z"/>
+<path class="st1" d="M0,300h558.6v100H0V300z"/>
+<g transform="translate(150 150)">
+	<g id="b">
+		<path id="a" class="st3" d="M-26.2-95L-55.6-4.6L-8,10.8"/>
+		<g transform="scale(-1 1)">
+			<path id="a_00000008831836546604587060000010585454480255261585_" class="st3" d="M-26.2-95L3.1-4.6l-47.6,15.5"/>
+		</g>
+	</g>
+	<g id="c">
+		<g transform="rotate(72)">
+			<g id="b_00000057145852544958278860000015760191473984180643_">
+				<path id="a_00000072987573525724995300000004367442857026474647_" class="st3" d="M64.1-29.4h-95v50"/>
+				<g transform="scale(-1 1)">
+					<path id="a_00000052093759281974985500000011871173296677871772_" class="st3" d="M64.1-29.4l-76.9,55.8L-42.1-14"/>
+				</g>
+			</g>
+		</g>
+		<g transform="rotate(216)">
+			<g id="b_00000154406874415254522000000003841685498217103753_">
+				<path id="a_00000021102076047363965910000011561066896612243630_" class="st3" d="M-82,76.9L-5.2,21l-29.4-40.5"/>
+				<g transform="scale(-1 1)">
+					<path id="a_00000174591418401490021740000008171632909255485847_" class="st3" d="M-82,76.9l29.4-90.4L-5.1,2"/>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g transform="rotate(72)">
+		<g id="c_00000012460305803317469670000011102517886239502765_">
+			<g transform="rotate(72)">
+				<g id="b_00000110456961881611451770000017930953840314872746_">
+					<path id="a_00000093867263153877687000000014778538140957184164_" class="st3" d="M29.6,76.9L0.3-13.5L-47.3,2"/>
+					<g transform="scale(-1 1)">
+						<path id="a_00000042696522341912191200000011954389590246280067_" class="st3" d="M29.6,76.9L-47.2,21l29.4-40.5"/>
+					</g>
+				</g>
+			</g>
+			<g transform="rotate(216)">
+				<g id="b_00000175318024240642712690000010153284247286154663_">
+					<path id="a_00000097463050959260857370000007916044410440073885_" class="st3" d="M-116.6-29.4l76.9,55.8L-10.3-14"/>
+					<g transform="scale(-1 1)">
+						<path id="a_00000029010097736099579500000013759231089561997238_" class="st3" d="M-116.6-29.4l95,0v50"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

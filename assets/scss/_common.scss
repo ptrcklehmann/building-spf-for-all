@@ -358,7 +358,7 @@ img {
         font-family: "Overpass", sans-serif;
         font-weight: 300;
         color: $ilo-dark-blue;
-        margin-bottom: 0;
+        margin: 1rem 0;
         @media #{$tablet-device, $large-mobile} {
             font-size: 23px;
         }
@@ -367,18 +367,16 @@ img {
         transition: $transition-base;
         font-family: "Overpass", sans-serif;
         font-weight: 200;
-        color: $ilo-turquoise;
-        padding-top: 1rem;
-        margin-bottom: 0;
+        margin: 1rem 0;
         width: 80%;
         @media #{$tablet-device, $large-mobile} {
             font-size: 19px;
             width: 100%;
         }
         & > mark {
-            color: $ilo-red;
-            background: $ilo-dark-blue;
-            padding: 0.1rem 0;
+            color: $ilo-dark-blue;
+            background: $ilo-turquoise;
+            padding: 3px 0;
         }
     }
     & h5 {
@@ -611,18 +609,24 @@ img {
 }
 .tooltip {
     opacity: 1 !important;
+
 }
 .tooltip-inner {
     background: $ilo-grey;
     border-radius: 1px;
     font-family: Noto Sans, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     line-height: normal;
     color: $ilo-dark-blue;
     padding: 1rem 1rem;
     text-align: left;
+    min-width: 300px;
     & span {
         font-weight: bold;
+    }
+    & h3 {
+        font-size: 16px;
+        margin-bottom: 3px;
     }
     & a {
         color: $ilo-blue;
@@ -1044,27 +1048,18 @@ img {
 }
 
 .thematic-areas {
-    & .pillar2 {
-        flex: 1 1 auto;
-        align-self: center;
-        display: inline-block;
-        vertical-align: center;
-        align-content: center;
-        zoom: 1;
-        *display: inline;
-        padding: 0.6rem 1rem;
-        border-radius: 1px;
-        transition: 0.4s;
-        border: 2px solid;
-        border-color: $ilo-red;
-        background: #fed8db;
-        & a {
-            text-decoration: none;
-        }
+    & .pillar-2 {
         & h4 {
             color: $ilo-blue;
-            line-height: 1.5;
+            top: 1rem;
+            line-height: 1.2;
+            background: #fff;
+            z-index: -1;
             margin-bottom: 0;
+            width: fit-content;
+            padding-right: 1rem;
+            transition: $transition-base;
+            border-bottom: 2px solid $ilo-red;
         }
     }
     & a {
@@ -1109,13 +1104,22 @@ img {
 .text-red {
     color: $ilo-red !important;
 }
+.thematic-thumbnails {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+}
 .thematic-card {
     transition: $transition-base;
+    display: flex;
+    align-items: flex-end;
     padding: 0.6rem;
     min-height: 10rem;
     width: 100%;
     height: 100%;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
     font-weight: 600;
     & span {

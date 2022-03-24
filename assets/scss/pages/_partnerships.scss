@@ -9,27 +9,18 @@
     & .dark-blue {
         color: $ilo-dark-blue;
     }
-    & .pillar3 {
-        flex: 1 1 auto;
-        align-self: center;
-        display: inline-block;
-        vertical-align: center;
-        align-content: center;
-        zoom: 1;
-        *display: inline;
-        padding: 0.6rem 1rem;
-        border-radius: 1px;
-        transition: 0.4s;
-        border: 2px solid;
-        border-color: $ilo-blue;
-        background: #bedcfa;
-        & a {
-            text-decoration: none;
-        }
+    & .pillar-3 {
         & h4 {
             color: $ilo-blue;
-            line-height: 1.5;
+            top: 1rem;
+            line-height: 1.2;
+            background: #fff;
+            z-index: -1;
             margin-bottom: 0;
+            width: fit-content;
+            padding-right: 1rem;
+            transition: $transition-base;
+            border-bottom: 2px solid $ilo-blue;
         }
     }
     & .list-group {
