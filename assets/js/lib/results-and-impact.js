@@ -347,5 +347,41 @@ document.addEventListener('DOMContentLoaded',function() {
         }, function() {
           $(this).children('.collapse').collapse('hide');
         }
-      );
+      )
+      tippy('.potential-coverage',{
+        content: "<p class='mb-0'>Number of persons potentially covered by the strategy</p>",
+        allowHTML: true,
+        animation: 'scale',
+        theme: 'bspffa',
+    })
+    tippy('.comprehensiveness',{
+        content: "<p class='mb-0'>Number of persons with more comprehensive social protection (additional risks covered)​</p>",
+        allowHTML: true,
+        animation: 'scale',
+        theme: 'bspffa',
+    })
+    tippy('.legal-coverage',{
+        content: "<p class='mb-0'>Number of persons entitled to social protection by law</p>",
+        allowHTML: true,
+        animation: 'scale',
+        theme: 'bspffa',
+    })
+    tippy('.effective',{
+        content: "<p class='mb-0'>Number of persons effectively covered (registered and contributing)</p>",
+        allowHTML: true,
+        animation: 'scale',
+        theme: 'bspffa',
+    })
+    tippy('.adequacy',{
+        content: "<p class='mb-0'>Number of persons with higher benefits (adequacy)</p>",
+        allowHTML: true,
+        animation: 'scale',
+        theme: 'bspffa',
+    })
+    tippy('.access',{
+        content: "<p class='mb-0'>Number of persons with a better access to social protection (single registry, online application, one stop service…)</p>",
+        allowHTML: true,
+        animation: 'scale',
+        theme: 'bspffa',
+    })
 })

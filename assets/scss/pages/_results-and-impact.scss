@@ -17,7 +17,6 @@
             text-decoration: underline;
         }
     }
-
     & .accordion {
         height: 4.8rem;
         display: flex;
@@ -132,6 +131,11 @@
         &.i3 {
             background: $ilo-dark-blue !important;
             color: white;
+        }
+    }
+    & #results-framework-graph {
+        & .text {
+            cursor: pointer;
         }
     }
 }
