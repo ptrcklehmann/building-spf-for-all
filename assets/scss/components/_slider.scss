@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: flex-end;
     & .hero-background {
+        background-size: 170%;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
     }
