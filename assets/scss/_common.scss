@@ -45,6 +45,7 @@ body {
     color: $body-color;
     line-height: 1.5;
     visibility: visible;
+    scroll-behavior: smooth;
     // overflow: scroll;
     &[dir="rtl"] {
         text-align: right;
