@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Building social protection floors for all</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pakistan | Building social protection floors for all</title>
-    <meta
-      name="site_name"
-      content="Building social
-    protection floors for all"
+    <meta name="site_name" content="Building social
+    protection floors for all" />
+    <meta name="title" content="Home | Building social
+    protection floors for all" />
+    <meta name="description" content="The ILO's Global Flagship Programme on Building Social Protection Floors for All, launched in early 2016, supports the implementation of social protection systems including floors, guided by ILO's social security standards."
     />
-    <meta
-      name="title"
-      content="Home | Building social
-    protection floors for all"
-    />
-    <meta
-      name="description"
-      content="The ILO's Global Flagship Programme on Building Social Protection Floors for All, launched in early 2016, supports the implementation of social protection systems including floors, guided by ILO's social security standards."
-    />
-    <link
-      rel="canonical"
-      href="https://ptrcklehmann.github.io/building-spf-for-all/"
-    />
+    <link rel="canonical" href="https://ptrcklehmann.github.io/building-spf-for-all/" />
     <meta name="type" content="article" />
     <meta name="article:published_time" content="2022-02-18T11:08:40+03:00" />
     <meta name="article:author" content="ILO's Social Protection Department" />
@@ -46,15 +36,10 @@
     <link rel="stylesheet" href="assets/css/vendor/fontawesome.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/icofont.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/tippy.js@6/animations/scale.css"
-    />
-    <link
-    rel="stylesheet"
-    href="https://unpkg.com/tippy.js@6/themes/light.css"
-  />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-toward.css" />
 
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
 
     <!-- Plugins CSS (All Plugins Files) -->
     <link rel="stylesheet" href="assets/css/plugins/splide.min.css" />
@@ -64,56 +49,69 @@
     <link rel="stylesheet" href="assets/css/plugins/nice-select.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/imagehover.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/custom-select.css" />
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 
-    <!--
-<link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
-<link rel="stylesheet" href="assets/css/plugins/plugins.min.css">
-<link rel="stylesheet" href="assets/css/style.min.css">
--->
 
     <!-- Main Style CSS -->
-
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
 
-  <body>
+<body>
     <!-- Header Section Start -->
     <!-- topbar -->
     <div class="topbar">
-      <div class="container align-items-center justify-content-between me-auto">
-        <a href="https://www.ilo.org/global/lang--en/index.htm"
-          ><i class="icofont-dotted-left"></i> ILO
-        </a>
-        <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
-          Social Protection platform
-        </a>
-        <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
-          World Social Protection Data Dashboard
-        </a>
-      </div>
+        <div class="container justify-content-between d-flex">
+            <div class="left-links">
+                <a href="https://www.ilo.org/global/lang--en/index.htm">
+                    <i class="icofont-dotted-left"></i> ILO</a>
+                <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
+            Social Protection platform</a
+          >
+          <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
+            World Social Protection Data Dashboard
+          </a>
+            </div>
+            <div class="right-links">
+                <select class="language-select">
+            <option value="EN">EN</option>
+            <option value="ES">ES</option>
+            <option value="FR">FR</option>
+          </select>
+                <div class="dropdown">
+                    <a class="dropdown-toggle hidden-xs hidden-sm" id="dropdownLogin" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5">
+              Login
+            </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownLogin">
+                        <form id="login" name="login" action="/gimi/Login.action" method="post" class="form">
+                            <input type="hidden" name="sid" value="3" id="login_sid" />
+                            <div class="form-group">
+                                <label class="sr-only" for="UserName">Login</label>
+                                <input type="text" name="user.login" size="40" maxlength="40" value="" id="UserName" class="form-control mb-1" placeholder="Login" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="Password">Password</label>
+                                <input type="password" name="user.password" size="20" maxlength="20" id="Password" class="form-control mb-1" autocomplete="on" placeholder="Password" required="" />
+                            </div>
+                            <input type="submit" value="Login" id="login_general_submit" name="general.submit" class="btn btn-blue btn-small" />
+                        </form>
+                        <a href="ShowLooseLogin.action">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Header -->
-    <div class="header" data-aos="fade-up"
-    data-aos-duration="800">
-      <div class="sticky-header">
-        <div class="container">
-          <div class="header-wrapper">
-            <!-- Header Logo Start -->
-            <div class="header-logo me-auto">
-              <a href="/building-spf-for-all/">
-                <svg
-                  id="logo-socpro"
-                  class="logo-socpro"
-                  data-name="logo-socpro"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1183.78 255.35"
-                >
+    <div class="header">
+        <div class="sticky-header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <!-- Header Logo Start -->
+                    <div class="header-logo me-auto">
+                        <a href="/building-spf-for-all/">
+                            <svg id="logo-socpro" class="logo-socpro" data-name="logo-socpro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1183.78 255.35">
                   <path
                     d="M407.24,223.14v-46.2h7.92v46.2Z"
                     transform="translate(-52.91 -147.76)"
@@ -424,34 +422,30 @@
                     transform="translate(-52.91 -147.76)"
                   />
                 </svg>
-              </a>
-            </div>
-            <!-- Header Logo End -->
-            <div class="headline ms-lg-auto pt-lg-1">
-              <h1>
-                <i class="icon red">play_arrow</i>Building social protection
-                floors for all
-              </h1>
-              <p>ILO Global Flagship Programme</p>
-            </div>
-            <!-- Header Menu Start -->
-            <div class="main-menu d-none d-lg-flex">
-              <nav class="nav">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-                <a class="nav-link" href="our-approach.html">Our approach</a>
-                <a class="nav-link" href="countries.html">Countries</a>
-                <a class="nav-link" href="thematic-areas.html"
-                  >Thematic areas</a
+                        </a>
+                    </div>
+                    <!-- Header Logo End -->
+                    <div class="headline ms-lg-auto pt-lg-1">
+                        <h1>
+                            <i class="icon red">play_arrow</i>Building social protection floors for all
+                        </h1>
+                        <p>ILO Global Flagship Programme</p>
+                    </div>
+                    <!-- Header Menu Start -->
+                    <div class="main-menu d-none d-lg-flex">
+                        <nav class="nav">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link" href="our-approach.html">Our approach</a>
+                            <a class="nav-link" href="countries.html">Countries</a>
+                            <a class="nav-link" href="thematic-areas.html">Thematic areas</a
                 >
                 <a class="nav-link" href="partnerships.html">Partnerships</a>
-                <a class="nav-link" href="results-and-impact.html"
-                  >Results and impact</a
+                            <a class="nav-link" href="results-and-impact.html">Results and impact</a
                 >
                 <a class="nav-link" href="our-team.html">Our team</a>
-                <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
-                <a class="nav-link" href="library.html">Library</a>
-                <a class="nav-link" href="news-and-events.html"
-                  >News and events</a
+                            <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
+                            <a class="nav-link" href="library.html">Library</a>
+                            <a class="nav-link" href="news-and-events.html">News and events</a
                 >
               </nav>
             </div>
@@ -470,36 +464,27 @@
                   <span></span>
                   <span></span>
                 </a>
-                <!-- Default Hambarger Action Button End -->
-              </div>
+                            <!-- Default Hambarger Action Button End -->
+                    </div>
+                </div>
+                <!-- Header Actions End -->
             </div>
-            <!-- Header Actions End -->
-          </div>
         </div>
-      </div>
+    </div>
     </div>
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
-    <div class="hero-layout" data-aos="fade-up"
-    data-aos-duration="800">
-      <figure
-        class="hero-background home"
-        data-rellax-speed="3"
-        style="
+    <div class="hero-layout" data-aos="fade-up" data-aos-duration="800">
+        <figure class="hero-background home" data-rellax-speed="3" style="
           background-image: url('assets/images/slider/esteban-benites.jpg');
-        "
-      ></figure>
-      <div class="section">
-        <!-- Hero background -->
-        <div class="container">
-          <div class="row align-items-start">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
-              <svg
-                class="double-bullet"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 965 992.05"
-              >
+        "></figure>
+        <div class="section">
+            <!-- Hero background -->
+            <div class="container">
+                <div class="row align-items-start">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+                        <svg class="double-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 965 992.05">
                 <polygon
                   points="965 496.02 105.86 0 105.86 992.05 965 496.02"
                   style="fill: #9ef2f2"
@@ -509,23 +494,22 @@
                   style="fill: #1e2dbe"
                 />
               </svg>
-            </div>
-          </div>
-          <article
-            class="uuper_box home p-b-60"
-          >
-            <h1 data-aos="fade-up"
-            data-aos-duration="1800">Building social protection floors for all</h1>
-            <h2 data-aos="fade-up"
-            data-aos-duration="1300">ILO Global Flagship Programme</h2>
-            <h3 class="p-b-30" data-aos="fade-up"
-            data-aos-duration="1400">
-              <mark>Helping millions of people live in dignity.</mark>
-            </h3>
-          </article>
+                    </div>
+                </div>
+                <article class="uuper_box home p-b-60">
+                    <h1 data-aos="fade-up" data-aos-duration="1800">
+                        Building social protection floors for all
+                    </h1>
+                    <h2 data-aos="fade-up" data-aos-duration="1300">
+                        ILO Global Flagship Programme
+                    </h2>
+                    <h3 class="p-b-30" data-aos="fade-up" data-aos-duration="1400">
+                        <mark>Helping millions of people live in dignity.</mark>
+                    </h3>
+                </article>
 
-          <div class="col-lg-12 m-t-n60">
-            <small class="ms-auto strong-copyright">
+                <div class="col-lg-12 m-t-n60">
+                    <small class="ms-auto strong-copyright">
               <i class="icon">play_arrow</i>Photo: Esteban Benites</small
             >
           </div>
@@ -553,33 +537,32 @@
                   Programme
                 </h2>
               </div>
-              <p class="about-content__first-text"  data-aos="fade-up" data-aos-duration="700">
+              <p
+                class="about-content__first-text"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 The ILO's Global Flagship Programme on building social
                 protection floors for all, launched in early 2016, supports the
                 implementation of social protection systems including floors,
                 guided by ILO's social security standards.
               </p>
-              <p  data-aos="fade-up" data-aos-duration="700">
+              <p data-aos="fade-up" data-aos-duration="700">
                 Working across 50 priority countries, it aims to change the
                 lives of millions of people by 2025 and provide evidence on
                 ILO's contribution to the Sustainable Development Goals on
                 social protection.
               </p>
             </div>
-            <div class="home-sdgs"  data-aos="fade-up" data-aos-duration="900">
-              <figure
-                class="sdg-one one"
-
-              >
+            <div class="home-sdgs" data-aos="fade-up" data-aos-duration="900">
+              <figure class="sdg-one one">
                 <img
                   src="assets/images/sdgs/sdg-1.svg"
                   alt="1.3 End poverty in all its forms everywhere"
                 />
                 <p class="desc">End poverty in all its forms everywhere</p>
               </figure>
-              <figure
-                class="three sdg-three"
-              >
+              <figure class="three sdg-three">
                 <img
                   src="assets/images/sdgs/sdg-3.svg"
                   alt="3.8 Ensure healthy lives and promote well-being for all at all
@@ -605,12 +588,12 @@
                   src="assets/images/sdgs/sdg-8.svg"
                   alt="8.5 Achieve full and productive employment and decent work for all women and men, including for young people and persons with disabilities, and equal pay for work of equal value"
                   class="sdg-eight"
-                  />
+                />
                 <img
                   src="assets/images/sdgs/sdg-10.svg"
                   alt="10.4 Adopt policies, especially fiscal, wage, and social protection policies, and progressively achieve greater equality"
                   class="sdg-ten"
-                  />
+                />
                 <img
                   src="assets/images/sdgs/sdg-13.svg"
                   alt="Improve education, awareness-raising and human and institutional capacity on climate change mitigation, adaptation, impact reduction and early warning"
@@ -667,7 +650,8 @@
             <div class="text-left section-title">
               <h2
                 class="title text-red"
-                data-aos="fade-up" data-aos-duration="700"
+                data-aos="fade-up"
+                data-aos-duration="700"
               >
                 Our ambition
               </h2>
@@ -679,7 +663,8 @@
           <!-- Single Service Start -->
           <div
             class="single-service m-b-10"
-            data-aos="fade-up" data-aos-duration="700"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
             <div class="service-icon">
               <img
@@ -697,7 +682,8 @@
           <!-- Single Service Start -->
           <div
             class="single-service m-b-10"
-            data-aos="fade-up" data-aos-duration="700"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
             <div class="service-icon">
               <img
@@ -715,7 +701,8 @@
           <!-- Single Service Start -->
           <div
             class="single-service m-b-10"
-            data-aos="fade-up" data-aos-duration="700"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
             <div class="service-icon">
               <img
@@ -730,7 +717,8 @@
           <!-- Single Service Start -->
           <div
             class="single-service m-b-10"
-            data-aos="fade-up" data-aos-duration="700"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
             <div class="service-icon">
               <img
@@ -752,7 +740,8 @@
             <a
               href="results-and-impact.html"
               class="btn-turquoise btn-small m-t-50 ms-auto"
-              data-aos="fade-up" data-aos-duration="700"
+              data-aos="fade-up"
+              data-aos-duration="700"
               >Our results framework <i class="fa fa-angle-right"></i
             ></a>
           </div>
@@ -776,7 +765,8 @@
             <!-- Single Blog Wrapper Start -->
             <div
               class="single-blog-wrapper"
-              data-aos="fade-up" data-aos-duration="700"
+              data-aos="fade-up"
+              data-aos-duration="700"
             >
               <div class="single-blog-thumb">
                 <a class="image" href="#"
@@ -817,7 +807,8 @@
             <!-- Single Blog Wrapper Start -->
             <div
               class="single-blog-wrapper"
-              data-aos="fade-up" data-aos-duration="700"
+              data-aos="fade-up"
+              data-aos-duration="700"
             >
               <div class="single-blog-thumb">
                 <a class="image" href="#"
@@ -851,10 +842,16 @@
             <!-- Single Blog Wrapper End -->
           </div>
           <div class="col-lg-4 col-sm-6 upcomingEvents mb-5">
-            <h4 class="mb-2" data-aos="fade-up" data-aos-duration="700">Upcoming events</h4>
+            <h4 class="mb-2" data-aos="fade-up" data-aos-duration="700">
+              Upcoming events
+            </h4>
             <!-- Upcoming events Start -->
             <div class="accordion" id="upcomingEvents">
-              <div class="accordion-item" data-aos="fade-up" data-aos-duration="700">
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-duration="700"
+              >
                 <h2 class="accordion-header" id="headingOne">
                   <p class="event-date">10 March 2022</p>
                   <button
@@ -892,7 +889,11 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" data-aos="fade-up" data-aos-duration="900">
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-duration="900"
+              >
                 <h2 class="accordion-header" id="headingTwo">
                   <p class="event-date">16 - 17 March 2022</p>
                   <button
@@ -924,7 +925,11 @@
                   </div>
                 </div>
               </div>
-              <div class="accordion-item" data-aos="fade-up" data-aos-duration="1000">
+              <div
+                class="accordion-item"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 <h2 class="accordion-header" id="headingThree">
                   <p class="event-date">24 February 2022</p>
                   <button
@@ -964,9 +969,11 @@
           </div>
           <!-- Upcoming events End -->
         </div>
-        <div class="row" >
+        <div class="row">
           <div class="col-12">
-            <a data-aos="fade-up" data-aos-duration="700"
+            <a
+              data-aos="fade-up"
+              data-aos-duration="700"
               href="news-and-events.html"
               class="btn-turquoise btn-small ms-auto"
               >See all <i class="fa fa-angle-right"></i
@@ -987,7 +994,8 @@
 
           <div
             class="row justify-content-end"
-            data-aos="fade-up" data-aos-duration="700"
+            data-aos="fade-up"
+            data-aos-duration="700"
           >
             <div class="col-12">
               <div class="splide-key-publications">
@@ -1091,7 +1099,12 @@
     <div class="section section-margin">
       <div class="container">
         <div class="row">
-          <a href="#" data-aos="fade-up" data-aos-duration="700" class="m-auto btn-turquoise btn-arrow m-t-20 fw-bold">
+          <a
+            href="#"
+            data-aos="fade-up"
+            data-aos-duration="700"
+            class="m-auto btn-turquoise btn-arrow m-t-20 fw-bold"
+          >
             Become a development partner <i class="fa fa-play"></i>
           </a>
         </div>
@@ -1099,7 +1112,11 @@
     </div>
 
     <!-- Start Footer Area -->
-    <footer class="section footer-area" data-aos="fade-up" data-aos-duration="700">
+    <footer
+      class="section footer-area"
+      data-aos="fade-up"
+      data-aos-duration="700"
+    >
       <div class="footer-top overlay" data-bg-color="#230050">
         <div class="container">
           <div class="row">
@@ -1604,6 +1621,7 @@
 
     <script src="assets/js/plugins/rellax.min.js"></script>
     <script src="assets/js/plugins/menuspy.js"></script>
+    <script src="assets/js/plugins/custom-select.min.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 

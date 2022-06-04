@@ -1,9 +1,14 @@
 /*----------------------------------------*/
+
+
 /*  03. Component CSS
 /*----------------------------------------*/
+
+
 /*=======================================
     03.01 Header CSS
 =========================================*/
+
 // Header Section
 .header {
     position: absolute;
@@ -12,6 +17,7 @@
     transition: $transition-header;
     background: $ilo-blue;
 }
+
 .topbar {
     background: #151f85;
     height: 30px;
@@ -28,8 +34,13 @@
 }
 
 .topbar {
-    & > .container {
-        & > a {
+    & .container {
+        & .left-links {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+        }
+        & a {
             font-size: 12px;
             line-height: 1.3;
             font-weight: 300;
@@ -71,17 +82,87 @@
                 }
             }
         }
-        & > a:hover {
+        & a:hover {
             color: $ilo-white;
             &::after {
                 color: $ilo-white;
                 width: 100%;
             }
-            & > i::before {
+            &>i::before {
                 color: $ilo-white;
             }
         }
     }
+    & .right-links {
+        width: fit-content;
+        display: flex;
+        & .language-select {
+            display: none;
+        }
+        & .dropdown {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            & .dropdown-toggle {
+                cursor: pointer;
+                padding-left: .5rem;
+                padding-right: 0rem;
+                line-height: 15.2px;
+                border-left: none;
+                border-right: none;
+                transition: all 0.3s ease-in-out 0s;
+                &::after {
+                    background: none;
+                    display: none;
+                }
+            }
+            .dropdown-menu {
+                position: absolute;
+                top: 30px;
+                left: 0;
+                z-index: 1000;
+                padding: 1rem 1rem .5rem 1rem;
+                width: fit-content;
+                font-size: 14px;
+                background-color: #fff;
+                border-radius: 1px;
+                & .form-control {
+                    display: block;
+                    width: 10rem;
+                    padding: .2rem;
+                    font-size: 12px;
+                    line-height: 15.2px;
+                    background-color: #fff;
+                    background-image: none;
+                    border: 1px solid #ccc;
+                    border-radius: 1px;
+                    &:focus {
+                        color: #212529;
+                        background-color: #fff;
+                        border-color: none;
+                        outline: 0;
+                        box-shadow: none;
+                    }
+                }
+                & a {
+                    color: $ilo-white-unselected;
+                    padding: 0;
+                    &:hover {
+                        color: $ilo-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tippy-box[data-theme~="language"] {
+    background-color: $ilo-legacy-blue;
+    color: $ilo-white-unselected;
+    font-size: 12px;
+    line-height: 15.6px;
+    padding: 0;
+    margin: 0;
 }
 
 // Header Wapper
@@ -101,6 +182,7 @@
         padding: 15px 0;
     }
 }
+
 // Headline
 .headline {
     display: flex;
@@ -111,6 +193,7 @@
     height: auto;
     transition: all 0s ease-in-out;
 }
+
 .headline h1 {
     color: $ilo-white;
     white-space: nowrap;
@@ -143,7 +226,9 @@
     }
 }
 
+
 /* Main Menu */
+
 .main-menu {
     display: flex;
     justify-content: center;
@@ -169,7 +254,7 @@
             }
             &:last-child {
                 border-right: 0;
-                & > a {
+                &>a {
                     padding-right: 0;
                 }
             }
@@ -245,7 +330,9 @@
     }
 }
 
+
 /* Logo */
+
 .header-logo a svg {
     margin: 0;
     height: 80px;
@@ -277,7 +364,6 @@
                     font-size: 15px;
                     color: $white;
                     padding: 0 10px;
-
                     &:hover {
                         color: $secondary;
                     }
@@ -286,10 +372,10 @@
         }
     }
 }
+
 .header-actions {
     display: flex;
     align-items: center;
-
     & .header-action-search {
         color: $white;
         font-size: 15px;
@@ -301,10 +387,12 @@
         }
     }
 }
+
 .header-action-btn {
     background: none;
     border: 0px;
 }
+
 .header-action-btn-menu {
     line-height: 100px;
     position: relative;

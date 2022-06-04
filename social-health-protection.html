@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Thematic area: Social Health Protection | Building social protection
-      floors for all
+        Thematic area: Social Health Protection | Building social protection floors for all
     </title>
 
     <!-- Favicons -->
@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="assets/css/plugins/odometer.min.css" />
     <link rel="stylesheet" href="assets/css/plugins/magnific-popup-min.css" />
     <link rel="stylesheet" href="assets/css/plugins/imagehover.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/custom-select.css" />
+
 
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
@@ -38,44 +40,63 @@
 -->
 
     <!-- Main Style CSS -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-<link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-  <body>
+<body>
     <!-- Header Section Start -->
     <!-- topbar -->
     <div class="topbar">
-      <div class="container align-items-center justify-content-between me-auto">
-        <a href="https://www.ilo.org/global/lang--en/index.htm"
-          ><i class="icofont-dotted-left"></i> ILO
-        </a>
-        <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
-          Social Protection platform
-        </a>
-        <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
-          World Social Protection Data Dashboard
-        </a>
-      </div>
+        <div class="container justify-content-between d-flex">
+            <div class="left-links">
+                <a href="https://www.ilo.org/global/lang--en/index.htm">
+                    <i class="icofont-dotted-left"></i> ILO</a>
+                <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
+            Social Protection platform</a
+          >
+          <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
+            World Social Protection Data Dashboard
+          </a>
+            </div>
+            <div class="right-links">
+                <select class="language-select">
+            <option value="EN">EN</option>
+            <option value="ES">ES</option>
+            <option value="FR">FR</option>
+          </select>
+                <div class="dropdown">
+                    <a class="dropdown-toggle hidden-xs hidden-sm" id="dropdownLogin" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5">
+              Login
+            </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownLogin">
+                        <form id="login" name="login" action="/gimi/Login.action" method="post" class="form">
+                            <input type="hidden" name="sid" value="3" id="login_sid" />
+                            <div class="form-group">
+                                <label class="sr-only" for="UserName">Login</label>
+                                <input type="text" name="user.login" size="40" maxlength="40" value="" id="UserName" class="form-control mb-1" placeholder="Login" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="Password">Password</label>
+                                <input type="password" name="user.password" size="20" maxlength="20" id="Password" class="form-control mb-1" autocomplete="on" placeholder="Password" required="" />
+                            </div>
+                            <input type="submit" value="Login" id="login_general_submit" name="general.submit" class="btn btn-blue btn-small" />
+                        </form>
+                        <a href="ShowLooseLogin.action">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Header -->
     <div class="header">
-      <div class="sticky-header">
-        <div class="container">
-          <div class="header-wrapper">
-            <!-- Header Logo Start -->
-            <div class="header-logo me-auto">
-              <a href="/building-spf-for-all/">
-                <svg
-                  id="logo-socpro"
-                  class="logo-socpro"
-                  data-name="logo-socpro"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1183.78 255.35"
-                >
+        <div class="sticky-header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <!-- Header Logo Start -->
+                    <div class="header-logo me-auto">
+                        <a href="/building-spf-for-all/">
+                            <svg id="logo-socpro" class="logo-socpro" data-name="logo-socpro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1183.78 255.35">
                   <path
                     d="M407.24,223.14v-46.2h7.92v46.2Z"
                     transform="translate(-52.91 -147.76)"
@@ -386,34 +407,30 @@
                     transform="translate(-52.91 -147.76)"
                   />
                 </svg>
-              </a>
-            </div>
-            <!-- Header Logo End -->
-            <div class="headline ms-lg-auto pt-lg-1">
-              <h1>
-                <span class="tri-bullet">►</span> Building social protection
-                floors for all
-              </h1>
-              <p>ILO Global Flagship Programme</p>
-            </div>
-            <!-- Header Menu Start -->
-            <div class="main-menu d-none d-lg-flex">
-              <nav class="nav">
-                <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a>
-                <a class="nav-link" href="our-approach.html">Our approach</a>
-                <a class="nav-link" href="countries.html">Countries</a>
-                <a class="nav-link active" href="thematic-areas.html"
-                  >Thematic areas</a
+                        </a>
+                    </div>
+                    <!-- Header Logo End -->
+                    <div class="headline ms-lg-auto pt-lg-1">
+                        <h1>
+                            <span class="tri-bullet">►</span> Building social protection floors for all
+                        </h1>
+                        <p>ILO Global Flagship Programme</p>
+                    </div>
+                    <!-- Header Menu Start -->
+                    <div class="main-menu d-none d-lg-flex">
+                        <nav class="nav">
+                            <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a>
+                            <a class="nav-link" href="our-approach.html">Our approach</a>
+                            <a class="nav-link" href="countries.html">Countries</a>
+                            <a class="nav-link active" href="thematic-areas.html">Thematic areas</a
                 >
                 <a class="nav-link" href="partnerships.html">Partnerships</a>
-                <a class="nav-link" href="results-and-impact.html"
-                  >Results and impact</a
+                            <a class="nav-link" href="results-and-impact.html">Results and impact</a
                 >
                 <a class="nav-link" href="our-team.html">Our team</a>
-                <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
-                <a class="nav-link" href="library.html">Library</a>
-                <a class="nav-link" href="news-and-events.html"
-                  >News and events</a
+                            <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
+                            <a class="nav-link" href="library.html">Library</a>
+                            <a class="nav-link" href="news-and-events.html">News and events</a
                 >
               </nav>
             </div>
@@ -432,40 +449,28 @@
                   <span></span>
                   <span></span>
                 </a>
-                <!-- Default Hambarger Action Button End -->
-              </div>
+                            <!-- Default Hambarger Action Button End -->
+                    </div>
+                </div>
+                <!-- Header Actions End -->
             </div>
-            <!-- Header Actions End -->
-          </div>
         </div>
-      </div>
+    </div>
     </div>
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
     <div class="sub-hero-layout">
-      <figure
-        class="hero-background"
-        data-rellax-speed="3"
-        style="
+        <figure class="hero-background" data-rellax-speed="3" style="
           background-image: url('assets/images/thematics/large-images/social-health-protection.jpg');
           background-position: 25%;
-        "
-      ></figure>
-      <div class="section">
-        <!-- Hero background -->
-        <div class="container">
-          <div class="row m-b-2 align-items-start">
-            <div
-              class="col-lg-6 pb-3"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              <svg
-                class="double-bullet"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 965 992.05"
-              >
+        "></figure>
+        <div class="section">
+            <!-- Hero background -->
+            <div class="container">
+                <div class="row m-b-2 align-items-start">
+                    <div class="col-lg-6 pb-3" data-aos="fade-up" data-aos-duration="2000">
+                        <svg class="double-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 965 992.05">
                 <polygon
                   points="965 496.02 105.86 0 105.86 992.05 965 496.02"
                   style="fill: #9ef2f2"
@@ -475,27 +480,18 @@
                   style="fill: #1e2dbe"
                 />
               </svg>
-            </div>
-          </div>
-          <article
-            class="uuper_box hero-heading"
-            data-aos="fade-up"
-            data-aos-duration="1800"
-          >
-            <h5>Thematic areas</h5>
-            <h1>Social health protection</h1>
-            <h4>Access to quality services and financial protection</h4>
-            <a
-              href="https://www.social-protection.org/gimi/RessourcePDF.action?id=57567"
-              class="btn-red btn-small m-t-25 me-auto"
-              target="_blank"
-            >
+                    </div>
+                </div>
+                <article class="uuper_box hero-heading" data-aos="fade-up" data-aos-duration="1800">
+                    <h5>Thematic areas</h5>
+                    <h1>Social health protection</h1>
+                    <h4>Access to quality services and financial protection</h4>
+                    <a href="https://www.social-protection.org/gimi/RessourcePDF.action?id=57567" class="btn-red btn-small m-t-25 me-auto" target="_blank">
               See our service brochure
               <i class="fa fa-angle-right"></i>
             </a>
-          </article>
-          <small class="strong-copyright"
-            ><i class="fa fa-play"></i> Photo: ILO/Marcel Crozet</small
+                </article>
+                <small class="strong-copyright"><i class="fa fa-play"></i> Photo: ILO/Marcel Crozet</small
           >
         </div>
       </div>
@@ -1415,6 +1411,7 @@
 
     <script src="assets/js/plugins/rellax.min.js"></script>
     <script src="assets/js/plugins/menuspy.js"></script>
+    <script src="assets/js/plugins/custom-select.min.js"></script>
 
     <!-- Use the minified version files listed below for better performance and remove the files listed above -->
 

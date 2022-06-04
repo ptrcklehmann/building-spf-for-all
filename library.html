@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library | Building social protection floors for all</title>
@@ -33,44 +34,63 @@
 -->
 
     <!-- Main Style CSS -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Header Section Start -->
     <!-- topbar -->
     <div class="topbar">
-      <div class="container align-items-center justify-content-between me-auto">
-        <a href="https://www.ilo.org/global/lang--en/index.htm"
-          ><i class="icofont-dotted-left"></i> ILO
-        </a>
-        <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
-          Social Protection platform
-        </a>
-        <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
-          World Social Protection Data Dashboard
-        </a>
-      </div>
+        <div class="container justify-content-between d-flex">
+            <div class="left-links">
+                <a href="https://www.ilo.org/global/lang--en/index.htm">
+                    <i class="icofont-dotted-left"></i> ILO</a>
+                <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
+            Social Protection platform</a
+          >
+          <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
+            World Social Protection Data Dashboard
+          </a>
+            </div>
+            <div class="right-links">
+                <select class="language-select">
+            <option value="EN">EN</option>
+            <option value="ES">ES</option>
+            <option value="FR">FR</option>
+          </select>
+                <div class="dropdown">
+                    <a class="dropdown-toggle hidden-xs hidden-sm" id="dropdownLogin" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5">
+              Login
+            </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownLogin">
+                        <form id="login" name="login" action="/gimi/Login.action" method="post" class="form">
+                            <input type="hidden" name="sid" value="3" id="login_sid" />
+                            <div class="form-group">
+                                <label class="sr-only" for="UserName">Login</label>
+                                <input type="text" name="user.login" size="40" maxlength="40" value="" id="UserName" class="form-control mb-1" placeholder="Login" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="Password">Password</label>
+                                <input type="password" name="user.password" size="20" maxlength="20" id="Password" class="form-control mb-1" autocomplete="on" placeholder="Password" required="" />
+                            </div>
+                            <input type="submit" value="Login" id="login_general_submit" name="general.submit" class="btn btn-blue btn-small" />
+                        </form>
+                        <a href="ShowLooseLogin.action">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Header -->
     <div class="header">
-      <div class="sticky-header">
-        <div class="container">
-          <div class="header-wrapper">
-            <!-- Header Logo Start -->
-            <div class="header-logo me-auto">
-              <a href="/building-spf-for-all/">
-                <svg
-                  id="logo-socpro"
-                  class="logo-socpro"
-                  data-name="logo-socpro"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1183.78 255.35"
-                >
+        <div class="sticky-header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <!-- Header Logo Start -->
+                    <div class="header-logo me-auto">
+                        <a href="/building-spf-for-all/">
+                            <svg id="logo-socpro" class="logo-socpro" data-name="logo-socpro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1183.78 255.35">
                   <path
                     d="M407.24,223.14v-46.2h7.92v46.2Z"
                     transform="translate(-52.91 -147.76)"
@@ -381,36 +401,32 @@
                     transform="translate(-52.91 -147.76)"
                   />
                 </svg>
-              </a>
-            </div>
-            <!-- Header Logo End -->
-            <div class="headline ms-lg-auto pt-lg-1">
-              <h1>
-                <i class="icon red">play_arrow</i>Building social protection
-                floors for all
-              </h1>
-              <p>ILO Global Flagship Programme</p>
-            </div>
-            <!-- Header Menu Start -->
-            <div class="main-menu d-none d-lg-flex">
-              <nav class="nav">
-                <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a>
-                <a class="nav-link" href="our-approach.html">Our approach</a>
-                <a class="nav-link" href="countries.html">Countries</a>
-                <a class="nav-link" href="thematic-areas.html"
-                  >Thematic areas</a
+                        </a>
+                    </div>
+                    <!-- Header Logo End -->
+                    <div class="headline ms-lg-auto pt-lg-1">
+                        <h1>
+                            <i class="icon red">play_arrow</i>Building social protection floors for all
+                        </h1>
+                        <p>ILO Global Flagship Programme</p>
+                    </div>
+                    <!-- Header Menu Start -->
+                    <div class="main-menu d-none d-lg-flex">
+                        <nav class="nav">
+                            <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a>
+                            <a class="nav-link" href="our-approach.html">Our approach</a>
+                            <a class="nav-link" href="countries.html">Countries</a>
+                            <a class="nav-link" href="thematic-areas.html">Thematic areas</a
                 >
                 <a class="nav-link" href="partnerships.html">Partnerships</a>
-                <a class="nav-link" href="results-and-impact.html"
-                  >Results and impact</a
+                            <a class="nav-link" href="results-and-impact.html">Results and impact</a
                 >
                 <a class="nav-link" aria-current="page" href="our-team.html"
                   >Our team</a
                 >
                 <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
-                <a class="nav-link active" href="library.html">Library</a>
-                <a class="nav-link" href="news-and-events.html"
-                  >News and events</a
+                            <a class="nav-link active" href="library.html">Library</a>
+                            <a class="nav-link" href="news-and-events.html">News and events</a
                 >
               </nav>
             </div>
@@ -429,40 +445,28 @@
                   <span></span>
                   <span></span>
                 </a>
-                <!-- Default Hambarger Action Button End -->
-              </div>
+                            <!-- Default Hambarger Action Button End -->
+                    </div>
+                </div>
+                <!-- Header Actions End -->
             </div>
-            <!-- Header Actions End -->
-          </div>
         </div>
-      </div>
+    </div>
     </div>
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
     <div class="sub-hero-layout">
-      <figure
-        class="hero-background"
-        data-rellax-speed="2"
-        style="
+        <figure class="hero-background" data-rellax-speed="2" style="
           background-image: url('assets/images/slider/library.jpg');
           background-position: top;
-        "
-      ></figure>
-      <div class="section">
-        <!-- Hero background -->
-        <div class="container">
-          <div class="row m-b-2 align-items-start">
-            <div
-              class="pb-3 col-lg-6"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              <svg
-                class="double-bullet"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 965 992.05"
-              >
+        "></figure>
+        <div class="section">
+            <!-- Hero background -->
+            <div class="container">
+                <div class="row m-b-2 align-items-start">
+                    <div class="pb-3 col-lg-6" data-aos="fade-up" data-aos-duration="2000">
+                        <svg class="double-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 965 992.05">
                 <polygon
                   points="965 496.02 105.86 0 105.86 992.05 965 496.02"
                   style="fill: #9ef2f2"
@@ -472,55 +476,44 @@
                   style="fill: #1e2dbe"
                 />
               </svg>
-            </div>
-          </div>
-          <article
-            class="uuper_box hero-heading m-b-n20"
-            data-aos="fade-up"
-            data-aos-duration="1800"
-          >
-            <h1>Library</h1>
-          </article>
-          <div class="row justify-content-end">
-            <div class="col-lg-6" data-aos="fade-in" data-aos-duration="2000">
-              <small class="ms-auto strong-copyright">
+                    </div>
+                </div>
+                <article class="uuper_box hero-heading m-b-n20" data-aos="fade-up" data-aos-duration="1800">
+                    <h1>Library</h1>
+                </article>
+                <div class="row justify-content-end">
+                    <div class="col-lg-6" data-aos="fade-in" data-aos-duration="2000">
+                        <small class="ms-auto strong-copyright">
                 <i class="icon">play_arrow</i> Photo: Unsplash/M. Feeney
               </small>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <!-- Hero Section End -->
 
     <!-- Blog Grid Section Start -->
     <div class="section section-margin">
-      <div class="container">
-        <div class="row m-b-n60">
-          <div class="order-2 col-xl-12 col-lg-12 m-b-60 order-lg-1">
-            <!-- Sidebar Start -->
-            <div class="sidebar-wrapper m-b-n30">
-              <!-- Sidebar Widget Start -->
-              <div
-                class="sidebar-widget categories m-b-30"
-                data-aos="fade-up"
-                data-aos-duration="1300"
-              >
-                <ul class="sidebar-searchRange">
-                  <li>
-                    <p class="pe-2">Date:</p>
-                  </li>
-                  <li>
-                    <div class="year-slider"></div>
-                  </li>
-                  <li class="ms-auto">
-                    <p class="country-select pe-2">Country:</p>
-                  </li>
-                  <li>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                    >
+        <div class="container">
+            <div class="row m-b-n60">
+                <div class="order-2 col-xl-12 col-lg-12 m-b-60 order-lg-1">
+                    <!-- Sidebar Start -->
+                    <div class="sidebar-wrapper m-b-n30">
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget categories m-b-30" data-aos="fade-up" data-aos-duration="1300">
+                            <ul class="sidebar-searchRange">
+                                <li>
+                                    <p class="pe-2">Date:</p>
+                                </li>
+                                <li>
+                                    <div class="year-slider"></div>
+                                </li>
+                                <li class="ms-auto">
+                                    <p class="country-select pe-2">Country:</p>
+                                </li>
+                                <li>
+                                    <select class="form-select" aria-label="Default select example">
                       <option selected>All</option>
                       <optgroup label="Africa (26)">
                         <option value="Democratic Rep. of the Congo">
@@ -598,274 +591,234 @@
                         <option value="Uzbekistan">Uzbekistan</option>
                       </optgroup>
                     </select>
-                  </li>
-                </ul>
-                <ul class="sidebar-categories">
-                  <li><a class="active" href="#/">All</a></li>
-                  <li><a href="#/">Flagship Programme Reports</a></li>
-                  <li><a href="#/">World Social Protection Report</a></li>
-                  <li><a href="#/">Guides</a></li>
-                  <li><a href="#/">Quantitative Tools</a></li>
-                  <li><a href="#/">Country Briefs</a></li>
-                  <li><a href="#/">Relevant ILO Standards</a></li>
-                  <li><a href="#/">eLearning</a></li>
-                  <li><a href="#/">Webinars</a></li>
-                  <li class="ms-5 flex-fill">
-                    <form class="sidebar-form">
-                      <input
-                        class="searchbox-input"
-                        type="text"
-                        placeholder="Search"
-                      />
-                      <button class="searchbox-btn" type="submit">
+                                </li>
+                            </ul>
+                            <ul class="sidebar-categories">
+                                <li><a class="active" href="#/">All</a></li>
+                                <li><a href="#/">Flagship Programme Reports</a></li>
+                                <li><a href="#/">World Social Protection Report</a></li>
+                                <li><a href="#/">Guides</a></li>
+                                <li><a href="#/">Quantitative Tools</a></li>
+                                <li><a href="#/">Country Briefs</a></li>
+                                <li><a href="#/">Relevant ILO Standards</a></li>
+                                <li><a href="#/">eLearning</a></li>
+                                <li><a href="#/">Webinars</a></li>
+                                <li class="ms-5 flex-fill">
+                                    <form class="sidebar-form">
+                                        <input class="searchbox-input" type="text" placeholder="Search" />
+                                        <button class="searchbox-btn" type="submit">
                         <i class="fa fa-search"></i>
                       </button>
-                    </form>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Sidebar Widget End -->
-          <div class="order-2 col-xl-2 col-lg-2 m-b-60 order-lg-1">
-            <!-- Sidebar Start -->
-            <div class="sidebar-wrapper m-b-n30 me-0">
-              <!-- Sidebar Widget Start -->
-              <div
-                class="sidebar-widget m-b-30"
-                data-aos="fade-up"
-                data-aos-duration="1900"
-              >
-                <div class="sidebar-title-wrapper">
-                  <h4 class="sidebar-title">Tags</h4>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="blog-sidebar-tags">
-                  <a href="#/">Actuarial valuation or peer reviews​</a>
-                  <a href="#/">Feasibility study​</a>
-                  <a href="#/">Assessment based national dialogue (ABND)</a>
-                  <a href="#/">National social protection strategies</a>
-                  <a href="#/">Statistical support / monitoring framework​</a>
-                  <a href="#/">Ratification of ILS on social security​</a>
-                  <a href="#/">Legal drafting / assessments</a>
-                  <a href="#/">Administration / governance</a>
-                  <a href="#/">Information management systems</a>
-                  <a href="#/">Capacity building / trainings</a>
-                  <a href="#/">Coordination / delivery mechanisms</a>
-                  <a href="#/">COVID-19</a>
-                  <a href="#/">Financial / fiscal / costing</a>
-                  <a href="#/">Gender equality</a>
-                  <a href="#/">Maternity</a>
-                  <a href="#/">Family / child</a>
-                  <a href="#/">Communication / awareness-raising</a>
-                  <a href="#/">Disability</a>
-                  <a href="#/">Environment/ climate change</a>
-                  <a href="#/">Unemployment</a>
-                  <a href="#/">Informal economy workers​</a>
-                  <a href="#/">Rural populations​</a>
-                  <a href="#/">Self-employed​</a>
-                  <a href="#/">Maternity</a>
-                  <a href="#/">Migrant workers​</a>
-                  <a href="#/">Refugees / disaster affected population​</a>
-                  <a href="#/">Medical / Heath care</a>
-                  <a href="#/">Sickness​</a>
-                  <a href="#/">Old-age​</a>
-                  <a href="#/">Joint UN work​</a>
-                  <a href="#/">South-south exchanges​</a>
-                  <a href="#/">Employment injury​</a>
-                  <a href="#/">Survivors</a>
+                <!-- Sidebar Widget End -->
+                <div class="order-2 col-xl-2 col-lg-2 m-b-60 order-lg-1">
+                    <!-- Sidebar Start -->
+                    <div class="sidebar-wrapper m-b-n30 me-0">
+                        <!-- Sidebar Widget Start -->
+                        <div class="sidebar-widget m-b-30" data-aos="fade-up" data-aos-duration="1900">
+                            <div class="sidebar-title-wrapper">
+                                <h4 class="sidebar-title">Tags</h4>
+                            </div>
+                            <div class="blog-sidebar-tags">
+                                <a href="#/">Actuarial valuation or peer reviews​</a>
+                                <a href="#/">Feasibility study​</a>
+                                <a href="#/">Assessment based national dialogue (ABND)</a>
+                                <a href="#/">National social protection strategies</a>
+                                <a href="#/">Statistical support / monitoring framework​</a>
+                                <a href="#/">Ratification of ILS on social security​</a>
+                                <a href="#/">Legal drafting / assessments</a>
+                                <a href="#/">Administration / governance</a>
+                                <a href="#/">Information management systems</a>
+                                <a href="#/">Capacity building / trainings</a>
+                                <a href="#/">Coordination / delivery mechanisms</a>
+                                <a href="#/">COVID-19</a>
+                                <a href="#/">Financial / fiscal / costing</a>
+                                <a href="#/">Gender equality</a>
+                                <a href="#/">Maternity</a>
+                                <a href="#/">Family / child</a>
+                                <a href="#/">Communication / awareness-raising</a>
+                                <a href="#/">Disability</a>
+                                <a href="#/">Environment/ climate change</a>
+                                <a href="#/">Unemployment</a>
+                                <a href="#/">Informal economy workers​</a>
+                                <a href="#/">Rural populations​</a>
+                                <a href="#/">Self-employed​</a>
+                                <a href="#/">Maternity</a>
+                                <a href="#/">Migrant workers​</a>
+                                <a href="#/">Refugees / disaster affected population​</a>
+                                <a href="#/">Medical / Heath care</a>
+                                <a href="#/">Sickness​</a>
+                                <a href="#/">Old-age​</a>
+                                <a href="#/">Joint UN work​</a>
+                                <a href="#/">South-south exchanges​</a>
+                                <a href="#/">Employment injury​</a>
+                                <a href="#/">Survivors</a>
+                            </div>
+                        </div>
+                        <!-- Sidebar Widget End -->
+                    </div>
+                    <!-- Sidebar End -->
                 </div>
-              </div>
-              <!-- Sidebar Widget End -->
-            </div>
-            <!-- Sidebar End -->
-          </div>
 
-          <div class="order-1 col-xl-10 col-lg-10 m-b-60 order-lg-2">
-            <div class="publications-grid">
-              <!-- Single Blog Wrapper Start -->
-              <div class="publication-item item-lg">
-                <div class="gallery-thumb">
-                  <a href="project-details.html">
-                    <img
-                      class="fit-image"
-                      src="assets/images/project/strategy_for_the_second_phase.jpg"
-                      alt="Gallery Image"
-                    />
-                  </a>
-                </div>
-                <div class="gallery-content">
-                  <a href="project-details.html" class="title"
-                    >Strategy for the second phase 2021-2026
+                <div class="order-1 col-xl-10 col-lg-10 m-b-60 order-lg-2">
+                    <div class="publications-grid">
+                        <!-- Single Blog Wrapper Start -->
+                        <div class="publication-item item-lg">
+                            <div class="gallery-thumb">
+                                <a href="project-details.html">
+                                    <img class="fit-image" src="assets/images/project/strategy_for_the_second_phase.jpg" alt="Gallery Image" />
+                                </a>
+                            </div>
+                            <div class="gallery-content">
+                                <a href="project-details.html" class="title">Strategy for the second phase 2021-2026
                     <i class="fa fa-angle-right"></i
                   ></a>
-                  <br />
-                  <span>Building social protection floors for all</span>
-                </div>
-              </div>
-              <!-- Single Blog Wrapper End -->
+                                <br />
+                                <span>Building social protection floors for all</span>
+                            </div>
+                        </div>
+                        <!-- Single Blog Wrapper End -->
 
-              <!-- Single Blog Wrapper Start -->
-              <div class="publication-item item-lg">
-                <div class="gallery-thumb">
-                  <a href="project-details.html">
-                    <img
-                      class="fit-image"
-                      src="assets/images/project/annexes-thematic.jpg"
-                      alt="Gallery Image"
-                    />
-                  </a>
-                </div>
-                <div class="gallery-content item-lg">
-                  <a href="project-details.html" class="title"
-                    >Annexes Strategy 2021-2025 <i class="fa fa-angle-right"></i
+                        <!-- Single Blog Wrapper Start -->
+                        <div class="publication-item item-lg">
+                            <div class="gallery-thumb">
+                                <a href="project-details.html">
+                                    <img class="fit-image" src="assets/images/project/annexes-thematic.jpg" alt="Gallery Image" />
+                                </a>
+                            </div>
+                            <div class="gallery-content item-lg">
+                                <a href="project-details.html" class="title">Annexes Strategy 2021-2025 <i class="fa fa-angle-right"></i
                   ></a>
-                  <br />
-                  <span>Building social protection floors for all</span>
-                </div>
-              </div>
-              <!-- Single Blog Wrapper End -->
+                                <br />
+                                <span>Building social protection floors for all</span>
+                            </div>
+                        </div>
+                        <!-- Single Blog Wrapper End -->
 
-              <!-- Single Blog Wrapper Start -->
-              <div class="publication-item item-lg">
-                <div class="gallery-thumb">
-                  <a href="project-details.html">
-                    <img
-                      class="fit-image"
-                      src="assets/images/project/5-year-report.jpg"
-                      alt="Gallery Image"
-                    />
-                  </a>
-                </div>
-                <div class="gallery-content">
-                  <a href="project-details.html" class="title">
+                        <!-- Single Blog Wrapper Start -->
+                        <div class="publication-item item-lg">
+                            <div class="gallery-thumb">
+                                <a href="project-details.html">
+                                    <img class="fit-image" src="assets/images/project/5-year-report.jpg" alt="Gallery Image" />
+                                </a>
+                            </div>
+                            <div class="gallery-content">
+                                <a href="project-details.html" class="title">
                     Report of the first phase 2016-2020
                     <i class="fa fa-angle-right"></i
                   ></a>
-                  <br />
-                  <span>Building social protection floors for all</span>
-                </div>
-              </div>
+                                <br />
+                                <span>Building social protection floors for all</span>
+                            </div>
+                        </div>
 
-              <!-- Single Blog Wrapper End -->
+                        <!-- Single Blog Wrapper End -->
 
-              <!-- Single Blog Wrapper Start -->
-              <div class="border publication-item">
-                <div class="gallery-thumb">
-                  <a href="project-details.html">
-                    <img
-                      class="fit-image small"
-                      src="assets/images/tools/C102.png"
-                      alt="Gallery Image"
-                    />
-                  </a>
-                </div>
-                <div class="gallery-content">
-                  <a href="project-details.html" class="title">
+                        <!-- Single Blog Wrapper Start -->
+                        <div class="border publication-item">
+                            <div class="gallery-thumb">
+                                <a href="project-details.html">
+                                    <img class="fit-image small" src="assets/images/tools/C102.png" alt="Gallery Image" />
+                                </a>
+                            </div>
+                            <div class="gallery-content">
+                                <a href="project-details.html" class="title">
                     Toolkit on social security standards
                     <i class="fa fa-angle-right"></i>
                   </a>
-                </div>
-              </div>
-              <!-- Single Blog Wrapper End -->
+                            </div>
+                        </div>
+                        <!-- Single Blog Wrapper End -->
 
-              <!-- Single Blog Wrapper Start -->
-              <div class="border publication-item">
-                <div class="gallery-thumb">
-                  <a href="project-details.html">
-                    <img
-                      class="fit-image small"
-                      src="assets/images/tools/RAP_high_resolution_web_2.png"
-                      alt="Rapid Social Protection Cost Calculator"
-                    />
-                  </a>
-                </div>
-                <div class="gallery-content">
-                  <a href="project-details.html" class="title">
+                        <!-- Single Blog Wrapper Start -->
+                        <div class="border publication-item">
+                            <div class="gallery-thumb">
+                                <a href="project-details.html">
+                                    <img class="fit-image small" src="assets/images/tools/RAP_high_resolution_web_2.png" alt="Rapid Social Protection Cost Calculator" />
+                                </a>
+                            </div>
+                            <div class="gallery-content">
+                                <a href="project-details.html" class="title">
                     Rapid Social Protection Cost Calculator
                     <i class="fa fa-angle-right"></i>
                   </a>
-                </div>
-              </div>
-              <!-- Single Blog Wrapper End -->
-              <!-- Single Blog Wrapper Start -->
-              <div class="publication-item">
-                <div class="gallery-thumb">
-                  <a href="project-details.html">
-                    <img
-                      class="fit-image"
-                      src="assets/images/project/handbook-social-protection.png"
-                      alt="Handbook for social health protection for refugees"
-                    />
-                  </a>
-                </div>
-                <div class="gallery-content">
-                  <a href="project-details.html" class="title">
+                            </div>
+                        </div>
+                        <!-- Single Blog Wrapper End -->
+                        <!-- Single Blog Wrapper Start -->
+                        <div class="publication-item">
+                            <div class="gallery-thumb">
+                                <a href="project-details.html">
+                                    <img class="fit-image" src="assets/images/project/handbook-social-protection.png" alt="Handbook for social health protection for refugees" />
+                                </a>
+                            </div>
+                            <div class="gallery-content">
+                                <a href="project-details.html" class="title">
                     Handbook for social health protection for refugees
                     <i class="fa fa-angle-right"></i>
                   </a>
-                </div>
-              </div>
-              <!-- Single Blog Wrapper End -->
+                            </div>
+                        </div>
+                        <!-- Single Blog Wrapper End -->
 
-              <div class="publication-item">
-                <div class="gallery-thumb">
-                  <a href="project-details.html">
-                    <img
-                      class="fit-image"
-                      src="assets/images/project/extending-informal-economy.png"
-                      alt="Extending social security to workers in informal economy"
-                    />
-                  </a>
-                </div>
-                <div class="gallery-content">
-                  <a href="project-details.html" class="title">
+                        <div class="publication-item">
+                            <div class="gallery-thumb">
+                                <a href="project-details.html">
+                                    <img class="fit-image" src="assets/images/project/extending-informal-economy.png" alt="Extending social security to workers in informal economy" />
+                                </a>
+                            </div>
+                            <div class="gallery-content">
+                                <a href="project-details.html" class="title">
                     Extending social security to workers in informal economy
                     <i class="fa fa-angle-right"></i>
                   </a>
-                </div>
-              </div>
-              <!-- Single Blog Wrapper End -->
-            </div>
+                            </div>
+                        </div>
+                        <!-- Single Blog Wrapper End -->
+                    </div>
 
-          </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mt-auto col-12" data-aos="fade-up" data-aos-duration="2000">
+                    <nav>
+                        <ul class="pagination ">
+                            <li><a class="active" href="#/">1</a></li>
+                            <li><a href="#/">2</a></li>
+                            <li><a href="#/">3</a></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><span></span></li>
+                            <li><a href="#/">10</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <div class="mt-auto col-12" data-aos="fade-up" data-aos-duration="2000">
-            <nav>
-              <ul class="pagination ">
-                <li><a class="active" href="#/">1</a></li>
-                <li><a href="#/">2</a></li>
-                <li><a href="#/">3</a></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><span></span></li>
-                <li><a href="#/">10</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- Blog Grid Section End -->
 
     <!-- Start Footer Area Wrapper -->
     <footer class="section footer-area">
-      <div class="footer-top overlay" data-bg-color="#230050">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <!-- Start Footer Widget Area -->
-              <div class="footer-widget-area">
-                <div class="footer-topbar footer-row">
-                  <div class="contact-us">
-                    Contact us:
-                    <a href="mailto:socpro@ilo.org ">socpro@ilo.org</a>
-                  </div>
-                  <ul class="footer-links">
-                    <li>
-                      <a
-                        href="https://www.ilo.org/global/copyright/lang--en/index.htm"
-                        >Copyright</a
+        <div class="footer-top overlay" data-bg-color="#230050">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Start Footer Widget Area -->
+                        <div class="footer-widget-area">
+                            <div class="footer-topbar footer-row">
+                                <div class="contact-us">
+                                    Contact us:
+                                    <a href="mailto:socpro@ilo.org ">socpro@ilo.org</a>
+                                </div>
+                                <ul class="footer-links">
+                                    <li>
+                                        <a href="https://www.ilo.org/global/copyright/lang--en/index.htm">Copyright</a
                       >
                     </li>
                     <li>
@@ -897,55 +850,43 @@
                         alt="Back to ILO main site"
                       />
                     </a>
-                  </div>
-                  <div class="headline">
-                    <h1>
-                      <i class="icon red">play_arrow</i>Advancing social
-                      justice, promoting decent work
-                    </h1>
-                    <p>ILO is a specialized agency of the United Nations</p>
-                  </div>
+                            </div>
+                            <div class="headline">
+                                <h1>
+                                    <i class="icon red">play_arrow</i>Advancing social justice, promoting decent work
+                                </h1>
+                                <p>ILO is a specialized agency of the United Nations</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <!-- End Footer Widget Area -->
             </div>
-            <!-- End Footer Widget Area -->
-          </div>
         </div>
-      </div>
+        </div>
     </footer>
     <!--== End Footer Area Wrapper ==-->
 
     <!-- Scroll Top Start -->
     <a href="#" class="scroll-top show" id="scroll-top">
-      <i class="arrow-top icofont-rounded-up"></i>
-      <i class="arrow-bottom icofont-rounded-up"></i>
+        <i class="arrow-top icofont-rounded-up"></i>
+        <i class="arrow-bottom icofont-rounded-up"></i>
     </a>
     <!-- Scroll Top End -->
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
-      <div class="offcanvas-header d-flex justify-content-end">
-        <button
-          type="button"
-          class="btn-close text-reset text-end"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        >
+        <div class="offcanvas-header d-flex justify-content-end">
+            <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="icofont-close"></i>
         </button>
-      </div>
-      <div class="offcanvas-body">
-        <!-- Mobile Menu Inner Wrapper Start -->
-        <div class="p-0 mobile-menu-inner-wrapper">
-          <!-- Mobile Menu Start -->
-          <div class="header-logo me-auto">
-            <a href="../">
-              <svg
-                id="logo-socpro"
-                class="logo-socpro"
-                data-name="logo-socpro"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1183.78 255.35"
-              >
+        </div>
+        <div class="offcanvas-body">
+            <!-- Mobile Menu Inner Wrapper Start -->
+            <div class="p-0 mobile-menu-inner-wrapper">
+                <!-- Mobile Menu Start -->
+                <div class="header-logo me-auto">
+                    <a href="../">
+                        <svg id="logo-socpro" class="logo-socpro" data-name="logo-socpro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1183.78 255.35">
                 <path
                   d="M407.24,223.14v-46.2h7.92v46.2Z"
                   transform="translate(-52.91 -147.76)"
@@ -1256,37 +1197,36 @@
                   transform="translate(-52.91 -147.76)"
                 />
               </svg>
-            </a>
-          </div>
-          <h1 class="mobile-headline">
-            <i class="icon red">play_arrow</i> Building social protection floors
-            for all
-          </h1>
+                    </a>
+                </div>
+                <h1 class="mobile-headline">
+                    <i class="icon red">play_arrow</i> Building social protection floors for all
+                </h1>
 
-          <div class="mobile-navigation">
-            <nav>
-              <ul class="mt-0 mobile-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="our-approach.html">Our approach</a></li>
-                <li><a href="countries.html">Countries</a></li>
-                <li><a href="thematic-areas.html">Thematic areas</a></li>
-                <li><a href="partnerships.html">Partnerships</a></li>
-                <li><a href="results-and-impact.html">Results and impact</a></li>
-                <li><a href="our-team.html">Our team</a></li>
-                <li><a href="funding-gaps.html">Funding gaps</a></li>
-                <li><a href="library.html">Library</a></li>
-                <li><a href="funding-gaps.html">News and events</a></li>
-              </ul>
-            </nav>
-          </div>
-          <!-- Mobile Menu End -->
+                <div class="mobile-navigation">
+                    <nav>
+                        <ul class="mt-0 mobile-menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="our-approach.html">Our approach</a></li>
+                            <li><a href="countries.html">Countries</a></li>
+                            <li><a href="thematic-areas.html">Thematic areas</a></li>
+                            <li><a href="partnerships.html">Partnerships</a></li>
+                            <li><a href="results-and-impact.html">Results and impact</a></li>
+                            <li><a href="our-team.html">Our team</a></li>
+                            <li><a href="funding-gaps.html">Funding gaps</a></li>
+                            <li><a href="library.html">Library</a></li>
+                            <li><a href="funding-gaps.html">News and events</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile Menu End -->
 
-          <!-- Contact Links/Social Links Start -->
-          <div class="bottom-0 mt-auto">
-            <!-- Contact Links Start -->
-            <ul class="contact-links">
-              <li>
-                <i class="icofont-ui-email"></i
+                <!-- Contact Links/Social Links Start -->
+                <div class="bottom-0 mt-auto">
+                    <!-- Contact Links Start -->
+                    <ul class="contact-links">
+                        <li>
+                            <i class="icofont-ui-email"></i
                 ><a href="mailto:socpro@ilo.org">socpro@ilo.org</a>
               </li>
             </ul>

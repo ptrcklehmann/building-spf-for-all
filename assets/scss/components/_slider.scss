@@ -13,6 +13,10 @@
         background-size: 160%;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
+        @media #{$tablet-device,
+            $large-mobile} {
+                background-size: cover;
+            }
     }
 }
 
@@ -34,10 +38,7 @@
     @media #{$extra-small-mobile} {
         width: 100%;
     }
-    & .hero-background {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
-    }
+
     & .above {
         z-index: 4;
         margin-bottom: -30%;
@@ -56,7 +57,8 @@
 
 .hero-background {
     background-repeat: no-repeat;
-    background-position: 50%;
+    background-position: center;
+    background-size: cover;
     height: 100%;
     position: absolute;
     top: -5px;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Partnerships | Building social protection floors for all</title>
@@ -36,44 +37,63 @@
 -->
 
     <!-- Main Style CSS -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Header Section Start -->
     <!-- topbar -->
     <div class="topbar">
-      <div class="container align-items-center justify-content-between me-auto">
-        <a href="https://www.ilo.org/global/lang--en/index.htm"
-          ><i class="icofont-dotted-left"></i> ILO
-        </a>
-        <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
-          Social Protection platform
-        </a>
-        <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
-          World Social Protection Data Dashboard
-        </a>
-      </div>
+        <div class="container justify-content-between d-flex">
+            <div class="left-links">
+                <a href="https://www.ilo.org/global/lang--en/index.htm">
+                    <i class="icofont-dotted-left"></i> ILO</a>
+                <a href="https://www.social-protection.org/gimi/ShowMainPage.action">
+            Social Protection platform</a
+          >
+          <a href="https://www.social-protection.org/gimi/WSPDB.action?id=32">
+            World Social Protection Data Dashboard
+          </a>
+            </div>
+            <div class="right-links">
+                <select class="language-select">
+            <option value="EN">EN</option>
+            <option value="ES">ES</option>
+            <option value="FR">FR</option>
+          </select>
+                <div class="dropdown">
+                    <a class="dropdown-toggle hidden-xs hidden-sm" id="dropdownLogin" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5">
+              Login
+            </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownLogin">
+                        <form id="login" name="login" action="/gimi/Login.action" method="post" class="form">
+                            <input type="hidden" name="sid" value="3" id="login_sid" />
+                            <div class="form-group">
+                                <label class="sr-only" for="UserName">Login</label>
+                                <input type="text" name="user.login" size="40" maxlength="40" value="" id="UserName" class="form-control mb-1" placeholder="Login" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="Password">Password</label>
+                                <input type="password" name="user.password" size="20" maxlength="20" id="Password" class="form-control mb-1" autocomplete="on" placeholder="Password" required="" />
+                            </div>
+                            <input type="submit" value="Login" id="login_general_submit" name="general.submit" class="btn btn-blue btn-small" />
+                        </form>
+                        <a href="ShowLooseLogin.action">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Header -->
     <div class="header">
-      <div class="sticky-header">
-        <div class="container">
-          <div class="header-wrapper">
-            <!-- Header Logo Start -->
-            <div class="header-logo me-auto">
-              <a href="/building-spf-for-all/">
-                <svg
-                  id="logo-socpro"
-                  class="logo-socpro"
-                  data-name="logo-socpro"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 1183.78 255.35"
-                >
+        <div class="sticky-header">
+            <div class="container">
+                <div class="header-wrapper">
+                    <!-- Header Logo Start -->
+                    <div class="header-logo me-auto">
+                        <a href="/building-spf-for-all/">
+                            <svg id="logo-socpro" class="logo-socpro" data-name="logo-socpro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1183.78 255.35">
                   <path
                     d="M407.24,223.14v-46.2h7.92v46.2Z"
                     transform="translate(-52.91 -147.76)"
@@ -384,29 +404,23 @@
                     transform="translate(-52.91 -147.76)"
                   />
                 </svg>
-              </a>
-            </div>
-            <!-- Header Logo End -->
-            <div class="headline ms-lg-auto pt-lg-1">
-              <h1>
-                <i class="icon red">play_arrow</i>Building social protection
-                floors for all
-              </h1>
-              <p>ILO Global Flagship Programme</p>
-            </div>
-            <!-- Header Menu Start -->
-            <div class="main-menu d-none d-lg-flex">
-              <nav class="nav">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="/building-spf-for-all/"
-                  >Home</a
+                        </a>
+                    </div>
+                    <!-- Header Logo End -->
+                    <div class="headline ms-lg-auto pt-lg-1">
+                        <h1>
+                            <i class="icon red">play_arrow</i>Building social protection floors for all
+                        </h1>
+                        <p>ILO Global Flagship Programme</p>
+                    </div>
+                    <!-- Header Menu Start -->
+                    <div class="main-menu d-none d-lg-flex">
+                        <nav class="nav">
+                            <a class="nav-link" aria-current="page" href="/building-spf-for-all/">Home</a
                 >
                 <a class="nav-link" href="our-approach.html">Our approach</a>
-                <a class="nav-link" href="countries.html">Countries</a>
-                <a class="nav-link" href="thematic-areas.html"
-                  >Thematic areas</a
+                            <a class="nav-link" href="countries.html">Countries</a>
+                            <a class="nav-link" href="thematic-areas.html">Thematic areas</a
                 >
                 <a class="nav-link active" href="partnerships.html"
                   >Partnerships</a
@@ -415,10 +429,9 @@
                   >Results and impact</a
                 >
                 <a class="nav-link" href="our-team.html">Our team</a>
-                <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
-                <a class="nav-link" href="library.html">Library</a>
-                <a class="nav-link" href="news-and-events.html"
-                  >News and events</a
+                            <a class="nav-link" href="funding-gaps.html">Funding gaps</a>
+                            <a class="nav-link" href="library.html">Library</a>
+                            <a class="nav-link" href="news-and-events.html">News and events</a
                 >
               </nav>
             </div>
@@ -437,41 +450,29 @@
                   <span></span>
                   <span></span>
                 </a>
-                <!-- Default Hambarger Action Button End -->
-              </div>
+                            <!-- Default Hambarger Action Button End -->
+                    </div>
+                </div>
+                <!-- Header Actions End -->
             </div>
-            <!-- Header Actions End -->
-          </div>
         </div>
-      </div>
+    </div>
     </div>
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
     <div class="sub-hero-layout">
-      <figure
-        class="hero-background"
-        data-rellax-speed="-1"
-        style="
+        <figure class="hero-background" data-rellax-speed="-1" style="
           background-image: url('assets/images/slider/partnerships.jpg');
           background-position: center 25%;
-        "
-      ></figure>
-      <div class="section">
-        <!-- Hero background -->
-        <div class="container-fluid">
-          <div class="container">
-            <div class="row m-b-2 align-items-start">
-              <div
-                class="col-lg-6 pb-lg-3 g-lg-2 g-sm-0 pb-sm-2"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <svg
-                  class="double-bullet"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 965 992.05"
-                >
+        "></figure>
+        <div class="section">
+            <!-- Hero background -->
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row m-b-2 align-items-start">
+                        <div class="col-lg-6 pb-lg-3 g-lg-2 g-sm-0 pb-sm-2" data-aos="fade-up" data-aos-duration="2000">
+                            <svg class="double-bullet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 965 992.05">
                   <polygon
                     points="965 496.02 105.86 0 105.86 992.05 965 496.02"
                     style="fill: #9ef2f2"
@@ -481,127 +482,64 @@
                     style="fill: #1e2dbe"
                   />
                 </svg>
-              </div>
-            </div>
-            <article
-              class="uuper_box hero-heading"
-              data-aos="fade-up"
-              data-aos-duration="1800"
-            >
-              <h1>Partnerships</h1>
-            </article>
-            <div class="row justify-content-end m-b-n50">
-              <div
-                class="col-lg-12"
-                data-aos="fade-in"
-                data-aos-duration="2000"
-              >
-                <small class="ms-auto strong-copyright">
+                        </div>
+                    </div>
+                    <article class="uuper_box hero-heading" data-aos="fade-up" data-aos-duration="1800">
+                        <h1>Partnerships</h1>
+                    </article>
+                    <div class="row justify-content-end m-b-n50">
+                        <div class="col-lg-12" data-aos="fade-in" data-aos-duration="2000">
+                            <small class="ms-auto strong-copyright">
                   <i class="icon">play_arrow</i>Photo: ILO/Apex Image
                 </small>
-              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
     <!-- Hero Section End -->
 
     <!-- Blog Grid Section Start -->
     <div class="section section-margin partnerships-section">
-      <div class="container">
-        <div class="row justify-content-between align-items-center">
-          <div class="mt-3 mb-4 col-12">
-            <div class="pillar-3 me-auto">
-              <h4>Pillar 3</h4>
-            </div>
-          </div>
-          <div class="mb-5 col-12">
-            <p>
-              Strategic partnerships support pillar 1 and pillar 2 to multiply
-              impact and promote a rights-based social protection approach in
-              line with ILO standards.
-            </p>
-          </div>
-          <ul class="list-group partn-list col-lg-5 m-b-60 list-group-flush">
-            <li
-              class="list-group-item usp usp-tooltip"
-              tabindex="0"
-              data-bs-toggle="popover"
-              data-bs-trigger="hover focus"
-              data-bs-html="true"
-              data-bs-content="<p>
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="mt-3 mb-4 col-12">
+                    <div class="pillar-3 me-auto">
+                        <h4>Pillar 3</h4>
+                    </div>
+                </div>
+                <div class="mb-5 col-12">
+                    <p>
+                        Strategic partnerships support pillar 1 and pillar 2 to multiply impact and promote a rights-based social protection approach in line with ILO standards.
+                    </p>
+                </div>
+                <ul class="list-group partn-list col-lg-5 m-b-60 list-group-flush">
+                    <li class="list-group-item usp usp-tooltip" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="<p>
                 Created in 2016, and co-chaired by the ILO and World Bank, USP2030 promotes both global policy development and country-level implementation
-              </p><a href='https://www.usp2030.org/gimi/USP2030.action' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>"
-            >
-              USP 2030
-            </li>
-            <li
-              class="list-group-item unlist"
-              tabindex="0"
-              data-bs-toggle="popover"
-              data-bs-trigger="hover focus"
-              data-bs-html="true"
-              data-bs-content="<p>The United Nations Development Group brings together 32 different development bodies, which have been encouraged to increase cooperation efforts in the area of social protection.</p><a href='https://www.social-protection.org/gimi/ShowProject.action?id=2767' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>"
-            >
-              UN Social Protection Floors Initiative
-            </li>
-            <li
-              class="list-group-item spiacB"
-              tabindex="0"
-              data-bs-toggle="popover"
-              data-bs-trigger="hover focus"
-              data-bs-html="true"
-              data-bs-content="<p>The Social Protection Inter-Agency Cooperation Board is an inter-agency coordination mechanism to enhance global coordination and advocacy on social protection issues and to coordinate international cooperation in country demand-driven actions.</p><a href='https://www.ilo.org/newyork/at-the-un/social-protection-inter-agency-cooperation-board/lang--en/index.htm' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>"
-            >
-              Social Protection Inter-Agency Cooperation Board (SPIAC-B)​
-            </li>
-            <li
-              class="transform list-group-item"
-              tabindex="0"
-              data-bs-toggle="popover"
-              data-bs-trigger="hover focus"
-              data-bs-html="true"
-              data-bs-content="<p>TRANSFORM is an innovative training initiative that strengthens individual and institutional capacity for the management of national social protection systems in Africa.</p><a href='https://transformsp.org/' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>"
-            >
-              TRANSFORM
-            </li>
-            <li
-              class="list-group-item global"
-              tabindex="0"
-              data-bs-toggle="popover"
-              data-bs-trigger="hover focus"
-              data-bs-html="true"
-              data-bs-content="<p>The Global Business Network for Social Protection Floors is a unique platform for  the private sector to contribute to the United Nations Sustainable Development Goals  on social protection.</p><a href='https://www.social-protection.org/gimi/ShowProject.action?id=3030' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>"
-            >
-              Global Business Network for Social Protection Floors
-            </li>
-            <li
-              class="list-group-item spf-network"
-              tabindex="0"
-              data-bs-toggle="popover"
-              data-bs-trigger="hover focus"
-              data-bs-html="true"
-              data-bs-content="<p>The Network was initiated in 2017 by the ILO, the International Trade Union Confederation and in collaboration with members of the Global Coalition for Social Protection Floors. It aims to support workers' organisations in the promotion and defence of the right to social protection.</p><a href='https://www.social-protection.org/gimi/Workers.action' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>"
-            >
-              Social Protection, Freedom, and Justice for Workers Network
-            </li>
-            <li
-              class="list-group-item global-coalition"
-              tabindex="0"
-              data-bs-toggle="popover"
-              data-bs-trigger="hover focus"
-              data-bs-html="true"
-              data-bs-content="<p>The Coalition consists of more than 100 NGOs and Trade Unions from all parts of the world,  working to provide a space and virtual platform for coalition members united by the common purpose of promoting the extension of social protection floors and systems.</p><a href='http://www.socialprotectionfloorscoalition.org/' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>"
-            >
-              Global Coalition for Social Protection Floors
-            </li>
-          </ul>
-          <svg
-            class="px-2 col-xl-5 col-lg-5 m-b-60"
-            id="partnerships-diagram"
-            viewBox="0 0 409.64 274.59"
-          >
+              </p><a href='https://www.usp2030.org/gimi/USP2030.action' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>">
+                        USP 2030
+                    </li>
+                    <li class="list-group-item unlist" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="<p>The United Nations Development Group brings together 32 different development bodies, which have been encouraged to increase cooperation efforts in the area of social protection.</p><a href='https://www.social-protection.org/gimi/ShowProject.action?id=2767' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>">
+                        UN Social Protection Floors Initiative
+                    </li>
+                    <li class="list-group-item spiacB" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="<p>The Social Protection Inter-Agency Cooperation Board is an inter-agency coordination mechanism to enhance global coordination and advocacy on social protection issues and to coordinate international cooperation in country demand-driven actions.</p><a href='https://www.ilo.org/newyork/at-the-un/social-protection-inter-agency-cooperation-board/lang--en/index.htm' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>">
+                        Social Protection Inter-Agency Cooperation Board (SPIAC-B)​
+                    </li>
+                    <li class="transform list-group-item" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="<p>TRANSFORM is an innovative training initiative that strengthens individual and institutional capacity for the management of national social protection systems in Africa.</p><a href='https://transformsp.org/' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>">
+                        TRANSFORM
+                    </li>
+                    <li class="list-group-item global" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="<p>The Global Business Network for Social Protection Floors is a unique platform for  the private sector to contribute to the United Nations Sustainable Development Goals  on social protection.</p><a href='https://www.social-protection.org/gimi/ShowProject.action?id=3030' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>">
+                        Global Business Network for Social Protection Floors
+                    </li>
+                    <li class="list-group-item spf-network" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="<p>The Network was initiated in 2017 by the ILO, the International Trade Union Confederation and in collaboration with members of the Global Coalition for Social Protection Floors. It aims to support workers' organisations in the promotion and defence of the right to social protection.</p><a href='https://www.social-protection.org/gimi/Workers.action' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>">
+                        Social Protection, Freedom, and Justice for Workers Network
+                    </li>
+                    <li class="list-group-item global-coalition" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-html="true" data-bs-content="<p>The Coalition consists of more than 100 NGOs and Trade Unions from all parts of the world,  working to provide a space and virtual platform for coalition members united by the common purpose of promoting the extension of social protection floors and systems.</p><a href='http://www.socialprotectionfloorscoalition.org/' target='_blank'>Read more<i class='icofont-rounded-right'></i></a>">
+                        Global Coalition for Social Protection Floors
+                    </li>
+                </ul>
+                <svg class="px-2 col-xl-5 col-lg-5 m-b-60" id="partnerships-diagram" viewBox="0 0 409.64 274.59">
             <path
               d="M235.85,9.48a2.78,2.78,0,0,1-1.85-.6,2.22,2.22,0,0,1-.72-1.8A6.57,6.57,0,0,1,233.39,6l.78-4.36h1.31l-.8,4.58a5.59,5.59,0,0,0-.08.73c0,.84.45,1.26,1.33,1.26a2,2,0,0,0,1.25-.4,2.22,2.22,0,0,0,.66-1.4l.84-4.77H240l-.84,4.87A3.62,3.62,0,0,1,238,8.82,3.38,3.38,0,0,1,235.85,9.48Z"
               transform="translate(-0.79 -1.41)"
@@ -1101,32 +1039,25 @@
               style="fill: #bfdcf4; fill-rule: evenodd"
             />
           </svg>
-        </div>
-        <div class="row m-t-55 m-b-55">
-          <a
-            href="funding-gaps.html"
-            class="m-auto btn-turquoise btn-arrow m-t-50 fw-bold"
-          >
+            </div>
+            <div class="row m-t-55 m-b-55">
+                <a href="funding-gaps.html" class="m-auto btn-turquoise btn-arrow m-t-50 fw-bold">
             Become a development partner <i class="fa fa-play"></i>
           </a>
+            </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-start align-items-start m-b-60">
-          <div class="col-12">
-            <h3>Our development partners</h3>
-            <p>
-              Development partners make the Flagship programme possible by
-              providing funding for its activities. These include partner
-              countries, international financial institutions, multinational
-              enterprises and corporate foundations. Priority countries also
-              fund an increasing amount of national-level activities, such as
-              actuarial valuations.
-              <span class="fw-bold">See below for a complete list of projects funded by development partners. ​</span>
-            </p>
-          </div>
-        </div>
-          <!-- <div class="col-12 partners-panel">
+        <div class="container">
+            <div class="row justify-content-start align-items-start m-b-60">
+                <div class="col-12">
+                    <h3>Our development partners</h3>
+                    <p>
+                        Development partners make the Flagship programme possible by providing funding for its activities. These include partner countries, international financial institutions, multinational enterprises and corporate foundations. Priority countries also fund
+                        an increasing amount of national-level activities, such as actuarial valuations.
+                        <span class="fw-bold">See below for a complete list of projects funded by development partners. ​</span>
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="col-12 partners-panel">
             <div
               class="d-flex nav-panel align-items-start justify-content-between flex-md-row flex-md-wrap flex-sm-wrap p-t-25"
             >
@@ -1226,7 +1157,7 @@
                 id="v-pills-tabContent"
               >
                 <!-- Africa Pane -->
-                <!-- <div
+            <!-- <div
                   class="tab-pane fade show active"
                   id="v-pills-africa"
                   role="tabpanel"
@@ -1351,16 +1282,12 @@
                 </div>
               </div>
             </div> -->
-          <!-- </div> -->
-          <div class="row justify-content-between">
-            <div class="col-3 my-3">
-              <h6 class="mb-1 dark-blue">Select partner</h6>
-              <form class="h-100">
-                <select
-                  name="news.countries.countryId"
-                  id="NewsSearch_news_countries_countryId"
-                  class="form-select h-100" multiple aria-label="multiple select country"
-                >
+            <!-- </div> -->
+            <div class="row justify-content-between">
+                <div class="col-3 my-3">
+                    <h6 class="mb-1 dark-blue">Select partner</h6>
+                    <form class="h-100">
+                        <select name="news.countries.countryId" id="NewsSearch_news_countries_countryId" class="form-select h-100" multiple aria-label="multiple select country">
                   <option value="Algeria">Algeria</option>
                   <option value="Australia">Australia</option>
                   <option value="Austria">Austria</option>
@@ -1391,126 +1318,125 @@
                   <option value="Multi Donor">Multi Donor</option>
                   <option value="Netherlands">Netherlands</option>
                 </select>
-              </form>
-            </div>
-            <div class="col-9 my-3">
-              <table class="table mt-4 mb-0" data-sortable>
-                <thead>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <th scope="col" class="align-self-stretch w-15">Partner</th>
-                    <th scope="col" class="align-self-stretch w-15">Countries</th>
-                    <th scope="col" class="align-self-stretch w-50">Project name</th>
-                    <th scope="col" class="align-self-stretch w-10">Start</th>
-                    <th scope="col" class="align-self-stretch w-10">End</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <th scope="row" class="align-self-stretch w-15">IFAD</th>
-                    <td class="w-15">Madagascar</th>
-                    <td class="w-50">Accès universel à la protection sociale, à la santé et la sécurité au travail</td>
-                    <td class="w-10">01.10.2020</td>
-                    <td class="w-10">31.12.2024</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">IFAD</td>
-                    <td class="w-15">Madagascar</th>
-                    <td class="w-50">Appui à l'organe de gestion global des outils ISPA pour le développement des capacités et l'application de ces outils.</td>
-                    <td class="w-10">10.05.2017</td>
-                    <td class="w-10">24.06.2016</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">IFAD</td>
-                    <td class="w-15">Madagascar</th>
-                    <td class="w-50">Projet d'appui de la France au Programme mondial pour les socles de protection sociale du BIT</td>
-                    <td class="w-10">24.06.2016</td>
-                    <td class="w-10">31.12.2020</td>
-                  </tr>
+                    </form>
+                </div>
+                <div class="col-9 my-3">
+                    <table class="table mt-4 mb-0" data-sortable>
+                        <thead>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <th scope="col" class="align-self-stretch w-15">Partner</th>
+                                <th scope="col" class="align-self-stretch w-15">Countries</th>
+                                <th scope="col" class="align-self-stretch w-50">Project name</th>
+                                <th scope="col" class="align-self-stretch w-10">Start</th>
+                                <th scope="col" class="align-self-stretch w-10">End</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <th scope="row" class="align-self-stretch w-15">IFAD</th>
+                                <td class="w-15">Madagascar</th>
+                                    <td class="w-50">Accès universel à la protection sociale, à la santé et la sécurité au travail</td>
+                                    <td class="w-10">01.10.2020</td>
+                                    <td class="w-10">31.12.2024</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">IFAD</td>
+                                <td class="w-15">Madagascar</th>
+                                    <td class="w-50">Appui à l'organe de gestion global des outils ISPA pour le développement des capacités et l'application de ces outils.</td>
+                                    <td class="w-10">10.05.2017</td>
+                                    <td class="w-10">24.06.2016</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">IFAD</td>
+                                <td class="w-15">Madagascar</th>
+                                    <td class="w-50">Projet d'appui de la France au Programme mondial pour les socles de protection sociale du BIT</td>
+                                    <td class="w-10">24.06.2016</td>
+                                    <td class="w-10">31.12.2020</td>
+                            </tr>
 
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <th scope="row" class="align-self-stretch w-15">Direct Trust Fund</th>
-                    <td class="w-15">Cambodia</th>
-                    <td class="w-50">Policy, design and actuarial assessments of the national pension</td>
-                    <td class="w-10">01.01.2017</td>
-                    <td class="w-10">31.12.2018</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">Direct Trust Fund</td>
-                    <td class="w-15">Cambodia</th>
-                    <td class="w-50">Appui à l'organe de gestion globale des outils ISPA pour le développement et l'application des outils techniques interinstitutionnels pour 'évaluation des systèmes de protection sociale dans le cadre des engagements du SPIAC-B</td>
-                    <td class="w-10">03.11.2014</td>
-                    <td class="w-10">31.12.2016</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">Direct Trust Fund</td>
-                    <td class="w-15">Cambodia</td>
-                    <td class="w-50">Protection sociale et changement climatique</td>
-                    <td class="w-10">31.07.2015</td>
-                    <td class="w-10">31.10.2016</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">Direct Trust Fund</td>
-                    <td class="w-15">Cambodia</td>
-                    <td class="w-50">Protection social - New Agence Francaise de Développement Global Partnershio with ILO</td>
-                    <td class="w-10">15.12.2017</td>
-                    <td class="w-10">30.06.2021</td>
-                  </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <th scope="row" class="align-self-stretch w-15">Direct Trust Fund</th>
+                                <td class="w-15">Cambodia</th>
+                                    <td class="w-50">Policy, design and actuarial assessments of the national pension</td>
+                                    <td class="w-10">01.01.2017</td>
+                                    <td class="w-10">31.12.2018</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">Direct Trust Fund</td>
+                                <td class="w-15">Cambodia</th>
+                                    <td class="w-50">Appui à l'organe de gestion globale des outils ISPA pour le développement et l'application des outils techniques interinstitutionnels pour 'évaluation des systèmes de protection sociale dans le cadre des engagements
+                                        du SPIAC-B</td>
+                                    <td class="w-10">03.11.2014</td>
+                                    <td class="w-10">31.12.2016</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">Direct Trust Fund</td>
+                                <td class="w-15">Cambodia</td>
+                                <td class="w-50">Protection sociale et changement climatique</td>
+                                <td class="w-10">31.07.2015</td>
+                                <td class="w-10">31.10.2016</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">Direct Trust Fund</td>
+                                <td class="w-15">Cambodia</td>
+                                <td class="w-50">Protection social - New Agence Francaise de Développement Global Partnershio with ILO</td>
+                                <td class="w-10">15.12.2017</td>
+                                <td class="w-10">30.06.2021</td>
+                            </tr>
 
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <th scope="row" class="align-self-stretch w-15">MPTF/UNDP</th>
-                    <td class="w-15">Cabo Verde</td>
-                    <td class="w-50">Modelling in health care finance: A compendium of quantitative techniques for health care financing</td>
-                    <td class="w-10">01.01.2017</td>
-                    <td class="w-10">31.12.2018</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">MPTF/UNDP</td>
-                    <td class="w-15">Cabo Verde</td>
-                    <td class="w-50">Et l'application des outils techniques interinstitutionnels pour 'évaluation des systèmes de protection sociale dans le cadre des engagements du SPIAC-B</td>
-                    <td class="w-10">03.11.2014</td>
-                    <td class="w-10">31.12.2016</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">MPTF/UNDP</td>
-                    <td class="w-15">Cabo Verde</td>
-                    <td class="w-50">Protection sociale et changement climatique</td>
-                    <td class="w-10">31.07.2015</td>
-                    <td class="w-10">31.10.2016</td>
-                  </tr>
-                  <tr class="d-flex justify-content-between align-items-stretch">
-                    <td class="w-15">MPTF/UNDP</td>
-                    <td class="w-15">Cabo Verde</td>
-                    <td class="w-50">Protection social - New Agence Francaise de Développement Global Partnershio with ILO</td>
-                    <td class="w-10">15.12.2017</td>
-                    <td class="w-10">30.06.2021</td>
-                  </tr>
-                </tbody>
-            </table>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <th scope="row" class="align-self-stretch w-15">MPTF/UNDP</th>
+                                <td class="w-15">Cabo Verde</td>
+                                <td class="w-50">Modelling in health care finance: A compendium of quantitative techniques for health care financing</td>
+                                <td class="w-10">01.01.2017</td>
+                                <td class="w-10">31.12.2018</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">MPTF/UNDP</td>
+                                <td class="w-15">Cabo Verde</td>
+                                <td class="w-50">Et l'application des outils techniques interinstitutionnels pour 'évaluation des systèmes de protection sociale dans le cadre des engagements du SPIAC-B</td>
+                                <td class="w-10">03.11.2014</td>
+                                <td class="w-10">31.12.2016</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">MPTF/UNDP</td>
+                                <td class="w-15">Cabo Verde</td>
+                                <td class="w-50">Protection sociale et changement climatique</td>
+                                <td class="w-10">31.07.2015</td>
+                                <td class="w-10">31.10.2016</td>
+                            </tr>
+                            <tr class="d-flex justify-content-between align-items-stretch">
+                                <td class="w-15">MPTF/UNDP</td>
+                                <td class="w-15">Cabo Verde</td>
+                                <td class="w-50">Protection social - New Agence Francaise de Développement Global Partnershio with ILO</td>
+                                <td class="w-10">15.12.2017</td>
+                                <td class="w-10">30.06.2021</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
     </div>
     <!-- Blog Grid Section End -->
 
     <!-- Start Footer Area Wrapper -->
     <footer class="section footer-area">
-      <div class="footer-top overlay" data-bg-color="#230050">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <!-- Start Footer Widget Area -->
-              <div class="footer-widget-area">
-                <div class="footer-topbar footer-row">
-                  <div class="contact-us">
-                    Contact us:
-                    <a href="mailto:socpro@ilo.org ">socpro@ilo.org</a>
-                  </div>
-                  <ul class="footer-links">
-                    <li>
-                      <a
-                        href="https://www.ilo.org/global/copyright/lang--en/index.htm"
-                        >Copyright</a
+        <div class="footer-top overlay" data-bg-color="#230050">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- Start Footer Widget Area -->
+                        <div class="footer-widget-area">
+                            <div class="footer-topbar footer-row">
+                                <div class="contact-us">
+                                    Contact us:
+                                    <a href="mailto:socpro@ilo.org ">socpro@ilo.org</a>
+                                </div>
+                                <ul class="footer-links">
+                                    <li>
+                                        <a href="https://www.ilo.org/global/copyright/lang--en/index.htm">Copyright</a
                       >
                     </li>
                     <li>
@@ -1542,55 +1468,43 @@
                         alt="Back to ILO main site"
                       />
                     </a>
-                  </div>
-                  <div class="headline">
-                    <h1>
-                      <i class="icon red">play_arrow</i>Advancing social
-                      justice, promoting decent work
-                    </h1>
-                    <p>ILO is a specialized agency of the United Nations</p>
-                  </div>
+                            </div>
+                            <div class="headline">
+                                <h1>
+                                    <i class="icon red">play_arrow</i>Advancing social justice, promoting decent work
+                                </h1>
+                                <p>ILO is a specialized agency of the United Nations</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <!-- End Footer Widget Area -->
             </div>
-            <!-- End Footer Widget Area -->
-          </div>
         </div>
-      </div>
+        </div>
     </footer>
     <!--== End Footer Area Wrapper ==-->
 
     <!-- Scroll Top Start -->
     <a href="#" class="scroll-top show" id="scroll-top">
-      <i class="arrow-top icofont-rounded-up"></i>
-      <i class="arrow-bottom icofont-rounded-up"></i>
+        <i class="arrow-top icofont-rounded-up"></i>
+        <i class="arrow-bottom icofont-rounded-up"></i>
     </a>
     <!-- Scroll Top End -->
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
-      <div class="offcanvas-header d-flex justify-content-end">
-        <button
-          type="button"
-          class="btn-close text-reset text-end"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        >
+        <div class="offcanvas-header d-flex justify-content-end">
+            <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="icofont-close"></i>
         </button>
-      </div>
-      <div class="offcanvas-body">
-        <!-- Mobile Menu Inner Wrapper Start -->
-        <div class="p-0 mobile-menu-inner-wrapper">
-          <!-- Mobile Menu Start -->
-          <div class="header-logo me-auto">
-            <a href="../">
-              <svg
-                id="logo-socpro"
-                class="logo-socpro"
-                data-name="logo-socpro"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1183.78 255.35"
-              >
+        </div>
+        <div class="offcanvas-body">
+            <!-- Mobile Menu Inner Wrapper Start -->
+            <div class="p-0 mobile-menu-inner-wrapper">
+                <!-- Mobile Menu Start -->
+                <div class="header-logo me-auto">
+                    <a href="../">
+                        <svg id="logo-socpro" class="logo-socpro" data-name="logo-socpro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1183.78 255.35">
                 <path
                   d="M407.24,223.14v-46.2h7.92v46.2Z"
                   transform="translate(-52.91 -147.76)"
@@ -1901,37 +1815,36 @@
                   transform="translate(-52.91 -147.76)"
                 />
               </svg>
-            </a>
-          </div>
-          <h1 class="mobile-headline">
-            <i class="icon red">play_arrow</i> Building social protection floors
-            for all
-          </h1>
+                    </a>
+                </div>
+                <h1 class="mobile-headline">
+                    <i class="icon red">play_arrow</i> Building social protection floors for all
+                </h1>
 
-          <div class="mobile-navigation">
-            <nav>
-              <ul class="mt-0 mobile-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="our-approach.html">Our approach</a></li>
-                <li><a href="countries.html">Countries</a></li>
-                <li><a href="thematic-areas.html">Thematic areas</a></li>
-                <li><a href="partnerships.html">Partnerships</a></li>
-                <li><a href="results-and-impact.html">Results and impact</a></li>
-                <li><a href="our-team.html">Our team</a></li>
-                <li><a href="funding-gaps.html">Funding gaps</a></li>
-                <li><a href="library.html">Library</a></li>
-                <li><a href="funding-gaps.html">News and events</a></li>
-              </ul>
-            </nav>
-          </div>
-          <!-- Mobile Menu End -->
+                <div class="mobile-navigation">
+                    <nav>
+                        <ul class="mt-0 mobile-menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="our-approach.html">Our approach</a></li>
+                            <li><a href="countries.html">Countries</a></li>
+                            <li><a href="thematic-areas.html">Thematic areas</a></li>
+                            <li><a href="partnerships.html">Partnerships</a></li>
+                            <li><a href="results-and-impact.html">Results and impact</a></li>
+                            <li><a href="our-team.html">Our team</a></li>
+                            <li><a href="funding-gaps.html">Funding gaps</a></li>
+                            <li><a href="library.html">Library</a></li>
+                            <li><a href="funding-gaps.html">News and events</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Mobile Menu End -->
 
-          <!-- Contact Links/Social Links Start -->
-          <div class="bottom-0 mt-auto">
-            <!-- Contact Links Start -->
-            <ul class="contact-links">
-              <li>
-                <i class="icofont-ui-email"></i
+                <!-- Contact Links/Social Links Start -->
+                <div class="bottom-0 mt-auto">
+                    <!-- Contact Links Start -->
+                    <ul class="contact-links">
+                        <li>
+                            <i class="icofont-ui-email"></i
                 ><a href="mailto:socpro@ilo.org">socpro@ilo.org</a>
               </li>
             </ul>
