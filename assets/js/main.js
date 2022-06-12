@@ -10,6 +10,10 @@
       $('.sticky-header').removeClass('sticky')
     }
   })
+  $(window).scroll(function() {
+    const e = $(window).scrollTop(), i = 50, t = $(".social-pages");
+    e > i ? $(t).addClass("affix") : $(t).removeClass("affix")
+}),
 
   /*--}
       Custom script to call Background
