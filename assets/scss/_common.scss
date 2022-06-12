@@ -1,257 +1,270 @@
 /*----------------------------------------*/
-    /*  01. Template default CSS
+
+
+/*  01. Template default CSS
 /*----------------------------------------*/
-    
-    @mixin placeholder {
-        &::-webkit-input-placeholder {
-            @content;
-        }
-        &:-moz-placeholder {
-            @content;
-        }
-        &::-moz-placeholder {
-            @content;
-        }
-        &:-ms-input-placeholder {
-            @content;
-        }
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
     }
-    /*-- Google Font --*/
-    
-    @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=Overpass:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap");
-    /*-- Common Style --*/
-    
-    *,
-    *::after,
-    *::before {
-        box-sizing: border-box;
+    &:-moz-placeholder {
+        @content;
     }
-    
-    html,
-    body {
-        height: 100%;
+    &::-moz-placeholder {
+        @content;
     }
-    
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+
+/*-- Google Font --*/
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=Overpass:ital,wght@0,300;0,400;0,600;0,700;1,700&display=swap");
+
+/*-- Common Style --*/
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
     }
-    
-    @media screen and (prefers-reduced-motion: reduce) {
-        html {
-            scroll-behavior: auto;
-        }
+}
+
+body {
+    position: relative;
+    font-family: $font-family-base;
+    font-size: 16px;
+    color: $body-color;
+    line-height: 1.5;
+    visibility: visible;
+    scroll-behavior: smooth;
+    // overflow: scroll;
+    &[dir="rtl"] {
+        text-align: right;
     }
-    
-    body {
-        position: relative;
-        font-family: $font-family-base;
-        font-size: 16px;
-        color: $body-color;
-        line-height: 1.5;
-        visibility: visible;
-        scroll-behavior: smooth;
-        // overflow: scroll;
-        &[dir="rtl"] {
-            text-align: right;
-        }
-    }
-    
-    a:hover,
-    a:focus,
-    a:active,
-    button:focus,
-    .btn:focus,
-    input:focus,
-    select,
-    textarea {
-        border: 0;
-        text-decoration: none;
-        outline: 0;
-        box-shadow: none;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: $headings-font-family;
-        font-weight: $headings-font-weight;
-        line-height: $headings-line-height;
-        color: $headings-color;
-    }
-    
-    h1 {
+}
+
+a:hover,
+a:focus,
+a:active,
+button:focus,
+.btn:focus,
+input:focus,
+select,
+textarea {
+    border: 0;
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    line-height: $headings-line-height;
+    color: $headings-color;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    @media #{$tablet-device} {
         font-size: 40px;
     }
-    
-    h2 {
-        @media #{$tablet-device} {
-            font-size: 40px;
-        }
-        @media #{$large-mobile} {
-            font-size: 30px;
-        }
-        @media #{$extra-small-mobile} {
-            font-size: 26px;
-        }
-    }
-    
-    h3 {
+    @media #{$large-mobile} {
         font-size: 30px;
-        @media #{$tablet-device} {
-            font-size: 25px;
-        }
-        @media #{$large-mobile} {
-            font-size: 20px;
-        }
-        @media #{$extra-small-mobile} {
-            font-size: 20px;
-        }
     }
-    
-    h4 {
+    @media #{$extra-small-mobile} {
+        font-size: 26px;
+    }
+}
+
+h3 {
+    font-size: 30px;
+    @media #{$tablet-device} {
+        font-size: 25px;
+    }
+    @media #{$large-mobile} {
         font-size: 20px;
     }
-    
-    h5 {
-        font-size: 18px;
+    @media #{$extra-small-mobile} {
+        font-size: 20px;
     }
-    
-    h6 {
-        font-size: 16px;
-    }
-    
-    a {
-        text-decoration: none;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    transition: $transition-base;
+    color: $dark;
+    &:hover {
+        color: $ilo-blue;
         transition: $transition-base;
-        color: $dark;
-        &:hover {
-            color: $ilo-blue;
-            transition: $transition-base;
-        }
     }
-    
-    p {
-        &:last-child {
-            margin-bottom: 0;
-        }
-        & .tri-bullet {
-            color: $ilo-turquoise;
-            font-size: 0.7rem;
-        }
+}
+
+p {
+    &:last-child {
+        margin-bottom: 0;
     }
-    
-    ul {
-        margin: 0;
-        padding: 0;
-        li {
-            list-style: none;
-        }
+    & .tri-bullet {
+        color: $ilo-turquoise;
+        font-size: 0.7rem;
     }
-    
-     ::selection {
-        color: $ilo-dark-blue;
-        background: $ilo-canary;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style: none;
     }
-    
-    img {
-        max-width: 100%;
-    }
-    /* Overlay */
-    
-    [data-overlay] {
-        position: relative;
-        z-index: 1;
-        &::before {
-            position: absolute;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            content: "";
-            background-color: rgb(49, 46, 65);
-        }
-    }
-    
-    .overlay {
-        position: relative;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-        }
-    }
-    
-    @for $i from 0 through 20 {
-        [data-overlay="#{$i * .1}"] {
-            &::before {
-                opacity: 0.1 * $i;
-            }
-        }
-    }
-    /* Background Image */
-    
-    [data-bg-image] {
-        background-repeat: repeat;
-        background-position: top center;
-        &:not(.bg-pattern) {
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: cover;
-            overflow: hidden;
-        }
-    }
-    
-    // Image width
-    .fit-image {
+}
+
+ ::selection {
+    color: $ilo-dark-blue;
+    background: $ilo-canary;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* Overlay */
+
+[data-overlay] {
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
         width: 100%;
-        object-fit: cover;
-        object-position: center;
-        clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%, 0 0);
-        transition: $transition-base;
+        height: 100%;
+        content: "";
+        background-color: rgb(49, 46, 65);
+    }
+}
+
+.overlay {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+@for $i from 0 through 20 {
+    [data-overlay="#{$i * .1}"] {
+        &::before {
+            opacity: 0.1 * $i;
+        }
+    }
+}
+
+
+/* Background Image */
+
+[data-bg-image] {
+    background-repeat: repeat;
+    background-position: top center;
+    &:not(.bg-pattern) {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        overflow: hidden;
+    }
+}
+
+// Image width
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%, 0 0);
+    transition: $transition-base;
+    &.small {
+        clip-path: none;
+        height: 100%;
+    }
+    &:hover {
+        clip-path: polygon(calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%, 0 0);
         &.small {
             clip-path: none;
-            height: 100%;
-        }
-        &:hover {
-            clip-path: polygon(calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%, 0 0);
-            &.small {
-                clip-path: none;
-            }
         }
     }
-    /* Section Style */
-    
-    .section,
-    .section-fluid {
-        float: left;
-        width: 100%;
-    }
-    
-    .section-fluid {
-        padding-right: 222px;
-        padding-left: 222px;
-        @media #{$laptop-device, $desktop-device,
+}
+
+
+/* Section Style */
+
+.section,
+.section-fluid {
+    float: left;
+    width: 100%;
+}
+
+.section-fluid {
+    padding-right: 222px;
+    padding-left: 222px;
+    @media #{$laptop-device, $desktop-device,
  $tablet-device,
-        $large-mobile
-    }
-    
-    {
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-    
-    @media #{$extra-small-mobile} {
-        padding-right: 0;
-        padding-left: 0;
-    }
+    $large-mobile
+}
+
+{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+@media #{$extra-small-mobile} {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
 }
 // Custom Container
 // Container
@@ -1638,7 +1651,7 @@
         padding-bottom: 0.4rem;
         font-size: 1.3rem;
         & a {
-            color: $ilo-white;
+            color: $ilo-light-blue;
             transition: $transition-base;
             &:hover {
                 color: $ilo-legacy-blue;
