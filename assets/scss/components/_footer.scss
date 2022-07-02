@@ -5,12 +5,14 @@
 .footer-top {
     padding: 1rem 0;
 }
+
 .footer-row {
     padding: 1.5rem 0;
     @media #{$tablet-device, $large-mobile} {
         padding: 0.5rem 0;
     }
 }
+
 .footer-topbar {
     border-bottom: 1px solid $ilo-white;
     display: flex;
@@ -55,6 +57,7 @@
         }
     }
 }
+
 .footer-tagline {
     display: flex;
     flex-direction: row;
@@ -107,10 +110,12 @@
         }
     }
 }
+
 .footer-widget-area {
     position: relative;
     z-index: 9;
 }
+
 .footer-area {
     background: #211e31;
 }
