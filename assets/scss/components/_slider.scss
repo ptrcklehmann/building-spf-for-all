@@ -1,6 +1,7 @@
 /*=======================================
     03.03 Slider CSS
 =========================================*/
+
 .hero-layout {
     position: relative;
     z-index: 1;
@@ -9,17 +10,23 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    &.headerless {
+        height: 140px;
+    }
     & .hero-background {
         background-size: 160%;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 70px), 0 100%);
         @media #{$tablet-device,
-            $large-mobile} {
-                background-size: cover;
-            }
+ $large-mobile
+    }
+    {
+        background-size: cover;
     }
 }
 
+
+}
 .sub-hero-layout {
     position: relative;
     z-index: 1;
@@ -28,33 +35,41 @@
     &.team {
         height: calc(100vh - 30px);
     }
+    
+    &.headerless {
+        margin-top: 200px;
+        height: auto;
+    }
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     @media #{$tablet-device,
-        $large-mobile} {
-        height: calc(65vh - 25px);
-    }
-    @media #{$extra-small-mobile} {
-        width: 100%;
-    }
-
-    & .above {
-        z-index: 4;
-        margin-bottom: -30%;
-        @media #{$tablet-device,
-            $large-mobile} {
-                padding-left: 0;
-                margin-bottom: -20%;
-            }
-    }
-    & .rotate {
-        transform: rotate(-90deg);
-
-    }
-
+ $large-mobile
+}
+{
+    height: calc(65vh - 25px);
+}
+@media #{$extra-small-mobile} {
+    width: 100%;
+}
+& .above {
+    z-index: 4;
+    margin-bottom: -30%;
+    @media #{$tablet-device,
+ $large-mobile
+}
+{
+    padding-left: 0;
+    margin-bottom: -20%;
 }
 
+}
+& .rotate {
+    transform: rotate(-90deg);
+}
+
+}
 .hero-background {
     background-repeat: no-repeat;
     background-position: center;
@@ -66,19 +81,25 @@
     right: 0;
     &.t-climate {
         @media #{$tablet-device,
-            $large-mobile, $extra-small-mobile} {
-                 background-position: top 25% left 0%!important;
-            }
+ $large-mobile,
+        $extra-small-mobile
     }
-    &.t-country {
-        @media #{$tablet-device,
-            $large-mobile, $extra-small-mobile} {
-                 background-position: top 25% right 50%!important;
-            }
+    {
+        background-position: top 25% left 0%!important;
     }
+}
+&.t-country {
+    @media #{$tablet-device,
+ $large-mobile,
+    $extra-small-mobile
+}
+{
+    background-position: top 25% right 50%!important;
+}
 
 }
 
+}
 .double-bullet {
     transition: $transition-base;
     width: 5rem;
@@ -94,21 +115,19 @@
             margin-left: 0.2rem;
         }
         & .uuper_box {
-            & > * {
+            &>* {
                 transition: $transition-base;
                 margin-left: 0.2rem;
             }
         }
     }
 }
-
 // Animation Style
 .animation-style-01 {
     & .slider-content,
     & .slider-content-image {
         opacity: 0;
     }
-
     & .swiper-slide-active {
         & .slider-content,
         & .slider-content-image {
@@ -144,10 +163,8 @@
                 animation-fill-mode: both;
             }
         }
-
         & .slider-images {
             opacity: 1;
-
             & img {
                 animation-name: fadeInUpBig;
                 animation-delay: 1.2s;
